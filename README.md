@@ -2,9 +2,60 @@
 
 **Importance-Aware Self-Evolving Scheduler for AI Agents**
 
-TSMC-inspired incident recovery demo. This project is independent of TSMC.
+Help AI agents decide **what matters, which tools run next, and which model to use**.
 
-## Layout
+The demo simulates a wafer-fab incident competing with background tasks. It is inspired by TSMC operations, but is not affiliated with TSMC.
+
+## Three main components
+
+### 1. Task Evolver: What matters?
+
+- Learn task importance from human preference pairs.
+- Convert preferences into scores with Bradley–Terry fitting.
+- Publish updated scores for scheduling and routing policies.
+
+### 2. Client Scheduler: What runs next?
+
+- Coordinate tool calls across multiple Codex sessions.
+- Rank waiting tasks by importance and aging.
+- Limit concurrent tool calls and release slots when calls finish.
+
+### 3. vLLM Semantic Router: Which model should respond?
+
+- Classify requests, such as alert summaries or incident diagnosis.
+- Route summaries to a low-cost model and diagnosis to a stronger model.
+- Support HierShrink quality-cost selection through our custom selector, not yet enabled in the live gateway.
+
+**Importance is not model difficulty.** Tool scheduling and model selection are separate decisions.
+
+## Try the demo
+
+Use Node 22.18 or newer.
+
+```sh
+cd apps/demo
+npm ci
+npm run dev
+```
+
+Trigger an incident, switch scheduling policies, and compare the queue and resource display.
+
+**Frontend only:** tasks, CPU, and RAM are simulated. The UI is not connected to the backend components.
+
+## Current status
+
+| Area | What works | What remains |
+| --- | --- | --- |
+| Evolver + Scheduler | Preference scores and cross-session tool admission | Full validation of newer pool and preemption changes |
+| Semantic routing | A prior Codex → OpenAI tool round trip completed in 6.585 seconds | Combined frontend, scheduler, and HierShrink validation |
+| HierShrink | Go selector, exporter, and tests | Live routing integration and evidence of quality-cost gains |
+
+The first offline SWE pilot resolved 68/100 tasks, equal to fixed medium. It did not improve on that baseline. This is not a production deployment or a deadline guarantee.
+
+## Development
+
+<details>
+<summary>Source layout</summary>
 
 ```text
 apps/demo/                       Incident demo frontend
@@ -18,22 +69,14 @@ integrations/                    Pinned upstream revisions, patches, and adapter
 scripts/prepare.py               Reconstruct the development workspace
 ```
 
-Edit code in `src/`. Keep upstream wiring in `integrations/`. The repository does not contain upstream source trees, datasets, credentials, caches, or binaries. Patches contain only changes to existing upstream files. New adapter files live in `integrations/*/overlay/`. Licenses and notices remain under each integration.
+Edit code in `src/`. Keep upstream wiring in `integrations/`.
 
-## Frontend
+Upstream sources, datasets, trained artifacts, credentials, caches, and binaries are not included. Patches modify existing upstream files. New adapter files live in `integrations/*/overlay/`. Licenses and notices remain under each integration.
 
-Use Node 22.18 or newer.
+</details>
 
-```sh
-cd apps/demo
-npm ci
-npm test
-npm run dev
-```
-
-The incident trigger, queue, CPU, and RAM display use simulated data. They do not control host resources.
-
-## Backend workspace
+<details>
+<summary>Prepare the backend and run the routing smoke</summary>
 
 Use Python 3.11 or newer and Git. The preparation command downloads the pinned upstream sources, applies patches, and copies our modules into their build locations.
 
@@ -59,12 +102,4 @@ PYTHONPATH=tools/task-scheduler python3 tools/task-scheduler/experiments/semanti
 
 Use `--fast-model` and `--analysis-model` on the launcher to select model IDs available to your account. Keep the gateway on loopback; it has no client authentication.
 
-## Status
-
-- Evolver publishes Bradley–Terry importance from preference pairs.
-- Scheduler implements cross-session admission, importance, aging, and tool lifecycle cleanup. New pool and preemption changes still need full integration validation.
-- The prior local Codex to OpenAI Responses SSE smoke completed a tool round trip in 6.585 seconds. This was not a combined frontend, scheduler, and HierShrink test.
-- HierShrink includes a Go selector, exporter, and tests. The live gateway does not enable it.
-- The first offline SWE pilot resolved 68 of 100 tasks, equal to fixed medium. It did not show an improvement over that baseline. Pilot data and trained artifacts are not included.
-
-Importance is not model difficulty. Tool scheduling and model selection remain separate decisions. This repository is not a production deployment or a deadline guarantee.
+</details>
