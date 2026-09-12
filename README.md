@@ -74,9 +74,25 @@ Trigger an incident, switch scheduling policies, and compare the queue and resou
 
 | Area | What works | What remains |
 | --- | --- | --- |
-| Evolver + Scheduler | Preference scores and cross-session tool admission | Full validation of newer pool and preemption changes |
+| Evolver + Scheduler | Preference scores, cross-session tool admission, resource pools, preemption, closed-loop tuning; 35 tests pass | Preemption and tuning in the replay benchmark; victim retry behaviour |
 | Semantic routing | A prior Codex → OpenAI tool round trip completed in 6.585 seconds | Combined frontend, scheduler, and HierShrink validation |
 | HierShrink | Go selector, exporter, and tests | Live routing integration and evidence of quality-cost gains |
+
+### Scheduler benchmark
+
+Offline replay, 200 rounds, 16,000 tool calls, 10 seeds per policy. Linear score = importance + wait × rate.
+
+| Workload | Policy | Critical mean wait | Critical p95 wait | Background max wait | Background max unserved |
+| --- | --- | --- | --- | --- | --- |
+| Long tail | FIFO | 75.0 s | 139.6 s | 148.4 s | 52.2 s |
+| Long tail | Strict priority | 5.8 s | 12.8 s | 155.4 s | 122.5 s |
+| Long tail | Linear, rate 0.25 | 5.9 s | 12.8 s | 153.5 s | 87.3 s |
+| Long tail | Linear, rate 1 | 41.3 s | 98.1 s | 151.1 s | 55.1 s |
+| Uniform | FIFO | 38.3 s | 73.0 s | 76.7 s | 32.8 s |
+| Uniform | Strict priority | 2.0 s | 5.1 s | 88.0 s | 73.6 s |
+| Uniform | Linear, rate 0.25 | 2.0 s | 5.1 s | 81.5 s | 44.7 s |
+
+Linear at rate 0.25 matches strict priority on critical wait and starves background sessions less. Live Codex run with preemption enabled: critical call wait dropped from 4699 ms to 1 ms. Aging policies collapsed to FIFO in this replay.
 
 The first offline SWE pilot resolved 68/100 tasks, equal to fixed medium. It did not improve on that baseline. This is not a production deployment or a deadline guarantee.
 
