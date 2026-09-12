@@ -28,17 +28,22 @@ Simplified view. The frontend is mock, HierShrink is not enabled in live routing
 - Publish updated scores for scheduling and routing policies.
 
 <details>
-<summary>How Task Evolver learns</summary>
+<summary>Task Evolver loop</summary>
 
 ```mermaid
 flowchart LR
-    Human["Human preferences"] --> Fit["Bradley-Terry fit"]
-    Fit --> Scores["Importance scores"]
-    Human --> Expand["LLM task expansion"]
+    Select["Pick a task pair"] --> Human["Human score: 0 to 1"]
+    Human --> Fit["Fit importance scores"]
+    Fit --> Scheduler["Schedule tasks"]
+    Scheduler -->|"Waiting tasks"| Select
+    Human -->|"Task descriptions only"| Expand["LLM expansion"]
     Expand -->|"Low-weight derived pairs"| Fit
 ```
 
-Human answers update scores first. LLM expansion can refine them, but does not replace human preferences.
+Pick a comparison that can affect the waiting queue. Learn from the human answer,
+update importance with Bradley–Terry fitting, and use the scores for scheduling.
+Repeat as tasks arrive. LLM expansion adds related tasks; human preferences take precedence.
+Scheduling continues while the user answers. Each service run allows up to 10 questions.
 
 </details>
 
