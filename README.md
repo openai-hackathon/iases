@@ -8,19 +8,19 @@ The demo simulates a wafer-fab incident competing with background tasks. It is i
 
 ## Three main components
 
-### 1. Task Evolver: What matters?
+### 1. 🧠 Task Evolver: What matters?
 
 - Learn task importance from human preference pairs.
 - Convert preferences into scores with Bradley–Terry fitting.
 - Publish updated scores for scheduling and routing policies.
 
-### 2. Client Scheduler: What runs next?
+### 2. ⏱️ Client Scheduler: What runs next?
 
 - Coordinate tool calls across multiple Codex sessions.
 - Rank waiting tasks by importance and aging.
 - Limit concurrent tool calls and release slots when calls finish.
 
-### 3. vLLM Semantic Router: Which model should respond?
+### 3. 🔀 vLLM Semantic Router: Which model should respond?
 
 - Classify requests, such as alert summaries or incident diagnosis.
 - Route summaries to a low-cost model and diagnosis to a stronger model.
@@ -28,7 +28,7 @@ The demo simulates a wafer-fab incident competing with background tasks. It is i
 
 **Importance is not model difficulty.** Tool scheduling and model selection are separate decisions.
 
-## Try the demo
+## 🚀 Try the demo
 
 Use Node 22.18 or newer.
 
