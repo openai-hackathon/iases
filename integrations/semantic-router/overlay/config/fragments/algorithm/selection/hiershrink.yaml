@@ -1,0 +1,7 @@
+algorithm:
+  type: hiershrink
+  hiershrink:
+    artifact_path: /models/hiershrink.json
+    embedding_model: bge
+    embedding_dimension: 768
+    cost_weight: 0.1

@@ -1,0 +1,163 @@
+diff --git a/codex-rs/Cargo.lock b/codex-rs/Cargo.lock
+index 7f027e2217..7a9e8ca2c3 100644
+--- a/codex-rs/Cargo.lock
++++ b/codex-rs/Cargo.lock
+@@ -2220,6 +2220,7 @@ dependencies = [
+  "codex-rmcp-client",
+  "codex-rollout",
+  "codex-sandboxing",
++ "codex-scheduler-extension",
+  "codex-shell-command",
+  "codex-skills",
+  "codex-skills-extension",
+@@ -3361,6 +3362,7 @@ dependencies = [
+  "pretty_assertions",
+  "serde_json",
+  "tokio",
++ "tokio-util",
+ ]
+ 
+ [[package]]
+@@ -4457,6 +4459,19 @@ dependencies = [
+  "which 8.0.0",
+ ]
+ 
++[[package]]
++name = "codex-scheduler-extension"
++version = "0.0.0"
++dependencies = [
++ "codex-code-mode-protocol",
++ "codex-extension-api",
++ "pretty_assertions",
++ "serde_json",
++ "tokio",
++ "tokio-util",
++ "tracing",
++]
++
+ [[package]]
+ name = "codex-secrets"
+ version = "0.0.0"
+diff --git a/codex-rs/Cargo.toml b/codex-rs/Cargo.toml
+index 788afe6e80..a6572047eb 100644
+--- a/codex-rs/Cargo.toml
++++ b/codex-rs/Cargo.toml
+@@ -70,6 +70,7 @@ members = [
+     "ext/memories",
+     "ext/mcp",
+     "ext/queue",
++    "ext/scheduler",
+     "ext/skills",
+     "ext/web-search",
+     "external-agent-migration",
+@@ -253,6 +254,7 @@ codex-process-hardening = { path = "process-hardening" }
+ codex-protocol = { path = "protocol" }
+ codex-prompts = { path = "prompts" }
+ codex-queue-extension = { path = "ext/queue" }
++codex-scheduler-extension = { path = "ext/scheduler" }
+ codex-responses-api-proxy = { path = "responses-api-proxy" }
+ codex-response-debug-context = { path = "response-debug-context" }
+ codex-rmcp-client = { path = "rmcp-client" }
+diff --git a/codex-rs/app-server/Cargo.toml b/codex-rs/app-server/Cargo.toml
+index 0643950835..25a2b60ceb 100644
+--- a/codex-rs/app-server/Cargo.toml
++++ b/codex-rs/app-server/Cargo.toml
+@@ -80,6 +80,7 @@ codex-model-provider = { workspace = true }
+ codex-models-manager = { workspace = true }
+ codex-protocol = { workspace = true }
+ codex-queue-extension = { workspace = true }
++codex-scheduler-extension = { workspace = true }
+ codex-app-server-protocol = { workspace = true }
+ codex-app-server-transport = { workspace = true }
+ codex-feedback = { workspace = true }
+diff --git a/codex-rs/app-server/src/extensions.rs b/codex-rs/app-server/src/extensions.rs
+index 46af9c9a9c..7c6abf8e7b 100644
+--- a/codex-rs/app-server/src/extensions.rs
++++ b/codex-rs/app-server/src/extensions.rs
+@@ -80,6 +80,11 @@ where
+     if let Some(queue_service) = queue_service {
+         codex_queue_extension::install(&mut builder, queue_service);
+     }
++    if let Some(scheduler) = codex_scheduler_extension::shared_from_env() {
++        codex_scheduler_extension::install(&mut builder, scheduler, |config: &Config| {
++            config.cwd.to_path_buf()
++        });
++    }
+     codex_history_notes_extension::install(&mut builder, auth_manager.clone());
+     if let Some(state_db) = state_db {
+         codex_goal_extension::install_with_backend(
+diff --git a/codex-rs/core/src/tools/lifecycle.rs b/codex-rs/core/src/tools/lifecycle.rs
+index 0d3a0ecf1a..c7359c43d2 100644
+--- a/codex-rs/core/src/tools/lifecycle.rs
++++ b/codex-rs/core/src/tools/lifecycle.rs
+@@ -4,6 +4,7 @@ use codex_extension_api::McpToolContext;
+ use codex_extension_api::McpToolResultInput;
+ use codex_extension_api::ToolCallOutcome;
+ use codex_extension_api::ToolCallSource as ExtensionToolCallSource;
++use codex_extension_api::ToolCancelRegistry;
+ use codex_extension_api::ToolFinishInput;
+ use codex_extension_api::ToolStartInput;
+ use codex_protocol::mcp::CallToolResult;
+@@ -27,6 +28,11 @@ pub(crate) async fn notify_tool_start(
+         return;
+     }
+     let thread_store = &invocation.session.services.thread_extension_data;
++    invocation
++        .turn
++        .extension_data
++        .get_or_init(ToolCancelRegistry::default)
++        .register(&invocation.call_id, invocation.cancellation_token.clone());
+     let conversation_history = invocation.session.conversation_history_snapshot().await;
+     let root_turn_id = invocation.turn.turn_metadata_state.root_turn_id();
+     let originating_item_id = invocation.originating_item_id().await;
+@@ -113,6 +119,9 @@ async fn notify_tool_finish_parts(
+     source: ToolCallSource,
+     outcome: ToolCallOutcome,
+ ) {
++    if let Some(registry) = turn.extension_data.get::<ToolCancelRegistry>() {
++        registry.unregister(call_id);
++    }
+     for contributor in session.services.extensions.tool_lifecycle_contributors() {
+         contributor
+             .on_tool_finish(ToolFinishInput {
+diff --git a/codex-rs/ext/extension-api/Cargo.toml b/codex-rs/ext/extension-api/Cargo.toml
+index a0d4fe1f4c..3eb91e4834 100644
+--- a/codex-rs/ext/extension-api/Cargo.toml
++++ b/codex-rs/ext/extension-api/Cargo.toml
+@@ -23,6 +23,7 @@ codex-protocol = { workspace = true }
+ codex-tools = { workspace = true }
+ codex-utils-absolute-path = { workspace = true }
+ codex-utils-path-uri = { workspace = true }
++tokio-util = { workspace = true }
+ serde_json = { workspace = true }
+ 
+ [dev-dependencies]
+diff --git a/codex-rs/ext/extension-api/src/capabilities/mod.rs b/codex-rs/ext/extension-api/src/capabilities/mod.rs
+index deb5cba723..924fa1799b 100644
+--- a/codex-rs/ext/extension-api/src/capabilities/mod.rs
++++ b/codex-rs/ext/extension-api/src/capabilities/mod.rs
+@@ -4,6 +4,7 @@ mod events;
+ mod internal_session;
+ mod metrics;
+ mod response_items;
++mod tool_cancel;
+ 
+ pub use agent::AgentSpawnFuture;
+ pub use agent::AgentSpawner;
+@@ -17,3 +18,4 @@ pub use metrics::ExtensionMetrics;
+ pub use response_items::NoopResponseItemInjector;
+ pub use response_items::ResponseItemInjectionFuture;
+ pub use response_items::ResponseItemInjector;
++pub use tool_cancel::ToolCancelRegistry;
+diff --git a/codex-rs/ext/extension-api/src/lib.rs b/codex-rs/ext/extension-api/src/lib.rs
+index d92e5c6a65..c762a49d80 100644
+--- a/codex-rs/ext/extension-api/src/lib.rs
++++ b/codex-rs/ext/extension-api/src/lib.rs
+@@ -20,6 +20,7 @@ pub use capabilities::NoopExtensionEventSink;
+ pub use capabilities::NoopResponseItemInjector;
+ pub use capabilities::ResponseItemInjectionFuture;
+ pub use capabilities::ResponseItemInjector;
++pub use capabilities::ToolCancelRegistry;
+ pub use codex_context_fragments::ContextualUserFragment;
+ pub use codex_mcp::McpProtocolMode;
+ pub use codex_mcp::ToolInfo as McpToolInfo;

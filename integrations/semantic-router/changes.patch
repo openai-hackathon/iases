@@ -1,0 +1,344 @@
+diff --git a/config/config.yaml b/config/config.yaml
+index a14dd7217..dce5888f8 100644
+--- a/config/config.yaml
++++ b/config/config.yaml
+@@ -1495,6 +1495,29 @@ routing:
+               timeout_seconds: 20
+               workflow_mode: tool_based
+ 
++    - name: hiershrink_disabled_example
++      description: Inactive profile example. Replace the contradictory rule to enable.
++      priority: 1
++      rules:
++        operator: AND
++        conditions:
++          - type: user_feedback
++            name: need_clarification
++          - operator: NOT
++            conditions:
++              - type: user_feedback
++                name: need_clarification
++      modelRefs:
++        - model: qwen3-32b
++        - model: qwen3-8b
++      algorithm:
++        type: hiershrink
++        hiershrink:
++          artifact_path: /models/hiershrink.json
++          embedding_model: bge
++          embedding_dimension: 768
++          cost_weight: 0.1
++
+     - name: clarification_kmeans_route
+       description: KMeans route for clarification requests with local vector-store RAG.
+       priority: 115
+diff --git a/src/semantic-router/pkg/cache/contracts.go b/src/semantic-router/pkg/cache/contracts.go
+index 2acabd0a2..b167740b4 100644
+--- a/src/semantic-router/pkg/cache/contracts.go
++++ b/src/semantic-router/pkg/cache/contracts.go
+@@ -64,6 +64,10 @@ type CacheIdentity struct {
+ 	SemanticQuery            string         `json:"-"`
+ }
+ 
++func (i CacheIdentity) SemanticPartitionKey() string {
++	return CombineFingerprints("semantic", i.Partition.Key(), i.CompatibilityFingerprint)
++}
++
+ type TTLPolicy struct {
+ 	UseDefault bool
+ 	NoStore    bool
+diff --git a/src/semantic-router/pkg/cache/legacy_adapter.go b/src/semantic-router/pkg/cache/legacy_adapter.go
+index a3556fa71..2d9300384 100644
+--- a/src/semantic-router/pkg/cache/legacy_adapter.go
++++ b/src/semantic-router/pkg/cache/legacy_adapter.go
+@@ -95,7 +95,7 @@ func (a *LegacyBackendAdapter) LookupSemantic(
+ 	}
+ 	result, err := a.backend.LookupSimilarWithThreshold(
+ 		ctx,
+-		lookup.Identity.Partition.Key(),
++		lookup.Identity.SemanticPartitionKey(),
+ 		lookup.Identity.SemanticQuery,
+ 		lookup.Threshold,
+ 	)
+@@ -129,7 +129,7 @@ func (a *LegacyBackendAdapter) StoreSemantic(ctx context.Context, write CacheWri
+ 	return a.backend.AddEntry(
+ 		ctx,
+ 		write.RequestID,
+-		write.Identity.Partition.Key(),
++		write.Identity.SemanticPartitionKey(),
+ 		write.Identity.SemanticQuery,
+ 		write.RequestBody,
+ 		write.ResponseBody,
+diff --git a/src/semantic-router/pkg/cache/legacy_adapter_fingerprint_test.go b/src/semantic-router/pkg/cache/legacy_adapter_fingerprint_test.go
+new file mode 100644
+index 000000000..5a2bd5b33
+--- /dev/null
++++ b/src/semantic-router/pkg/cache/legacy_adapter_fingerprint_test.go
+@@ -0,0 +1,81 @@
++package cache
++
++import (
++	"context"
++	"strings"
++	"testing"
++)
++
++type partitionRecordingBackend struct {
++	entries map[string][]byte
++}
++
++func (b *partitionRecordingBackend) IsEnabled() bool                       { return true }
++func (b *partitionRecordingBackend) CheckConnection(context.Context) error { return nil }
++func (b *partitionRecordingBackend) Close() error                          { return nil }
++func (b *partitionRecordingBackend) GetStats() CacheStats                  { return CacheStats{} }
++
++func (b *partitionRecordingBackend) AddEntry(
++	_ context.Context, _ string, model string, _ string, _, responseBody []byte, _ int,
++) error {
++	b.entries[model] = responseBody
++	return nil
++}
++
++func (b *partitionRecordingBackend) LookupSimilarWithThreshold(
++	_ context.Context, model string, _ string, _ float32,
++) (LookupResult, error) {
++	body, ok := b.entries[model]
++	return LookupResult{Found: ok, ResponseBody: body}, nil
++}
++
++func TestLegacyAdapterPartitionsSemanticEntriesByCompatibilityFingerprint(t *testing.T) {
++	backend := &partitionRecordingBackend{entries: make(map[string][]byte)}
++	adapter := NewLegacyBackendAdapter(backend, InMemoryCacheType)
++	identity := func(fingerprint string) CacheIdentity {
++		return CacheIdentity{
++			Partition:                CachePartition{RequestModel: "model"},
++			CompatibilityFingerprint: fingerprint,
++			SemanticQuery:            "what is the capital of france",
++		}
++	}
++	if err := adapter.StoreSemantic(context.Background(), CacheWrite{
++		Identity:     identity("system-a"),
++		ResponseBody: []byte("paris"),
++		TTL:          DefaultTTL(),
++	}); err != nil {
++		t.Fatal(err)
++	}
++	lookup := func(fingerprint string) bool {
++		result, err := adapter.LookupSemantic(context.Background(), SemanticLookup{
++			Identity: identity(fingerprint),
++		})
++		if err != nil {
++			t.Fatal(err)
++		}
++		return result.Found
++	}
++	if !lookup("system-a") {
++		t.Fatal("same compatibility fingerprint must hit")
++	}
++	if lookup("system-b") {
++		t.Fatal("different compatibility fingerprint must miss")
++	}
++	if lookup("") {
++		t.Fatal("missing compatibility fingerprint must miss")
++	}
++}
++
++func TestSemanticPartitionKeyStaysWithinMilvusFieldWidth(t *testing.T) {
++	identity := CacheIdentity{
++		Partition: CachePartition{
++			Recipe:    strings.Repeat("r", 200),
++			Decision:  strings.Repeat("d", 200),
++			Namespace: strings.Repeat("n", 200),
++		},
++		CompatibilityFingerprint: strings.Repeat("f", 64),
++	}
++	if got := len(identity.SemanticPartitionKey()); got != 64 {
++		t.Fatalf("semantic partition key length = %d, want 64", got)
++	}
++}
+diff --git a/src/semantic-router/pkg/config/decision_config.go b/src/semantic-router/pkg/config/decision_config.go
+index 593e7932c..ffc3e980c 100644
+--- a/src/semantic-router/pkg/config/decision_config.go
++++ b/src/semantic-router/pkg/config/decision_config.go
+@@ -106,6 +106,7 @@ type CandidateIterationOutputConfig struct {
+ 
+ // AlgorithmConfig defines how multiple models should be executed and aggregated.
+ type AlgorithmConfig struct {
++	HierShrink        *HierShrinkSelectionConfig   `yaml:"hiershrink,omitempty"`
+ 	Type              string                       `yaml:"type"`
+ 	MinimumCandidates int                          `yaml:"minimum_candidates,omitempty"`
+ 	Confidence        *ConfidenceAlgorithmConfig   `yaml:"confidence,omitempty"`
+diff --git a/src/semantic-router/pkg/config/docs_contract_algorithm_plugin_test.go b/src/semantic-router/pkg/config/docs_contract_algorithm_plugin_test.go
+index 32c6a3efc..5f0c88d59 100644
+--- a/src/semantic-router/pkg/config/docs_contract_algorithm_plugin_test.go
++++ b/src/semantic-router/pkg/config/docs_contract_algorithm_plugin_test.go
+@@ -9,6 +9,7 @@ import (
+ )
+ 
+ var algorithmTutorialBuckets = map[string]string{
++	"hiershrink":    "selection",
+ 	"automix":       "selection",
+ 	"confidence":    "looper",
+ 	"fusion":        "looper",
+diff --git a/src/semantic-router/pkg/config/fragment_catalog_test.go b/src/semantic-router/pkg/config/fragment_catalog_test.go
+index ce895b2af..54bd1a22a 100644
+--- a/src/semantic-router/pkg/config/fragment_catalog_test.go
++++ b/src/semantic-router/pkg/config/fragment_catalog_test.go
+@@ -27,6 +27,7 @@ func TestConfigFragmentCatalogCoversSupportedRoutingSurfaces(t *testing.T) {
+ 	}
+ 
+ 	requiredAlgorithmFragments := map[string]string{
++		"hiershrink":    filepath.Join("selection", "hiershrink.yaml"),
+ 		"automix":       filepath.Join("selection", "automix.yaml"),
+ 		"confidence":    filepath.Join("looper", "confidence.yaml"),
+ 		"fusion":        filepath.Join("looper", "fusion.yaml"),
+diff --git a/src/semantic-router/pkg/config/routing_surface_catalog.go b/src/semantic-router/pkg/config/routing_surface_catalog.go
+index b1cd867a6..fd8a9c4ed 100644
+--- a/src/semantic-router/pkg/config/routing_surface_catalog.go
++++ b/src/semantic-router/pkg/config/routing_surface_catalog.go
+@@ -149,6 +149,7 @@ type decisionAlgorithmRegistryEntry struct {
+ }
+ 
+ var decisionAlgorithmRegistry = []decisionAlgorithmRegistryEntry{
++	{Catalog: AlgorithmCatalogEntry{Type: "hiershrink", DisplayName: "HierShrink", Description: "Select with a frozen quality profile and artifact cost.", Tier: "experimental", Execution: AlgorithmExecutionSelector, ConfigField: "hiershrink"}, IsConfigured: func(config *AlgorithmConfig) bool { return config.HierShrink != nil }},
+ 	{Catalog: AlgorithmCatalogEntry{Type: DecisionAlgorithmAutoMix, DisplayName: "AutoMix", Description: "Optimize a cost-quality escalation policy.", Tier: "experimental", Execution: AlgorithmExecutionSelector, ConfigField: "automix"}, IsConfigured: func(config *AlgorithmConfig) bool { return config.AutoMix != nil }},
+ 	{Catalog: AlgorithmCatalogEntry{Type: DecisionAlgorithmConfidence, DisplayName: "Confidence", Description: "Escalate across candidate models until confidence is sufficient.", Tier: "supported", Execution: AlgorithmExecutionLooper, ConfigField: "confidence"}, IsConfigured: func(config *AlgorithmConfig) bool { return config.Confidence != nil }},
+ 	{Catalog: AlgorithmCatalogEntry{Type: DecisionAlgorithmFusion, DisplayName: "Fusion", Description: "Run a parallel panel and synthesize a judged final response.", Tier: "experimental", Execution: AlgorithmExecutionLooper, ConfigField: "fusion"}, IsConfigured: func(config *AlgorithmConfig) bool { return config.Fusion != nil }},
+diff --git a/src/semantic-router/pkg/config/validator_decision.go b/src/semantic-router/pkg/config/validator_decision.go
+index 27e9971cc..18d03ffe6 100644
+--- a/src/semantic-router/pkg/config/validator_decision.go
++++ b/src/semantic-router/pkg/config/validator_decision.go
+@@ -688,6 +688,11 @@ func expectedAlgorithmBlock(normalizedType string) (string, bool) {
+ 
+ func validateSpecializedAlgorithmConfig(decisionName string, modelRefs []ModelRef, normalizedType string, algorithm *AlgorithmConfig) error {
+ 	switch normalizedType {
++	case "hiershrink":
++		cfg := algorithm.HierShrink
++		if cfg == nil || strings.TrimSpace(cfg.ArtifactPath) == "" || strings.TrimSpace(cfg.EmbeddingModel) == "" || cfg.EmbeddingDimension < 1 || math.IsNaN(cfg.CostWeight) || math.IsInf(cfg.CostWeight, 0) || cfg.CostWeight < 0 {
++			return fmt.Errorf("decision %q: hiershrink requires an artifact, embedding model, positive dimension and finite nonnegative cost weight", decisionName)
++		}
+ 	case "confidence":
+ 		return wrapAlgorithmValidationError(decisionName, "confidence", ValidateConfidenceAlgorithmConfig(algorithm.Confidence))
+ 	case "latency_aware":
+diff --git a/src/semantic-router/pkg/configschema/router-config-v0.3.schema.json b/src/semantic-router/pkg/configschema/router-config-v0.3.schema.json
+index bac66eea9..e777025b2 100644
+--- a/src/semantic-router/pkg/configschema/router-config-v0.3.schema.json
++++ b/src/semantic-router/pkg/configschema/router-config-v0.3.schema.json
+@@ -76,12 +76,16 @@
+     },
+     "AlgorithmConfig": {
+       "properties": {
++        "hiershrink": {
++          "$ref": "#/$defs/HierShrinkSelectionConfig"
++        },
+         "type": {
+           "type": "string",
+           "enum": [
+             "automix",
+             "confidence",
+             "fusion",
++            "hiershrink",
+             "hybrid",
+             "kmeans",
+             "knn",
+@@ -2447,6 +2451,9 @@
+           },
+           "type": "array"
+         },
++        "analysis_mode": {
++          "type": "string"
++        },
+         "analysis_overrides": {
+           "items": {
+             "$ref": "#/$defs/FusionModelOverride"
+@@ -2652,6 +2659,24 @@
+       "additionalProperties": false,
+       "type": "object"
+     },
++    "HierShrinkSelectionConfig": {
++      "properties": {
++        "artifact_path": {
++          "type": "string"
++        },
++        "embedding_model": {
++          "type": "string"
++        },
++        "embedding_dimension": {
++          "type": "integer"
++        },
++        "cost_weight": {
++          "type": "number"
++        }
++      },
++      "additionalProperties": false,
++      "type": "object"
++    },
+     "HybridHistoryToolRetrievalConfig": {
+       "properties": {
+         "history_horizon": {
+@@ -6798,6 +6823,15 @@
+       }
+     ],
+     "algorithms": [
++      {
++        "type": "hiershrink",
++        "display_name": "HierShrink",
++        "description": "Select with a frozen quality profile and artifact cost.",
++        "tier": "experimental",
++        "execution": "selector",
++        "config_field": "hiershrink",
++        "schema_ref": "#/$defs/HierShrinkSelectionConfig"
++      },
+       {
+         "type": "automix",
+         "display_name": "AutoMix",
+diff --git a/src/semantic-router/pkg/extproc/req_filter_classification.go b/src/semantic-router/pkg/extproc/req_filter_classification.go
+index 8a1ce6c97..5ae92808e 100644
+--- a/src/semantic-router/pkg/extproc/req_filter_classification.go
++++ b/src/semantic-router/pkg/extproc/req_filter_classification.go
+@@ -87,6 +87,9 @@ func (r *OpenAIRouter) prepareDecisionEvaluation(
+ }
+ 
+ func (r *OpenAIRouter) selectorForDecisionMethod(method selection.SelectionMethod, algorithm *config.AlgorithmConfig, ctx *RequestContext) selection.Selector {
++	if method == selection.MethodHierShrink && algorithm != nil && algorithm.HierShrink != nil {
++		return r.hierShrinkSelector(algorithm.HierShrink)
++	}
+ 	if method == selection.MethodHybrid && algorithm != nil && algorithm.Hybrid != nil {
+ 		return r.newDecisionHybridSelector(algorithm.Hybrid, ctx)
+ 	}
+diff --git a/src/semantic-router/pkg/extproc/req_filter_classification_runtime.go b/src/semantic-router/pkg/extproc/req_filter_classification_runtime.go
+index c39381ffa..30da1aa40 100644
+--- a/src/semantic-router/pkg/extproc/req_filter_classification_runtime.go
++++ b/src/semantic-router/pkg/extproc/req_filter_classification_runtime.go
+@@ -15,6 +15,7 @@ import (
+ )
+ 
+ var selectionMethodByAlgorithmType = map[string]selection.SelectionMethod{
++	"hiershrink":    selection.MethodHierShrink,
+ 	"router_dc":     selection.MethodRouterDC,
+ 	"automix":       selection.MethodAutoMix,
+ 	"hybrid":        selection.MethodHybrid,
+diff --git a/src/semantic-router/pkg/extproc/router.go b/src/semantic-router/pkg/extproc/router.go
+index 7eb28f0b3..250ab79ac 100644
+--- a/src/semantic-router/pkg/extproc/router.go
++++ b/src/semantic-router/pkg/extproc/router.go
+@@ -33,6 +33,7 @@ import (
+ 
+ // OpenAIRouter is an Envoy ExtProc server that routes OpenAI API requests.
+ type OpenAIRouter struct {
++	hierShrinkSelectors  sync.Map
+ 	Config               *config.RouterConfig
+ 	CategoryDescriptions []string
+ 	Classifier           *classification.Classifier
+diff --git a/website/sidebars.ts b/website/sidebars.ts
+index d41e21c10..ab0099ee8 100644
+--- a/website/sidebars.ts
++++ b/website/sidebars.ts
+@@ -149,6 +149,7 @@ const sidebars: SidebarsConfig = {
+                 'tutorials/algorithm/selection/latency-aware',
+                 'tutorials/algorithm/selection/mlp',
+                 'tutorials/algorithm/selection/multi-factor',
++                'tutorials/algorithm/selection/hiershrink',
+                 'tutorials/algorithm/selection/prompt',
+                 'tutorials/algorithm/selection/router-dc',
+                 'tutorials/algorithm/selection/static',

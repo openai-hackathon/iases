@@ -1,0 +1,21 @@
+{
+  "codex": {
+    "url": "https://github.com/openai-hackathon/codex.git",
+    "revision": "654b0a77d0d2f81aa21f61caf7af4be88fe550bb",
+    "copies": {
+      "src/task-evolver": "tools/task-scheduler",
+      "src/client-scheduler": "codex-rs/ext/scheduler",
+      "src/model-router/gateway": "tools/semantic-router",
+      "integrations/codex/overlay": "."
+    }
+  },
+  "semantic-router": {
+    "url": "https://github.com/vllm-project/semantic-router.git",
+    "revision": "544ce4f15eb5d04c1efaa597660c4a8ed042e22c",
+    "copies": {
+      "src/model-router/hiershrink": "src/semantic-router/pkg/selection",
+      "src/model-router/tools": "tools",
+      "integrations/semantic-router/overlay": "."
+    }
+  }
+}

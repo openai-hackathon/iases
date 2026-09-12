@@ -1,0 +1,95 @@
+version: v0.3
+listeners: []
+providers:
+  defaults:
+    model: incident-analysis
+  models:
+    - name: incident-fast
+      provider_model_id: ${FAST_MODEL}
+      api_format: responses
+      backend_refs:
+        - {name: openai-fast, provider: openai, base_url: https://api.openai.com/v1, api_key_env: OPENAI_API_KEY, weight: 100}
+    - name: incident-analysis
+      provider_model_id: ${ANALYSIS_MODEL}
+      api_format: responses
+      backend_refs:
+        - {name: openai-analysis, provider: openai, base_url: https://api.openai.com/v1, api_key_env: OPENAI_API_KEY, weight: 100}
+routing:
+  signals:
+    embeddings:
+      - name: incident-summary
+        threshold: 0.45
+        aggregation_method: max
+        candidates:
+          - Summarize this incident timeline and list the affected services.
+          - Extract the alert severity, service name, and timestamp into JSON.
+          - Write a short status update from these incident notes.
+          - Group duplicate alerts and summarize the observed symptoms.
+          - 請整理這起事件的時間軸、受影響服務與目前狀態。
+          - 從告警擷取嚴重程度、服務名稱與時間，輸出 JSON。
+      - name: incident-diagnosis
+        threshold: 0.55
+        aggregation_method: max
+        candidates:
+          - Diagnose the root cause of this service outage using logs and deployment changes.
+          - Investigate why error rates rose after the deployment and propose a recovery plan.
+          - Compare rollback and failover options and verify the safest repair.
+          - Analyze cascading failures across dependent services and plan incident recovery.
+          - 根據日誌與部署變更診斷服務中斷原因，提出修復步驟。
+          - 比較回滾與故障切換方案，規劃修復並驗證服務恢復。
+  decisions:
+    - name: incident-diagnosis
+      priority: 200
+      rules:
+        operator: AND
+        conditions: [{type: embedding, name: incident-diagnosis}]
+      modelRefs: [{model: incident-analysis}]
+    - name: incident-summary
+      priority: 100
+      rules:
+        operator: AND
+        conditions: [{type: embedding, name: incident-summary}]
+      modelRefs: [{model: incident-fast}]
+    - name: uncertain-analysis
+      priority: 1
+      rules:
+        operator: AND
+        conditions: []
+      modelRefs: [{model: incident-analysis}]
+global:
+  router:
+    auto_model_name: incident-auto
+    strategy: priority
+    model_selection: {enabled: false}
+  services:
+    response_api: {enabled: false}
+    observability:
+      tracing: {enabled: false}
+  stores:
+    response_cache: {enabled: false}
+  model_catalog:
+    kbs: []
+    embeddings:
+      semantic:
+        mmbert_model_path: ""
+        bert_model_path: ""
+        use_cpu: true
+        embedding_config:
+          backend: openai_compatible
+          model_type: remote
+          target_dimension: 1536
+          preload_embeddings: true
+          enable_soft_matching: false
+        endpoint:
+          base_url: https://api.openai.com/v1
+          model: text-embedding-3-small
+          api_key_env: OPENAI_API_KEY
+          timeout_seconds: 15
+          max_retries: 1
+          dimensions: 1536
+    modules:
+      prompt_guard: {enabled: false, model_ref: "", model_id: "", jailbreak_mapping_path: ""}
+      feedback_detector: {enabled: false, model_ref: "", model_id: ""}
+      classifier:
+        domain: {enabled: false, model_ref: "", model_id: "", category_mapping_path: ""}
+        pii: {enabled: false, model_ref: "", model_id: "", pii_mapping_path: ""}

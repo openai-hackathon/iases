@@ -1,0 +1,1 @@
+{"version":1,"encoder":"fixture","models":["strong","cheap"],"costs":[1,0.1],"layers":[{"weights":[[1,0],[0,1]],"bias":[0,0]},{"weights":[[1,0],[0,1]],"bias":[0,0]},{"weights":[[1,0],[0,1]],"bias":[0,0]}],"profile":[[0.8,0.4],[0.6,0.7]],"offset":[0.05,0],"table":[[0.02,-0.01],[-0.1,0.1]],"centers":[[1,0],[0,1]]}
