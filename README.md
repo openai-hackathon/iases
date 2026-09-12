@@ -73,14 +73,6 @@ Trigger an incident, switch scheduling policies, and compare the queue and resou
 
 **Frontend only:** tasks, CPU, and RAM are simulated. The UI is not connected to the backend components.
 
-## Current status
-
-| Area | What works | What remains |
-| --- | --- | --- |
-| Evolver + Scheduler | Preference scores, cross-session tool admission, resource pools, preemption, closed-loop tuning; 35 tests pass | Preemption and tuning in the replay benchmark; victim retry behaviour |
-| Semantic routing | A prior Codex → OpenAI tool round trip completed in 6.585 seconds | Combined frontend, scheduler, and HierShrink validation |
-| HierShrink | Go selector, exporter, and tests | Live routing integration and evidence of quality-cost gains |
-
 ## Bench
 
 - **Scheduling:** compare FIFO, strict priority, and aging policies with offline replay.
