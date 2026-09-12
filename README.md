@@ -27,25 +27,19 @@ Simplified view. The frontend is mock, HierShrink is not enabled in live routing
 - Convert preferences into scores with Bradley–Terry fitting.
 - Publish updated scores for scheduling and routing policies.
 
-<details>
-<summary>Task Evolver loop</summary>
+**Ask → Learn → Schedule → Repeat**
 
 ```mermaid
-flowchart LR
-    Select["Pick a task pair"] --> Human["Human score: 0 to 1"]
-    Human --> Fit["Fit importance scores"]
-    Fit --> Scheduler["Schedule tasks"]
-    Scheduler -->|"Waiting tasks"| Select
-    Human -->|"Task descriptions only"| Expand["LLM expansion"]
-    Expand -->|"Low-weight derived pairs"| Fit
+flowchart TD
+    Ask["1. Ask which task matters more"] --> Learn["2. Learn importance from your answer"]
+    Learn --> Schedule["3. Update the task queue"]
+    Schedule --> Next["4. Pick the next useful question"]
+    Next --> Ask
 ```
 
-Pick a comparison that can affect the waiting queue. Learn from the human answer,
-update importance with Bradley–Terry fitting, and use the scores for scheduling.
-Repeat as tasks arrive. LLM expansion adds related tasks; human preferences take precedence.
-Scheduling continues while the user answers. Each service run allows up to 10 questions.
-
-</details>
+- **You decide:** score a task pair from 0 to 1. Use 1 for A, 0 for B, or 0.5 for equal importance.
+- **AI expands:** add related task descriptions with less weight than human answers.
+- **Work continues:** scheduling does not wait for your answer. Each service run asks at most 10 questions.
 
 ### 2. ⏱️ Client Scheduler: What runs next?
 
