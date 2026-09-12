@@ -9,28 +9,15 @@ The demo simulates a wafer-fab incident competing with background tasks. It is i
 ## Architecture
 
 ```mermaid
-flowchart TB
-    Human["Human preferences"] --> Evolver["Task Evolver"]
-    Evolver --> Scores["Importance snapshot"]
-    Scores --> Scheduler["Client Scheduler"]
-    Agents["Codex sessions"] -->|"Tool calls"| Scheduler
-    Scheduler -->|"Admission: importance + aging"| Tools["Tool execution slots"]
-    Tools -->|"Results and slot release"| Agents
-
-    Agents -->|"Model requests"| Gateway["Incident gateway"]
-    Gateway -->|"Classify request"| Router["vLLM Semantic Router"]
-    Router -->|"Semantic decision"| Gateway
-    Scores -.->|"Optional importance policy"| Gateway
-    Gateway -->|"Select backend"| Models["Low-cost or strong model"]
-    Models -->|"Streamed response via gateway"| Agents
-    HierShrink["HierShrink selector"] -.->|"Implemented, not enabled in live path"| Router
-
-    subgraph Demo["Separate frontend demo"]
-        Incident["Trigger incident"] --> Simulation["Mock queue and CPU / RAM display"]
-    end
+flowchart LR
+    Evolver["Task Evolver"] -->|"Importance"| Scheduler["Client Scheduler"]
+    Agents["AI agents"] -->|"Tool calls"| Scheduler
+    Scheduler --> Tools["Tools"]
+    Agents -->|"Model requests"| Router["vLLM Semantic Router + gateway"]
+    Router --> Models["Models"]
 ```
 
-Solid arrows show implemented connections. Dashed arrows mark optional or inactive paths. The frontend remains separate; the full combined system has not passed an end-to-end test.
+Simplified view. The frontend is mock, HierShrink is not enabled in live routing, and the combined system still needs end-to-end validation.
 
 ## Three main components
 
@@ -44,23 +31,14 @@ Solid arrows show implemented connections. Dashed arrows mark optional or inacti
 <summary>How Task Evolver learns</summary>
 
 ```mermaid
-flowchart TD
-    Task["Task key"] --> Lookup{"Known importance?"}
-    Lookup -->|"Yes"| Existing["Return current score"]
-    Lookup -->|"No, learning enabled"| Human["Ask a human to compare two tasks"]
-    Human --> Pair["Save preference pair in SQLite"]
-    Pair --> Fit["Fit Bradley-Terry scores"]
-    Fit --> Publish["Publish versioned importance snapshot: 0-100"]
-    Fit --> Expand["Try LLM task expansion"]
-    Expand -->|"New valid task variants"| Derived["Derive pairs from the human answer"]
-    Derived --> Weight["Cap total expansion weight at 0.2 per parent pair"]
-    Weight --> Refit["Refit scores"]
-    Refit --> Publish
-    Expand -->|"Failure or no new variants"| Keep["Keep scores from the human answer"]
-    Publish --> Consumers["Scheduler and optional gateway policy"]
+flowchart LR
+    Human["Human preferences"] --> Fit["Bradley-Terry fit"]
+    Fit --> Scores["Importance scores"]
+    Human --> Expand["LLM task expansion"]
+    Expand -->|"Low-weight derived pairs"| Fit
 ```
 
-Human answers carry weight 1.0. LLM expansion adds low-weight derived pairs; it does not choose the human preference. Comparisons must connect to the reference task. Lookup without learning can return an unknown score instead of asking a question.
+Human answers update scores first. LLM expansion can refine them, but does not replace human preferences.
 
 </details>
 
