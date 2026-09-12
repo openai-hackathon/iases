@@ -1,0 +1,64 @@
+services:
+  router-config:
+    image: iases-backend:local
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile.backend
+    command: [python, /app/render_router.py]
+    environment:
+      FAST_MODEL: ${FAST_MODEL:?Set FAST_MODEL in .env}
+      ANALYSIS_MODEL: ${ANALYSIS_MODEL:?Set ANALYSIS_MODEL in .env}
+    volumes:
+      - router-config:/data
+
+  router:
+    image: ${ROUTER_IMAGE:?Set ROUTER_IMAGE in .env}
+    entrypoint: [/usr/local/bin/router]
+    command: [-config, /config/router.yaml, -port, "50051", -api-port, "8080", -api-bind, "0.0.0.0", -metrics-port, "9190"]
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY:?Set OPENAI_API_KEY in .env}
+      VLLM_SR_MANAGEMENT_INTERNAL_LISTENER: "true"
+    volumes:
+      - router-config:/config:ro
+    depends_on:
+      router-config:
+        condition: service_completed_successfully
+        restart: true
+    restart: unless-stopped
+    healthcheck:
+      test: [CMD, curl, --fail, --silent, http://127.0.0.1:8080/health]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 60s
+    cpus: 2
+    mem_limit: 2g
+
+  gateway:
+    image: iases-backend:local
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile.backend
+    command: [python, tools/semantic-router/gateway.py, --host, "0.0.0.0", --classifier-url, "http://router:8080", --fast-model, "${FAST_MODEL:?Set FAST_MODEL in .env}", --analysis-model, "${ANALYSIS_MODEL:?Set ANALYSIS_MODEL in .env}", --importance-snapshot, /data/importance.json]
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY:?Set OPENAI_API_KEY in .env}
+    volumes:
+      - state:/data:ro
+    ports:
+      - "127.0.0.1:${GATEWAY_PORT:-18899}:18899"
+    depends_on:
+      router:
+        condition: service_healthy
+      scheduler:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: [CMD, python, -c, "from urllib.request import urlopen; urlopen('http://127.0.0.1:18899/healthz', timeout=2).close()"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    cpus: 1
+    mem_limit: 256m
+
+volumes:
+  router-config:

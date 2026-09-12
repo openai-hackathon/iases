@@ -1,0 +1,65 @@
+name: iases
+
+services:
+  demo:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile.demo
+    ports:
+      - "127.0.0.1:${DEMO_PORT:-5173}:8080"
+    restart: unless-stopped
+    healthcheck:
+      test: [CMD, wget, -q, --spider, http://127.0.0.1:8080/]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    cpus: 0.5
+    mem_limit: 128m
+
+  scheduler:
+    image: iases-backend:local
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile.backend
+    command:
+      - sh
+      - -ec
+      - |
+        python -m task_evolver --db /data/evolver.sqlite3 --reference background --snapshot /data/importance.json --bind "$$INCIDENT_CWD" incident export
+        exec python -m task_evolver.admission --host 0.0.0.0 --port 8765 --snapshot /data/importance.json --slots "$$SCHEDULER_SLOTS" --rate "$$SCHEDULER_AGING_RATE"
+    environment:
+      INCIDENT_CWD: ${INCIDENT_CWD:-/workspace/incident}
+      SCHEDULER_SLOTS: ${SCHEDULER_SLOTS:-1}
+      SCHEDULER_AGING_RATE: ${SCHEDULER_AGING_RATE:-1}
+    volumes:
+      - state:/data
+    ports:
+      - "127.0.0.1:${SCHEDULER_PORT:-8765}:8765"
+    restart: unless-stopped
+    healthcheck:
+      test: [CMD, python, -c, "import socket; socket.create_connection(('127.0.0.1', 8765), timeout=2).close()"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    cpus: ${SCHEDULER_CPUS:-1.0}
+    mem_limit: ${SCHEDULER_MEMORY:-512m}
+
+  evolver:
+    profiles: [tools]
+    image: iases-backend:local
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile.backend
+    entrypoint: [python, -m, task_evolver, --db, /data/evolver.sqlite3, --reference, background, --snapshot, /data/importance.json, --bind, "${INCIDENT_CWD:-/workspace/incident}", incident]
+    command: [export]
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      TASK_EVOLVER_MODEL: ${TASK_EVOLVER_MODEL:-}
+    volumes:
+      - state:/data
+    depends_on:
+      scheduler:
+        condition: service_healthy
+
+volumes:
+  state:

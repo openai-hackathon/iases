@@ -251,6 +251,7 @@ class GatewayHandler(BaseHTTPRequestHandler):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
+    parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=18899)
     parser.add_argument("--classifier-url", default="http://127.0.0.1:18080")
     parser.add_argument("--fast-model", default="gpt-5.6-luna")
@@ -263,7 +264,7 @@ if __name__ == "__main__":
         parser.error("Set OPENAI_API_KEY in the environment or repository .env")
     signal.signal(signal.SIGTERM, signal.default_int_handler)
     with GatewayServer(
-        ("127.0.0.1", args.port),
+        (args.host, args.port),
         args.classifier_url,
         "https://api.openai.com/v1",
         {"incident-fast": args.fast_model, "incident-analysis": args.analysis_model},

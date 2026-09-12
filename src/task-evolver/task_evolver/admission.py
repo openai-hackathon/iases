@@ -232,7 +232,7 @@ async def serve(args):
         service.on_missing = learner.request
         service.on_queue = learner.observe
     server = await asyncio.start_server(
-        service.handle, "127.0.0.1", args.port, limit=65536
+        service.handle, args.host, args.port, limit=65536
     )
     print(json.dumps({"port": server.sockets[0].getsockname()[1]}), flush=True)
     async with server:
@@ -241,6 +241,7 @@ async def serve(args):
 
 def main():
     parser = argparse.ArgumentParser(description="Shared local tool admission service")
+    parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=8765)
     parser.add_argument("--slots", type=int, default=1)
     parser.add_argument("--rate", type=float, default=1.0)
