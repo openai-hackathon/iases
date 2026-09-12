@@ -37,8 +37,8 @@ flowchart LR
 
 - **Classify:** identify the request type, such as a summary or incident diagnosis.
 - **Route:** send summaries to a low-cost model and diagnosis to a stronger model.
-- **Compare:** support quality-cost selection with the custom HierShrink selector.
-  HierShrink is not yet enabled in the live gateway.
+- **Compare:** provide a custom HierShrink quality-cost selector for source builds.
+  Live gateway integration is pending.
 
 ### Task Evolver loop
 
@@ -59,8 +59,8 @@ cp .env.example .env
 docker compose up -d --build --wait
 ```
 
-Open **http://localhost:5173**. The stack starts a mock frontend and real admission service.
-The frontend is not connected to the backend. No API key is needed for the default stack.
+Open **http://localhost:5173** for the simulation UI. Docker also starts an independent admission service.
+The default stack needs no API key.
 See [setup instructions](DEVELOPMENT.md) to connect Codex or enable live routing.
 
 ## Bench
@@ -69,8 +69,7 @@ See [setup instructions](DEVELOPMENT.md) to connect Codex or enable live routing
 - **Live Codex:** a recorded preemption run reduced critical-call wait from 4699 ms to 1 ms.
 - **SWE pilot:** resolved 68/100 tasks, equal to the fixed-medium baseline.
 
-These are separate experiments. The combined system still needs end-to-end validation.
-See [benchmark details](BENCH.md) for workloads, measurements, and limitations.
+See [benchmark details](BENCH.md) for the separate experiments, baselines, and validation scope.
 
 ## Development
 
