@@ -87,13 +87,10 @@ def lookup_details(evolver, key, embedder=None):
                 sources.get(item), 3
             ):
                 sources[item] = pair.source
-    source = sources.get(key, "miss")
-    if key == evolver.ref_key and importance is not None:
-        source = "reference"
     result = {
         "key": key,
         "importance": importance,
-        "source": source,
+        "source": sources.get(key, "miss"),
         "estimated_importance": None,
         "candidates": [],
         "embedding_error": None,

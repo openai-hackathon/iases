@@ -93,9 +93,9 @@ class LearningQueue:
                 question = select_question(
                     evolver, keys, waiting, self.asked, time.monotonic()
                 )
-                key = question.first if question else keys[0] if keys else None
-                if key is None:
+                if not keys:
                     continue
+                key = question.first if question else keys[0]
                 with self.lock:
                     if key not in self.jobs:
                         continue
@@ -106,16 +106,15 @@ class LearningQueue:
                         with self.lock:
                             if was_queued and key not in self.waiting:
                                 continue
-                            current = select_question(
+                            question = select_question(
                                 evolver,
                                 [key],
                                 self.waiting,
                                 self.asked,
                                 time.monotonic(),
                             )
-                        if current is None:
+                        if question is None:
                             continue
-                        question = current
                         self.asked[tuple(sorted((key, question.second)))] = (
                             time.monotonic()
                         )
