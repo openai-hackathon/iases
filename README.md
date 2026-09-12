@@ -23,9 +23,31 @@ Simplified view. The frontend is mock, HierShrink is not enabled in live routing
 
 ### 1. 🧠 Task Evolver: What matters?
 
-- Learn task importance from human preference pairs.
-- Convert preferences into scores with Bradley–Terry fitting.
-- Publish updated scores for scheduling and routing policies.
+- **Ask:** select a useful task pair and collect a human score from 0 to 1.
+  Use 1 for A, 0 for B, or 0.5 for equal importance.
+- **Learn:** fit importance scores with Bradley–Terry and expand related tasks with an LLM.
+  Human preferences take precedence over low-weight AI-derived pairs.
+- **Update:** publish new scores while scheduling continues.
+  Each service run asks at most 10 questions.
+
+### 2. ⏱️ Client Scheduler: What runs next?
+
+- **Coordinate:** share a tool-call queue across Codex sessions.
+- **Prioritize:** rank waiting tasks by importance plus waiting time.
+  Aging raises the priority of tasks that wait longer.
+- **Control:** limit concurrent tool calls.
+  Release slots when calls finish.
+
+### 3. 🔀 vLLM Semantic Router: Which model should respond?
+
+- **Classify:** identify the request type, such as a summary or incident diagnosis.
+- **Route:** send summaries to a low-cost model and diagnosis to a stronger model.
+- **Compare:** support quality-cost selection with the custom HierShrink selector.
+  HierShrink is not yet enabled in the live gateway.
+
+**Importance is not model difficulty.** Tool scheduling and model selection are separate decisions.
+
+### Task Evolver loop
 
 **Ask → Learn → Schedule → Repeat**
 
@@ -36,24 +58,6 @@ flowchart TD
     Schedule --> Next["4. Pick the next useful question"]
     Next --> Ask
 ```
-
-- **You decide:** score a task pair from 0 to 1. Use 1 for A, 0 for B, or 0.5 for equal importance.
-- **AI expands:** add related task descriptions with less weight than human answers.
-- **Work continues:** scheduling does not wait for your answer. Each service run asks at most 10 questions.
-
-### 2. ⏱️ Client Scheduler: What runs next?
-
-- Coordinate tool calls across multiple Codex sessions.
-- Rank waiting tasks by importance and aging.
-- Limit concurrent tool calls and release slots when calls finish.
-
-### 3. 🔀 vLLM Semantic Router: Which model should respond?
-
-- Classify requests, such as alert summaries or incident diagnosis.
-- Route summaries to a low-cost model and diagnosis to a stronger model.
-- Support HierShrink quality-cost selection through our custom selector, not yet enabled in the live gateway.
-
-**Importance is not model difficulty.** Tool scheduling and model selection are separate decisions.
 
 ## 🚀 Try the demo
 
@@ -77,7 +81,16 @@ Trigger an incident, switch scheduling policies, and compare the queue and resou
 | Semantic routing | A prior Codex → OpenAI tool round trip completed in 6.585 seconds | Combined frontend, scheduler, and HierShrink validation |
 | HierShrink | Go selector, exporter, and tests | Live routing integration and evidence of quality-cost gains |
 
-### Scheduler benchmark
+## Bench
+
+- **Scheduling:** compare FIFO, strict priority, and aging policies with offline replay.
+  Measure critical-task wait and background-task starvation.
+- **Live execution:** check tool admission with a real Codex run.
+  Keep live measurements separate from replay results.
+- **Task quality:** compare resolved SWE tasks against a fixed-model baseline.
+  The first pilot matched the baseline; it did not improve it.
+
+### Scheduler replay
 
 Offline replay, 200 rounds, 16,000 tool calls, 10 seeds per policy. Linear score = importance + wait × rate.
 
@@ -91,9 +104,20 @@ Offline replay, 200 rounds, 16,000 tool calls, 10 seeds per policy. Linear score
 | Uniform | Strict priority | 2.0 s | 5.1 s | 88.0 s | 73.6 s |
 | Uniform | Linear, rate 0.25 | 2.0 s | 5.1 s | 81.5 s | 44.7 s |
 
-Linear at rate 0.25 matches strict priority on critical wait and starves background sessions less. Live Codex run with preemption enabled: critical call wait dropped from 4699 ms to 1 ms. Aging policies collapsed to FIFO in this replay.
+Linear at rate 0.25 has similar critical wait to strict priority and lower background max unserved time in these workloads.
 
-The first offline SWE pilot resolved 68/100 tasks, equal to fixed medium. It did not improve on that baseline. This is not a production deployment or a deadline guarantee.
+### Live Codex
+
+A recorded run with preemption enabled reduced critical-call wait from 4699 ms to 1 ms.
+This is a separate live measurement, not a replay result or a deadline guarantee.
+
+### SWE pilot
+
+The first offline pilot resolved **68/100 tasks**, equal to fixed medium.
+It did not improve on that baseline. The combined system still needs end-to-end validation.
+
+See the [replay runner](src/task-evolver/experiments/replay.py) and
+[benchmark harness](benchmark/) for the evaluation code.
 
 ## Development
 
