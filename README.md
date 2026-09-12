@@ -6,6 +6,32 @@ Help AI agents decide **what matters, which tools run next, and which model to u
 
 The demo simulates a wafer-fab incident competing with background tasks. It is inspired by TSMC operations, but is not affiliated with TSMC.
 
+## Architecture
+
+```mermaid
+flowchart TB
+    Human["Human preferences"] --> Evolver["Task Evolver"]
+    Evolver --> Scores["Importance snapshot"]
+    Scores --> Scheduler["Client Scheduler"]
+    Agents["Codex sessions"] -->|"Tool calls"| Scheduler
+    Scheduler -->|"Admission: importance + aging"| Tools["Tool execution slots"]
+    Tools -->|"Results and slot release"| Agents
+
+    Agents -->|"Model requests"| Gateway["Incident gateway"]
+    Gateway -->|"Classify request"| Router["vLLM Semantic Router"]
+    Router -->|"Semantic decision"| Gateway
+    Scores -.->|"Optional importance policy"| Gateway
+    Gateway -->|"Select backend"| Models["Low-cost or strong model"]
+    Models -->|"Streamed response via gateway"| Agents
+    HierShrink["HierShrink selector"] -.->|"Implemented, not enabled in live path"| Router
+
+    subgraph Demo["Separate frontend demo"]
+        Incident["Trigger incident"] --> Simulation["Mock queue and CPU / RAM display"]
+    end
+```
+
+Solid arrows show implemented connections. Dashed arrows mark optional or inactive paths. The frontend remains separate; the full combined system has not passed an end-to-end test.
+
 ## Three main components
 
 ### 1. 🧠 Task Evolver: What matters?
@@ -13,6 +39,30 @@ The demo simulates a wafer-fab incident competing with background tasks. It is i
 - Learn task importance from human preference pairs.
 - Convert preferences into scores with Bradley–Terry fitting.
 - Publish updated scores for scheduling and routing policies.
+
+<details>
+<summary>How Task Evolver learns</summary>
+
+```mermaid
+flowchart TD
+    Task["Task key"] --> Lookup{"Known importance?"}
+    Lookup -->|"Yes"| Existing["Return current score"]
+    Lookup -->|"No, learning enabled"| Human["Ask a human to compare two tasks"]
+    Human --> Pair["Save preference pair in SQLite"]
+    Pair --> Fit["Fit Bradley-Terry scores"]
+    Fit --> Publish["Publish versioned importance snapshot: 0-100"]
+    Fit --> Expand["Try LLM task expansion"]
+    Expand -->|"New valid task variants"| Derived["Derive pairs from the human answer"]
+    Derived --> Weight["Cap total expansion weight at 0.2 per parent pair"]
+    Weight --> Refit["Refit scores"]
+    Refit --> Publish
+    Expand -->|"Failure or no new variants"| Keep["Keep scores from the human answer"]
+    Publish --> Consumers["Scheduler and optional gateway policy"]
+```
+
+Human answers carry weight 1.0. LLM expansion adds low-weight derived pairs; it does not choose the human preference. Comparisons must connect to the reference task. Lookup without learning can return an unknown score instead of asking a question.
+
+</details>
 
 ### 2. ⏱️ Client Scheduler: What runs next?
 
