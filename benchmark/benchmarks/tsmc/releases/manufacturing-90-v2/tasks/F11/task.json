@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "b235d5dca76e7084432a52b05475bced5c4eef292d93b42e7d8ec0f520719589",
+    "data/expected.json": "917df3320d778ddbaa5c5c7742bc4046bf803c36ed2b050f30844ed206783469",
+    "data/request.json": "30865800d888544cdd353f12448c09dfac661d6b38bd4ccbb848c7286f928f17",
+    "docs/contract.md": "6f37d59ab3a36aad286044a5277b002c3a748139d17f9250b90bb8adfee89368",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "0b5eb48d2424e02f7d379401177f596a35bcd13313d00a34f23e4fca61ff3be0",
+    "problem_statement.md": "bfa1659d62259ecb98b678585ea9eaf6c34975cbe7145a5f0774eb2254946b30",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "7e8d75084f50ca91a20fb7d8a202f11491c9084bd38e66c542df4bf07aec804c"
+  },
+  "baseline_git_commit": "f6bbb7fa57776ca9e1d6f86b677fe565faf3e622",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Merge overlapping intervals before clipping and counting.",
+  "family_id": "maintenance_interval_union",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "production-log"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "F11",
+  "test_count": 11,
+  "title": "Overlapping maintenance windows are subtracted twice",
+  "track": "factory_logic",
+  "version": "1.0"
+}

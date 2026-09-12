@@ -1,0 +1,38 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "668202d23fdf0c30526a488afcb7263648314eeba26f47f356bb63b1c5ab4f42",
+    "data/expected.json": "9b9721b9bdebfbcfd5846b870b2434527a2022d2a8dc5e861e0a8f4f31b6b7e3",
+    "data/request.json": "4f85f766d996a65f24b339748d6ca20d0c53ba2d0a0d1f419aab1e72fd53efa7",
+    "docs/contract.md": "b13406c86d581f88691f46db1aa8f5053395f2219579f3ef3342e21cc6bd7278",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "d36ab4e326b5ffafdd7f0a7b9538d7f96f0051e49616a1c43a29ed40bf5d5de2",
+    "fabops/ledger.py": "c826807237cd2ed2e9560ee65ce7acd2c195c9e8994e67f1a2e6bbcf4bef84ad",
+    "fabops/revisions.py": "351ebb443ffe0ca53e01f60a63f52a1288dc6280e8a78e8961a6dd542478d09f",
+    "problem_statement.md": "480c5dca995267bdd5f7ac4fe024802b4b72440fb697b01c6937df4691e02d69",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "49d9b827dc66bfef9053c719057206fc77d9ba356a2cd8a13715141f9f0156cd"
+  },
+  "baseline_git_commit": "7376a0db0835b7bbf4e9142358245e8ef788e5fc",
+  "design_difficulty": "hard",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Corrections reorder and remove causal material receipts, so latest-version selection must precede full deterministic replay; multi-input gate availability, net capacity checks, rollback and scaled yield loss interact across separate modules.",
+  "family_id": "revisioned_synchronized_quantity_replay",
+  "hidden_tests": 16,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "production-log"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "F27",
+  "test_count": 21,
+  "title": "Corrected MES gate receipts corrupt downstream WIP and rejected-batch balances",
+  "track": "factory_logic",
+  "version": "1.0"
+}

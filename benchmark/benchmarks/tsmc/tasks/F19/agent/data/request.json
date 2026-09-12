@@ -1,0 +1,20 @@
+{
+  "lots": [],
+  "tools": [
+    "x",
+    "y"
+  ],
+  "stock": {
+    "r": 1,
+    "s": 1
+  },
+  "horizon": 4,
+  "observed": {
+    "dispatch": 1,
+    "calendar": 1
+  },
+  "current": {
+    "dispatch": 1,
+    "calendar": 1
+  }
+}

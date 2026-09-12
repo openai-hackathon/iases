@@ -1,0 +1,5 @@
+# Public behavior contract
+
+Plan and commit dispatch for at most eight lots and four unique tools. Each lot has a unique id, nonnegative priority, a reticle id, and costs mapping eligible tools to nonnegative setup costs. Each selected lot needs one tool and one unit of its reticle; tools cannot be shared and reticle use cannot exceed stock. Optimize lexicographically: maximize selected count, maximize priority sum, minimize setup cost, then minimize sorted (lot id,tool id) pairs. Return sorted plan pairs. Commit only if the complete observed revision mapping equals current. On a mismatch, return committed=false and unchanged stock while retaining the computed plan for diagnostics. Otherwise deduct selected reticles and return committed=true. Missing reticles have zero capacity. Empty plans may commit. All revision keys matter; no input object may change.
+
+The entry point is `fabops.domain.run(request)`. Inputs are JSON-compatible. Do not mutate the request, including on rejected operations. Only the documented valid input domain is tested.

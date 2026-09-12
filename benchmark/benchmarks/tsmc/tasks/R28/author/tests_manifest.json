@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_bad_crc_inside",
+    "tests/test_public.py::test_interior_corruption"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_bad_crc_tail",
+    "assessment/tests/test_hidden.py::test_duplicate",
+    "assessment/tests/test_hidden.py::test_first_sequence",
+    "assessment/tests/test_hidden.py::test_gap",
+    "assessment/tests/test_hidden.py::test_valid_tail",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_torn_tail",
+    "tests/test_public.py::test_valid"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_bad_crc_inside",
+    "assessment/tests/test_hidden.py::test_bad_crc_tail",
+    "assessment/tests/test_hidden.py::test_duplicate",
+    "assessment/tests/test_hidden.py::test_first_sequence",
+    "assessment/tests/test_hidden.py::test_gap",
+    "assessment/tests/test_hidden.py::test_valid_tail",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_interior_corruption",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_torn_tail",
+    "tests/test_public.py::test_valid"
+  ],
+  "task_id": "R28",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_bad_crc_inside": "hidden",
+    "assessment/tests/test_hidden.py::test_bad_crc_tail": "hidden",
+    "assessment/tests/test_hidden.py::test_duplicate": "hidden",
+    "assessment/tests/test_hidden.py::test_first_sequence": "hidden",
+    "assessment/tests/test_hidden.py::test_gap": "hidden",
+    "assessment/tests/test_hidden.py::test_valid_tail": "hidden",
+    "tests/test_public.py::test_empty": "public",
+    "tests/test_public.py::test_interior_corruption": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public",
+    "tests/test_public.py::test_torn_tail": "public",
+    "tests/test_public.py::test_valid": "public"
+  }
+}

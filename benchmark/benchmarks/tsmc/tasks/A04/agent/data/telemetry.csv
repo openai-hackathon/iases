@@ -1,0 +1,4 @@
+offset,event_id,event_time,machine_id,value
+0,e0,2026-01-15T00:01:00Z,M,2
+1,e1,2026-01-15T00:01:00Z,M,3
+2,e2,2026-01-15T00:00:00Z,M,5

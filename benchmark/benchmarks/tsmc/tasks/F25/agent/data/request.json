@@ -1,0 +1,34 @@
+{
+  "initial": {
+    "raw": 1
+  },
+  "final": {
+    "done": 1
+  },
+  "capacities": {
+    "done": 3,
+    "raw": 3
+  },
+  "transitions": [
+    {
+      "id": "work",
+      "label": "work",
+      "consume": {
+        "raw": 1
+      },
+      "produce": {
+        "done": 1
+      },
+      "model_cost": 2
+    }
+  ],
+  "groups": [
+    [
+      {
+        "id": "w",
+        "label": "work",
+        "skip_cost": 5
+      }
+    ]
+  ]
+}

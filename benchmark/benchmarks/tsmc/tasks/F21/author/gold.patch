@@ -1,0 +1,13 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index bc2403b..598efca 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -7,7 +7,7 @@ def run(request):
+     accepted = []
+     for invoice in request["invoices"]:
+         key, quantity = invoice["line"], invoice["quantity"]
+-        valid = key in billed and billed[key] + quantity <= min(request["orders"][key], sum(received.values()))
++        valid = key in billed and billed[key] + quantity <= min(request["orders"][key], received.get(key, 0))
+         if valid:
+             billed[key] += quantity
+         accepted.append(valid)

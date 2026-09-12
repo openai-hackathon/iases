@@ -1,0 +1,3 @@
+{
+  "note": "event_time watermark is diagnostic; ingest offset is the cursor"
+}

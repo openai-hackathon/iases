@@ -1,0 +1,78 @@
+diff --git a/fabops/constraints.py b/fabops/constraints.py
+index ee74f69..e93657a 100644
+--- a/fabops/constraints.py
++++ b/fabops/constraints.py
+@@ -1,9 +1,27 @@
+-"""Legacy per-operation validation misses competing lifecycle explanations."""
++"""Global physical and routing feasibility of an event interpretation."""
+ def admissible(events, pairs, request):
+     by_id = {event["id"]: event for event in events}
+-    for start_id, end_id in pairs:
+-        start, end = by_id[start_id], by_id[end_id]
++    intervals = [(by_id[start], by_id[end]) for start, end in pairs]
++    for start, end in intervals:
+         low, high = request.get("duration_limits", {}).get(start["activity"], [0, float("inf")])
+         if not low <= end["time"] - start["time"] <= high:
+             return False
++    for resource, capacity in request.get("capacities", {}).items():
++        points = sorted({event["time"] for pair in intervals for event in pair})
++        for tick in points:
++            usage = sum(start.get("units", 1) for start, end in intervals
++                        if start["resource"] == resource and start["time"] <= tick < end["time"])
++            if usage > capacity:
++                return False
++    for earlier, later in request.get("route", []):
++        for a, b in intervals:
++            for c, d in intervals:
++                if a["case"] == c["case"] and a["activity"] == earlier and c["activity"] == later:
++                    if b["time"] > c["time"]:
++                        return False
++    # Pairs of event IDs express coupled audit evidence, not transport duplicates.
++    chosen = {identifier for pair in pairs for identifier in pair}
++    for left, right in request.get("coupled", []):
++        if (left in chosen) != (right in chosen):
++            return False
+     return True
+diff --git a/fabops/correlation.py b/fabops/correlation.py
+index c7696ce..309bb88 100644
+--- a/fabops/correlation.py
++++ b/fabops/correlation.py
+@@ -3,7 +3,7 @@ def compatible(start, end):
+     return (all(start[key] == end[key] for key in ("case", "activity", "resource"))
+             and start["time"] <= end["time"]
+             and (start.get("run") is None or end.get("run") is None
+-                 or start["case"] == end["case"]))
++                 or start["run"] == end["run"]))
+ 
+ def matchings(events, request):
+     from .constraints import admissible
+@@ -26,6 +26,5 @@ def matchings(events, request):
+             if end["id"] in used or not compatible(start, end):
+                 continue
+             visit(index + 1, used | {end["id"]}, pairs + [(start["id"], end["id"])])
+-            break
+     visit(0, set(), [])
+     return results
+diff --git a/fabops/domain.py b/fabops/domain.py
+index e6c2797..8192e8f 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -6,7 +6,7 @@ def run(request):
+     interpretations = matchings(events, request)
+     certain = set(interpretations[0])
+     for pairs in interpretations[1:]:
+-        certain.update(pairs)
++        certain.intersection_update(pairs)
+     ever_used = {identifier for pairs in interpretations for pair in pairs for identifier in pair}
+     by_id = {event["id"]: event for event in events}
+     durations = [sum(by_id[end]["time"] - by_id[start]["time"]
+diff --git a/fabops/events.py b/fabops/events.py
+index cc44c2b..04021ab 100644
+--- a/fabops/events.py
++++ b/fabops/events.py
+@@ -6,4 +6,4 @@ def normalize(events):
+         if identifier in seen and seen[identifier] != event:
+             raise ValueError("Conflicting event id")
+         seen[identifier] = dict(event)
+-    return sorted(events, key=lambda event: event["id"])
++    return [seen[key] for key in sorted(seen)]

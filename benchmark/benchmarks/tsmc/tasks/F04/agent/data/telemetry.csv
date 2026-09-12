@@ -1,0 +1,4 @@
+sensor_id,value,unit
+P1,3,kPa
+P1,1500,Pa
+T1,77,F

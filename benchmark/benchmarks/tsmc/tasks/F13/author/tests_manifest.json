@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_return_to_reticle",
+    "assessment/tests/test_hidden.py::test_three_reticles",
+    "tests/test_public.py::test_reticles"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_first_fit",
+    "assessment/tests/test_hidden.py::test_full",
+    "assessment/tests/test_hidden.py::test_products",
+    "assessment/tests/test_hidden.py::test_recipes",
+    "tests/test_public.py::test_combine",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_single"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_first_fit",
+    "assessment/tests/test_hidden.py::test_full",
+    "assessment/tests/test_hidden.py::test_products",
+    "assessment/tests/test_hidden.py::test_recipes",
+    "assessment/tests/test_hidden.py::test_return_to_reticle",
+    "assessment/tests/test_hidden.py::test_three_reticles",
+    "tests/test_public.py::test_combine",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_reticles",
+    "tests/test_public.py::test_single"
+  ],
+  "task_id": "F13",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_first_fit": "hidden",
+    "assessment/tests/test_hidden.py::test_full": "hidden",
+    "assessment/tests/test_hidden.py::test_products": "hidden",
+    "assessment/tests/test_hidden.py::test_recipes": "hidden",
+    "assessment/tests/test_hidden.py::test_return_to_reticle": "hidden",
+    "assessment/tests/test_hidden.py::test_three_reticles": "hidden",
+    "tests/test_public.py::test_combine": "public",
+    "tests/test_public.py::test_empty": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public",
+    "tests/test_public.py::test_reticles": "public",
+    "tests/test_public.py::test_single": "public"
+  }
+}

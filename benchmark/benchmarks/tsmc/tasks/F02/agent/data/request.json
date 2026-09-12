@@ -1,0 +1,35 @@
+{
+  "qualifications": [
+    {
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S",
+      "version": 1,
+      "valid": true
+    }
+  ],
+  "actions": [
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 2,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    }
+  ]
+}

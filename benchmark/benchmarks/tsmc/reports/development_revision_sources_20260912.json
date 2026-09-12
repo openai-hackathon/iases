@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-09-12",
+  "task_ids": ["A12", "F11", "R13", "R21", "A29", "F25", "R29"],
+  "scope": "Primary-source research for seven selected development-task revisions",
+  "use_policy": "Operational context and engineering semantics only. Fixtures, interfaces, fault combinations and expected outputs are authored. No raw source records, proprietary manufacturing data or third-party implementation code are redistributed.",
+  "sources": [
+    {
+      "title": "ERPNext workstation capacity validation fix",
+      "url": "https://github.com/frappe/erpnext/pull/53523",
+      "tasks": ["F11"],
+      "observed": "The merged change describes undercounted concurrent Job Cards when sequential classification leaked across time-log entries.",
+      "adaptation": "Weighted capacity calendars and earliest continuous booking across working periods and maintenance.",
+      "limitation": "The real patch was small. The benchmark's broader algorithm repair and exact booking contract are independently authored."
+    },
+    {
+      "title": "ERPNext workstation documentation",
+      "url": "https://docs.frappe.io/erpnext/workstation",
+      "tasks": ["F11"],
+      "observed": "Production capacity, working-hour shifts and holiday constraints interact in workstation scheduling.",
+      "adaptation": "A bounded absolute-minute calendar avoids timezone ambiguity while retaining overlapping reservations and closures."
+    },
+    {
+      "title": "Process Mining: Conformance Checking",
+      "url": "https://www.processmining.org/conformance.html",
+      "tasks": ["F25"],
+      "observed": "Local replay can give misleading conformance explanations; alignments seek an optimal correspondence between observations and modeled behavior.",
+      "adaptation": "Globally optimal deviation diagnosis with an independently specified cost, length and witness ordering."
+    },
+    {
+      "title": "PM4Py Petri-net alignment variants",
+      "url": "https://pm4py-source.readthedocs.io/en/stable/pm4py.algo.conformance.alignments.petri_net.variants.html",
+      "tasks": ["F25"],
+      "observed": "Alignment implementations distinguish trace, model and synchronous move costs.",
+      "adaptation": "An authored bounded weighted net with observation groups and deterministic audit output.",
+      "limitation": "No PM4Py dependency or implementation is included. Observation groups are synthetic, not a claimed field of the production dataset."
+    },
+    {
+      "title": "Production Analysis with Process Mining Technology",
+      "url": "https://doi.org/10.4121/uuid:68726926-5ac5-4fab-b873-ee76ea412399",
+      "tasks": ["F11", "F25"],
+      "observed": "Production event records provide case, activity, resource, timestamp and quantity context.",
+      "limitation": "The source supplies production context, not repair patches or reported incidents."
+    },
+    {
+      "title": "Connecting, Deploying, and Using the Smart Manufacturing Systems Test Bed",
+      "url": "https://www.nist.gov/publications/connecting-deploying-and-using-smart-manufacturing-systems-test-bed",
+      "tasks": ["A12", "R13", "R21", "A29", "R29"],
+      "observed": "NIST describes equipment-data collection, curation and reuse with manufacturing protocols and integrated information systems.",
+      "adaptation": "Historical metrology, scoped telemetry services and durable factory-data publication.",
+      "limitation": "No defect is attributed to NIST, and no full standards-conformance claim is made."
+    },
+    {
+      "title": "Condition monitoring of hydraulic systems",
+      "url": "https://archive.ics.uci.edu/dataset/447/condition+monitoring+of+hydraulic+systems",
+      "tasks": ["A29"],
+      "observed": "The hydraulic rig records multirate measurements, including pressure and flow across repeated cycles.",
+      "adaptation": "Exact joint-support analytics with synthetic clock offsets, quality barriers, calibration changes and late corrections.",
+      "limitation": "The rig is not a semiconductor fab. The original dataset does not supply these software faults or missing-data scenarios."
+    },
+    {
+      "title": "Python asyncio: Coroutines and Tasks",
+      "url": "https://docs.python.org/3/library/asyncio-task.html",
+      "tasks": ["R13"],
+      "observed": "Task cancellation, shielding and strong references affect asynchronous task lifetime.",
+      "adaptation": "Scoped invalidation and generation-aware ownership with multiple independently cancelling callers."
+    },
+    {
+      "title": "OPC UA Services: Common Parameters",
+      "url": "https://reference.opcfoundation.org/specs/OPC-10000-4/7",
+      "tasks": ["R21"],
+      "observed": "Request handles are interpreted in session context.",
+      "adaptation": "An independently authored plant/cell command-key namespace and transactional revision-aware outcome replay.",
+      "limitation": "The benchmark does not implement OPC UA, and its idempotency contract is an engineering extension."
+    },
+    {
+      "title": "Transactional outbox pattern",
+      "url": "https://microservices.io/patterns/data/transactional-outbox.html",
+      "tasks": ["R21", "R29"],
+      "observed": "Publication intent must commit with business state; relay delivery can repeat and order matters.",
+      "adaptation": "Real SQLite persistence, injected crash boundaries, lease fencing, gap handling and safe retention.",
+      "limitation": "The bounded command protocol, consumer projections and fault combinations are synthetic."
+    }
+  ],
+  "difficulty_hypothesis": {
+    "medium": "Several interacting rules in one bounded service operation",
+    "hard": "Algorithm reconstruction across a global state space, continuous signal boundaries or independently durable participants",
+    "status": "Author design hypothesis; evaluate with preserved development-only model trials"
+  }
+}

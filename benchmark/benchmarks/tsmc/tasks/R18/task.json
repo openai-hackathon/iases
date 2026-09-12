@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "1a377010df6bb75bb083603f22f775828706a84064ba3656f77ece14562f2c97",
+    "data/expected.json": "37d9d1d0f515f181f38989e6f99fdf06b737d7b3751adb83e538c2d874b334ba",
+    "data/request.json": "855a1de214b4142be31d9b147d13e0873608441fe2b577f8a97b3115b00dc6e6",
+    "docs/contract.md": "28eff8f57da8faf3fb5a463a50c7f4c6fc592fe3371b643b97bdff5d5eb4ffa3",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "8f78e692e5fc3befe33760bfe00aa97c7a344a2a7cd8650291e9b92582735efe",
+    "problem_statement.md": "fadf81719313e6eadf2cfc44f47370aae99f1c79cd6a1680b3f9e29c2d402d26",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "7954b927b441920116fe32eda9eccd217fd170ce2ffd2316c862bbacf1b38dc8"
+  },
+  "baseline_git_commit": "40007e0292452b148b6cc96c38af7189a397195a",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Reconcile FIFO fairness, weighted capacity and cancellation before waking waiters.",
+  "family_id": "fifo_weighted_semaphore_cancellation",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "production-log"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "R18",
+  "test_count": 11,
+  "title": "Cancelled semaphore waiters block the admission queue",
+  "track": "reliability",
+  "version": "1.0"
+}

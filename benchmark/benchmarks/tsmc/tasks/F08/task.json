@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "205e8196c38d9f1ff2f33130da59bf14fdaa4b91e2cc066dc4a046c280729099",
+    "data/expected.json": "18dfee0f09da106d3e66476c079a0f2f76d06dfafcfa453b62c7cecf7826d7eb",
+    "data/request.json": "8cf9aab92ea6d6a38e59fa15eb8fc252d4556e9e13287430b657fca4f4707496",
+    "docs/contract.md": "302030e19105f967e2d4326e8382e9c088de66f73851a4675bfc2f509d0da4a5",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "9b1a94adc33742b690809132aa54211cccf5ed4d23dd6e7b8d015f6b5f8a13aa",
+    "problem_statement.md": "7e748ed2bbfaab137b1239d402dde5bbfb06a7b6b852a65073b75053c4506811",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "9aee8243b6faf8220e50b16f15d9ad132ac423f5d87f8a916e437e5e4d1f65d9"
+  },
+  "baseline_git_commit": "a3835016e403112799cea75a7abc1c51099d8e2b",
+  "design_difficulty": "easy",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "",
+  "family_id": "overnight_shift_membership",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "production-log"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "F08",
+  "test_count": 11,
+  "title": "Overnight staffing windows disappear after midnight",
+  "track": "factory_logic",
+  "version": "1.0"
+}

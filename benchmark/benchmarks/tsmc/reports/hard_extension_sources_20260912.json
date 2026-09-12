@@ -1,0 +1,91 @@
+{
+  "raw_data_redistributed": false,
+  "reviewed_on": "2026-09-12",
+  "scope": "Primary-source context inspection for ten authored hard manufacturing repairs",
+  "sources": [
+    {
+      "access": "Official NIST page read successfully",
+      "id": "nist-sms",
+      "limitation": "Authored protocols and failures are inspired by these channels; no actual NIST outage or MTConnect-conformance claim is made.",
+      "new_tasks": [
+        "R29",
+        "R30",
+        "R31",
+        "R32"
+      ],
+      "observed_context": [
+        "design/fabrication/inspection integration",
+        "volatile MTConnect stream",
+        "queryable repository",
+        "technical data packages"
+      ],
+      "url": "https://www.nist.gov/laboratories/tools-instruments/smart-manufacturing-systems-sms-test-bed"
+    },
+    {
+      "access": "HTML page returned 403; publisher JSON metadata and ZIP download returned HTTP 200. ZIP and CSV header inspected in memory.",
+      "csv_columns": [
+        "Case ID",
+        "Activity",
+        "Resource",
+        "Start Timestamp",
+        "Complete Timestamp",
+        "Span",
+        "Work Order  Qty",
+        "Part Desc.",
+        "Worker ID",
+        "Report Type",
+        "Qty Completed",
+        "Qty Rejected",
+        "Qty for MRB",
+        "Rework"
+      ],
+      "doi": "10.4121/uuid:68726926-5ac5-4fab-b873-ee76ea412399",
+      "download_url": "https://ndownloader.figshare.com/files/24045434",
+      "file_id": 24045434,
+      "file_name": "data.zip",
+      "id": "production-log",
+      "license_observed": "4TU General Terms of Use",
+      "limitation": "Petri nets, pairing ambiguity contracts, correction protocols and software bugs are synthetic extensions, not supplied models or known failures from the source.",
+      "members": [
+        "MI_-Eng.pdf",
+        "Production_Data.csv"
+      ],
+      "metadata_url": "https://api.figshare.com/v2/articles/12697997",
+      "new_tasks": [
+        "F25",
+        "F26",
+        "F27"
+      ],
+      "publisher_file_bytes": 1442577,
+      "publisher_md5": "46174bf470258f9895dd153c78bc8b61",
+      "url": "https://figshare.com/articles/dataset/Production_Analysis_with_Process_Mining_Technology/12697997?file=24045434"
+    },
+    {
+      "access": "UCI JSON metadata returned HTTP 200 after the browser page fetch failed",
+      "cycle_seconds": 60,
+      "cycles": 2205,
+      "doi": "10.24432/C5CW21",
+      "id": "zema-hydraulic",
+      "limitation": "Monitoring algorithms and missing/quality cases are authored extensions; the source dataset reports no missing values and is a hydraulic test rig rather than a semiconductor factory.",
+      "metadata_url": "https://archive.ics.uci.edu/api/dataset?id=447",
+      "new_tasks": [
+        "A29",
+        "A30",
+        "A31"
+      ],
+      "reported_missing_values": false,
+      "sampling_hz": {
+        "flow": 10,
+        "motor_power": 100,
+        "pressure": 100,
+        "temperature": 1,
+        "vibration": 1
+      },
+      "stable_flag": {
+        "0": "stable",
+        "1": "static conditions might not have been reached"
+      },
+      "url": "https://archive.ics.uci.edu/dataset/447/condition+monitoring+of+hydraulic+systems"
+    }
+  ]
+}

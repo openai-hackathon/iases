@@ -1,0 +1,13 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index bcf1601..54df032 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -6,7 +6,7 @@ def run(request):
+             continue
+         total = count + n
+         delta = group["mean"] - mean
+-        m2 += group["m2"]
++        m2 += group["m2"] + delta * delta * count * n / total
+         mean += delta * n / total
+         count = total
+     return dict(count=count, mean=mean if count else None, variance=m2 / count if count else None)

@@ -1,0 +1,32 @@
+{
+  "rows": [
+    {
+      "test_id": "t1",
+      "wafer_id": "W1",
+      "lot_id": "L1",
+      "tested_at": "2026-01-15T00:00:00Z",
+      "result": "FAIL",
+      "valid": true
+    },
+    {
+      "test_id": "t2",
+      "wafer_id": "W1",
+      "lot_id": "L1",
+      "tested_at": "2026-01-15T00:01:00Z",
+      "result": "PASS",
+      "valid": true
+    },
+    {
+      "test_id": "t3",
+      "wafer_id": "W2",
+      "lot_id": "L1",
+      "tested_at": "2026-01-15T00:01:00Z",
+      "result": "PASS",
+      "valid": true
+    }
+  ],
+  "lot_ids": [
+    "L1",
+    "empty"
+  ]
+}

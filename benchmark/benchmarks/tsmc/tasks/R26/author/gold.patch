@@ -1,0 +1,9 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 4e156fc..fe410eb 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -1,3 +1,3 @@
+ def run(request):
+-    responses = {key: row["value"] for key, row in zip(request["ids"], request["responses"])}
++    responses = {r["id"]: r["value"] for r in request["responses"]}
+     return [responses.get(key) for key in request["ids"]]

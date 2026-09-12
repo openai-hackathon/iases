@@ -1,0 +1,43 @@
+{
+  "qualifications": [],
+  "actions": [
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 7,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 6,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    }
+  ]
+}

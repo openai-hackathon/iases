@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_boundary",
+    "assessment/tests/test_hidden.py::test_day",
+    "assessment/tests/test_hidden.py::test_past",
+    "tests/test_public.py::test_date"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_fractional",
+    "assessment/tests/test_hidden.py::test_negative",
+    "assessment/tests/test_hidden.py::test_whitespace",
+    "tests/test_public.py::test_malformed",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_seconds",
+    "tests/test_public.py::test_zero"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_boundary",
+    "assessment/tests/test_hidden.py::test_day",
+    "assessment/tests/test_hidden.py::test_fractional",
+    "assessment/tests/test_hidden.py::test_negative",
+    "assessment/tests/test_hidden.py::test_past",
+    "assessment/tests/test_hidden.py::test_whitespace",
+    "tests/test_public.py::test_date",
+    "tests/test_public.py::test_malformed",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_seconds",
+    "tests/test_public.py::test_zero"
+  ],
+  "task_id": "R11",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_boundary": "hidden",
+    "assessment/tests/test_hidden.py::test_day": "hidden",
+    "assessment/tests/test_hidden.py::test_fractional": "hidden",
+    "assessment/tests/test_hidden.py::test_negative": "hidden",
+    "assessment/tests/test_hidden.py::test_past": "hidden",
+    "assessment/tests/test_hidden.py::test_whitespace": "hidden",
+    "tests/test_public.py::test_date": "public",
+    "tests/test_public.py::test_malformed": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public",
+    "tests/test_public.py::test_seconds": "public",
+    "tests/test_public.py::test_zero": "public"
+  }
+}

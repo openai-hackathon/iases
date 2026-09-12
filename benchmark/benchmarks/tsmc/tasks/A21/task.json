@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "b8ddd43e9d2f6d6a569e52efb36c119dc595b8ebcc97e36b177263473441f8f5",
+    "data/expected.json": "f6cd262df6132ba506b97efa74e1e308db30b132d1501b364d193e50901fb928",
+    "data/request.json": "68975f8870193280698e19e72408d550ce13cb2721481644f304c0c995098b5c",
+    "docs/contract.md": "cf2fec3c7025fe01a0d8864add53900dc2addccf86604546a23fc3c958830c4f",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "f1506d4b8d682c19de24766b64c0f0b2a9746747d5214ca8d846bd371851976a",
+    "problem_statement.md": "421fa3792070d5f5baec903ae96ce5cf3f313e3b6690d652d3868c7b0a14b838",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "a4da17993d1984add706e66783338220569338a1fa864f5437da213851dc8e11"
+  },
+  "baseline_git_commit": "e76c83a8a0be57f3a3c74e9c0e258f44e01ef614",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Keep a stable composite ordering across page boundaries and timestamp ties.",
+  "family_id": "composite_keyset_pagination",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "A21",
+  "test_count": 11,
+  "title": "Keyset pagination loses rows sharing the cursor timestamp",
+  "track": "data_analysis",
+  "version": "1.0"
+}

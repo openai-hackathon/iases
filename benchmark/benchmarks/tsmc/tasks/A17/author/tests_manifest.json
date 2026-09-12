@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_many",
+    "assessment/tests/test_hidden.py::test_negative",
+    "assessment/tests/test_hidden.py::test_three",
+    "assessment/tests/test_hidden.py::test_translate_after",
+    "assessment/tests/test_hidden.py::test_wrap",
+    "tests/test_public.py::test_quarter"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_origin",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_half",
+    "tests/test_public.py::test_identity",
+    "tests/test_public.py::test_public_cli_fixture"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_many",
+    "assessment/tests/test_hidden.py::test_negative",
+    "assessment/tests/test_hidden.py::test_origin",
+    "assessment/tests/test_hidden.py::test_three",
+    "assessment/tests/test_hidden.py::test_translate_after",
+    "assessment/tests/test_hidden.py::test_wrap",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_half",
+    "tests/test_public.py::test_identity",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_quarter"
+  ],
+  "task_id": "A17",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_many": "hidden",
+    "assessment/tests/test_hidden.py::test_negative": "hidden",
+    "assessment/tests/test_hidden.py::test_origin": "hidden",
+    "assessment/tests/test_hidden.py::test_three": "hidden",
+    "assessment/tests/test_hidden.py::test_translate_after": "hidden",
+    "assessment/tests/test_hidden.py::test_wrap": "hidden",
+    "tests/test_public.py::test_empty": "public",
+    "tests/test_public.py::test_half": "public",
+    "tests/test_public.py::test_identity": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public",
+    "tests/test_public.py::test_quarter": "public"
+  }
+}

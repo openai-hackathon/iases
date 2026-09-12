@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_small_loss",
+    "tests/test_public.py::test_loss"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_chain",
+    "assessment/tests/test_hidden.py::test_collision",
+    "assessment/tests/test_hidden.py::test_merge",
+    "assessment/tests/test_hidden.py::test_reuse",
+    "assessment/tests/test_hidden.py::test_zero_output",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_gain",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_split"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_chain",
+    "assessment/tests/test_hidden.py::test_collision",
+    "assessment/tests/test_hidden.py::test_merge",
+    "assessment/tests/test_hidden.py::test_reuse",
+    "assessment/tests/test_hidden.py::test_small_loss",
+    "assessment/tests/test_hidden.py::test_zero_output",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_gain",
+    "tests/test_public.py::test_loss",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_split"
+  ],
+  "task_id": "F18",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_chain": "hidden",
+    "assessment/tests/test_hidden.py::test_collision": "hidden",
+    "assessment/tests/test_hidden.py::test_merge": "hidden",
+    "assessment/tests/test_hidden.py::test_reuse": "hidden",
+    "assessment/tests/test_hidden.py::test_small_loss": "hidden",
+    "assessment/tests/test_hidden.py::test_zero_output": "hidden",
+    "tests/test_public.py::test_empty": "public",
+    "tests/test_public.py::test_gain": "public",
+    "tests/test_public.py::test_loss": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public",
+    "tests/test_public.py::test_split": "public"
+  }
+}

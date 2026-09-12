@@ -1,0 +1,13 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 3b7bb1a..ca86407 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -11,7 +11,7 @@ class SingleFlight:
+             self.pending[key].add_done_callback(lambda done: self.discard(key, done))
+         task = self.pending[key]
+         try:
+-            return await task
++            return await asyncio.shield(task)
+         finally:
+             if task.done() and self.pending.get(key) is task:
+                 del self.pending[key]

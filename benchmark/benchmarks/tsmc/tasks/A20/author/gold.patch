@@ -1,0 +1,8 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 77acc85..8aaf3d8 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -1,2 +1,2 @@
+ def run(request):
+-    return [bool(label) for label in request["labels"]]
++    return [label == 1 for label in request["labels"]]

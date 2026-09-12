@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "6ccdf559c72ba93ebb6f7d588ccab18c610d82ed2bca6f23328937ee3a5b2fa4",
+    "data/expected.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "data/request.json": "898db1dd21fc9f039bb6cfa85df6c165da9c9356d6396f72ab67ad60e938a48b",
+    "docs/contract.md": "3a71224397a2510327db069a81c2212049a147f29d5dad11baf3adb04378f799",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "b122a61c21d6d65184e18e971830e5a126eef68a9f36c6e90b6242a46b4632fe",
+    "problem_statement.md": "74e04b9fc728c8eb0aa6989735f51d2a554d10973d7a859feb7b3d8686935880",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "76dc0794fcd19e437133dd58c923aef896a97ce7fe9b3255942000572a3cd9cb"
+  },
+  "baseline_git_commit": "33f7cebcd5e008a4b9309f5be71d636bb598f12a",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Derive a safe retention frontier from all active consumers, including initial and inactive states.",
+  "family_id": "consumer_frontier_safe_retention",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "mtconnect-2.0"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "R27",
+  "test_count": 11,
+  "title": "Deduplication cleanup runs ahead of the slowest consumer",
+  "track": "reliability",
+  "version": "1.0"
+}

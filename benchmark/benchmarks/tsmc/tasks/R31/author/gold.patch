@@ -1,0 +1,67 @@
+diff --git a/fabops/causal.py b/fabops/causal.py
+index 649b2e2..baf47be 100644
+--- a/fabops/causal.py
++++ b/fabops/causal.py
+@@ -1,5 +1,16 @@
+-"""Legacy event-time filtering assumes arrival progress implies causal completeness."""
+-def close(states,cut):
+-    return {name:max([0]+[event["sequence"] for event in state["events"].values()
+-                         if event["sequence"] < state["next"] and event["time"] <= cut])
+-            for name,state in states.items()}
++"""Compute the greatest dependency-closed vector under certified source cuts."""
++def close(states, cut):
++    prefixes = {name:max([0]+[event["sequence"] for event in state["events"].values()
++                             if event["sequence"] < state["next"] and event["time"] <= cut])
++                for name,state in states.items()}
++    while True:
++        candidate=dict(prefixes)
++        for source,state in states.items():
++            for sequence in range(1,prefixes[source]+1):
++                event=state["events"][str(sequence)]
++                for dependency,epoch,required in event.get("depends",[]):
++                    if states[dependency]["epoch"] != epoch or prefixes[dependency] < required:
++                        candidate[source]=min(candidate[source],sequence-1)
++        if candidate == prefixes:
++            return prefixes
++        prefixes=candidate
+diff --git a/fabops/checkpoint.py b/fabops/checkpoint.py
+index ac9e345..3729a59 100644
+--- a/fabops/checkpoint.py
++++ b/fabops/checkpoint.py
+@@ -11,13 +11,10 @@ def connect(path):
+ 
+ def save(db, states, published, crash=False):
+     durable = copy.deepcopy(states)
+-    for state in durable.values():
+-        state["events"] = {key: value for key, value in state["events"].items() if int(key) < state["next"]}
+     payload = json.dumps(dict(states=durable, published=published), sort_keys=True)
+     db.execute("BEGIN IMMEDIATE")
+     try:
+         db.execute("INSERT OR REPLACE INTO checkpoint VALUES (1,?)", (payload,))
+-        db.commit()
+         if crash:
+             raise RuntimeError("interrupted checkpoint")
+         db.commit()
+diff --git a/fabops/stream.py b/fabops/stream.py
+index 1676117..854a905 100644
+--- a/fabops/stream.py
++++ b/fabops/stream.py
+@@ -9,7 +9,7 @@ def accept(previous, page):
+         return "stale", previous
+     state = copy.deepcopy(previous)
+     if page["epoch"] > state["epoch"]:
+-        state = dict(initial(page["epoch"]), watermark=previous["watermark"])
++        state = initial(page["epoch"])
+     for event in page["events"]:
+         key = str(event["sequence"])
+         old = state["events"].get(key)
+@@ -17,7 +17,8 @@ def accept(previous, page):
+             return "conflict", previous
+         state["events"][key] = dict(event)
+     state["barriers"].append([page["through"], page["watermark"]])
+-    state["next"] = max([state["next"] - 1] + [int(key) for key in state["events"]]) + 1
++    while str(state["next"]) in state["events"]:
++        state["next"] += 1
+     ready = [watermark for through, watermark in state["barriers"] if through < state["next"]]
+     state["watermark"] = max([state["watermark"]] + ready)
+     state["barriers"] = [[through, watermark] for through, watermark in state["barriers"] if through >= state["next"]]

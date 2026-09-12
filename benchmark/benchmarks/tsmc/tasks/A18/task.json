@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "d09796a6190b506348198c3be7e264bf9bc8d9ca9846bf4d240085b69285a61d",
+    "data/expected.json": "18bd149d9224d50af331c7fdea3f59db808cc46380e01398b96b14f52ac68e6b",
+    "data/request.json": "7cbeead9ff49d982c927e5779700537e7041b36c454d864fc76a5c4519dad8da",
+    "docs/contract.md": "2c2297010fa4678da7baac21080aee8c5f26f9a8d454a11159e963ad389e9b2d",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "ea35e4a171f42901cdec42d29fe05bbf849a6a2c46503357e1b3462df52050d6",
+    "problem_statement.md": "8a7e52a7273d861594322125ee4e18e13902bfcc5617abb22a5ae650570b465e",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "d93996417f609f9aaf3cdc929a4e852869344bae78583e5f5f54ee9ba5f3fdb2"
+  },
+  "baseline_git_commit": "f7a3b3efe27a3aea75e7bbbb053b0a166211a314",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Join signals by absolute distance with explicit tolerance and tie behavior.",
+  "family_id": "nearest_sensor_alignment",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "zema-hydraulic"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "A18",
+  "test_count": 11,
+  "title": "Multirate sensor alignment accepts readings outside tolerance",
+  "track": "data_analysis",
+  "version": "1.0"
+}

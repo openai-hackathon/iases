@@ -1,0 +1,34 @@
+{
+  "commands": [
+    {
+      "op": "append",
+      "id": "e1",
+      "delta": 5,
+      "crash": false
+    },
+    {
+      "op": "acquire",
+      "owner": "w",
+      "now": 0,
+      "ttl": 100
+    },
+    {
+      "op": "deliver",
+      "seq": 1,
+      "consumer": "mes",
+      "owner": "w",
+      "token": 1,
+      "now": 0,
+      "crash": "none"
+    },
+    {
+      "op": "deliver",
+      "seq": 1,
+      "consumer": "quality",
+      "owner": "w",
+      "token": 1,
+      "now": 0,
+      "crash": "none"
+    }
+  ]
+}

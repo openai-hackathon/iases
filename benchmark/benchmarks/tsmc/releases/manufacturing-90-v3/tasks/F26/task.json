@@ -1,0 +1,38 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "f499efcdbfbc286f19dc1bce20f5f31a5f6265564e190185e5733dbae4f9ebb1",
+    "data/expected.json": "ca810cfe7ab883a7fe092d8e8c5785bf88ef706ed9f302a01ab4c50ce831522b",
+    "data/request.json": "d64f10bb73ece7e0d0f51bf8616c472d090b2644b4bb4735231f4a01c18b5846",
+    "docs/contract.md": "f13b78de5dee9021dd532a70f1b1424e44702f5c0906276bbd61fb4db72c0b34",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/correlation.py": "25bce86c82b60d8955fbd89da86188950eaecd437fdf61572de6450ba0b8e6d3",
+    "fabops/domain.py": "7b60dacb75ec242ebd09ec4e43d552cea8563620f4ce529e65730a797d6f5c45",
+    "fabops/events.py": "1cbb16a4aff412a993246b63938a2bef50753962cbd00da9e6fc2d69592e3a37",
+    "problem_statement.md": "bea14ae4afef0bf885e92989fcb0f4be1c0d72d59abd9a5496f67584650c0f25",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "a8a11ac64fee729cb2078ae6c7436aedef3d3b9e9d1d1a33786668c46d453a76"
+  },
+  "baseline_git_commit": "ec345342888ec49dc32aa2025bdc2afe574ea364",
+  "design_difficulty": "hard",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Must reconstruct all globally maximal lifecycle pairings instead of a greedy operation order, combining idempotent ingestion, partial correlation ids, ambiguity intersections and independently bounded duration aggregates across modules.",
+  "family_id": "ambiguous_lifecycle_maximum_matching",
+  "hidden_tests": 16,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "production-log"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "F26",
+  "test_count": 21,
+  "title": "Overlapping production lifecycles are reported as certain after greedy correlation",
+  "track": "factory_logic",
+  "version": "1.0"
+}

@@ -1,0 +1,46 @@
+{
+  "lots": {
+    "L1": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L2": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    }
+  },
+  "machines": {
+    "M1": {
+      "state": "AVAILABLE"
+    },
+    "M2": {
+      "state": "MAINTENANCE"
+    }
+  },
+  "qualifications": [
+    {
+      "machine_id": "M1",
+      "product_id": "P",
+      "step_id": "S",
+      "valid": true
+    }
+  ],
+  "assignments": [
+    {
+      "lot_id": "L1",
+      "machine_id": "M1"
+    },
+    {
+      "lot_id": "L2",
+      "machine_id": "M1"
+    },
+    {
+      "lot_id": "L2",
+      "machine_id": "M2"
+    }
+  ]
+}

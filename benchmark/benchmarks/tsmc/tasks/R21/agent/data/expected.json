@@ -1,0 +1,20 @@
+{
+  "results": [
+    {
+      "status": "applied",
+      "revision": 1,
+      "value": 1
+    }
+  ],
+  "states": [
+    [
+      [
+        "fab",
+        "cell"
+      ],
+      1,
+      1
+    ]
+  ],
+  "receipts": 1
+}

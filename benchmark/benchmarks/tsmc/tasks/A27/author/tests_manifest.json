@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_late_before",
+    "assessment/tests/test_hidden.py::test_negative",
+    "assessment/tests/test_hidden.py::test_reverse",
+    "tests/test_public.py::test_late"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_correction",
+    "assessment/tests/test_hidden.py::test_middle_correction",
+    "assessment/tests/test_hidden.py::test_same_value",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_one",
+    "tests/test_public.py::test_ordered",
+    "tests/test_public.py::test_public_cli_fixture"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_correction",
+    "assessment/tests/test_hidden.py::test_late_before",
+    "assessment/tests/test_hidden.py::test_middle_correction",
+    "assessment/tests/test_hidden.py::test_negative",
+    "assessment/tests/test_hidden.py::test_reverse",
+    "assessment/tests/test_hidden.py::test_same_value",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_late",
+    "tests/test_public.py::test_one",
+    "tests/test_public.py::test_ordered",
+    "tests/test_public.py::test_public_cli_fixture"
+  ],
+  "task_id": "A27",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_correction": "hidden",
+    "assessment/tests/test_hidden.py::test_late_before": "hidden",
+    "assessment/tests/test_hidden.py::test_middle_correction": "hidden",
+    "assessment/tests/test_hidden.py::test_negative": "hidden",
+    "assessment/tests/test_hidden.py::test_reverse": "hidden",
+    "assessment/tests/test_hidden.py::test_same_value": "hidden",
+    "tests/test_public.py::test_empty": "public",
+    "tests/test_public.py::test_late": "public",
+    "tests/test_public.py::test_one": "public",
+    "tests/test_public.py::test_ordered": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public"
+  }
+}

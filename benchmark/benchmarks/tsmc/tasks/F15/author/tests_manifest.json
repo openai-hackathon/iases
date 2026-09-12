@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_repeat_rework",
+    "assessment/tests/test_hidden.py::test_reset_on_pass",
+    "tests/test_public.py::test_reset"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_empty",
+    "assessment/tests/test_hidden.py::test_extra_events",
+    "assessment/tests/test_hidden.py::test_no_retry",
+    "assessment/tests/test_hidden.py::test_two_allowed",
+    "tests/test_public.py::test_done",
+    "tests/test_public.py::test_initial",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_scrap"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_empty",
+    "assessment/tests/test_hidden.py::test_extra_events",
+    "assessment/tests/test_hidden.py::test_no_retry",
+    "assessment/tests/test_hidden.py::test_repeat_rework",
+    "assessment/tests/test_hidden.py::test_reset_on_pass",
+    "assessment/tests/test_hidden.py::test_two_allowed",
+    "tests/test_public.py::test_done",
+    "tests/test_public.py::test_initial",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_reset",
+    "tests/test_public.py::test_scrap"
+  ],
+  "task_id": "F15",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_empty": "hidden",
+    "assessment/tests/test_hidden.py::test_extra_events": "hidden",
+    "assessment/tests/test_hidden.py::test_no_retry": "hidden",
+    "assessment/tests/test_hidden.py::test_repeat_rework": "hidden",
+    "assessment/tests/test_hidden.py::test_reset_on_pass": "hidden",
+    "assessment/tests/test_hidden.py::test_two_allowed": "hidden",
+    "tests/test_public.py::test_done": "public",
+    "tests/test_public.py::test_initial": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public",
+    "tests/test_public.py::test_reset": "public",
+    "tests/test_public.py::test_scrap": "public"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "32ffc0d387550ce3102b53a0c3e665d97c3b18cbe35bf34fd9c2a1cf4da52a1e",
+    "data/expected.json": "49444070fe492fccac2938508e5c38cd3489ec569851778fba8ba3834be64b76",
+    "data/request.json": "2192f9c24e949e9bcf0c71a40e52e566ca3a8aef2a9fdb79942d06b5f5e8c5ef",
+    "docs/contract.md": "b68919cefd823113d973ae913a6868e3c49ba3fae7c1d50062b1c055fbd470d3",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "8be9d8aa61f9739cf30e7ea34ba1afeffc500453e6e3afe089385bc02f2bab29",
+    "problem_statement.md": "8fcd803b35ffa733eeba15affa3c7d2d3f5959c11cf59bca744011095d229977",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "ba9682e1c42d9588f0484507036ad46d6e60102fe645c10941d4990c4805031a"
+  },
+  "baseline_git_commit": "844a90e61bf842e1971fecf1be6876a2ce9fde6a",
+  "design_difficulty": "easy",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "",
+  "family_id": "route_occurrence_cursor",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "production-log"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "F07",
+  "test_count": 11,
+  "title": "Repeated route steps send lots back to the wrong occurrence",
+  "track": "factory_logic",
+  "version": "1.0"
+}

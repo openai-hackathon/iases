@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "e28e23dc7442070db6b3ee9c303c0f9eced2f3e67b99b8ee4e46b4d1fde36ae1",
+    "data/expected.json": "9bab5c1d7091593f4b4bb2364b5a805f397a7b20947329b3e8135e11a5fa40a7",
+    "data/request.json": "0831975f04d92fff8f9e8b15dd24fb2ef02edd8b2c36bd2d0e0de016847395b6",
+    "docs/contract.md": "a2290fe42e97befb59e7fa903bf5a6c87bdd4a21b0dc460379768e4d8b38ba8b",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "9aace338e6dc3e437399c6e46077f513ffd216d8af0c3126259001eaf771831b",
+    "problem_statement.md": "3696e20cb0cfd6dbe70c8dc934722f65578dbaf16eb9565bfd24022616ace1e3",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "3f6307e1d426e1dfa76483ce0f917fd026dcb1b9dcb0891463bae795e12591aa"
+  },
+  "baseline_git_commit": "b29366c31c9a51ad4d4bd8fa68f18b8aea2a3446",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Maintain failure streak and cooldown transitions across recovery probes.",
+  "family_id": "circuit_breaker_failure_reset",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "R16",
+  "test_count": 11,
+  "title": "Successful circuit-breaker probes retain old failures",
+  "track": "reliability",
+  "version": "1.0"
+}

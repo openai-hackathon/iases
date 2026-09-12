@@ -1,0 +1,3 @@
+# F03 Public API and data contract
+
+`reduce_events(events, initial=None)` returns a new dictionary mapping machine_id to {sequence, state}, without mutating inputs. sequence is a nonnegative int; state is AVAILABLE/BUSY/MAINTENANCE/LOCKED. Update each machine only by sequence age; occurred_at/received_at/event_id are metadata, not version keys. Ignore events older than the current version. The current version with the same state is a replay; a different state raises ConflictError. This is not full historical deduplication: conflicting events already older than the current version may be ignored. initial is validated upstream. Empty input returns a deep copy of initial. Invalid events raise ValueError. Never mutate initial, including when a later event conflicts.

@@ -1,0 +1,1377 @@
+{
+  "by_difficulty": {
+    "easy": {
+      "accounting_notes": [
+        "Costs are estimates from recorded API responses or mini-SWE-agent metadata, not invoices.",
+        "Cached input tokens are included in input tokens; reasoning tokens are included in output tokens.",
+        "Observed totals sum available evidence; failed or interrupted requests can leave billable usage unknown.",
+        "Agent queries and HTTP requests are separate counts; legacy trajectories do not expose retries.",
+        "Total task time combines solver startup, inference, cleanup and grading; solve_total_seconds excludes grading."
+      ],
+      "accuracy": 1.0,
+      "accuracy_complete": true,
+      "cleanup_time": {
+        "known_trials": 3,
+        "observed": 0.048242251155897975,
+        "total": 0.048242251155897975
+      },
+      "completed_tasks": 3,
+      "cost_estimate_complete": true,
+      "cost_known_trials": 3,
+      "estimated_cost_usd": 0.0046602399999999995,
+      "expected_tasks": 3,
+      "failure_counts": {},
+      "graded_tasks": 3,
+      "grading_accuracy": 1.0,
+      "grading_time": {
+        "known_trials": 3,
+        "observed": 4.732059334171936,
+        "total": 4.732059334171936
+      },
+      "inference_time": {
+        "known_trials": 3,
+        "observed": 58.114192665787414,
+        "total": 58.114192665787414
+      },
+      "observed_cost_usd": 0.0046602399999999995,
+      "observed_usage": {
+        "cache_write_input_tokens": 5854,
+        "cached_input_tokens": 16337,
+        "input_tokens": 28225,
+        "output_tokens": 1386,
+        "reasoning_tokens": 0,
+        "total_tokens": 29611
+      },
+      "pending_tasks": 0,
+      "provisional": false,
+      "recorded_tasks": 3,
+      "resolved_tasks": 3,
+      "solve_total_time": {
+        "known_trials": 3,
+        "observed": 58.16243491694331,
+        "total": 58.16243491694331
+      },
+      "total_time": {
+        "known_trials": 3,
+        "observed": 62.89449425111525,
+        "total": 62.89449425111525
+      },
+      "usage": {
+        "cache_write_input_tokens": 5854,
+        "cached_input_tokens": 16337,
+        "input_tokens": 28225,
+        "output_tokens": 1386,
+        "reasoning_tokens": 0,
+        "total_tokens": 29611
+      },
+      "usage_complete": true
+    },
+    "hard": {
+      "accounting_notes": [
+        "Costs are estimates from recorded API responses or mini-SWE-agent metadata, not invoices.",
+        "Cached input tokens are included in input tokens; reasoning tokens are included in output tokens.",
+        "Observed totals sum available evidence; failed or interrupted requests can leave billable usage unknown.",
+        "Agent queries and HTTP requests are separate counts; legacy trajectories do not expose retries.",
+        "Total task time combines solver startup, inference, cleanup and grading; solve_total_seconds excludes grading."
+      ],
+      "accuracy": 0.3333333333333333,
+      "accuracy_complete": true,
+      "cleanup_time": {
+        "known_trials": 3,
+        "observed": 0.041617998853325844,
+        "total": 0.041617998853325844
+      },
+      "completed_tasks": 3,
+      "cost_estimate_complete": true,
+      "cost_known_trials": 3,
+      "estimated_cost_usd": 0.012841130000000001,
+      "expected_tasks": 3,
+      "failure_counts": {
+        "test_failure": 2
+      },
+      "graded_tasks": 3,
+      "grading_accuracy": 0.3333333333333333,
+      "grading_time": {
+        "known_trials": 3,
+        "observed": 5.671251832973212,
+        "total": 5.671251832973212
+      },
+      "inference_time": {
+        "known_trials": 3,
+        "observed": 90.44591800007038,
+        "total": 90.44591800007038
+      },
+      "observed_cost_usd": 0.012841130000000001,
+      "observed_usage": {
+        "cache_write_input_tokens": 19597,
+        "cached_input_tokens": 122724,
+        "input_tokens": 146838,
+        "output_tokens": 3820,
+        "reasoning_tokens": 0,
+        "total_tokens": 150658
+      },
+      "pending_tasks": 0,
+      "provisional": false,
+      "recorded_tasks": 3,
+      "resolved_tasks": 1,
+      "solve_total_time": {
+        "known_trials": 3,
+        "observed": 90.4875359989237,
+        "total": 90.4875359989237
+      },
+      "total_time": {
+        "known_trials": 3,
+        "observed": 96.15878783189692,
+        "total": 96.15878783189692
+      },
+      "usage": {
+        "cache_write_input_tokens": 19597,
+        "cached_input_tokens": 122724,
+        "input_tokens": 146838,
+        "output_tokens": 3820,
+        "reasoning_tokens": 0,
+        "total_tokens": 150658
+      },
+      "usage_complete": true
+    },
+    "medium": {
+      "accounting_notes": [
+        "Costs are estimates from recorded API responses or mini-SWE-agent metadata, not invoices.",
+        "Cached input tokens are included in input tokens; reasoning tokens are included in output tokens.",
+        "Observed totals sum available evidence; failed or interrupted requests can leave billable usage unknown.",
+        "Agent queries and HTTP requests are separate counts; legacy trajectories do not expose retries.",
+        "Total task time combines solver startup, inference, cleanup and grading; solve_total_seconds excludes grading."
+      ],
+      "accuracy": 0.75,
+      "accuracy_complete": true,
+      "cleanup_time": {
+        "known_trials": 4,
+        "observed": 0.06108675105497241,
+        "total": 0.06108675105497241
+      },
+      "completed_tasks": 4,
+      "cost_estimate_complete": true,
+      "cost_known_trials": 4,
+      "estimated_cost_usd": 0.011767139999999999,
+      "expected_tasks": 4,
+      "failure_counts": {
+        "test_failure": 1
+      },
+      "graded_tasks": 4,
+      "grading_accuracy": 0.75,
+      "grading_time": {
+        "known_trials": 4,
+        "observed": 6.505227248882875,
+        "total": 6.505227248882875
+      },
+      "inference_time": {
+        "known_trials": 4,
+        "observed": 80.65389649989083,
+        "total": 80.65389649989083
+      },
+      "observed_cost_usd": 0.011767139999999999,
+      "observed_usage": {
+        "cache_write_input_tokens": 22972,
+        "cached_input_tokens": 57097,
+        "input_tokens": 84374,
+        "output_tokens": 3351,
+        "reasoning_tokens": 0,
+        "total_tokens": 87725
+      },
+      "pending_tasks": 0,
+      "provisional": false,
+      "recorded_tasks": 4,
+      "resolved_tasks": 3,
+      "solve_total_time": {
+        "known_trials": 4,
+        "observed": 80.7149832509458,
+        "total": 80.7149832509458
+      },
+      "total_time": {
+        "known_trials": 4,
+        "observed": 87.22021049982868,
+        "total": 87.22021049982868
+      },
+      "usage": {
+        "cache_write_input_tokens": 22972,
+        "cached_input_tokens": 57097,
+        "input_tokens": 84374,
+        "output_tokens": 3351,
+        "reasoning_tokens": 0,
+        "total_tokens": 87725
+      },
+      "usage_complete": true
+    }
+  },
+  "comparison": {
+    "by_difficulty": {
+      "easy": {
+        "after_resolved": 3,
+        "before_resolved": 3,
+        "tasks": 3
+      },
+      "hard": {
+        "after_resolved": 1,
+        "before_resolved": 3,
+        "tasks": 3
+      },
+      "medium": {
+        "after_resolved": 3,
+        "before_resolved": 4,
+        "tasks": 4
+      }
+    },
+    "interpretation": "One development-only Luna/none run shows reduced saturation: easy 3/3, medium 3/4, hard 1/3, versus 10/10 previously. This is preliminary calibration, not proof of stable difficulty or full-benchmark discrimination.",
+    "previous_release": "manufacturing-90-v2",
+    "previous_release_content_sha256": "afc1fdf2eca1ac00408e74e584108dc88328c549ddad882381ba54184379b2ad",
+    "previous_source": "logs/experiments/tsmc-openai-matrix-20260912/conditions/gpt-5.6-luna__none.json",
+    "previous_source_sha256": "8135fba94d151bbf9ef50f191987872f2d93d0300501c9c7a84db905008a356c",
+    "previous_summary": {
+      "accounting_notes": [
+        "Costs are estimates from recorded API responses or mini-SWE-agent metadata, not invoices.",
+        "Cached input tokens are included in input tokens; reasoning tokens are included in output tokens.",
+        "Observed totals sum available evidence; failed or interrupted requests can leave billable usage unknown.",
+        "Agent queries and HTTP requests are separate counts; legacy trajectories do not expose retries.",
+        "Total task time combines solver startup, inference, cleanup and grading; solve_total_seconds excludes grading."
+      ],
+      "accuracy": 1.0,
+      "accuracy_complete": true,
+      "cleanup_time": {
+        "known_trials": 10,
+        "observed": 0.09731946024112403,
+        "total": 0.09731946024112403
+      },
+      "completed_tasks": 10,
+      "cost_estimate_complete": true,
+      "cost_known_trials": 10,
+      "estimated_cost_usd": 0.0210301,
+      "expected_tasks": 10,
+      "failure_counts": {},
+      "graded_tasks": 10,
+      "grading_accuracy": 1.0,
+      "grading_time": {
+        "known_trials": 10,
+        "observed": 17.793567375512794,
+        "total": 17.793567375512794
+      },
+      "inference_time": {
+        "known_trials": 10,
+        "observed": 181.9812242470216,
+        "total": 181.9812242470216
+      },
+      "observed_cost_usd": 0.0210301,
+      "observed_usage": {
+        "cache_write_input_tokens": 32206,
+        "cached_input_tokens": 81980,
+        "input_tokens": 130897,
+        "output_tokens": 6664,
+        "reasoning_tokens": 0,
+        "total_tokens": 137561
+      },
+      "pending_tasks": 0,
+      "provisional": false,
+      "recorded_tasks": 10,
+      "resolved_tasks": 10,
+      "solve_total_time": {
+        "known_trials": 10,
+        "observed": 182.07854370726272,
+        "total": 182.07854370726272
+      },
+      "total_time": {
+        "known_trials": 10,
+        "observed": 199.87211108277552,
+        "total": 199.87211108277552
+      },
+      "usage": {
+        "cache_write_input_tokens": 32206,
+        "cached_input_tokens": 81980,
+        "input_tokens": 130897,
+        "output_tokens": 6664,
+        "reasoning_tokens": 0,
+        "total_tokens": 137561
+      },
+      "usage_complete": true
+    }
+  },
+  "condition_id": "gpt-5.6-luna__none",
+  "effort": "none",
+  "experiment_id": "tsmc-development-revision-20260912",
+  "failed_cases": {
+    "A29": [
+      "assessment/tests/test_hidden.py::test_compressed_clock_gap_is_supported",
+      "assessment/tests/test_hidden.py::test_different_marginals_joint_half",
+      "assessment/tests/test_hidden.py::test_disjoint_support_is_not_coverage"
+    ],
+    "R21": [
+      "assessment/tests/test_hidden.py::test_revision_is_part_of_identity"
+    ],
+    "R29": [
+      "assessment/tests/test_hidden.py::test_retired_epoch_survives_restart",
+      "assessment/tests/test_hidden.py::test_same_owner_stale_token_fenced",
+      "assessment/tests/test_hidden.py::test_stale_worker_cannot_compact",
+      "assessment/tests/test_hidden.py::test_wrong_token_cannot_retire"
+    ]
+  },
+  "implementation_commit": "c59c1fd",
+  "including_smoke": {
+    "active_session_wall_seconds": 270.8897402919829,
+    "estimated_cost_usd": 0.03091651,
+    "note": "Smoke is excluded from scored accuracy and formal task usage; session time excludes the pause for native fixture validation.",
+    "total_tokens": 280604
+  },
+  "limits": {
+    "hard_timeout_seconds": 600,
+    "max_output_tokens_per_request": 32768,
+    "per_task_cost_limit_usd": null,
+    "step_limit": 50
+  },
+  "model": "gpt-5.6-luna",
+  "pricing": {
+    "currency": "USD",
+    "long_context_input_multiplier": 2,
+    "long_context_output_multiplier": 1.5,
+    "long_context_threshold": 272000,
+    "rates_per_million_tokens": {
+      "gpt-5.6-luna": {
+        "cache_write": 0.25,
+        "cached_input": 0.02,
+        "input": 0.2,
+        "output": 1.2
+      },
+      "gpt-5.6-sol": {
+        "cache_write": 5.0,
+        "cached_input": 0.4,
+        "input": 4.0,
+        "output": 20.0
+      },
+      "gpt-5.6-terra": {
+        "cache_write": 2.5,
+        "cached_input": 0.2,
+        "input": 2.0,
+        "output": 12.0
+      },
+      "gpt-6-astra": {
+        "cache_write": 12.5,
+        "cached_input": 1.0,
+        "input": 10.0,
+        "output": 50.0
+      }
+    },
+    "scope": "Usage-based estimates, not an invoice; interrupted requests may have unreported billable usage",
+    "service_tier": "default",
+    "source": "https://developers.openai.com/api/docs/pricing",
+    "verified_on": "2026-09-12"
+  },
+  "release": "manufacturing-90-v3",
+  "release_content_sha256": "dddc29ff09641cd6871d90fcc70c2d4fbd0b8a5c836ddd08313b1155360a7e31",
+  "schema_version": 1,
+  "sessions": [
+    {
+      "ended_at": "2026-09-12T07:54:50.088644+00:00",
+      "scheduled_conditions": 1,
+      "smoke_only": true,
+      "started_at": "2026-09-12T07:54:26.245937+00:00",
+      "wall_seconds": 23.84253174997866,
+      "workers": 1
+    },
+    {
+      "ended_at": "2026-09-12T08:00:39.706628+00:00",
+      "scheduled_conditions": 1,
+      "smoke_only": false,
+      "started_at": "2026-09-12T07:56:32.657273+00:00",
+      "wall_seconds": 247.04720854200423,
+      "workers": 1
+    }
+  ],
+  "smoke": {
+    "gate_issues": [],
+    "included_in_score": false,
+    "result": {
+      "accounting_conflict": false,
+      "agent_query_count": 6,
+      "cleanup_seconds": 0.009294542018324137,
+      "cost_estimate_complete": true,
+      "cost_source": "api_request_ledger",
+      "difficulty": "unrated",
+      "effort": "none",
+      "estimated_cost_usd": 0.001648,
+      "evaluation": {
+        "evaluator_seconds": 0.8778736669992213,
+        "grade_queue_seconds": 3.658398054540157e-05,
+        "grading_seconds": 1.9410864158999175,
+        "hidden_tests_passed": 13,
+        "hidden_tests_total": 13,
+        "log_directory": "/Users/rich/SWE-bench/logs/evaluation/tsmc-development-revision-20260912-smoke-gpt-5.6-luna__none/gpt-5.6-luna__none/tsmc__f01-v0.2",
+        "patch_applied": true,
+        "patch_sha256": "52ec7267917baea564c24249b3f634c853e22e6e446f6a4ae5c85aef07d58722",
+        "required_suite_passed": true,
+        "resolved": true,
+        "status": "graded",
+        "tests_failed": 0,
+        "tests_passed": 18,
+        "tests_total": 18
+      },
+      "evaluation_status": "graded",
+      "failed_request_count": 0,
+      "failure_category": null,
+      "grading_seconds": 1.9410864158999175,
+      "incomplete_request_count": 0,
+      "inference_seconds": 21.864293792052194,
+      "inference_status": "Submitted",
+      "instance_id": "tsmc__f01-v0.2",
+      "model": "gpt-5.6-luna",
+      "nonempty_submission": true,
+      "observed_cost_usd": 0.001648,
+      "observed_usage": {
+        "cache_write_input_tokens": 2660,
+        "cached_input_tokens": 8250,
+        "input_tokens": 12132,
+        "output_tokens": 478,
+        "reasoning_tokens": 0,
+        "total_tokens": 12610
+      },
+      "patch_applied": true,
+      "patch_bytes": 646,
+      "patch_sha256": "52ec7267917baea564c24249b3f634c853e22e6e446f6a4ae5c85aef07d58722",
+      "phase": "smoke",
+      "request_count": 6,
+      "request_error_types": [],
+      "resolved": true,
+      "response_count": 6,
+      "response_models": [
+        "gpt-5.6-luna"
+      ],
+      "solve_total_seconds": 21.87358833407052,
+      "state": "completed",
+      "submission_source": "workspace_diff",
+      "task_id": "F01",
+      "tests_failed": 0,
+      "tests_passed": 18,
+      "tests_total": 18,
+      "total_seconds": 23.814674749970436,
+      "trial_directory": "/Users/rich/SWE-bench/logs/experiments/tsmc-development-revision-20260912/smokes/gpt-5.6-luna__none/tsmc__f01-v0.2",
+      "trial_wall_seconds": 23.818359165918082,
+      "usage": {
+        "cache_write_input_tokens": 2660,
+        "cached_input_tokens": 8250,
+        "input_tokens": 12132,
+        "output_tokens": 478,
+        "reasoning_tokens": 0,
+        "total_tokens": 12610
+      },
+      "usage_complete": true,
+      "usage_completeness": {
+        "cache_write_input_tokens": true,
+        "cached_input_tokens": true,
+        "input_tokens": true,
+        "output_tokens": true,
+        "reasoning_tokens": true,
+        "total_tokens": true
+      }
+    }
+  },
+  "source_condition_sha256": "77a7e997dc3fd14078b4365cd9bc205a7373046d93b6412611b107b125ab1eb3",
+  "source_log": "logs/experiments/tsmc-development-revision-20260912/conditions/gpt-5.6-luna__none.json",
+  "source_manifest_sha256": "25bfd6f7b20d5e7dccb4e5e4d30900946e40cb5fa7ba188f41507d02bb42e48d",
+  "summary": {
+    "accounting_notes": [
+      "Costs are estimates from recorded API responses or mini-SWE-agent metadata, not invoices.",
+      "Cached input tokens are included in input tokens; reasoning tokens are included in output tokens.",
+      "Observed totals sum available evidence; failed or interrupted requests can leave billable usage unknown.",
+      "Agent queries and HTTP requests are separate counts; legacy trajectories do not expose retries.",
+      "Total task time combines solver startup, inference, cleanup and grading; solve_total_seconds excludes grading."
+    ],
+    "accuracy": 0.7,
+    "accuracy_complete": true,
+    "cleanup_time": {
+      "known_trials": 10,
+      "observed": 0.15094700106419623,
+      "total": 0.15094700106419623
+    },
+    "completed_tasks": 10,
+    "cost_estimate_complete": true,
+    "cost_known_trials": 10,
+    "estimated_cost_usd": 0.02926851,
+    "expected_tasks": 10,
+    "failure_counts": {
+      "test_failure": 3
+    },
+    "graded_tasks": 10,
+    "grading_accuracy": 0.7,
+    "grading_time": {
+      "known_trials": 10,
+      "observed": 16.908538416028023,
+      "total": 16.908538416028023
+    },
+    "inference_time": {
+      "known_trials": 10,
+      "observed": 229.21400716574863,
+      "total": 229.21400716574863
+    },
+    "observed_cost_usd": 0.02926851,
+    "observed_usage": {
+      "cache_write_input_tokens": 48423,
+      "cached_input_tokens": 196158,
+      "input_tokens": 259437,
+      "output_tokens": 8557,
+      "reasoning_tokens": 0,
+      "total_tokens": 267994
+    },
+    "pending_tasks": 0,
+    "provisional": false,
+    "recorded_tasks": 10,
+    "resolved_tasks": 7,
+    "solve_total_time": {
+      "known_trials": 10,
+      "observed": 229.36495416681282,
+      "total": 229.36495416681282
+    },
+    "total_time": {
+      "known_trials": 10,
+      "observed": 246.27349258284084,
+      "total": 246.27349258284084
+    },
+    "usage": {
+      "cache_write_input_tokens": 48423,
+      "cached_input_tokens": 196158,
+      "input_tokens": 259437,
+      "output_tokens": 8557,
+      "reasoning_tokens": 0,
+      "total_tokens": 267994
+    },
+    "usage_complete": true
+  },
+  "tasks": [
+    {
+      "accounting_conflict": false,
+      "agent_query_count": 7,
+      "cleanup_seconds": 0.014063042122870684,
+      "cost_estimate_complete": true,
+      "cost_source": "api_request_ledger",
+      "difficulty": "easy",
+      "effort": "none",
+      "estimated_cost_usd": 0.00171554,
+      "evaluation": {
+        "evaluator_seconds": 0.7556258340000568,
+        "grade_queue_seconds": 1.6167061403393745e-05,
+        "grading_seconds": 1.6404635841026902,
+        "hidden_tests_passed": 6,
+        "hidden_tests_total": 6,
+        "log_directory": "/Users/rich/SWE-bench/logs/evaluation/tsmc-development-revision-20260912-gpt-5.6-luna__none/gpt-5.6-luna__none/tsmc__a05-v1.0",
+        "patch_applied": true,
+        "patch_sha256": "73d25e47adbc13c5ebf12b7738aee32808774bb2c8620ba32396f875b5cddc32",
+        "required_suite_passed": true,
+        "resolved": true,
+        "status": "graded",
+        "tests_failed": 0,
+        "tests_passed": 11,
+        "tests_total": 11
+      },
+      "evaluation_status": "graded",
+      "failed_request_count": 0,
+      "failure_category": null,
+      "grading_seconds": 1.6404635841026902,
+      "incomplete_request_count": 0,
+      "inference_seconds": 20.903477290878072,
+      "inference_status": "Submitted",
+      "instance_id": "tsmc__a05-v1.0",
+      "model": "gpt-5.6-luna",
+      "nonempty_submission": true,
+      "observed_cost_usd": 0.00171554,
+      "observed_usage": {
+        "cache_write_input_tokens": 2096,
+        "cached_input_tokens": 6837,
+        "input_tokens": 11003,
+        "output_tokens": 534,
+        "reasoning_tokens": 0,
+        "total_tokens": 11537
+      },
+      "patch_applied": true,
+      "patch_bytes": 699,
+      "patch_sha256": "73d25e47adbc13c5ebf12b7738aee32808774bb2c8620ba32396f875b5cddc32",
+      "phase": "scored",
+      "request_count": 7,
+      "request_error_types": [],
+      "resolved": true,
+      "response_count": 7,
+      "response_models": [
+        "gpt-5.6-luna"
+      ],
+      "solve_total_seconds": 20.917540333000943,
+      "state": "completed",
+      "submission_source": "workspace_diff",
+      "task_id": "A05",
+      "tests_failed": 0,
+      "tests_passed": 11,
+      "tests_total": 11,
+      "total_seconds": 22.558003917103633,
+      "trial_directory": "/Users/rich/SWE-bench/logs/experiments/tsmc-development-revision-20260912/trials/gpt-5.6-luna__none/tsmc__a05-v1.0",
+      "trial_wall_seconds": 22.561215250054374,
+      "usage": {
+        "cache_write_input_tokens": 2096,
+        "cached_input_tokens": 6837,
+        "input_tokens": 11003,
+        "output_tokens": 534,
+        "reasoning_tokens": 0,
+        "total_tokens": 11537
+      },
+      "usage_complete": true,
+      "usage_completeness": {
+        "cache_write_input_tokens": true,
+        "cached_input_tokens": true,
+        "input_tokens": true,
+        "output_tokens": true,
+        "reasoning_tokens": true,
+        "total_tokens": true
+      }
+    },
+    {
+      "accounting_conflict": false,
+      "agent_query_count": 6,
+      "cleanup_seconds": 0.018941625021398067,
+      "cost_estimate_complete": true,
+      "cost_source": "api_request_ledger",
+      "difficulty": "easy",
+      "effort": "none",
+      "estimated_cost_usd": 0.0014332,
+      "evaluation": {
+        "evaluator_seconds": 0.64106054199965,
+        "grade_queue_seconds": 1.9833911210298538e-05,
+        "grading_seconds": 1.4972181250341237,
+        "hidden_tests_passed": 6,
+        "hidden_tests_total": 6,
+        "log_directory": "/Users/rich/SWE-bench/logs/evaluation/tsmc-development-revision-20260912-gpt-5.6-luna__none/gpt-5.6-luna__none/tsmc__f05-v1.0",
+        "patch_applied": true,
+        "patch_sha256": "30a216c5cfc61ea9c4791506511bd39af9eb51b240fb30fc0ca4e2e9bf3252ab",
+        "required_suite_passed": true,
+        "resolved": true,
+        "status": "graded",
+        "tests_failed": 0,
+        "tests_passed": 11,
+        "tests_total": 11
+      },
+      "evaluation_status": "graded",
+      "failed_request_count": 0,
+      "failure_category": null,
+      "grading_seconds": 1.4972181250341237,
+      "incomplete_request_count": 0,
+      "inference_seconds": 20.113442749949172,
+      "inference_status": "Submitted",
+      "instance_id": "tsmc__f05-v1.0",
+      "model": "gpt-5.6-luna",
+      "nonempty_submission": true,
+      "observed_cost_usd": 0.0014332,
+      "observed_usage": {
+        "cache_write_input_tokens": 1736,
+        "cached_input_tokens": 4360,
+        "input_tokens": 7992,
+        "output_tokens": 444,
+        "reasoning_tokens": 0,
+        "total_tokens": 8436
+      },
+      "patch_applied": true,
+      "patch_bytes": 395,
+      "patch_sha256": "30a216c5cfc61ea9c4791506511bd39af9eb51b240fb30fc0ca4e2e9bf3252ab",
+      "phase": "scored",
+      "request_count": 6,
+      "request_error_types": [],
+      "resolved": true,
+      "response_count": 6,
+      "response_models": [
+        "gpt-5.6-luna"
+      ],
+      "solve_total_seconds": 20.13238437497057,
+      "state": "completed",
+      "submission_source": "workspace_diff",
+      "task_id": "F05",
+      "tests_failed": 0,
+      "tests_passed": 11,
+      "tests_total": 11,
+      "total_seconds": 21.629602500004694,
+      "trial_directory": "/Users/rich/SWE-bench/logs/experiments/tsmc-development-revision-20260912/trials/gpt-5.6-luna__none/tsmc__f05-v1.0",
+      "trial_wall_seconds": 22.10007366607897,
+      "usage": {
+        "cache_write_input_tokens": 1736,
+        "cached_input_tokens": 4360,
+        "input_tokens": 7992,
+        "output_tokens": 444,
+        "reasoning_tokens": 0,
+        "total_tokens": 8436
+      },
+      "usage_complete": true,
+      "usage_completeness": {
+        "cache_write_input_tokens": true,
+        "cached_input_tokens": true,
+        "input_tokens": true,
+        "output_tokens": true,
+        "reasoning_tokens": true,
+        "total_tokens": true
+      }
+    },
+    {
+      "accounting_conflict": false,
+      "agent_query_count": 6,
+      "cleanup_seconds": 0.015237584011629224,
+      "cost_estimate_complete": true,
+      "cost_source": "api_request_ledger",
+      "difficulty": "easy",
+      "effort": "none",
+      "estimated_cost_usd": 0.0015115,
+      "evaluation": {
+        "evaluator_seconds": 0.6902141259997734,
+        "grade_queue_seconds": 1.3333046808838844e-05,
+        "grading_seconds": 1.594377625035122,
+        "hidden_tests_passed": 6,
+        "hidden_tests_total": 6,
+        "log_directory": "/Users/rich/SWE-bench/logs/evaluation/tsmc-development-revision-20260912-gpt-5.6-luna__none/gpt-5.6-luna__none/tsmc__r05-v1.0",
+        "patch_applied": true,
+        "patch_sha256": "445e6ffbe6179bca5d54069eb350557a6a1e8cfd543ac9fa7da156b09bde67db",
+        "required_suite_passed": true,
+        "resolved": true,
+        "status": "graded",
+        "tests_failed": 0,
+        "tests_passed": 11,
+        "tests_total": 11
+      },
+      "evaluation_status": "graded",
+      "failed_request_count": 0,
+      "failure_category": null,
+      "grading_seconds": 1.594377625035122,
+      "incomplete_request_count": 0,
+      "inference_seconds": 17.09727262496017,
+      "inference_status": "Submitted",
+      "instance_id": "tsmc__r05-v1.0",
+      "model": "gpt-5.6-luna",
+      "nonempty_submission": true,
+      "observed_cost_usd": 0.0015115,
+      "observed_usage": {
+        "cache_write_input_tokens": 2022,
+        "cached_input_tokens": 5140,
+        "input_tokens": 9230,
+        "output_tokens": 408,
+        "reasoning_tokens": 0,
+        "total_tokens": 9638
+      },
+      "patch_applied": true,
+      "patch_bytes": 634,
+      "patch_sha256": "445e6ffbe6179bca5d54069eb350557a6a1e8cfd543ac9fa7da156b09bde67db",
+      "phase": "scored",
+      "request_count": 6,
+      "request_error_types": [],
+      "resolved": true,
+      "response_count": 6,
+      "response_models": [
+        "gpt-5.6-luna"
+      ],
+      "solve_total_seconds": 17.1125102089718,
+      "state": "completed",
+      "submission_source": "workspace_diff",
+      "task_id": "R05",
+      "tests_failed": 0,
+      "tests_passed": 11,
+      "tests_total": 11,
+      "total_seconds": 18.70688783400692,
+      "trial_directory": "/Users/rich/SWE-bench/logs/experiments/tsmc-development-revision-20260912/trials/gpt-5.6-luna__none/tsmc__r05-v1.0",
+      "trial_wall_seconds": 18.71211191616021,
+      "usage": {
+        "cache_write_input_tokens": 2022,
+        "cached_input_tokens": 5140,
+        "input_tokens": 9230,
+        "output_tokens": 408,
+        "reasoning_tokens": 0,
+        "total_tokens": 9638
+      },
+      "usage_complete": true,
+      "usage_completeness": {
+        "cache_write_input_tokens": true,
+        "cached_input_tokens": true,
+        "input_tokens": true,
+        "output_tokens": true,
+        "reasoning_tokens": true,
+        "total_tokens": true
+      }
+    },
+    {
+      "accounting_conflict": false,
+      "agent_query_count": 5,
+      "cleanup_seconds": 0.01597662502899766,
+      "cost_estimate_complete": true,
+      "cost_source": "api_request_ledger",
+      "difficulty": "medium",
+      "effort": "none",
+      "estimated_cost_usd": 0.00300718,
+      "evaluation": {
+        "evaluator_seconds": 0.6236443330008115,
+        "grade_queue_seconds": 1.4374963939189911e-05,
+        "grading_seconds": 1.4894872908480465,
+        "hidden_tests_passed": 24,
+        "hidden_tests_total": 24,
+        "log_directory": "/Users/rich/SWE-bench/logs/evaluation/tsmc-development-revision-20260912-gpt-5.6-luna__none/gpt-5.6-luna__none/tsmc__a12-v2.0",
+        "patch_applied": true,
+        "patch_sha256": "144681106871356f25426c41b400c91d58805559ff32102610aeab1fa616f294",
+        "required_suite_passed": true,
+        "resolved": true,
+        "status": "graded",
+        "tests_failed": 0,
+        "tests_passed": 29,
+        "tests_total": 29
+      },
+      "evaluation_status": "graded",
+      "failed_request_count": 0,
+      "failure_category": null,
+      "grading_seconds": 1.4894872908480465,
+      "incomplete_request_count": 0,
+      "inference_seconds": 19.18370958394371,
+      "inference_status": "Submitted",
+      "instance_id": "tsmc__a12-v2.0",
+      "model": "gpt-5.6-luna",
+      "nonempty_submission": true,
+      "observed_cost_usd": 0.00300718,
+      "observed_usage": {
+        "cache_write_input_tokens": 5972,
+        "cached_input_tokens": 11359,
+        "input_tokens": 18348,
+        "output_tokens": 903,
+        "reasoning_tokens": 0,
+        "total_tokens": 19251
+      },
+      "patch_applied": true,
+      "patch_bytes": 3963,
+      "patch_sha256": "144681106871356f25426c41b400c91d58805559ff32102610aeab1fa616f294",
+      "phase": "scored",
+      "request_count": 5,
+      "request_error_types": [],
+      "resolved": true,
+      "response_count": 5,
+      "response_models": [
+        "gpt-5.6-luna"
+      ],
+      "solve_total_seconds": 19.199686208972707,
+      "state": "completed",
+      "submission_source": "workspace_diff",
+      "task_id": "A12",
+      "tests_failed": 0,
+      "tests_passed": 29,
+      "tests_total": 29,
+      "total_seconds": 20.689173499820754,
+      "trial_directory": "/Users/rich/SWE-bench/logs/experiments/tsmc-development-revision-20260912/trials/gpt-5.6-luna__none/tsmc__a12-v2.0",
+      "trial_wall_seconds": 20.692389209056273,
+      "usage": {
+        "cache_write_input_tokens": 5972,
+        "cached_input_tokens": 11359,
+        "input_tokens": 18348,
+        "output_tokens": 903,
+        "reasoning_tokens": 0,
+        "total_tokens": 19251
+      },
+      "usage_complete": true,
+      "usage_completeness": {
+        "cache_write_input_tokens": true,
+        "cached_input_tokens": true,
+        "input_tokens": true,
+        "output_tokens": true,
+        "reasoning_tokens": true,
+        "total_tokens": true
+      }
+    },
+    {
+      "accounting_conflict": false,
+      "agent_query_count": 4,
+      "cleanup_seconds": 0.015498124994337559,
+      "cost_estimate_complete": true,
+      "cost_source": "api_request_ledger",
+      "difficulty": "medium",
+      "effort": "none",
+      "estimated_cost_usd": 0.00245345,
+      "evaluation": {
+        "evaluator_seconds": 0.6738315419997889,
+        "grade_queue_seconds": 1.2625008821487427e-05,
+        "grading_seconds": 1.5469217910431325,
+        "hidden_tests_passed": 20,
+        "hidden_tests_total": 20,
+        "log_directory": "/Users/rich/SWE-bench/logs/evaluation/tsmc-development-revision-20260912-gpt-5.6-luna__none/gpt-5.6-luna__none/tsmc__f11-v2.0",
+        "patch_applied": true,
+        "patch_sha256": "1f661c33de461615a6e6fb0ec536fa2062e648f12ae0919146f6dc575232fc78",
+        "required_suite_passed": true,
+        "resolved": true,
+        "status": "graded",
+        "tests_failed": 0,
+        "tests_passed": 25,
+        "tests_total": 25
+      },
+      "evaluation_status": "graded",
+      "failed_request_count": 0,
+      "failure_category": null,
+      "grading_seconds": 1.5469217910431325,
+      "incomplete_request_count": 0,
+      "inference_seconds": 16.35502124996856,
+      "inference_status": "Submitted",
+      "instance_id": "tsmc__f11-v2.0",
+      "model": "gpt-5.6-luna",
+      "nonempty_submission": true,
+      "observed_cost_usd": 0.00245345,
+      "observed_usage": {
+        "cache_write_input_tokens": 4793,
+        "cached_input_tokens": 5250,
+        "input_tokens": 10934,
+        "output_tokens": 810,
+        "reasoning_tokens": 0,
+        "total_tokens": 11744
+      },
+      "patch_applied": true,
+      "patch_bytes": 3095,
+      "patch_sha256": "1f661c33de461615a6e6fb0ec536fa2062e648f12ae0919146f6dc575232fc78",
+      "phase": "scored",
+      "request_count": 4,
+      "request_error_types": [],
+      "resolved": true,
+      "response_count": 4,
+      "response_models": [
+        "gpt-5.6-luna"
+      ],
+      "solve_total_seconds": 16.370519374962896,
+      "state": "completed",
+      "submission_source": "workspace_diff",
+      "task_id": "F11",
+      "tests_failed": 0,
+      "tests_passed": 25,
+      "tests_total": 25,
+      "total_seconds": 17.91744116600603,
+      "trial_directory": "/Users/rich/SWE-bench/logs/experiments/tsmc-development-revision-20260912/trials/gpt-5.6-luna__none/tsmc__f11-v2.0",
+      "trial_wall_seconds": 17.920809332979843,
+      "usage": {
+        "cache_write_input_tokens": 4793,
+        "cached_input_tokens": 5250,
+        "input_tokens": 10934,
+        "output_tokens": 810,
+        "reasoning_tokens": 0,
+        "total_tokens": 11744
+      },
+      "usage_complete": true,
+      "usage_completeness": {
+        "cache_write_input_tokens": true,
+        "cached_input_tokens": true,
+        "input_tokens": true,
+        "output_tokens": true,
+        "reasoning_tokens": true,
+        "total_tokens": true
+      }
+    },
+    {
+      "accounting_conflict": false,
+      "agent_query_count": 8,
+      "cleanup_seconds": 0.014972667209804058,
+      "cost_estimate_complete": true,
+      "cost_source": "api_request_ledger",
+      "difficulty": "medium",
+      "effort": "none",
+      "estimated_cost_usd": 0.00342945,
+      "evaluation": {
+        "evaluator_seconds": 0.8353055000006862,
+        "grade_queue_seconds": 1.3666925951838493e-05,
+        "grading_seconds": 1.791303874924779,
+        "hidden_tests_passed": 18,
+        "hidden_tests_total": 18,
+        "log_directory": "/Users/rich/SWE-bench/logs/evaluation/tsmc-development-revision-20260912-gpt-5.6-luna__none/gpt-5.6-luna__none/tsmc__r13-v2.0",
+        "patch_applied": true,
+        "patch_sha256": "51a21b3ffee2b5fb4fda8fab4f7825578751eb6250b04a664f9b5727da24b790",
+        "required_suite_passed": true,
+        "resolved": true,
+        "status": "graded",
+        "tests_failed": 0,
+        "tests_passed": 23,
+        "tests_total": 23
+      },
+      "evaluation_status": "graded",
+      "failed_request_count": 0,
+      "failure_category": null,
+      "grading_seconds": 1.791303874924779,
+      "incomplete_request_count": 0,
+      "inference_seconds": 26.329773040954024,
+      "inference_status": "Submitted",
+      "instance_id": "tsmc__r13-v2.0",
+      "model": "gpt-5.6-luna",
+      "nonempty_submission": true,
+      "observed_cost_usd": 0.00342945,
+      "observed_usage": {
+        "cache_write_input_tokens": 6229,
+        "cached_input_tokens": 29040,
+        "input_tokens": 36650,
+        "output_tokens": 846,
+        "reasoning_tokens": 0,
+        "total_tokens": 37496
+      },
+      "patch_applied": true,
+      "patch_bytes": 2696,
+      "patch_sha256": "51a21b3ffee2b5fb4fda8fab4f7825578751eb6250b04a664f9b5727da24b790",
+      "phase": "scored",
+      "request_count": 8,
+      "request_error_types": [],
+      "resolved": true,
+      "response_count": 8,
+      "response_models": [
+        "gpt-5.6-luna"
+      ],
+      "solve_total_seconds": 26.344745708163828,
+      "state": "completed",
+      "submission_source": "workspace_diff",
+      "task_id": "R13",
+      "tests_failed": 0,
+      "tests_passed": 23,
+      "tests_total": 23,
+      "total_seconds": 28.136049583088607,
+      "trial_directory": "/Users/rich/SWE-bench/logs/experiments/tsmc-development-revision-20260912/trials/gpt-5.6-luna__none/tsmc__r13-v2.0",
+      "trial_wall_seconds": 28.1396544999443,
+      "usage": {
+        "cache_write_input_tokens": 6229,
+        "cached_input_tokens": 29040,
+        "input_tokens": 36650,
+        "output_tokens": 846,
+        "reasoning_tokens": 0,
+        "total_tokens": 37496
+      },
+      "usage_complete": true,
+      "usage_completeness": {
+        "cache_write_input_tokens": true,
+        "cached_input_tokens": true,
+        "input_tokens": true,
+        "output_tokens": true,
+        "reasoning_tokens": true,
+        "total_tokens": true
+      }
+    },
+    {
+      "accounting_conflict": false,
+      "agent_query_count": 5,
+      "cleanup_seconds": 0.014639333821833134,
+      "cost_estimate_complete": true,
+      "cost_source": "api_request_ledger",
+      "difficulty": "medium",
+      "effort": "none",
+      "estimated_cost_usd": 0.00287706,
+      "evaluation": {
+        "evaluator_seconds": 0.8047059580003406,
+        "grade_queue_seconds": 1.4459015801548958e-05,
+        "grading_seconds": 1.6775142920669168,
+        "hidden_tests_passed": 17,
+        "hidden_tests_total": 18,
+        "log_directory": "/Users/rich/SWE-bench/logs/evaluation/tsmc-development-revision-20260912-gpt-5.6-luna__none/gpt-5.6-luna__none/tsmc__r21-v2.0",
+        "patch_applied": true,
+        "patch_sha256": "3736f467edaf715377d3de25bc195426686771be7ce18a7dba1ff241d3471175",
+        "required_suite_passed": false,
+        "resolved": false,
+        "status": "graded",
+        "tests_failed": 1,
+        "tests_passed": 22,
+        "tests_total": 23
+      },
+      "evaluation_status": "graded",
+      "failed_request_count": 0,
+      "failure_category": "test_failure",
+      "grading_seconds": 1.6775142920669168,
+      "incomplete_request_count": 0,
+      "inference_seconds": 18.785392625024542,
+      "inference_status": "Submitted",
+      "instance_id": "tsmc__r21-v2.0",
+      "model": "gpt-5.6-luna",
+      "nonempty_submission": true,
+      "observed_cost_usd": 0.00287706,
+      "observed_usage": {
+        "cache_write_input_tokens": 5978,
+        "cached_input_tokens": 11448,
+        "input_tokens": 18442,
+        "output_tokens": 792,
+        "reasoning_tokens": 0,
+        "total_tokens": 19234
+      },
+      "patch_applied": true,
+      "patch_bytes": 2941,
+      "patch_sha256": "3736f467edaf715377d3de25bc195426686771be7ce18a7dba1ff241d3471175",
+      "phase": "scored",
+      "request_count": 5,
+      "request_error_types": [],
+      "resolved": false,
+      "response_count": 5,
+      "response_models": [
+        "gpt-5.6-luna"
+      ],
+      "solve_total_seconds": 18.800031958846375,
+      "state": "completed",
+      "submission_source": "workspace_diff",
+      "task_id": "R21",
+      "tests_failed": 1,
+      "tests_passed": 22,
+      "tests_total": 23,
+      "total_seconds": 20.477546250913292,
+      "trial_directory": "/Users/rich/SWE-bench/logs/experiments/tsmc-development-revision-20260912/trials/gpt-5.6-luna__none/tsmc__r21-v2.0",
+      "trial_wall_seconds": 20.480634124949574,
+      "usage": {
+        "cache_write_input_tokens": 5978,
+        "cached_input_tokens": 11448,
+        "input_tokens": 18442,
+        "output_tokens": 792,
+        "reasoning_tokens": 0,
+        "total_tokens": 19234
+      },
+      "usage_complete": true,
+      "usage_completeness": {
+        "cache_write_input_tokens": true,
+        "cached_input_tokens": true,
+        "input_tokens": true,
+        "output_tokens": true,
+        "reasoning_tokens": true,
+        "total_tokens": true
+      }
+    },
+    {
+      "accounting_conflict": false,
+      "agent_query_count": 4,
+      "cleanup_seconds": 0.013928832951933146,
+      "cost_estimate_complete": true,
+      "cost_source": "api_request_ledger",
+      "difficulty": "hard",
+      "effort": "none",
+      "estimated_cost_usd": 0.0031628100000000003,
+      "evaluation": {
+        "evaluator_seconds": 0.7253560829994967,
+        "grade_queue_seconds": 1.195794902741909e-05,
+        "grading_seconds": 1.5917023329529911,
+        "hidden_tests_passed": 27,
+        "hidden_tests_total": 30,
+        "log_directory": "/Users/rich/SWE-bench/logs/evaluation/tsmc-development-revision-20260912-gpt-5.6-luna__none/gpt-5.6-luna__none/tsmc__a29-v2.0",
+        "patch_applied": true,
+        "patch_sha256": "0565a9574247546329c2fadd6dd3db632a5c8b81ef6bbd276239d0d843fcb2bf",
+        "required_suite_passed": false,
+        "resolved": false,
+        "status": "graded",
+        "tests_failed": 3,
+        "tests_passed": 32,
+        "tests_total": 35
+      },
+      "evaluation_status": "graded",
+      "failed_request_count": 0,
+      "failure_category": "test_failure",
+      "grading_seconds": 1.5917023329529911,
+      "incomplete_request_count": 0,
+      "inference_seconds": 17.081942958990112,
+      "inference_status": "Submitted",
+      "instance_id": "tsmc__a29-v2.0",
+      "model": "gpt-5.6-luna",
+      "nonempty_submission": true,
+      "observed_cost_usd": 0.0031628100000000003,
+      "observed_usage": {
+        "cache_write_input_tokens": 5899,
+        "cached_input_tokens": 8373,
+        "input_tokens": 15167,
+        "output_tokens": 1118,
+        "reasoning_tokens": 0,
+        "total_tokens": 16285
+      },
+      "patch_applied": true,
+      "patch_bytes": 6158,
+      "patch_sha256": "0565a9574247546329c2fadd6dd3db632a5c8b81ef6bbd276239d0d843fcb2bf",
+      "phase": "scored",
+      "request_count": 4,
+      "request_error_types": [],
+      "resolved": false,
+      "response_count": 4,
+      "response_models": [
+        "gpt-5.6-luna"
+      ],
+      "solve_total_seconds": 17.095871791942045,
+      "state": "completed",
+      "submission_source": "workspace_diff",
+      "task_id": "A29",
+      "tests_failed": 3,
+      "tests_passed": 32,
+      "tests_total": 35,
+      "total_seconds": 18.687574124895036,
+      "trial_directory": "/Users/rich/SWE-bench/logs/experiments/tsmc-development-revision-20260912/trials/gpt-5.6-luna__none/tsmc__a29-v2.0",
+      "trial_wall_seconds": 18.69054370908998,
+      "usage": {
+        "cache_write_input_tokens": 5899,
+        "cached_input_tokens": 8373,
+        "input_tokens": 15167,
+        "output_tokens": 1118,
+        "reasoning_tokens": 0,
+        "total_tokens": 16285
+      },
+      "usage_complete": true,
+      "usage_completeness": {
+        "cache_write_input_tokens": true,
+        "cached_input_tokens": true,
+        "input_tokens": true,
+        "output_tokens": true,
+        "reasoning_tokens": true,
+        "total_tokens": true
+      }
+    },
+    {
+      "accounting_conflict": false,
+      "agent_query_count": 18,
+      "cleanup_seconds": 0.013968749903142452,
+      "cost_estimate_complete": true,
+      "cost_source": "api_request_ledger",
+      "difficulty": "hard",
+      "effort": "none",
+      "estimated_cost_usd": 0.00670409,
+      "evaluation": {
+        "evaluator_seconds": 0.9366272509996634,
+        "grade_queue_seconds": 1.258309930562973e-05,
+        "grading_seconds": 1.7883392500225455,
+        "hidden_tests_passed": 28,
+        "hidden_tests_total": 28,
+        "log_directory": "/Users/rich/SWE-bench/logs/evaluation/tsmc-development-revision-20260912-gpt-5.6-luna__none/gpt-5.6-luna__none/tsmc__f25-v2.0",
+        "patch_applied": true,
+        "patch_sha256": "a5783554f75f7f040a48356496312331a88cfa7d0ba31c1eb93ee7ed7a9a15a9",
+        "required_suite_passed": true,
+        "resolved": true,
+        "status": "graded",
+        "tests_failed": 0,
+        "tests_passed": 34,
+        "tests_total": 34
+      },
+      "evaluation_status": "graded",
+      "failed_request_count": 0,
+      "failure_category": null,
+      "grading_seconds": 1.7883392500225455,
+      "incomplete_request_count": 0,
+      "inference_seconds": 52.077529166126624,
+      "inference_status": "Submitted",
+      "instance_id": "tsmc__f25-v2.0",
+      "model": "gpt-5.6-luna",
+      "nonempty_submission": true,
+      "observed_cost_usd": 0.00670409,
+      "observed_usage": {
+        "cache_write_input_tokens": 7829,
+        "cached_input_tokens": 102782,
+        "input_tokens": 113213,
+        "output_tokens": 1809,
+        "reasoning_tokens": 0,
+        "total_tokens": 115022
+      },
+      "patch_applied": true,
+      "patch_bytes": 5649,
+      "patch_sha256": "a5783554f75f7f040a48356496312331a88cfa7d0ba31c1eb93ee7ed7a9a15a9",
+      "phase": "scored",
+      "request_count": 18,
+      "request_error_types": [],
+      "resolved": true,
+      "response_count": 18,
+      "response_models": [
+        "gpt-5.6-luna"
+      ],
+      "solve_total_seconds": 52.091497916029766,
+      "state": "completed",
+      "submission_source": "workspace_diff",
+      "task_id": "F25",
+      "tests_failed": 0,
+      "tests_passed": 34,
+      "tests_total": 34,
+      "total_seconds": 53.87983716605231,
+      "trial_directory": "/Users/rich/SWE-bench/logs/experiments/tsmc-development-revision-20260912/trials/gpt-5.6-luna__none/tsmc__f25-v2.0",
+      "trial_wall_seconds": 53.88379237498157,
+      "usage": {
+        "cache_write_input_tokens": 7829,
+        "cached_input_tokens": 102782,
+        "input_tokens": 113213,
+        "output_tokens": 1809,
+        "reasoning_tokens": 0,
+        "total_tokens": 115022
+      },
+      "usage_complete": true,
+      "usage_completeness": {
+        "cache_write_input_tokens": true,
+        "cached_input_tokens": true,
+        "input_tokens": true,
+        "output_tokens": true,
+        "reasoning_tokens": true,
+        "total_tokens": true
+      }
+    },
+    {
+      "accounting_conflict": false,
+      "agent_query_count": 5,
+      "cleanup_seconds": 0.013720415998250246,
+      "cost_estimate_complete": true,
+      "cost_source": "api_request_ledger",
+      "difficulty": "hard",
+      "effort": "none",
+      "estimated_cost_usd": 0.00297423,
+      "evaluation": {
+        "evaluator_seconds": 1.4573982089996207,
+        "grade_queue_seconds": 1.5999889001250267e-05,
+        "grading_seconds": 2.2912102499976754,
+        "hidden_tests_passed": 25,
+        "hidden_tests_total": 29,
+        "log_directory": "/Users/rich/SWE-bench/logs/evaluation/tsmc-development-revision-20260912-gpt-5.6-luna__none/gpt-5.6-luna__none/tsmc__r29-v2.0",
+        "patch_applied": true,
+        "patch_sha256": "2881e6ed58d8cc62242c5cb6b182aaf4d9b2233f4bad182e116f918abf3e3c93",
+        "required_suite_passed": false,
+        "resolved": false,
+        "status": "graded",
+        "tests_failed": 4,
+        "tests_passed": 30,
+        "tests_total": 34
+      },
+      "evaluation_status": "graded",
+      "failed_request_count": 0,
+      "failure_category": "test_failure",
+      "grading_seconds": 2.2912102499976754,
+      "incomplete_request_count": 0,
+      "inference_seconds": 21.286445874953642,
+      "inference_status": "Submitted",
+      "instance_id": "tsmc__r29-v2.0",
+      "model": "gpt-5.6-luna",
+      "nonempty_submission": true,
+      "observed_cost_usd": 0.00297423,
+      "observed_usage": {
+        "cache_write_input_tokens": 5869,
+        "cached_input_tokens": 11569,
+        "input_tokens": 18458,
+        "output_tokens": 893,
+        "reasoning_tokens": 0,
+        "total_tokens": 19351
+      },
+      "patch_applied": true,
+      "patch_bytes": 3066,
+      "patch_sha256": "2881e6ed58d8cc62242c5cb6b182aaf4d9b2233f4bad182e116f918abf3e3c93",
+      "phase": "scored",
+      "request_count": 5,
+      "request_error_types": [],
+      "resolved": false,
+      "response_count": 5,
+      "response_models": [
+        "gpt-5.6-luna"
+      ],
+      "solve_total_seconds": 21.300166290951893,
+      "state": "completed",
+      "submission_source": "workspace_diff",
+      "task_id": "R29",
+      "tests_failed": 4,
+      "tests_passed": 30,
+      "tests_total": 34,
+      "total_seconds": 23.591376540949568,
+      "trial_directory": "/Users/rich/SWE-bench/logs/experiments/tsmc-development-revision-20260912/trials/gpt-5.6-luna__none/tsmc__r29-v2.0",
+      "trial_wall_seconds": 23.59478708403185,
+      "usage": {
+        "cache_write_input_tokens": 5869,
+        "cached_input_tokens": 11569,
+        "input_tokens": 18458,
+        "output_tokens": 893,
+        "reasoning_tokens": 0,
+        "total_tokens": 19351
+      },
+      "usage_complete": true,
+      "usage_completeness": {
+        "cache_write_input_tokens": true,
+        "cached_input_tokens": true,
+        "input_tokens": true,
+        "output_tokens": true,
+        "reasoning_tokens": true,
+        "total_tokens": true
+      }
+    }
+  ],
+  "updated_at": "2026-09-12T08:00:39.716159+00:00"
+}

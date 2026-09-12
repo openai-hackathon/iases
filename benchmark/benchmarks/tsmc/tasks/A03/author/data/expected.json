@@ -1,0 +1,15 @@
+[
+  {
+    "lot_id": "A",
+    "event_ids": [
+      "q"
+    ]
+  },
+  {
+    "lot_id": "B",
+    "event_ids": [
+      "a",
+      "z"
+    ]
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "df8e561a7f829d506facba3a2285744946c96c6a984ed12a61127a69c9838dd0",
+    "data/expected.json": "cf0b5b261cbd51946e26bb5960ee851d19b419e762cdd90d48c197b0844b8556",
+    "data/request.json": "d1933215812bb0a62c50ba518f5a0fd2a2ceee6c0da4a4dea8ee51640a6b38a4",
+    "docs/contract.md": "f54a238b57f3b138e4fecaed63506ad92d33eaebb1ceb08dc2406a5aaaac7041",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "97fd3a9ea80a71a8fc4d00fa2e7eee4b567ac57a6a2b7955ce17d8d27faf38ef",
+    "fabops/lease.py": "22156ff162d31b41fd9dae0d1dc5521b9dfc81935aec694c4ee7aa72064e1b54",
+    "fabops/store.py": "7963e60f86a208f050865c6a1d65d1714e08f72238da6ea21da59f31d9f1e962",
+    "problem_statement.md": "5a21cb8f3f8652725fdde028a2189ebd9dafe8d3031e7d087d5c2cfe6ef70e5a",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "1f319284402128a54091c75049255490089d010c49bd3698933a837f892a3452"
+  },
+  "baseline_git_commit": "2562dba7bc8833b34d42a97134fb8468787f8ec2",
+  "design_difficulty": "hard",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Repair two interacting invariants across durable epoch allocation, lease deletion, database reopen and transactional stale-writer fencing.",
+  "family_id": "durable_fencing_epoch_ownership",
+  "hidden_tests": 8,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "R22",
+  "test_count": 13,
+  "title": "Retired lease epochs are reused and stale owners overwrite newer output",
+  "track": "reliability",
+  "version": "1.0"
+}

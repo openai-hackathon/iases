@@ -1,0 +1,39 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "1459760f92601829bd0c6784edc9bd6da3c9011e5570fcdc9b77be6105762423",
+    "data/expected.json": "615cb87f61a6a9498817152a98a438942911b37f92deab9ab3f5637225a7d756",
+    "data/request.json": "83e288ac6bc0d7b279860b886ef831b43d2128811fed41ad6cf7b0285f0f843c",
+    "docs/contract.md": "5c0f90cb1ee7904f69a143b2bbc86a20b45cd4dff7452fc33b88936743e9b227",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/checkpoint.py": "975726619635bafebd73451c8613511954a5092d57df711d8851de8323864a31",
+    "fabops/domain.py": "1767be515155b5bca0984bebf57fcb401d7e94987ad06ea0e5415e85c3ab6d1f",
+    "fabops/snapshot.py": "b90bbbc7ca8ba4533dbef1e94889bcbae1d439e73c3256036316d3d403974b61",
+    "fabops/stream.py": "7796f81a4de8ba8f814c07cb057fe816b3f17c4b70623b4cc549665bfe84a3f2",
+    "problem_statement.md": "7c38557252331e7806f17b11519ad0cd181fd2f1e45d491fef8c0675078e158a",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "7705b71a8f1dbc8776f36b18f90692f34b2766ee3489003c3d45c32f9880c3f7"
+  },
+  "baseline_git_commit": "e0de637d839d0e982def303af085a7850ba4df71",
+  "design_difficulty": "hard",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Reconcile out-of-order event buffers, epoch resets, delayed watermark barriers and a common multi-source time cut across real checkpoint interruptions. Unlike cursor advancement or consumer retention, publication depends on the interaction of three independent orders: source epoch, sequence continuity and event time, with durable unresolved state.",
+  "family_id": "multisource_epoch_barrier_snapshot_recovery",
+  "hidden_tests": 15,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "R31",
+  "test_count": 20,
+  "title": "Recovered telemetry snapshots combine incomplete prefixes and obsolete source epochs",
+  "track": "reliability",
+  "version": "1.0"
+}

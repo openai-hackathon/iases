@@ -1,0 +1,10 @@
+{
+  "low": 2,
+  "high": 5,
+  "initial": false,
+  "values": [
+    1,
+    3,
+    4
+  ]
+}

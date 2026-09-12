@@ -1,0 +1,10 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 8441f31..2c5dd7c 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -1,4 +1,4 @@
+ def run(request):
+     frontiers = [c["ack"] for c in request["consumers"] if c["active"]]
+-    safe = max(frontiers) if frontiers else -1
++    safe = min(frontiers) if frontiers else -1
+     return [r["id"] for r in request["records"] if r["offset"] > safe]

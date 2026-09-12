@@ -1,0 +1,38 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "7af246ac3cd12b1888e1e013729f7d0245bd0d9184582e1915c9d97aafc33dd3",
+    "data/expected.json": "2a31256b1a371a861ea6790c251ee05eb89692633e864dcda1ed11ddf87558fc",
+    "data/request.json": "c0af2f004bc0f767d3d7d280f89c3f0f12bd7beded4b3b2e68507904b25ff9c3",
+    "docs/contract.md": "638c4301a4392c1acba013a90ad6bcbcc6bcac90cb0d78f29640418ca317348a",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "adc0ed9ac327711cfaae50e3120e33eabc6babc38374af637ea41edadc25a9ed",
+    "fabops/net.py": "59463fa02e2811c03fae7c6e9c24c3ad3cde949a2b9b658bd156dc81425aaf50",
+    "fabops/replay.py": "7ec19b8e63cff853a369ff80bda44f9ffd485412ac15a8297aa8b3722775130c",
+    "problem_statement.md": "67660bb892a5b396ac0819d2f4e6d762cf7db6622c0cb27e823b4fcef43a9ae8",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "8a93fb681e7a479e0a61119950fe616aac315ebe759423c45c59fee44bc3e233"
+  },
+  "baseline_git_commit": "b3ff73d2a06f1c59f802cfbe983cce50b8c5651d",
+  "design_difficulty": "hard",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Requires finite-state shortest-witness search across silent cycles and nondeterministic repeated labels while preserving weighted atomic firing, capacities and complete parallel markings in separate modules.",
+  "family_id": "bounded_weighted_workflow_conformance",
+  "hidden_tests": 14,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "production-log"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "F25",
+  "test_count": 19,
+  "title": "Production conformance replay loses parallel tokens and silent routing choices",
+  "track": "factory_logic",
+  "version": "1.0"
+}

@@ -1,0 +1,11 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 257f0d7..3f2005c 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -4,5 +4,5 @@ def run(request):
+         for cause in request["priority"]:
+             if any(r["cause"] == cause and r["start"] <= minute < r["end"] for r in request["intervals"]):
+                 totals[cause] += 1
+-                pass
++                break
+     return totals

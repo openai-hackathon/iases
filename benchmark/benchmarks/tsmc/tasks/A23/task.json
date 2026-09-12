@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "02fd1dab22886e559808f40f4c5b39773e4f74e8cee14a0a2591a7b664f1bdc6",
+    "data/expected.json": "501fdc42d6b15ed148cb16fdd237c89c2eaf2a7994c0f2e4d25538f44b87d8b9",
+    "data/request.json": "b37ab1123e51c7382c78dda564ded22e896819c402025330d9f4510037de2a5d",
+    "docs/contract.md": "fdd51d88a658f96297a4cfdea9a8ca6568b3450a330f85a3d9e84edb8f2fc3f3",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "7ea8feeaab148615f40773e4f711938ef76bcfa9a964356b9fd6b22b9ef52e77",
+    "problem_statement.md": "a4b67e0473b23623d6a0f3f782695598b941a2bbd925a537fef5eb3565f24997",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "2fbe0f59b8f77949b86db8085ee25dc275caef9bfa6869976f50ebbcd99afc82"
+  },
+  "baseline_git_commit": "59b4a3ba3ee003e4756726bd6e0a62603233e404",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Combine sufficient statistics using count weighting and the cross-group correction.",
+  "family_id": "parallel_variance_merge",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "zema-hydraulic"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "A23",
+  "test_count": 11,
+  "title": "Merged sensor summaries omit between-group variance",
+  "track": "data_analysis",
+  "version": "1.0"
+}

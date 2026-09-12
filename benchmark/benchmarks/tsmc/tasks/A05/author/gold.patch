@@ -1,0 +1,9 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 9499f1f..c90960c 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -1,3 +1,3 @@
+ def run(request):
+     lots = request["lots"]
+-    return sum(lot["good"] / lot["tested"] for lot in lots) / len(lots) if lots else None
++    return sum(lot["good"] for lot in lots) / sum(lot["tested"] for lot in lots) if lots else None

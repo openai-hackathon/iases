@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "87561ce030adb3d01a538d6ed55367054cc62ce7ce0a1647fa1057d7cda69189",
+    "data/expected.json": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "data/request.json": "1a46c0402c164e450fc729a327a7f36d64cf4e4425fc9fd7063a788623706f19",
+    "docs/contract.md": "1f7844dd5222a54d9aa3552c43ebf1858dc5cebb4050e838bfe1c427cc7599f2",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "4fd1e9b447c28db3df094265649569bd46852a78303cb37cd2db8f265d392c5a",
+    "problem_statement.md": "a78bab84b45a5fbc29266f8bea60643890dbab9ca9366e65ee1206e7270f4650",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "cf25e76e94576ab698f0a19cbcee57216098dc09158a71408e6e80da1fdece48"
+  },
+  "baseline_git_commit": "3c2257188988c9287a8f6db01900f37bc9d57d87",
+  "design_difficulty": "easy",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "",
+  "family_id": "signed_goods_receipt_quantity",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "bpi-2019"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "F20",
+  "test_count": 11,
+  "title": "Goods receipt reversals increase received quantity",
+  "track": "factory_logic",
+  "version": "1.0"
+}

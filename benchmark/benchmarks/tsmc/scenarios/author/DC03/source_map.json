@@ -1,0 +1,42 @@
+{
+  "journal": {
+    "task_id": "R03",
+    "source_task_manifest_sha256": "071684c5f7ff49137b1f03b26d5846a2d8c36daeab9962779061b465f133fbfe",
+    "archive_task_manifest_sha256": "8ff08081b72aa615a863513e8d58a0418581307bdb7f5bc7ed30849f33c9a51c"
+  },
+  "workers": {
+    "task_id": "R04",
+    "source_task_manifest_sha256": "6d931aba6cf7d74c5c31d4a61c1a9c05ce0710b806c603e39a27e9314b0e7c76",
+    "archive_task_manifest_sha256": "cef2b882b63c937f340b8ba5675f20fec3953bb388a0a48ad4931fcde22bc5fe"
+  },
+  "telemetry": {
+    "task_id": "A04",
+    "source_task_manifest_sha256": "73d31bad368e470145b946f0956cae52d23b4fb4f1fa3113c090bc3337acf8f3",
+    "archive_task_manifest_sha256": "ef844905282da53d31d452497b918735b2af74515681eb116a5a936ed515ceb3"
+  },
+  "state": {
+    "task_id": "F03",
+    "source_task_manifest_sha256": "af07f7af2f347a506cd9424180d8b147f4406e97648ac3f315c51ce8b0bf4f8f",
+    "archive_task_manifest_sha256": "c349903e0a548fa4d5390a03f855852e4be055ee0ed05c8960a74cf2b2d4b177"
+  },
+  "maintenance": {
+    "task_id": "R01",
+    "source_task_manifest_sha256": "c89213c0a949881bae502a7fd6b692e6abfe24ebd30090589efef035f093e9e4",
+    "archive_task_manifest_sha256": "703853d99c7a41ddd8a7d0ed2fe371c0e7e66c2564b44d3c03b7c1a21d75de65"
+  },
+  "reservation": {
+    "task_id": "R02",
+    "source_task_manifest_sha256": "d978de209c0a75f58570480d05853eab380c35583700d8d4cab80af71477fa60",
+    "archive_task_manifest_sha256": "9fb94de709d9c66c1c205aa3b2ae8449a79cdcf3c1f716acd02c763d5aef07a6"
+  },
+  "lineage": {
+    "task_id": "A03",
+    "source_task_manifest_sha256": "cd14a01f77a3886ce47f53d6a40f1f4b363e27c0ca310031098c1c7e6892d27c",
+    "archive_task_manifest_sha256": "4da987d35b38323e3dab99c93d6bc5a644e06a225dce275beb856973af04ae11"
+  },
+  "wafer_report": {
+    "task_id": "A02",
+    "source_task_manifest_sha256": "2317a1b553d482c191891ae683e2ae5ff923ec08d955c993c4e9d4e80ba1eb44",
+    "archive_task_manifest_sha256": "c0cdf2975524c8c08b16c48c3c443151935c6ecb4111159df4a155f9c1b43e12"
+  }
+}

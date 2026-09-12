@@ -1,0 +1,29 @@
+{
+  "batches": [
+    [
+      {
+        "offset": 0,
+        "event_id": "e0",
+        "event_time": "2026-01-15T00:01:00Z",
+        "machine_id": "M",
+        "value": 4
+      },
+      {
+        "offset": 1,
+        "event_id": "e0",
+        "event_time": "2026-01-15T00:01:00Z",
+        "machine_id": "M",
+        "value": 4
+      }
+    ],
+    [
+      {
+        "offset": 2,
+        "event_id": "e2",
+        "event_time": "2026-01-15T00:01:00Z",
+        "machine_id": "N",
+        "value": 2
+      }
+    ]
+  ]
+}

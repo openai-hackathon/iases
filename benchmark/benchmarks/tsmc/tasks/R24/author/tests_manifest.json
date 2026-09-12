@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_after_charge",
+    "assessment/tests/test_hidden.py::test_retry",
+    "assessment/tests/test_hidden.py::test_success_then_fail",
+    "assessment/tests/test_hidden.py::test_two_failures",
+    "tests/test_public.py::test_charge_fails"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_free_order",
+    "assessment/tests/test_hidden.py::test_no_balance",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_no_stock",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_success"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_after_charge",
+    "assessment/tests/test_hidden.py::test_free_order",
+    "assessment/tests/test_hidden.py::test_no_balance",
+    "assessment/tests/test_hidden.py::test_retry",
+    "assessment/tests/test_hidden.py::test_success_then_fail",
+    "assessment/tests/test_hidden.py::test_two_failures",
+    "tests/test_public.py::test_charge_fails",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_no_stock",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_success"
+  ],
+  "task_id": "R24",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_after_charge": "hidden",
+    "assessment/tests/test_hidden.py::test_free_order": "hidden",
+    "assessment/tests/test_hidden.py::test_no_balance": "hidden",
+    "assessment/tests/test_hidden.py::test_retry": "hidden",
+    "assessment/tests/test_hidden.py::test_success_then_fail": "hidden",
+    "assessment/tests/test_hidden.py::test_two_failures": "hidden",
+    "tests/test_public.py::test_charge_fails": "public",
+    "tests/test_public.py::test_empty": "public",
+    "tests/test_public.py::test_no_stock": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public",
+    "tests/test_public.py::test_success": "public"
+  }
+}

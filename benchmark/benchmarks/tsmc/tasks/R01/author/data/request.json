@@ -1,0 +1,26 @@
+{
+  "requests": [
+    {
+      "key": "k",
+      "payload": {
+        "machine_id": "E-02",
+        "reason": "inspection"
+      },
+      "lose_response": true
+    },
+    {
+      "key": "k",
+      "payload": {
+        "machine_id": "E-02",
+        "reason": "inspection"
+      }
+    },
+    {
+      "key": "k",
+      "payload": {
+        "machine_id": "E-03",
+        "reason": "other"
+      }
+    }
+  ]
+}

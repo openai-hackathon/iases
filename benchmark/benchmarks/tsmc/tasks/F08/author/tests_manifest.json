@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_midnight_end",
+    "assessment/tests/test_hidden.py::test_short_wrap",
+    "assessment/tests/test_hidden.py::test_wrap_middle",
+    "tests/test_public.py::test_night"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_equal_nonzero",
+    "assessment/tests/test_hidden.py::test_midnight_start",
+    "assessment/tests/test_hidden.py::test_single_minute",
+    "tests/test_public.py::test_day",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_no_queries",
+    "tests/test_public.py::test_public_cli_fixture"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_equal_nonzero",
+    "assessment/tests/test_hidden.py::test_midnight_end",
+    "assessment/tests/test_hidden.py::test_midnight_start",
+    "assessment/tests/test_hidden.py::test_short_wrap",
+    "assessment/tests/test_hidden.py::test_single_minute",
+    "assessment/tests/test_hidden.py::test_wrap_middle",
+    "tests/test_public.py::test_day",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_night",
+    "tests/test_public.py::test_no_queries",
+    "tests/test_public.py::test_public_cli_fixture"
+  ],
+  "task_id": "F08",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_equal_nonzero": "hidden",
+    "assessment/tests/test_hidden.py::test_midnight_end": "hidden",
+    "assessment/tests/test_hidden.py::test_midnight_start": "hidden",
+    "assessment/tests/test_hidden.py::test_short_wrap": "hidden",
+    "assessment/tests/test_hidden.py::test_single_minute": "hidden",
+    "assessment/tests/test_hidden.py::test_wrap_middle": "hidden",
+    "tests/test_public.py::test_day": "public",
+    "tests/test_public.py::test_empty": "public",
+    "tests/test_public.py::test_night": "public",
+    "tests/test_public.py::test_no_queries": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public"
+  }
+}

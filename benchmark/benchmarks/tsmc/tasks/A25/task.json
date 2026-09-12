@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "bfe76725364ba108b882314804112d99180ede0709633a87733a41ae07ee69f0",
+    "data/expected.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "data/request.json": "5e04f6499f79031929b2abdeba933aa55bb4356cc656b0a4a3ac383229853810",
+    "docs/contract.md": "09d49d9d597d3b12267ac6f3e5151e26310fd2578432dfd7d97007d1f0a38215",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "df333e7368610debfc739349c31c7014b0cf989d2e5fea9bbed96c0803b38639",
+    "problem_statement.md": "a893fb8f340b3bdf5c0f69dde42b98a837dd60c35f93bae076d07c2f33a6a6b2",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "2a5f4fedb13a6e65ee4b4e7bd056c091e13269a53568ac811501c6cfbce96ecb"
+  },
+  "baseline_git_commit": "75ef71043d508b57fa6cdf0114364c41d2eb10f3",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Compute transitive material impact with cycle and duplicate protection.",
+  "family_id": "transitive_material_descendants",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "production-log"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "A25",
+  "test_count": 11,
+  "title": "Lineage impact analysis stops at the first generation",
+  "track": "data_analysis",
+  "version": "1.0"
+}

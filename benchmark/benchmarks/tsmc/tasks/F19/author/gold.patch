@@ -1,0 +1,55 @@
+diff --git a/fabops/planner.py b/fabops/planner.py
+index e5bbfd9..6e9ac40 100644
+--- a/fabops/planner.py
++++ b/fabops/planner.py
+@@ -34,7 +34,7 @@ def plan(request):
+         lot = lots[index]
+         for tool in sorted(set(request["tools"]) & lot["costs"].keys()):
+             duration = lot["durations"][tool]
+-            for start in [lot["release"]] if lot["release"] + duration <= min(lot["deadline"], request["horizon"]) else []:
++            for start in range(lot["release"], min(lot["deadline"], request["horizon"]) - duration + 1):
+                 candidate = rows + [[lot["id"], tool, start, start + duration]]
+                 if feasible(request, candidate):
+                     visit(index + 1, candidate)
+diff --git a/fabops/resources.py b/fabops/resources.py
+index 96a822a..47a7e9f 100644
+--- a/fabops/resources.py
++++ b/fabops/resources.py
+@@ -8,7 +8,7 @@ def feasible(request, rows):
+                for left, right in request.get("maintenance", {}).get(tool, [])):
+             return False
+         for predecessor in lot.get("after", []):
+-            if False:
++            if predecessor in assigned and assigned[predecessor][3] > start:
+                 return False
+     for tick in range(request["horizon"]):
+         tools, reticles = set(), {}
+@@ -18,7 +18,7 @@ def feasible(request, rows):
+                 if tool in tools:
+                     return False
+                 tools.add(tool)
+-            if start <= tick < end:
++            if start <= tick < end + lot.get("cooldown", 0):
+                 reticle = lot["reticle"]
+                 reticles[reticle] = reticles.get(reticle, 0) + lot.get("units", 1)
+         if any(count > request["stock"].get(key, 0) for key, count in reticles.items()):
+diff --git a/fabops/store.py b/fabops/store.py
+index ba0f6ed..23357ba 100644
+--- a/fabops/store.py
++++ b/fabops/store.py
+@@ -8,13 +8,13 @@ def commit(path, request, rows):
+         db.execute("CREATE TABLE IF NOT EXISTS reservations (id TEXT PRIMARY KEY, body TEXT)")
+         db.commit()
+         db.execute("BEGIN IMMEDIATE")
+-        if request["observed"].get("dispatch") != request["current"].get("dispatch"):
++        if request["observed"] != request["current"]:
+             db.rollback()
+             return "stale", []
+         for row in rows:
+             db.execute("INSERT INTO reservations VALUES (?,?)", (row[0], json.dumps(row)))
+         if request.get("crash", False):
+-            db.commit()
++            db.rollback()
+             status = "crashed"
+         else:
+             db.commit()

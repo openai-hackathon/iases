@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "be9b756052adc3826d7bad05aff76b7f6598bb5a5e0d10e3344152bf08d746e7",
+    "data/expected.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "data/request.json": "7104436211d3e256d0fd8216269af13723b1a2c1314bb924f069ae7f84c61f0d",
+    "docs/contract.md": "8f889fd2b219d3595db524b571811c3c82059d7e588ab916155cdd4b097c103c",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "2277f60fdafaed07611fdfa4ef1a1dead195457115bfd47c040e28db0f3ee322",
+    "problem_statement.md": "ad31522d109439d0428047291689001cbe1229174cc7bd1939e0412520654c76",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "a3b1d4c1027d9a124c7d837acc363366c7380fff8dd3c940ff2c6b7832864916"
+  },
+  "baseline_git_commit": "f28bee0a33a23592487e581cea83f3debf4ed54c",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Rebuild temporal intervals after late arrivals and equal-time corrections.",
+  "family_id": "effective_dimension_interval_rebuild",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "A27",
+  "test_count": 11,
+  "title": "Late equipment dimension corrections overlap existing validity intervals",
+  "track": "data_analysis",
+  "version": "1.0"
+}

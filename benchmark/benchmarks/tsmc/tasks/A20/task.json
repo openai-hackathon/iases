@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "3a18664cf36e7d0b60d0f0d898d113f63a4db11c69e364426514b2cde33afa1b",
+    "data/expected.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "data/request.json": "bc749b6c4c5bfde415a9bd3fc053b803d72d7571ab9f6cfa967a32a480fec7d8",
+    "docs/contract.md": "1a38f43421fbda9ddd6773bce54d1dbf7534e28ca5f45cba7cbc620e055774c2",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "57ba973c562a7269e5d1b9c073b1d5efec463935997b89ebdf4d59f305d20fb2",
+    "problem_statement.md": "49234e5a8a0fb080cf56ec92b977cd978a426c8cfaa1559d72e20b361fe9f064",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "e60f4b97bb95c099b29ce58acb1512155158b22d1ab84a51ffd3684898478d71"
+  },
+  "baseline_git_commit": "8990c9b875038817b60b4da5a7b0693ee4ade5c1",
+  "design_difficulty": "easy",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "",
+  "family_id": "signed_quality_label_decoding",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "secom"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "A20",
+  "test_count": 11,
+  "title": "SECOM-style failure labels are interpreted as booleans",
+  "track": "data_analysis",
+  "version": "1.0"
+}

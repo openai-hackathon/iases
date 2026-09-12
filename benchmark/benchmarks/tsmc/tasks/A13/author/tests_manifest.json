@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_multiple",
+    "assessment/tests/test_hidden.py::test_reset_then_increase",
+    "assessment/tests/test_hidden.py::test_unordered",
+    "assessment/tests/test_hidden.py::test_zero_reset",
+    "tests/test_public.py::test_reset"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_equal",
+    "assessment/tests/test_hidden.py::test_initial_zero",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_increase",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_single"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_equal",
+    "assessment/tests/test_hidden.py::test_initial_zero",
+    "assessment/tests/test_hidden.py::test_multiple",
+    "assessment/tests/test_hidden.py::test_reset_then_increase",
+    "assessment/tests/test_hidden.py::test_unordered",
+    "assessment/tests/test_hidden.py::test_zero_reset",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_increase",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_reset",
+    "tests/test_public.py::test_single"
+  ],
+  "task_id": "A13",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_equal": "hidden",
+    "assessment/tests/test_hidden.py::test_initial_zero": "hidden",
+    "assessment/tests/test_hidden.py::test_multiple": "hidden",
+    "assessment/tests/test_hidden.py::test_reset_then_increase": "hidden",
+    "assessment/tests/test_hidden.py::test_unordered": "hidden",
+    "assessment/tests/test_hidden.py::test_zero_reset": "hidden",
+    "tests/test_public.py::test_empty": "public",
+    "tests/test_public.py::test_increase": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public",
+    "tests/test_public.py::test_reset": "public",
+    "tests/test_public.py::test_single": "public"
+  }
+}

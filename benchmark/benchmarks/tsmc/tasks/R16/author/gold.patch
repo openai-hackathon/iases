@@ -1,0 +1,13 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 53d2cb2..a33ace8 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -7,7 +7,7 @@ def run(request):
+             continue
+         accepted.append(True)
+         if event["success"]:
+-            state = "closed"
++            state, failures = "closed", 0
+         else:
+             failures += 1
+             if failures >= request["threshold"]:

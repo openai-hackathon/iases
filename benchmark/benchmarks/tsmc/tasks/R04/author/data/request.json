@@ -1,0 +1,15 @@
+{
+  "limit": 2,
+  "jobs": [
+    {
+      "outcome": "ok",
+      "values": [
+        4,
+        5
+      ]
+    },
+    {
+      "outcome": "cancel"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+diff --git a/fabops/delivery.py b/fabops/delivery.py
+index 35dd28d..76f9420 100644
+--- a/fabops/delivery.py
++++ b/fabops/delivery.py
+@@ -8,8 +8,6 @@ def deliver(db, event_id, channel, crash="none"):
+         return "missing"
+     if db.execute("SELECT 1 FROM acks WHERE id=? AND channel=?", (event_id, channel)).fetchone():
+         return "acked"
+-    db.execute("INSERT OR IGNORE INTO acks VALUES (?,?)", (event_id, channel))
+-    db.commit()
+     if crash == "before_sink":
+         return "crashed"
+     publish(db, channel, json.loads(row[0]))
+diff --git a/fabops/sink.py b/fabops/sink.py
+index 06469bd..a5f34fb 100644
+--- a/fabops/sink.py
++++ b/fabops/sink.py
+@@ -3,14 +3,14 @@ def publish(db, channel, event):
+     db.execute("BEGIN IMMEDIATE")
+     try:
+         receipt = db.execute("SELECT 1 FROM receipts WHERE id=? AND channel=?",
+-                             (event["artifact"], channel)).fetchone()
++                             (event["id"], channel)).fetchone()
+         if receipt is not None:
+             db.commit()
+             return
+         db.execute("INSERT INTO receipts VALUES (?,?)", (event["id"], channel))
+         current = db.execute("SELECT revision FROM projection WHERE channel=? AND artifact=?",
+                              (channel, event["artifact"])).fetchone()
+-        if current is None or event["revision"] != current[0]:
++        if current is None or event["revision"] > current[0]:
+             db.execute("INSERT OR REPLACE INTO projection VALUES (?,?,?,?)",
+                        (channel, event["artifact"], event["revision"], event["payload"]))
+         db.commit()
+diff --git a/fabops/store.py b/fabops/store.py
+index 5b7e965..ffd99bf 100644
+--- a/fabops/store.py
++++ b/fabops/store.py
+@@ -24,7 +24,6 @@ def enqueue(db, command):
+     db.execute("BEGIN IMMEDIATE")
+     try:
+         db.execute("INSERT INTO events VALUES (?,?)", (event["id"], body))
+-        db.commit()
+         if command.get("crash", False):
+             raise RuntimeError("interrupted enqueue")
+         db.commit()

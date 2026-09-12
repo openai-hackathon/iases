@@ -1,0 +1,8 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index ce5dc42..e18c3d2 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -1,2 +1,2 @@
+ def run(request):
+-    return request["wall_end"] - request["wall_start"]
++    return request["mono_end"] - request["mono_start"]

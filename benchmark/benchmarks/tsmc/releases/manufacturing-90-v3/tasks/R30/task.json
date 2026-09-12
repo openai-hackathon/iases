@@ -1,0 +1,38 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "0cd1f8fb5c4ccba466af2dda72dc5e854a5f6b13c248fe94042cd0826fa94b61",
+    "data/expected.json": "b446367d23e2a117865d5bf6c1cdb1e3d11e963184a71f344da5f9ed27f18801",
+    "data/request.json": "447781f40b9433e0642e56c6bc30a5cbbf56cc9c73b73618a02db96307b69f71",
+    "docs/contract.md": "bbd8ab4e59674b64f608f5448686a95abe350555faf08552e362c9b5108b8d5a",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "cba1a7f7214ab92745d033e1ff49ab49b1454d3a5c311db22b6a4934cb0b543f",
+    "fabops/graph.py": "b326e6e1a247bae0238d768f3436371ab5537109d00418310ec51e4a0c463f3d",
+    "fabops/package.py": "ea194b045e4a074c47a6864d9a2c4e6fccc71d4f8011d877f473457d999334d9",
+    "problem_statement.md": "ae2bd0cf16778a9720f215e3c1d532789e4465c1ee48d16cfc4c111be1425b0e",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "e6dce213365869a67a9a76f188b84b7a2b598999d2f271219a99646f8f6edb5c"
+  },
+  "baseline_git_commit": "0829a628747483fc9f12cf56ea1ed297cff64372",
+  "design_difficulty": "hard",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Resolve a revision-pinned graph with shared dependencies, cycles and incompatible pins; verify all reachable content; then preserve the last complete installed package across a real interrupted replacement. The coupled graph/integrity/publication boundary differs from a one-table schema migration.",
+  "family_id": "pinned_revision_closure_atomic_package_install",
+  "hidden_tests": 16,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "R30",
+  "test_count": 21,
+  "title": "Technical package assembly mixes revisions and destroys the last valid package",
+  "track": "reliability",
+  "version": "1.0"
+}

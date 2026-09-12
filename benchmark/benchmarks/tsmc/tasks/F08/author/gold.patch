@@ -1,0 +1,10 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 8f095b6..c66b4ab 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -1,4 +1,4 @@
+ def run(request):
+     start, end = request["start"], request["end"]
+-    return [(start <= t < end if start <= end else t >= start and t < end)
++    return [(start <= t < end if start <= end else t >= start or t < end)
+             for t in request["minutes"]]

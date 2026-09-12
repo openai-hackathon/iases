@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "1c30614ec2432e2543bdbf6a5d9adff6e6bdd769f771c27da3f5a08ff27f95f7",
+    "data/expected.json": "a17fcf0a2f50e2d495e4f90ce263410edc183add6c62699a2facbccf60410f74",
+    "data/request.json": "2892c0d73f52a4a60a5890d4867bf19f741c99d95bebac1314ba2580516e37f6",
+    "docs/contract.md": "35593c6b085ad5cbaafa266d29bd77336b7b3ca770e446ec24809d2a6e50131e",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "da977fe424614d01a0b689aad6c9b396fa50365f6d30582d7cf59ea7cb499b98",
+    "problem_statement.md": "e6281d3178c399c3644b5e1a222240e395d3391a1bed5e372522e6b701aff04c",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "35a46e1e067bde694483254483ffa17081ab388931a00a3cc49456b5d2a5ea0f"
+  },
+  "baseline_git_commit": "b8ab5fce5851551197355ac685db2555f29b3d10",
+  "design_difficulty": "easy",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "",
+  "family_id": "conjunctive_retry_budget",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "R05",
+  "test_count": 11,
+  "title": "Retries continue after one of their budgets is exhausted",
+  "track": "reliability",
+  "version": "1.0"
+}

@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "901b3533d3fa811a17cfc521335b859dd7461a7d14ae633b2440010c5682ce6b",
+    "data/expected.json": "acc6ffdc57dfd2f7f2211850dc6e4e19ab384918f18f63a5aefeeb715bfc844f",
+    "data/request.json": "ecbd8d487f909260c63fffd643a829a910d5895a3804c6e2a01c3fbef735100d",
+    "docs/contract.md": "8a4d2dc74fabcf2d9c6d8a696cbe5e3342c96cce473060553a2128533bd76ec8",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "139b463b07e4c68ab32c13ec60f80ea87ef7cdd62ca32802166bf650ecad419d",
+    "problem_statement.md": "cf6b30625b232831cdf2a785a0da6beadf116574020dcad522b4d014538c8ae2",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "337eaf44d18d1dec9a046f5e7bd65e84d6b72d494fc160cc13d950f4ed8fc73e"
+  },
+  "baseline_git_commit": "d7ee9693f4021cbd7ea7740c4680f06d647cd7d3",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Reason about real asyncio cancellation propagation and shared task ownership.",
+  "family_id": "singleflight_waiter_cancellation",
+  "hidden_tests": 8,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "R13",
+  "test_count": 13,
+  "title": "Cancelling one telemetry waiter cancels shared requests",
+  "track": "reliability",
+  "version": "1.0"
+}

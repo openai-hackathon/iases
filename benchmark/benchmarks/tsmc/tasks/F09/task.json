@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "55d7fbd92aafa2340dc211e49534c004ab5459f1b83efcc774ade60374340251",
+    "data/expected.json": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "data/request.json": "687f11398b82b586ddefb55c1937473a2c1094e93ebdf92a90e16adc2f081c85",
+    "docs/contract.md": "70c3c9a9ccb9b7ab9ce92d6a71435ab952734c90ed1a6e7d1404040a0a69b3ea",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "66c8b1ef9892244ee28751ea984f890b1c551a987674c753b36397cc5800b1be",
+    "problem_statement.md": "d6682a48772a6e549d0615eaf08f663d695bf12abb4e548a070981bcbc9b159c",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "f4846a79d804c1d55afd6ddc22c38a824eee62592d14720c7c9174b6f27537b0"
+  },
+  "baseline_git_commit": "ee10e4c8b28b7b57c50d6867cfe6827e599c52d1",
+  "design_difficulty": "easy",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "",
+  "family_id": "carrier_ceiling_division",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "production-log"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "F09",
+  "test_count": 11,
+  "title": "Partial carrier loads are omitted from packaging counts",
+  "track": "factory_logic",
+  "version": "1.0"
+}

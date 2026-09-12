@@ -1,0 +1,40 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index ddb0e7b..9ea8680 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -10,7 +10,7 @@ def run(request):
+         flow = segments(request["flow"], cycle, request["calibration"]["flow"],
+                         request["max_gap"]["flow"])
+         duration, volume, work = joint_integrals(pressure, flow)
+-        coverage = min(sum(s[1] - s[0] for s in pressure), sum(s[1] - s[0] for s in flow)) / (cycle["end"] - cycle["start"])
++        coverage = duration / (cycle["end"] - cycle["start"])
+         accepted = duration > 0 and coverage >= request["min_coverage"]
+         output.append(dict(cycle=cycle["id"], coverage=round(coverage, 6),
+                            accepted=accepted,
+diff --git a/fabops/integrate.py b/fabops/integrate.py
+index 6f83595..af807b8 100644
+--- a/fabops/integrate.py
++++ b/fabops/integrate.py
+@@ -15,5 +15,5 @@ def joint_integrals(pressure, flow):
+             duration += width
+             volume += width * (q0 + q1) / 120
+             work += width * (p0 * q0 + (p0 * dq + q0 * dp) / 2
+-                             + dp * dq / 2) / 600
++                             + dp * dq / 3) / 600
+     return duration, volume, work
+diff --git a/fabops/segments.py b/fabops/segments.py
+index bd2bdcf..8dc1344 100644
+--- a/fabops/segments.py
++++ b/fabops/segments.py
+@@ -6,9 +6,9 @@ def segments(rows, cycle, calibration, max_gap):
+     result = []
+     for left, right in zip(points, points[1:]):
+         width = right["t"] - left["t"]
+-        if not (left["valid"] or right["valid"]):
++        if not (left["valid"] and right["valid"]):
+             continue
+-        if width / (cycle["end"] - cycle["start"]) > max_gap:
++        if width > max_gap:
+             continue
+         values = [row["value"] * calibration["gain"] + calibration["offset"]
+                   for row in (left, right)]

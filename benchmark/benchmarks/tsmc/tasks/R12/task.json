@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "5b628227fab343dee0897f868e19a87ccb94e3c867c3e0c04d796c0a8c1ee66f",
+    "data/expected.json": "742b29fc8852bd985d53cd33b5b78e50f12dea878bb3e638757459788f3b4458",
+    "data/request.json": "586934e2e4be3eb2b1b33dd840b43586d285fea0740fa185f43a1863472ed859",
+    "docs/contract.md": "44977db955a9b4d097c6f8e88f5f1b783106f01930c6b9d856ae25c34ae9e564",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "9568554cce17b71f4895735406d12ac60da2f756812fd42f41338ccc2ae82412",
+    "problem_statement.md": "8cae78ad3d1d6327c8702f88ba85d393a66606e07252949a0e5618a127f607fc",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "cdfe0544cb097b650f57a3916202a44cff5dc9d350d238a41e3f9d2ff14cd488"
+  },
+  "baseline_git_commit": "2ed1a48c63362308fbe9d14febb3ae3eb12a0f99",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Preserve queue progress and terminal disposition after retry exhaustion.",
+  "family_id": "poison_message_dead_letter_progress",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "production-log"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "R12",
+  "test_count": 11,
+  "title": "Poison work orders prevent later messages from being processed",
+  "track": "reliability",
+  "version": "1.0"
+}

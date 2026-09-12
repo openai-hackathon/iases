@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "c27f87b4020a35c695ebe3e58d42b3f4e6380c53c2d25348f158a9f781070a93",
+    "data/expected.json": "eb123f96915eb5536431a749bb5c632ac582f7a63710045e23ddf57e032fdf4e",
+    "data/request.json": "15e4453ce4049304e3fd55a46cb1d9ae8594bdf844de9dbe7ac1b79616491599",
+    "docs/contract.md": "5c2160b32cdd741e2f0424d7c98993f1ac85d1966626b2d4ea3c4c2138e93814",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "b427ad23a5b22d9ed1f9769fc84653d9e1b1b1ed9798baa5bc17cbe6bf68aa05",
+    "problem_statement.md": "59dccf2e52b5e388eaf2df492381b7ee80c4cee25f0d12b68e7ccb399825572d",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "5488a484f9786e0c1d76d0eeec1151e2717092d0661e70967e2419045adca6bb"
+  },
+  "baseline_git_commit": "f4b5f2b6a4c63385b96ff6cc36f557a0380bd2f6",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Preserve mass and identity through successive atomic lineage edits.",
+  "family_id": "lot_lineage_mass_balance",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "production-log"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "F18",
+  "test_count": 11,
+  "title": "Lot merge validation ignores quantities consumed by earlier operations",
+  "track": "factory_logic",
+  "version": "1.0"
+}

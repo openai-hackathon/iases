@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_previous_day",
+    "assessment/tests/test_hidden.py::test_same_wall",
+    "assessment/tests/test_hidden.py::test_window_offset",
+    "tests/test_public.py::test_offset"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_expiry",
+    "assessment/tests/test_hidden.py::test_offset_expiry",
+    "assessment/tests/test_hidden.py::test_zero_window",
+    "tests/test_public.py::test_inside",
+    "tests/test_public.py::test_outside",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_start"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_expiry",
+    "assessment/tests/test_hidden.py::test_offset_expiry",
+    "assessment/tests/test_hidden.py::test_previous_day",
+    "assessment/tests/test_hidden.py::test_same_wall",
+    "assessment/tests/test_hidden.py::test_window_offset",
+    "assessment/tests/test_hidden.py::test_zero_window",
+    "tests/test_public.py::test_inside",
+    "tests/test_public.py::test_offset",
+    "tests/test_public.py::test_outside",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_start"
+  ],
+  "task_id": "F16",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_expiry": "hidden",
+    "assessment/tests/test_hidden.py::test_offset_expiry": "hidden",
+    "assessment/tests/test_hidden.py::test_previous_day": "hidden",
+    "assessment/tests/test_hidden.py::test_same_wall": "hidden",
+    "assessment/tests/test_hidden.py::test_window_offset": "hidden",
+    "assessment/tests/test_hidden.py::test_zero_window": "hidden",
+    "tests/test_public.py::test_inside": "public",
+    "tests/test_public.py::test_offset": "public",
+    "tests/test_public.py::test_outside": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public",
+    "tests/test_public.py::test_start": "public"
+  }
+}

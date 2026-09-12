@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_all_edges",
+    "assessment/tests/test_hidden.py::test_boundary_pair",
+    "assessment/tests/test_hidden.py::test_negative",
+    "assessment/tests/test_hidden.py::test_repeated_max",
+    "assessment/tests/test_hidden.py::test_single_bin",
+    "assessment/tests/test_hidden.py::test_uneven_bins",
+    "tests/test_public.py::test_last_edge"
+  ],
+  "PASS_TO_PASS": [
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_interior",
+    "tests/test_public.py::test_outside",
+    "tests/test_public.py::test_public_cli_fixture"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_all_edges",
+    "assessment/tests/test_hidden.py::test_boundary_pair",
+    "assessment/tests/test_hidden.py::test_negative",
+    "assessment/tests/test_hidden.py::test_repeated_max",
+    "assessment/tests/test_hidden.py::test_single_bin",
+    "assessment/tests/test_hidden.py::test_uneven_bins",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_interior",
+    "tests/test_public.py::test_last_edge",
+    "tests/test_public.py::test_outside",
+    "tests/test_public.py::test_public_cli_fixture"
+  ],
+  "task_id": "A08",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_all_edges": "hidden",
+    "assessment/tests/test_hidden.py::test_boundary_pair": "hidden",
+    "assessment/tests/test_hidden.py::test_negative": "hidden",
+    "assessment/tests/test_hidden.py::test_repeated_max": "hidden",
+    "assessment/tests/test_hidden.py::test_single_bin": "hidden",
+    "assessment/tests/test_hidden.py::test_uneven_bins": "hidden",
+    "tests/test_public.py::test_empty": "public",
+    "tests/test_public.py::test_interior": "public",
+    "tests/test_public.py::test_last_edge": "public",
+    "tests/test_public.py::test_outside": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public"
+  }
+}

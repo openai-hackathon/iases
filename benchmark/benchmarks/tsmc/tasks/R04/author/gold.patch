@@ -1,0 +1,20 @@
+diff --git a/fabops/worker_pool.py b/fabops/worker_pool.py
+index 36072ac..8e4d924 100644
+--- a/fabops/worker_pool.py
++++ b/fabops/worker_pool.py
+@@ -13,10 +13,11 @@ class WorkerPool:
+         await self._slots.acquire()
+         self.active+=1
+         self.peak=max(self.peak,self.active)
+-        result=await job()
+-        self.active-=1
+-        self._slots.release()
+-        return result
++        try:
++            return await job()
++        finally:
++            self.active-=1
++            self._slots.release()
+ 
+     @property
+     def free_slots(self):return self.limit-self.active

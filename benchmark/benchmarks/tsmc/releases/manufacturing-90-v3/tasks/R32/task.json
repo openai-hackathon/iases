@@ -1,0 +1,39 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "26d809d5f9be0aa8ab54ea2ffbda5292872923df2584f54d255ee3ffbbcfdda2",
+    "data/expected.json": "7c66ff9c99d4a7bdc36d873e2298191614a2e23e0c5f0386a4a94b7a96167635",
+    "data/request.json": "d1933215812bb0a62c50ba518f5a0fd2a2ceee6c0da4a4dea8ee51640a6b38a4",
+    "docs/contract.md": "f1897359c33e1db2be50f8d24db83db1785b3fa21b34fdf6e6b12435a45c55a5",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "c4e1f4a6ebccdadd8df9baa76bb1ee8962c28d12af0f85d211ed60dc922f9780",
+    "fabops/manifest.py": "dab3d77feeb88fccd7ecf522e7b612175c8c90cdbaf8f2c51174408e35f7ecbc",
+    "fabops/publish.py": "6748a6ab8e78e87ab4c90d9c5a7e903dbb27f3c198c598f18a4a62776bfd226c",
+    "fabops/upload.py": "2974f1c3471b72ab37423f6d5fe11feeb29668e01c4d63799c006931104ecdb1",
+    "problem_statement.md": "e03b9b3a9af74a26182f4a8755f9c069527f8c367a3ac8541d0b9131cdb4d829",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "920adac5842a3786809b5821b0a2a723eda8eb3b7502632bf06e644b0acbaa66"
+  },
+  "baseline_git_commit": "edd5bab0af0958529f9cc7f01532bc1d2ff11b86",
+  "design_difficulty": "hard",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Bind resumable staging to a canonical multi-chunk manifest, enforce independent per-chunk and cross-chunk constraints, and separate staged durability from atomic query visibility across restart. This combines hash integrity, scope/order identity and publication recovery rather than a single request fingerprint or schema rollback.",
+  "family_id": "manifest_bound_resumable_atomic_bulk_ingest",
+  "hidden_tests": 17,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "R32",
+  "test_count": 22,
+  "title": "Resumed bulk imports expose unverified or partially published manufacturing records",
+  "track": "reliability",
+  "version": "1.0"
+}

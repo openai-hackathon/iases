@@ -1,0 +1,18 @@
+{
+  "responses": [
+    {
+      "error": "ConnectionError"
+    },
+    {
+      "ok": {
+        "work_order_id": 1,
+        "machine_id": "E-02",
+        "reason": "inspection"
+      }
+    },
+    {
+      "error": "ConflictError"
+    }
+  ],
+  "work_orders": 1
+}

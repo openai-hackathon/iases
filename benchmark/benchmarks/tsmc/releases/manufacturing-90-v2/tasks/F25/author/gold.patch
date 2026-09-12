@@ -1,0 +1,42 @@
+diff --git a/fabops/net.py b/fabops/net.py
+index fe643c3..db67c7a 100644
+--- a/fabops/net.py
++++ b/fabops/net.py
+@@ -1,13 +1,13 @@
+ """Fire a weighted transition against a bounded marking atomically."""
+ def fire(marking, transition, places, capacities):
+     current = dict(zip(places, marking))
+-    if any(current[p] < 1 for p, count in transition["consume"].items()):
++    if any(current[p] < count for p, count in transition["consume"].items()):
+         return None
+     result = dict(current)
+     for p, count in transition["consume"].items():
+         result[p] -= count
+     for p, count in transition["produce"].items():
+         result[p] += count
+-    if any(current[p] + transition["produce"].get(p, 0) > capacities[p] for p in places):
++    if any(result[p] > capacities[p] for p in places):
+         return None
+     return tuple(result[p] for p in places)
+diff --git a/fabops/replay.py b/fabops/replay.py
+index 2dcb107..802920a 100644
+--- a/fabops/replay.py
++++ b/fabops/replay.py
+@@ -13,7 +13,7 @@ def replay(request):
+         silent, path, index, marking = heapq.heappop(queue)
+         if best.get((index, marking)) != (silent, path):
+             continue
+-        if index == len(trace):
++        if index == len(trace) and marking == final:
+             return dict(accepted=True, witness=list(path), silent=silent,
+                         marking=dict(zip(places, marking)))
+         for item in sorted(request["transitions"], key=lambda item: item["id"]):
+@@ -25,7 +25,7 @@ def replay(request):
+                 continue
+             target = (index + int(not hidden), changed)
+             score = (silent + int(hidden), path + (item["id"],))
+-            if all(position != target[0] for position, _ in best):
++            if target not in best or score < best[target]:
+                 best[target] = score
+                 heapq.heappush(queue, (*score, *target))
+     return dict(accepted=False, witness=[], silent=None,

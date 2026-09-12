@@ -1,0 +1,10 @@
+{
+  "synthetic": true,
+  "source": "authored synthetic issue fixtures; no real factory source",
+  "task_id": "F04",
+  "version": "0.2",
+  "sample_role": "public_reproduction",
+  "load_seed": 20260912,
+  "load_parameter": 128,
+  "physical_calibration": false
+}

@@ -1,0 +1,8 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 9f2a2d8..058e136 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -1,2 +1,2 @@
+ def run(request):
+-    return sum(e["quantity"] if e["type"] == "receipt" else e["quantity"] for e in request["events"])
++    return sum(e["quantity"] if e["type"] == "receipt" else -e["quantity"] for e in request["events"])

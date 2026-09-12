@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "5919768bbab16d757670d0229e35b73b3f75d32c321dee21dad21c1d5aa6f5f1",
+    "data/expected.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "data/request.json": "a4573d0f29c7abd96367d62663b50e9f2ecf029ebbfb02340b51b4ca43d911e0",
+    "docs/contract.md": "dad35781d0eedcb5e299f4ae1cf4516222b51e45da66fa4e49c71d128be859a5",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "1e8247f310743c3facb27841b51dc9cae62b894e805d4fcbed0c871dbe5f2071",
+    "problem_statement.md": "c851d300c193796c3cf4825ef32f609b96538bbff0d6dc5027aed0a96d2cd616",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "e638901e1db87c3ccb24239a41fb249f40e7af710dea4e3c266f8d0a488a4ff3"
+  },
+  "baseline_git_commit": "0d35751dd900ae7316869a5f3adb873de8531ace",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Correlate partial batches by identity while preserving requested order and valid falsey data.",
+  "family_id": "rpc_response_correlation",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "R26",
+  "test_count": 11,
+  "title": "Reordered batch RPC responses attach results to the wrong work orders",
+  "track": "reliability",
+  "version": "1.0"
+}

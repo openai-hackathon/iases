@@ -1,0 +1,13 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 7feb7c6..8a80081 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -3,7 +3,7 @@ def run(request):
+     for event in request["events"]:
+         if event["op"] == "edit":
+             current = event["revision"]
+-            pass
++            approvals.clear()
+         elif event["op"] == "approve":
+             if event["revision"] == current and event["role"] in request["roles"]:
+                 approvals.add(event["role"])

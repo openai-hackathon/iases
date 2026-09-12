@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "52e20a21dc1c1265dcfacb4edb63d5c7dc6286e8b05d243faf94cd2db2e4d732",
+    "data/expected.json": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+    "data/request.json": "b3f08182e74d8f6dc84978508a5296b9fbfa89de12859fc9de75fc2d76bca81c",
+    "docs/contract.md": "d2efa82f41bcce02db2ee5500c5f5ab979c34b18769e0c59640176f00f21e325",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "773acdf09fb6f6ad77fd2def923100302de247e0831afe1e412594ec577b5ec2",
+    "problem_statement.md": "ce619b1db184cf9a3ff13a0770dee7e4ba6b98cead9077ae95ef0649aba10be6",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "a87f8d874edcffc1efcd630608a7bcfef582d72bd30316e79dab2235f5b58d47"
+  },
+  "baseline_git_commit": "0c84df5d47a090eaf0058281b2ca7be8df87b69b",
+  "design_difficulty": "easy",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "",
+  "family_id": "nearest_rank_quantile",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "zema-hydraulic"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "A06",
+  "test_count": 11,
+  "title": "Nearest-rank quantiles select the following observation",
+  "track": "data_analysis",
+  "version": "1.0"
+}

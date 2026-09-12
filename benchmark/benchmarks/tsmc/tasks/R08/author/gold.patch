@@ -1,0 +1,11 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index f615180..74ba06c 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -1,5 +1,5 @@
+ def identity(row):
+-    return row["tenant"] + ":" + row["key"]
++    return (row["tenant"], row["key"])
+ def run(request):
+     cache = {identity(row): row["value"] for row in request["entries"]}
+     return [cache.get(identity(row)) for row in request["queries"]]

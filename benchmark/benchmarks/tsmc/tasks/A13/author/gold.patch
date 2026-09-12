@@ -1,0 +1,9 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index c7d4dd4..fa985f3 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -1,3 +1,3 @@
+ def run(request):
+     samples = sorted(request["samples"])
+-    return sum(b[1] - a[1] for a, b in zip(samples, samples[1:]))
++    return sum(b[1] - a[1] if b[1] >= a[1] else b[1] for a, b in zip(samples, samples[1:]))

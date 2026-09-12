@@ -1,0 +1,181 @@
+{
+  "schema_version": "tsmc-incident/0.3",
+  "scenario_id": "DC01",
+  "title": "Central datacenter outage: shared dependencies and different degradation levels",
+  "synthetic": true,
+  "affiliation": "none",
+  "split": "demo_dev",
+  "track": "patch-repair-with-recovery-gates",
+  "fault_domain": "synthetic factory services only; actual GCP/Modal inference stays up",
+  "story": "DC-A primary writes are unreachable. The DC-B read-only source and edge journals remain readable. Disconnection exposes existing checkpoint, state replay, qualification cache and hold defects. Repairing software does not repair a physical datacenter.",
+  "environment_facts": {
+    "standby_readable": true,
+    "source_complete": true,
+    "local_interlock_ok": true,
+    "dc_a_primary_up": false
+  },
+  "services": {
+    "journal": {
+      "task_id": "R03",
+      "node_id": "recovery-node",
+      "dc_dependency": "hard",
+      "initial_state": "unverified",
+      "impact": "Cursor and output may disagree; verify replay from a complete source",
+      "repair_requires": [],
+      "restore_requires": [],
+      "restore_facts": [
+        "standby_readable",
+        "source_complete"
+      ],
+      "acceptance_checks": [
+        "output/checkpoint atomic",
+        "source manifest complete"
+      ],
+      "protected_business_service": false
+    },
+    "telemetry": {
+      "task_id": "A04",
+      "node_id": "edge-gateway",
+      "dc_dependency": "buffered",
+      "initial_state": "buffered",
+      "impact": "Local data remains available, but central analytics lag",
+      "repair_requires": [],
+      "restore_requires": [
+        "journal"
+      ],
+      "restore_facts": [],
+      "acceptance_checks": [
+        "new offsets retained",
+        "replay duplicate invariance"
+      ],
+      "protected_business_service": false
+    },
+    "state": {
+      "task_id": "F03",
+      "node_id": "equipment-state-node",
+      "dc_dependency": "hard",
+      "initial_state": "stale",
+      "impact": "Older messages may overwrite LOCKED state",
+      "repair_requires": [],
+      "restore_requires": [
+        "journal"
+      ],
+      "restore_facts": [],
+      "acceptance_checks": [
+        "latest sequence wins",
+        "LOCKED cannot regress"
+      ],
+      "protected_business_service": false
+    },
+    "qualification": {
+      "task_id": "F02",
+      "node_id": "qualification-node",
+      "dc_dependency": "cache_grace",
+      "initial_state": "stale",
+      "impact": "Qualification revocation is missing from the cache",
+      "repair_requires": [],
+      "restore_requires": [
+        "journal"
+      ],
+      "restore_facts": [],
+      "acceptance_checks": [
+        "revocation reflected",
+        "full qualification key isolation"
+      ],
+      "protected_business_service": false
+    },
+    "release": {
+      "task_id": "F01",
+      "node_id": "release-node",
+      "dc_dependency": "hard",
+      "initial_state": "blocked_safe",
+      "impact": "Pause new-lot release; do not risk recovery using stale data",
+      "repair_requires": [],
+      "restore_requires": [
+        "state",
+        "qualification"
+      ],
+      "restore_facts": [
+        "local_interlock_ok"
+      ],
+      "acceptance_checks": [
+        "held lot refused",
+        "locked/revoked refused",
+        "eligible positive accepted"
+      ],
+      "protected_business_service": true
+    },
+    "reservation": {
+      "task_id": "R02",
+      "node_id": "dispatch-node",
+      "dc_dependency": "hard",
+      "initial_state": "offline",
+      "impact": "Eligible lots cannot create capacity-limited reservations",
+      "repair_requires": [],
+      "restore_requires": [
+        "release"
+      ],
+      "restore_facts": [],
+      "acceptance_checks": [
+        "one-slot concurrent capacity",
+        "only eligible assignments accepted"
+      ],
+      "protected_business_service": true
+    },
+    "maintenance": {
+      "task_id": "R01",
+      "node_id": "maintenance-node",
+      "dc_dependency": "async",
+      "initial_state": "backlog",
+      "impact": "Maintenance requests are buffered; retries may create duplicate orders",
+      "repair_requires": [],
+      "restore_requires": [
+        "journal"
+      ],
+      "restore_facts": [],
+      "acceptance_checks": [
+        "same-key retries one order",
+        "payload conflict rejected"
+      ],
+      "protected_business_service": false
+    },
+    "downtime": {
+      "task_id": "A01",
+      "node_id": "report-node",
+      "dc_dependency": "async",
+      "initial_state": "stale",
+      "impact": "Downtime reporting is delayed without blocking local equipment protection",
+      "repair_requires": [],
+      "restore_requires": [
+        "telemetry"
+      ],
+      "restore_facts": [],
+      "acceptance_checks": [
+        "union downtime",
+        "report inputs current"
+      ],
+      "protected_business_service": false
+    }
+  },
+  "importance": [
+    {
+      "higher": "release",
+      "lower": "maintenance",
+      "reason": "Reduce disruption to new-lot release first"
+    },
+    {
+      "higher": "reservation",
+      "lower": "downtime",
+      "reason": "Restore valid dispatch before background reporting"
+    },
+    {
+      "higher": "telemetry",
+      "lower": "downtime",
+      "reason": "Restore trusted ingestion before rebuilding statistics"
+    }
+  ],
+  "timing_note": "All numeric times are synthetic examples, not factory deadlines or measured agent durations.",
+  "correctness_rule": "local task suite AND current integration evidence AND recovery prerequisites; importance is NOT a precedence constraint",
+  "expected_total_order": null,
+  "policies_observe": "current states, observed environment facts, public importance/graph; NOT gold, hidden answers, future events or remaining durations"
+}

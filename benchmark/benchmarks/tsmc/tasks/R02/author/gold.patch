@@ -1,0 +1,20 @@
+diff --git a/fabops/reservations.py b/fabops/reservations.py
+index fa542c7..3275c41 100644
+--- a/fabops/reservations.py
++++ b/fabops/reservations.py
+@@ -13,12 +13,12 @@ def initialize(path, capacities):
+ def reserve(path,request_id,machine_id,units=1,hook=None,fail_after_insert=False):
+     if not request_id or type(units) is not int or units<=0:raise ValueError('invalid reservation')
+     with closing(sqlite3.connect(path,timeout=5)) as c:
+-        capacity=c.execute('SELECT capacity FROM machines WHERE id=?',(machine_id,)).fetchone()
+-        if capacity is None:raise ValueError('unknown machine')
+-        used=c.execute('SELECT COALESCE(SUM(units),0) FROM reservations WHERE machine_id=?',(machine_id,)).fetchone()[0]
+         if hook is not None:hook()
+         try:
+             c.execute('BEGIN IMMEDIATE')
++            capacity=c.execute('SELECT capacity FROM machines WHERE id=?',(machine_id,)).fetchone()
++            if capacity is None:raise ValueError('unknown machine')
++            used=c.execute('SELECT COALESCE(SUM(units),0) FROM reservations WHERE machine_id=?',(machine_id,)).fetchone()[0]
+             prior=c.execute('SELECT machine_id,units FROM reservations WHERE id=?',(request_id,)).fetchone()
+             if prior is not None:
+                 if prior!=(machine_id,units):raise ValueError('request ID conflict')

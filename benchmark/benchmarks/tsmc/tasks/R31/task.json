@@ -1,0 +1,40 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "528676117e93b0d1e9c2c93e0ed52156c610adebcb0f19a382fa15475a25f804",
+    "data/expected.json": "615cb87f61a6a9498817152a98a438942911b37f92deab9ab3f5637225a7d756",
+    "data/request.json": "83e288ac6bc0d7b279860b886ef831b43d2128811fed41ad6cf7b0285f0f843c",
+    "docs/contract.md": "0d7d6300142b6532eb637225b0611a65ce5e3f5f8a5b9efb2eda80869436605a",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/causal.py": "7a75166716be082a85867cfc0247c63f4c96c02817de0beb3bd36357367db1d7",
+    "fabops/checkpoint.py": "975726619635bafebd73451c8613511954a5092d57df711d8851de8323864a31",
+    "fabops/domain.py": "2a7b3a0bf22ca57c32370e31f2b1e051692f3478e347852a18b8bc5a5db9b90a",
+    "fabops/snapshot.py": "ba2f478c44aa652055840c7cfbb85af26ebd74d9e702020f521f15c9f65f0672",
+    "fabops/stream.py": "7796f81a4de8ba8f814c07cb057fe816b3f17c4b70623b4cc549665bfe84a3f2",
+    "problem_statement.md": "ef276ff584ed7e6f1dc5dd1b0a88dc61fbaade8f4e5cd250f7ff7fc12e420833",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "7fbde11966e61fd215881311e1e59b41609388cc401cbe268326c10bbd26da90"
+  },
+  "baseline_git_commit": "57ce67f44882b447467100b57d32e9b34fdfe05f",
+  "design_difficulty": "hard",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Compute greatest dependency-closed prefix vectors across epoch-sensitive sources; repeated causal retreat interacts with durable out-of-order buffers, delayed watermark barriers, lower-bound publication requests and failed checkpoints.",
+  "family_id": "durable_causal_prefix_fixed_point",
+  "hidden_tests": 26,
+  "language": "en",
+  "public_tests": 8,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "R31",
+  "test_count": 34,
+  "title": "Telemetry snapshots publish causally impossible cuts after buffered epoch recovery",
+  "track": "reliability",
+  "version": "2.0"
+}

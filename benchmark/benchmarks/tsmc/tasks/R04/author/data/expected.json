@@ -1,0 +1,13 @@
+{
+  "results": [
+    {
+      "ok": 9
+    },
+    {
+      "status": "cancelled"
+    }
+  ],
+  "active": 0,
+  "free_slots": 2,
+  "peak": 1
+}

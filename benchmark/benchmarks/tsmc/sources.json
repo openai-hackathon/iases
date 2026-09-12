@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-09-12",
+  "use_policy": "Sources inform scenario design and public contracts. No source code, raw dataset rows, real incident reports or proprietary TSMC data are redistributed. Unless explicitly stated, a reference supplies operational context, not evidence that the authored bug occurred in that dataset.",
+  "sources": {
+    "nist-sms": {
+      "title": "NIST Smart Manufacturing Systems Test Bed",
+      "url": "https://www.nist.gov/laboratories/tools-instruments/smart-manufacturing-systems-sms-test-bed",
+      "kind": "Physical manufacturing and inspection test bed with published telemetry",
+      "selection": "Primary operational context",
+      "informs": ["machine telemetry", "inspection", "data lifecycle", "manufacturing service reliability"],
+      "limitation": "The repair bugs and simplified service interfaces are authored; they are not NIST bug reports. Data-package reuse requires checking its own notices."
+    },
+    "mtconnect-2.0": {
+      "title": "MTConnect Standard Part 1.0 Fundamentals, Version 2.0.0",
+      "url": "https://docs.mtconnect.org/MBSD_MTConnect_Part_1_2-0-0.pdf",
+      "kind": "Pinned equipment-data protocol specification",
+      "selection": "Protocol semantics reference",
+      "informs": ["nextSequence", "bounded data buffers", "ordered consumption"],
+      "limitation": "Only R23 directly models the advertised nextSequence contract. Acknowledgement and retention tasks are engineering extensions, not claims of MTConnect conformance. Specification licensing applies to the original document; it is not bundled."
+    },
+    "production-log": {
+      "title": "Production Analysis with Process Mining Technology (Dafna Levy, 2014)",
+      "url": "https://doi.org/10.4121/uuid:68726926-5ac5-4fab-b873-ee76ea412399",
+      "metadata_url": "https://figshare.com/articles/dataset/Production_Analysis_with_Process_Mining_Technology/12697997",
+      "kind": "Production event log",
+      "selection": "Primary process-flow context",
+      "informs": ["work orders", "operations", "resources", "start and completion timestamps", "rework and scheduling scenarios"],
+      "license_observed": "4TU General Terms of Use",
+      "limitation": "Reticles, semiconductor lot lineage and software faults are synthetic extensions of production-flow concepts, not fields or incidents attributed to this source."
+    },
+    "zema-hydraulic": {
+      "title": "Condition monitoring of hydraulic systems (Helwig, Pignanelli and Schuetze)",
+      "url": "https://archive.ics.uci.edu/dataset/447/condition+monitoring+of+hydraulic+systems",
+      "doi": "https://doi.org/10.24432/C5CW21",
+      "kind": "Experimental hydraulic test-rig data",
+      "selection": "Primary multirate sensor context",
+      "informs": ["pressure in bar", "power in watts", "1 Hz / 10 Hz / 100 Hz sampling", "60-second cycles"],
+      "license_observed": "CC BY 4.0",
+      "limitation": "The rig is not a semiconductor fab. Calibration, quantile and integration defects are authored scenarios."
+    },
+    "secom": {
+      "title": "SECOM (Michael McCann and Adrian Johnston, 2008)",
+      "url": "https://archive.ics.uci.edu/dataset/179/secom",
+      "doi": "https://doi.org/10.24432/C54305",
+      "kind": "Semiconductor process measurements and test labels",
+      "selection": "Primary quality-data context",
+      "informs": ["missing measurements", "imbalanced yield labels", "-1 pass / +1 fail"],
+      "license_observed": "CC BY 4.0",
+      "limitation": "The provider is not identified as TSMC. Classification data contains no reference software patches."
+    },
+    "bosch": {
+      "title": "Bosch Production Line Performance",
+      "url": "https://www.kaggle.com/c/bosch-production-line-performance/data",
+      "kind": "Anonymized production-line competition data",
+      "selection": "Secondary schema context",
+      "informs": ["part identity", "station measurements", "sparse joins across numeric, categorical and date files"],
+      "license_observed": "Competition-specific rules; no blanket redistribution permission assumed",
+      "limitation": "Schema concepts only. No competition files were imported or redistributed."
+    },
+    "bpi-2019": {
+      "title": "BPI Challenge 2019 (Boudewijn van Dongen)",
+      "url": "https://doi.org/10.4121/uuid:d06aff4b-79f0-45e6-8ec8-e19730c248f1",
+      "metadata_url": "https://research.tue.nl/en/datasets/bpi-challenge-2019/",
+      "kind": "Anonymized purchase-order event log from a coatings and paints company",
+      "selection": "Secondary material-flow and procurement context",
+      "informs": ["purchase-order line identity", "partial goods receipts", "invoice matching", "reversals"],
+      "license_observed": "Dataset-specific terms must be checked before raw-data reuse",
+      "limitation": "This is procurement rather than machine telemetry. Quantity-based matching and compensation are deliberately simplified authored contracts."
+    }
+  }
+}

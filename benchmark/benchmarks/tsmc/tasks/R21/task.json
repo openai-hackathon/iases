@@ -1,0 +1,38 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "b3f4c4da6f22eb80fb4a561caa3a8d343c823f7ee7d53102b1e89d6c819c18f1",
+    "data/expected.json": "35d8483183bbdc928d73894b4c1b249fe05dbae660b17745f58b1338712783ea",
+    "data/request.json": "0dfbacc19bcc6e390a2136d56d9555708072e9edbe541dc3a65e30dd069a1ea9",
+    "docs/contract.md": "8140ae80e752e4d94623a5712b553e74805c05fab7756fa9d6cc67ff3fc5da57",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/canonical.py": "ddf707ef80d87b1cd1f0804b7ba57bb12bf72559e7d7b7ac291fa81ecb0dea70",
+    "fabops/commands.py": "924474a8c11f8ceef62aea156b1e912e71996edbb1b32a5755b716850825f577",
+    "fabops/domain.py": "3b0c1c3c103c72c1b8d8303e65211d726d0ac2147e64ff55d051ad64b0ea96a7",
+    "problem_statement.md": "7fab483df63dce5827bb1ec5133402d4d573b2a9a308dc2f7d42a2af87f76d20",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "5c53ba245f9a4719869589cdc5f8abb6b0944247ec5f06dddaec83e9027adda6"
+  },
+  "baseline_git_commit": "ee4309d3c3d8ad5b8ec1403449bb8258af11004a",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Combine recursive typed value equivalence, full scope identity, revision-sensitive replay and atomic caching of both positive and negative outcomes across a real database reopen.",
+  "family_id": "scoped_revision_idempotency_transaction",
+  "hidden_tests": 18,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "R21",
+  "test_count": 23,
+  "title": "Scoped recipe commands replay the wrong revision and lose rejected outcomes",
+  "track": "reliability",
+  "version": "2.0"
+}

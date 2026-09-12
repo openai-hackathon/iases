@@ -1,0 +1,10 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 44ec142..6f2e8a9 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -7,5 +7,4 @@ def run(request):
+             processed.append(key)
+         else:
+             dead.append(key)
+-            break
+     return dict(processed=processed, dead_letter=dead, attempts=attempts)

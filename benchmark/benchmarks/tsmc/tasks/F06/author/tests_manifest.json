@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_minor_numeric",
+    "assessment/tests/test_hidden.py::test_patch_numeric",
+    "assessment/tests/test_hidden.py::test_zero",
+    "tests/test_public.py::test_major_numeric"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_duplicate",
+    "assessment/tests/test_hidden.py::test_major_priority",
+    "assessment/tests/test_hidden.py::test_patch_tie_break",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_normal",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_single"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_duplicate",
+    "assessment/tests/test_hidden.py::test_major_priority",
+    "assessment/tests/test_hidden.py::test_minor_numeric",
+    "assessment/tests/test_hidden.py::test_patch_numeric",
+    "assessment/tests/test_hidden.py::test_patch_tie_break",
+    "assessment/tests/test_hidden.py::test_zero",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_major_numeric",
+    "tests/test_public.py::test_normal",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_single"
+  ],
+  "task_id": "F06",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_duplicate": "hidden",
+    "assessment/tests/test_hidden.py::test_major_priority": "hidden",
+    "assessment/tests/test_hidden.py::test_minor_numeric": "hidden",
+    "assessment/tests/test_hidden.py::test_patch_numeric": "hidden",
+    "assessment/tests/test_hidden.py::test_patch_tie_break": "hidden",
+    "assessment/tests/test_hidden.py::test_zero": "hidden",
+    "tests/test_public.py::test_empty": "public",
+    "tests/test_public.py::test_major_numeric": "public",
+    "tests/test_public.py::test_normal": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public",
+    "tests/test_public.py::test_single": "public"
+  }
+}

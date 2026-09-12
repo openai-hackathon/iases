@@ -1,0 +1,37 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "f1ac2a7b5125b35bc562de1fc57b395802fca592caea4356a4b0a57b7a0f7a0b",
+    "data/expected.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "data/request.json": "58562b2be41d6556675e9fe68e549d6e1fc73269cca506dfef371fcd9bf2f2ed",
+    "docs/contract.md": "0bf4ecd795cfcb65d7c5718293afd073b60452a8eece06d4d83eecacdfc745fb",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "ccda42e7f2a1ed05798f7aa67ea922eed5d533b84fd817b3d37b69182adbead2",
+    "problem_statement.md": "12240834756ec7013510ec6160eb3a37121fc6032824c22668002aa7efbe57d6",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "78061496cf054f37931c0b9106ba9c83038939de4aeaf2bc0e7b64cdcff1f830"
+  },
+  "baseline_git_commit": "1c648d41a68db0a625c5c6fd16cfbd127bc1021d",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Preserve join cardinality, identity, order and missing-value semantics.",
+  "family_id": "part_measurement_left_join",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "bosch",
+    "secom"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "A12",
+  "test_count": 11,
+  "title": "Station joins discard parts with unavailable measurements",
+  "track": "data_analysis",
+  "version": "1.0"
+}

@@ -1,0 +1,13 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 2100b39..7b995ac 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -11,7 +11,7 @@ def run(request):
+             balance -= price
+         valid = order["failure"] == "none"
+         if not valid:
+-            pass
++            stock += quantity
+             if charged:
+                 balance += price
+         accepted.append(valid)

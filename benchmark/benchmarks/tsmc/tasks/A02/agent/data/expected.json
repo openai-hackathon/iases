@@ -1,0 +1,14 @@
+[
+  {
+    "lot_id": "L1",
+    "wafer_count": 2,
+    "passed": 2,
+    "pass_ratio": 1.0
+  },
+  {
+    "lot_id": "empty",
+    "wafer_count": 0,
+    "passed": 0,
+    "pass_ratio": null
+  }
+]

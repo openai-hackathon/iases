@@ -1,0 +1,103 @@
+{
+  "samples": [
+    {
+      "id": "p0",
+      "channel": "pressure",
+      "t": "0",
+      "raw": "600",
+      "revision": 1,
+      "recorded": 0,
+      "epoch": "e",
+      "valid": true,
+      "deleted": false
+    },
+    {
+      "id": "p2",
+      "channel": "pressure",
+      "t": "2",
+      "raw": "600",
+      "revision": 1,
+      "recorded": 0,
+      "epoch": "e",
+      "valid": true,
+      "deleted": false
+    },
+    {
+      "id": "q0",
+      "channel": "flow",
+      "t": "0",
+      "raw": "60",
+      "revision": 1,
+      "recorded": 0,
+      "epoch": "e",
+      "valid": true,
+      "deleted": false
+    },
+    {
+      "id": "q2",
+      "channel": "flow",
+      "t": "2",
+      "raw": "60",
+      "revision": 1,
+      "recorded": 0,
+      "epoch": "e",
+      "valid": true,
+      "deleted": false
+    }
+  ],
+  "calibrations": [
+    {
+      "id": "pressure",
+      "channel": "pressure",
+      "start": "-100",
+      "end": "100",
+      "gain": "1",
+      "offset": "0",
+      "revision": 1,
+      "recorded": 0,
+      "deleted": false
+    },
+    {
+      "id": "flow",
+      "channel": "flow",
+      "start": "-100",
+      "end": "100",
+      "gain": "1",
+      "offset": "0",
+      "revision": 1,
+      "recorded": 0,
+      "deleted": false
+    }
+  ],
+  "clocks": [
+    {
+      "channel": "pressure",
+      "epoch": "e",
+      "local_origin": "0",
+      "global_origin": "0",
+      "rate": "1"
+    },
+    {
+      "channel": "flow",
+      "epoch": "e",
+      "local_origin": "0",
+      "global_origin": "0",
+      "rate": "1"
+    }
+  ],
+  "windows": [
+    {
+      "id": "w",
+      "start": "0",
+      "end": "2"
+    }
+  ],
+  "queries": [
+    1
+  ],
+  "max_gap": {
+    "pressure": "3",
+    "flow": "3"
+  },
+  "min_coverage": "1"
+}

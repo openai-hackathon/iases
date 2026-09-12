@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "de38bba57c031227e3972b2f17074d4ed8b42f8d7b89544f2a6a5c377fc48df0",
+    "data/expected.json": "6e666ab7a859b5031116cdfe6fd456a100ab475dae9352f1645f8bcae96437fe",
+    "data/request.json": "f74498097708215ee46031db7467ce3abed880ed8188eff156e81993d9787e31",
+    "docs/contract.md": "9552428006d71eba529e296aa9f698dc8292d8eec4b8e058b54b567b8a407314",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "ef7ba9913b01f10c2b04f2546aab8c2044b70782a979848414becd8d6a80f162",
+    "problem_statement.md": "ee227fc2de8db2c6a0187db815ae8095f4b39ca8d2d12ab71053b8239d00e7d4",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "fe113cdd7d85e196f916130eb9ea35ba225e7765e5f283eb0bd88f21b75243a9"
+  },
+  "baseline_git_commit": "473f895b7ecbd08f6304e1b3007e2b03764e7278",
+  "design_difficulty": "easy",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "",
+  "family_id": "decimal_aggregate_rounding",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "bpi-2019"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "A10",
+  "test_count": 11,
+  "title": "Rounding each measurement before aggregation changes totals",
+  "track": "data_analysis",
+  "version": "1.0"
+}

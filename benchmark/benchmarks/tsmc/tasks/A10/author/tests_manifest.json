@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_double_tie",
+    "assessment/tests/test_hidden.py::test_many_small",
+    "assessment/tests/test_hidden.py::test_negative_sum",
+    "tests/test_public.py::test_sum_before_round"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_exact_cents",
+    "assessment/tests/test_hidden.py::test_negative_tie",
+    "assessment/tests/test_hidden.py::test_offsetting",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_single_tie",
+    "tests/test_public.py::test_whole"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_double_tie",
+    "assessment/tests/test_hidden.py::test_exact_cents",
+    "assessment/tests/test_hidden.py::test_many_small",
+    "assessment/tests/test_hidden.py::test_negative_sum",
+    "assessment/tests/test_hidden.py::test_negative_tie",
+    "assessment/tests/test_hidden.py::test_offsetting",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_single_tie",
+    "tests/test_public.py::test_sum_before_round",
+    "tests/test_public.py::test_whole"
+  ],
+  "task_id": "A10",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_double_tie": "hidden",
+    "assessment/tests/test_hidden.py::test_exact_cents": "hidden",
+    "assessment/tests/test_hidden.py::test_many_small": "hidden",
+    "assessment/tests/test_hidden.py::test_negative_sum": "hidden",
+    "assessment/tests/test_hidden.py::test_negative_tie": "hidden",
+    "assessment/tests/test_hidden.py::test_offsetting": "hidden",
+    "tests/test_public.py::test_empty": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public",
+    "tests/test_public.py::test_single_tie": "public",
+    "tests/test_public.py::test_sum_before_round": "public",
+    "tests/test_public.py::test_whole": "public"
+  }
+}

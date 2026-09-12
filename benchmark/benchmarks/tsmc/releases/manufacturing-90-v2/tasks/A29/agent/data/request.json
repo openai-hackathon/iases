@@ -1,0 +1,52 @@
+{
+  "cycles": [
+    {
+      "id": "c",
+      "start": 0,
+      "end": 4
+    }
+  ],
+  "pressure": [
+    {
+      "cycle": "c",
+      "t": 0,
+      "value": 60,
+      "valid": true
+    },
+    {
+      "cycle": "c",
+      "t": 4,
+      "value": 60,
+      "valid": true
+    }
+  ],
+  "flow": [
+    {
+      "cycle": "c",
+      "t": 0,
+      "value": 60,
+      "valid": true
+    },
+    {
+      "cycle": "c",
+      "t": 4,
+      "value": 60,
+      "valid": true
+    }
+  ],
+  "max_gap": {
+    "pressure": 4,
+    "flow": 4
+  },
+  "min_coverage": 1,
+  "calibration": {
+    "pressure": {
+      "gain": 1,
+      "offset": 0
+    },
+    "flow": {
+      "gain": 1,
+      "offset": 0
+    }
+  }
+}

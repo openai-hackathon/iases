@@ -1,0 +1,13 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 07f4736..f2da3b0 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -8,7 +8,7 @@ def run(request):
+                 cache.move_to_end(key)
+         else:
+             weight = operation["weight"]
+-            if False:
++            if weight > request["capacity"]:
+                 continue
+             cache.pop(key, None)
+             cache[key] = weight

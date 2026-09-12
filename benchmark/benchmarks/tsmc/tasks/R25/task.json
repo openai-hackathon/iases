@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "8d25756ac840e6002e7b6a198a7c55efd23badfc5df283afeaf622d7c056489a",
+    "data/expected.json": "e44610d59e971e6b8ce211ebc856aab21534282697ca414c1bdd38c2cf203035",
+    "data/request.json": "5cdd0bf26b18c50db505ca8c594d9fff88f7319787b46cf2a1bde54840a52112",
+    "docs/contract.md": "dfa5642e5eb1fe51797acdcfde0c3fe54d07d506e0e98c471c96c1a6f662c8fd",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "fc661e70bdb5b43ee9b55249db1f2fcf376d843a713d87c5b8f4412e631d0ed8",
+    "problem_statement.md": "9dd8f4a2d8397beed0649aca94f1accd69a64a38ce73e82c0c48ac45ec76f097",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "0ff1e50eb5a61985081bb5054b81d0f7176db266d8db83a41b799f04890059ce"
+  },
+  "baseline_git_commit": "d97a9a4b63deb1339c8191c3d1d945c0b6c05c98",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Keep SQLite DDL and data changes in one rollback boundary and support a clean retry.",
+  "family_id": "transactional_schema_migration",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "R25",
+  "test_count": 11,
+  "title": "Interrupted SQLite migrations leave half-upgraded sensor tables",
+  "track": "reliability",
+  "version": "1.0"
+}

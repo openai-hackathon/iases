@@ -1,0 +1,8 @@
+{
+  "route": [
+    "a",
+    "b"
+  ],
+  "max_retries": 1,
+  "events": []
+}

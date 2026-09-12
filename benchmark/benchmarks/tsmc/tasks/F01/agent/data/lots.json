@@ -1,0 +1,14 @@
+{
+  "L1": {
+    "status": "WAITING",
+    "quality_hold": true,
+    "product_id": "P",
+    "step_id": "S"
+  },
+  "L2": {
+    "status": "WAITING",
+    "quality_hold": false,
+    "product_id": "P",
+    "step_id": "S"
+  }
+}

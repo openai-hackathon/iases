@@ -1,0 +1,4 @@
+test_id,lot_id,wafer_id,tested_at,valid,result
+t1,L1,W1,2026-01-15T00:00:00Z,true,FAIL
+t2,L1,W1,2026-01-15T00:01:00Z,true,PASS
+t3,L1,W2,2026-01-15T00:01:00Z,true,PASS

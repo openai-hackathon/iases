@@ -1,0 +1,281 @@
+{
+  "scope": "Original demo_dev only; exploratory solver pilot, not heldout calibration",
+  "endpoint": "https://s9930703--vllm-serve-d-serve.modal.run",
+  "model_alias": "local",
+  "reported_model_root": "Qwen/Qwen3-8B-FP8",
+  "mini_swe_agent_version": "2.4.6",
+  "workers": 2,
+  "step_limit": 40,
+  "agent_wall_time_limit_seconds": 480,
+  "temperature": 0.6,
+  "top_p": 0.95,
+  "max_tokens": 4096,
+  "enable_thinking": false,
+  "seeds": [
+    1101,
+    1102,
+    1103
+  ],
+  "timing_source": "Rounded mini-SWE-agent progress duration; excludes image builds and native grading",
+  "runs": [
+    {
+      "run_id": "tsmc-qwen-dev-r1-01",
+      "instances": 12,
+      "elapsed_seconds": 670,
+      "exit_status_counts": {
+        "LimitsExceeded": 3,
+        "Submitted": 9
+      },
+      "resolved": 0,
+      "tasks": [
+        {
+          "instance_id": "tsmc__a01-v0.2",
+          "exit_status": "LimitsExceeded",
+          "api_calls": 40,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__a02-v0.2",
+          "exit_status": "Submitted",
+          "api_calls": 29,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__a03-v0.2",
+          "exit_status": "Submitted",
+          "api_calls": 14,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__a04-v0.2",
+          "exit_status": "Submitted",
+          "api_calls": 2,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__f01-v0.2",
+          "exit_status": "LimitsExceeded",
+          "api_calls": 40,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__f02-v0.2",
+          "exit_status": "Submitted",
+          "api_calls": 2,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__f03-v0.2",
+          "exit_status": "Submitted",
+          "api_calls": 2,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__f04-v0.2",
+          "exit_status": "Submitted",
+          "api_calls": 16,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__r01-v0.2",
+          "exit_status": "Submitted",
+          "api_calls": 7,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__r02-v0.2",
+          "exit_status": "Submitted",
+          "api_calls": 12,
+          "nonempty_submission": true
+        },
+        {
+          "instance_id": "tsmc__r03-v0.2",
+          "exit_status": "Submitted",
+          "api_calls": 2,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__r04-v0.2",
+          "exit_status": "LimitsExceeded",
+          "api_calls": 40,
+          "nonempty_submission": false
+        }
+      ],
+      "grade_path": "logs/evaluation/tsmc-qwen-dev-r1-grade-01/results.json"
+    },
+    {
+      "run_id": "tsmc-qwen-dev-r2-01",
+      "instances": 12,
+      "elapsed_seconds": 336,
+      "exit_status_counts": {
+        "LimitsExceeded": 3,
+        "Submitted": 9
+      },
+      "resolved": 0,
+      "tasks": [
+        {
+          "instance_id": "tsmc__a01-v0.2",
+          "exit_status": "LimitsExceeded",
+          "api_calls": 40,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__a02-v0.2",
+          "exit_status": "Submitted",
+          "api_calls": 2,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__a03-v0.2",
+          "exit_status": "Submitted",
+          "api_calls": 2,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__a04-v0.2",
+          "exit_status": "Submitted",
+          "api_calls": 2,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__f01-v0.2",
+          "exit_status": "Submitted",
+          "api_calls": 7,
+          "nonempty_submission": true
+        },
+        {
+          "instance_id": "tsmc__f02-v0.2",
+          "exit_status": "Submitted",
+          "api_calls": 2,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__f03-v0.2",
+          "exit_status": "Submitted",
+          "api_calls": 9,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__f04-v0.2",
+          "exit_status": "Submitted",
+          "api_calls": 2,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__r01-v0.2",
+          "exit_status": "Submitted",
+          "api_calls": 2,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__r02-v0.2",
+          "exit_status": "Submitted",
+          "api_calls": 9,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__r03-v0.2",
+          "exit_status": "LimitsExceeded",
+          "api_calls": 40,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__r04-v0.2",
+          "exit_status": "LimitsExceeded",
+          "api_calls": 40,
+          "nonempty_submission": false
+        }
+      ],
+      "grade_path": "logs/evaluation/tsmc-qwen-dev-r2-grade-01/results.json"
+    },
+    {
+      "run_id": "tsmc-qwen-dev-r3-01",
+      "instances": 12,
+      "elapsed_seconds": 396,
+      "exit_status_counts": {
+        "Timeout": 3,
+        "Submitted": 1,
+        "ContextWindowExceededError": 1,
+        "RepeatedFormatError": 1,
+        "InternalServerError": 2,
+        "NotFoundError": 4
+      },
+      "resolved": 0,
+      "tasks": [
+        {
+          "instance_id": "tsmc__a01-v0.2",
+          "exit_status": "Timeout",
+          "api_calls": 4,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__a02-v0.2",
+          "exit_status": "Submitted",
+          "api_calls": 7,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__a03-v0.2",
+          "exit_status": "ContextWindowExceededError",
+          "api_calls": 34,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__a04-v0.2",
+          "exit_status": "RepeatedFormatError",
+          "api_calls": 3,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__f01-v0.2",
+          "exit_status": "Timeout",
+          "api_calls": 1,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__f02-v0.2",
+          "exit_status": "Timeout",
+          "api_calls": 1,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__f03-v0.2",
+          "exit_status": "InternalServerError",
+          "api_calls": 1,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__f04-v0.2",
+          "exit_status": "InternalServerError",
+          "api_calls": 2,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__r01-v0.2",
+          "exit_status": "NotFoundError",
+          "api_calls": 1,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__r02-v0.2",
+          "exit_status": "NotFoundError",
+          "api_calls": 1,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__r03-v0.2",
+          "exit_status": "NotFoundError",
+          "api_calls": 1,
+          "nonempty_submission": false
+        },
+        {
+          "instance_id": "tsmc__r04-v0.2",
+          "exit_status": "NotFoundError",
+          "api_calls": 1,
+          "nonempty_submission": false
+        }
+      ],
+      "grade_path": "logs/evaluation/tsmc-qwen-dev-r3-grade-01/results.json"
+    }
+  ]
+}

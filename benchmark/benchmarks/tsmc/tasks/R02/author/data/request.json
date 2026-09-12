@@ -1,0 +1,36 @@
+{
+  "capacities": {
+    "X": 3,
+    "Y": 0
+  },
+  "requests": [
+    {
+      "id": "a",
+      "machine": "X",
+      "units": 2
+    },
+    {
+      "id": "a",
+      "machine": "X",
+      "units": 2
+    },
+    {
+      "id": "b",
+      "machine": "X",
+      "units": 2
+    },
+    {
+      "op": "release",
+      "id": "a"
+    },
+    {
+      "id": "c",
+      "machine": "X",
+      "units": 3
+    },
+    {
+      "id": "d",
+      "machine": "Y"
+    }
+  ]
+}

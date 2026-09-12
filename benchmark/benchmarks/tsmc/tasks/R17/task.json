@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "fada78163752e6927c28ba3f5b7b512612f563bff372817baafa6dbb00472f04",
+    "data/expected.json": "2266cf69909e18b3a067970bebcee832d774e8a77b7a115c5002a8178d658c49",
+    "data/request.json": "0118f48739824667dc2c70ab0bae35be0b31f6fc22b8a0fa4b36f78a914852ce",
+    "docs/contract.md": "3eb38691bda0542304093f825d282f929944c01c7648cd966fd447f7c9c5216c",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "83e2489c79c62ec75557c52962313ca787fc1a8f28636556a87d1291d58bbac9",
+    "problem_statement.md": "129d38b02582d8eecc41054edb71c0fcf459cd2cfeeff76704a9d988d85cbcc5",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "0822470a3d59301fa005f5439bf5f27ed2a99c297f490fb4664bdc0f0e4a94b0"
+  },
+  "baseline_git_commit": "9c65f80c1fb6b8b3f06159d594bc25f0fb452f7e",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Preserve fractional refill across observations while enforcing burst capacity.",
+  "family_id": "fractional_token_bucket",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "R17",
+  "test_count": 11,
+  "title": "Frequent rate-limit checks lose fractional token refills",
+  "track": "reliability",
+  "version": "1.0"
+}

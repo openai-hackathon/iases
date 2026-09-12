@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "8859fd53bcbcbd9c574e9726264238bae57385273dded96b59f4ed5122975ffa",
+    "data/expected.json": "238903180cc104ec2c5d8b3f20c5bc61b389ec0a967df8cc208cdc7cd454174f",
+    "data/request.json": "4d1b13ea43c96753aac85ec4a110559baf2665b937397eda803725d359111d2f",
+    "docs/contract.md": "1c74dae6221f4264e0489a26f427b4ee7b9ebd74ad792aa1d40476e17dfd6bbd",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "ca14b5cd3b8b96915b83e53afef5b08d7da099c444f8f2323788fdae8db9c67a",
+    "problem_statement.md": "a1ff94891c421997e8323882d9cde12f5e1c127191acbdbc4e74233d5f7f70a7",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "ead22d9c77c29dd3aad15d576fa2d6b54eafade2e3e119e479ac9007fccdf17f"
+  },
+  "baseline_git_commit": "8b4d4ae6a865be57410b1915ee03ce15b175c63a",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Distinguish two protocol formats and normalize absolute dates against a supplied clock.",
+  "family_id": "retry_after_http_date",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "R11",
+  "test_count": 11,
+  "title": "HTTP date retry delays ignore the response clock",
+  "track": "reliability",
+  "version": "1.0"
+}

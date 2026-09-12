@@ -1,0 +1,41 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "3cbdbc26b090206498b48903b7ff031eeafe103dff3bcae3030ba2f68d8b6ad2",
+    "data/expected.json": "4d30465580df6925c4da2d7b26ba0e227bfc0a5310ca11bc05cac8c75244d8b1",
+    "data/request.json": "ce884045ca0b4be3835264ea52a829276d044fbe7bcc0efbc786aacc5dc3c224",
+    "docs/contract.md": "443bedb8c51e7d220d09248d48979f3a4cf09f2213282b07e0d60b0cb3868fe8",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "ff9422008b2ba7abb3bb717367593c4537cc8459d4a06872ecd0b1bff313c929",
+    "fabops/history.py": "2a2745e2e4dd8ba008488cac377846925b79f4614d49fb872c6cfa7675c31dbf",
+    "fabops/integrate.py": "999069d768be5ead5a57f2f9bef78a53e217b7d8bead194a81f3303597f38c48",
+    "fabops/support.py": "de61d243af1fcac42becfd3c3a76e53e7c4c00d54fa8020bcb6e10b0e15dfdb1",
+    "fabops/windows.py": "dd6fbfd2a553c90632805163f611c375aa758773efe31a25f3565a187ea659cc",
+    "problem_statement.md": "983232cdf0faa68c53efb58e1a03b0b8b2fbc054c91411f77395510517116d15",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "61cb45427c0996b19e1d12555284b1f6218c428def5c026eecb270a644a64bd8"
+  },
+  "baseline_git_commit": "dbb47e09ac042eb8eaf87707f50a440885333a45",
+  "design_difficulty": "hard",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Five interacting modules require reconstruction of revision visibility, affine clock/epoch adjacency, calibration-partitioned support, exact products on joint multirate intervals, and compensating publication deltas. Eight independent realistic fault sites include whole visibility, calibration and interval-integration algorithms. The baseline resamples window endpoints and cannot retain internal support gaps or quadratic signal products; nine mutants include a partial restoration that still uses endpoint-product trapezoids. Hidden cases combine corrections, discontinuities and clock/gap decisions. This is substantially broader than a static four-line hydraulic integration repair and the discrete A12 join.",
+  "family_id": "revisioned_multirate_hydraulic_retractions",
+  "hidden_tests": 30,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "zema-hydraulic",
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "A29",
+  "test_count": 35,
+  "title": "Hydraulic window revisions lose joint support and publish uncompensated corrections",
+  "track": "data_analysis",
+  "version": "2.0"
+}

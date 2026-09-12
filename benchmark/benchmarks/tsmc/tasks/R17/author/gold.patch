@@ -1,0 +1,13 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index bdbff28..ca35f60 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -1,7 +1,7 @@
+ def run(request):
+     tokens, last, accepted = request["capacity"] * 1000, 0, []
+     for now in request["times"]:
+-        tokens = min(request["capacity"] * 1000, tokens + ((now - last) * request["rate"] // 1000) * 1000)
++        tokens = min(request["capacity"] * 1000, tokens + (now - last) * request["rate"])
+         last = now
+         valid = tokens >= 1000
+         if valid:

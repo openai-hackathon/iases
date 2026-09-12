@@ -1,0 +1,40 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "124383fbe658ff2de64e4f4c0f230ec85ab1f5c8c5bf60cef9a7d751fe17c8b8",
+    "data/expected.json": "81e88137c029ed6cfbc6c33acce2ea0166ac4a28bac88befddf8e7e746daef63",
+    "data/request.json": "73337caca2d71066a05527ed702931ca849dc2b7bfce455a3b4cddfcd54570a7",
+    "docs/contract.md": "a87963da4d924f36ca3a58372da6a485e3cf4350a91ce6b9721811541a9dd848",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/calibration.py": "11389f3c7ac4265c835f24a644738bf412fb2be0d2bcce119b538fad0bc10ab4",
+    "fabops/cohort.py": "726534e5c5ee9cefdc56de665cf68ebaea21f97c4bfc077572889f77d6919cc4",
+    "fabops/domain.py": "3a87b676a2e223384910a01d147616dcf3b8e07d05a51f104bb06f6a8dd29049",
+    "fabops/linalg.py": "1e2dcbb225e3f42b69d141f70c9d44cf30f7c856bcf77a7e4d06a1938f2275c0",
+    "fabops/model.py": "ff3af7d6b88f7b67cb9b7eceb606a11be984b476dc4ba6cd5ec6e815512a2380",
+    "problem_statement.md": "76f077e8c04abaf0fb58819d84b8ea7fa63c4a92a9810beee3df5d887143cdf2",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "1a16523df73a85e004c23d39154f72ab2f18fe9cfa8dabebc6581b804dc1b1a8"
+  },
+  "baseline_git_commit": "a01344f5df976f0a1c542dcf5d253c5a9ff69bcd",
+  "design_difficulty": "hard",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Requires weighted multivariate covariance, observed-subspace linear solves and temporally purged leave-campaign-out calibration with finite-sample rank selection; campaign leakage, unequal sampling and missing dimensions interact across four algorithms.",
+  "family_id": "campaign_weighted_purged_calibration_subspace",
+  "hidden_tests": 33,
+  "language": "en",
+  "public_tests": 8,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "zema-hydraulic"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "A30",
+  "test_count": 41,
+  "title": "Campaign calibration leaks future runs and scores the wrong sensor subspace",
+  "track": "data_analysis",
+  "version": "2.0"
+}

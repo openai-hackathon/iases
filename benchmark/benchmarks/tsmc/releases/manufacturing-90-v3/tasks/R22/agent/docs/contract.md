@@ -1,0 +1,5 @@
+# Public behavior contract
+
+Use a real SQLite file to manage a singleton lease and fenced output. acquire(owner,now,ttl) returns None while a lease is unexpired, otherwise allocates a globally increasing positive token and expires at now+ttl. Every successful acquisition increments a separately persisted epoch, even after retire or restart. retire deletes only the lease and returns None; restart closes and reopens the same database. write(owner,token,now,value) returns true and changes output only if all three conditions hold: matching owner, matching token, now<expires. Other writes return false with no side effects. Return per-command results, final output value (initially None) and epoch (initially 0). Times are nondecreasing, ttl>0, values and owners are strings. Lease checks and writes must share a SQLite transaction; process memory cannot serve as durability.
+
+The entry point is `fabops.domain.run(request)`. Inputs are JSON-compatible. Do not mutate the request, including on rejected operations. Only the documented valid input domain is tested.

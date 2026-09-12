@@ -1,0 +1,39 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "c43796bd4b949813559f7757cdcea569a14d69fee6a7c4f4f28e7f7c97278758",
+    "data/expected.json": "cc83e4ba0603e5a90e628e26701a6c0f3dfd9e568838a5d364f47ecfef47c019",
+    "data/request.json": "4cfe94ea0f1de0444604b70a17aecc60fcba6154fc2304f3582e9c095e30d071",
+    "docs/contract.md": "34c23679f91801a2eb9bab08122dea7f526777cb76f2bb726c5e089c65d0ad07",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/booking.py": "9d63368165c4e551b1d8bb88fac9883f342c0089893ac1d1358f2b44c3425911",
+    "fabops/calendar.py": "8f294f1b840766d0584bb89fe830b61060a5f95a533b2c8b33eff2c3c44be6ec",
+    "fabops/domain.py": "d995d40522fbf8cea981740ae7a781010d172b39dec0482f86429c40f624f12c",
+    "problem_statement.md": "0edc6a02e997975e96337a156f5c7bbf90fc539aeac65e9e0f682d0ae65f3327",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "2acb91e8260e75c87e015a4e38dce6735a952c0a8d7e9197de5273d1bf903718"
+  },
+  "baseline_git_commit": "236bb3283d3e475fa57a73e23e6b57c86948837d",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Replaces the earlier one-dimensional maintenance-union repair with coupled operating-calendar normalization, weighted occupancy segmentation, maximal-profile reporting and nonpreemptive booking across changing capacity. Whole flawed calendar and booking algorithms must be reconciled; changing one overlap operator is insufficient.",
+  "family_id": "capacity_calendar_continuous_booking",
+  "hidden_tests": 20,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "production-log",
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "F11",
+  "test_count": 25,
+  "title": "Capacity planning invents continuous availability across downtime",
+  "track": "factory_logic",
+  "version": "2.0"
+}

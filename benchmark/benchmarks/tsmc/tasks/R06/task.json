@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "ec9e2ae3a4ab73c5ba6d0ad66ba05146a109fbf986f65f1fabcc5dc43957e75f",
+    "data/expected.json": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "data/request.json": "d84b764eb6d6c04ad080d64b1ef2e9d802acef5167ca783bde804787cf6d524a",
+    "docs/contract.md": "6c6e6ff54e9b5470ac49658165b13181af8f1903d6c13462e5f8b24385589d09",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "2881baeb33ec19cb2d2b817fbeea05d304e880dfa04362d287c5b13228844875",
+    "problem_statement.md": "3f5549e8ffef2f69754a60cf3cdd48bc171bf9dbd9d0ca9f75dad53bb28ab1e5",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "b9af58331953ed2db0e8195be947c4085934d035164935cf023d85e380cf4afa"
+  },
+  "baseline_git_commit": "89e74b4b8f9a60b5cc1e43cfd899008be8a8ea5f",
+  "design_difficulty": "easy",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "",
+  "family_id": "post_jitter_backoff_cap",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "R06",
+  "test_count": 11,
+  "title": "Retry jitter exceeds the configured maximum delay",
+  "track": "reliability",
+  "version": "1.0"
+}

@@ -1,0 +1,10 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 2c4e329..331f85e 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -1,4 +1,4 @@
+ def run(request):
+     index = {(r["part"], r["station"]): r["value"] for r in request["measurements"]}
+-    return [dict(part=part, values=[index.get((part, station)) or None for station in request["stations"]])
++    return [dict(part=part, values=[index.get((part, station)) for station in request["stations"]])
+             for part in request["parts"]]

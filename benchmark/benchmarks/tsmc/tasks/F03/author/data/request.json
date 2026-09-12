@@ -1,0 +1,36 @@
+{
+  "events": [
+    {
+      "event_id": "X-2",
+      "machine_id": "X",
+      "sequence": 2,
+      "new_state": "BUSY",
+      "occurred_at": "2026-01-15T00:00:00Z",
+      "received_at": "2026-01-15T00:00:00Z"
+    },
+    {
+      "event_id": "Y-9",
+      "machine_id": "Y",
+      "sequence": 9,
+      "new_state": "MAINTENANCE",
+      "occurred_at": "2026-01-15T00:00:00Z",
+      "received_at": "2026-01-15T00:00:00Z"
+    },
+    {
+      "event_id": "X-1",
+      "machine_id": "X",
+      "sequence": 1,
+      "new_state": "AVAILABLE",
+      "occurred_at": "2026-01-15T00:00:00Z",
+      "received_at": "2026-01-15T00:00:00Z"
+    },
+    {
+      "event_id": "Y-8",
+      "machine_id": "Y",
+      "sequence": 8,
+      "new_state": "BUSY",
+      "occurred_at": "2026-01-15T00:00:00Z",
+      "received_at": "2026-01-15T00:00:00Z"
+    }
+  ]
+}

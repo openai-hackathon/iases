@@ -1,0 +1,13 @@
+"""Fire a weighted transition against a bounded marking atomically."""
+def fire(marking, transition, places, capacities):
+    current = dict(zip(places, marking))
+    if any(current[p] < count for p, count in transition["consume"].items()):
+        return None
+    result = dict(current)
+    for p, count in transition["consume"].items():
+        result[p] -= count
+    for p, count in transition["produce"].items():
+        result[p] += count
+    if any(current[p] + transition["produce"].get(p, 0) > capacities[p] for p in places):
+        return None
+    return tuple(result[p] for p in places)

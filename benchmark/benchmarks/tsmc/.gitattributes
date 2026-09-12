@@ -1,0 +1,6 @@
+# Fixture hashes must survive checkout without line-ending conversion.
+tasks/** -text
+# Unified patches use a single space for empty context lines.
+tasks/**/author/gold.patch whitespace=-blank-at-eol,-blank-at-eof
+# Preserve the source CSV's original CRLF records.
+tasks/**/agent/data/*.csv whitespace=cr-at-eol

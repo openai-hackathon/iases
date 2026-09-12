@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "a7a94bd04f6736e5e12725112c2a56420293c3b20309a1c10b7648379b7bac15",
+    "data/expected.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "data/request.json": "7dce48b11aa684751887d1f8eff801ee80fa5c1e997acc657016175fe77bc867",
+    "docs/contract.md": "552aeb8b2617a812856228ab0b5c248c886d51f4cfb4363d061857d6aa313d44",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "8a6d2d646c24dfeab810dcb5ca46ec7a1239b80b3fde8b420c7cd3f40ecba5b1",
+    "problem_statement.md": "853cef8b35623446e3a7a8b32564250f1e0ddbdd6acf6194f70db53341dfef3d",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "2213d57d759f57a1891f29b0efbfc5ddc6f93a1a6f38186b707d8f2b8598241c"
+  },
+  "baseline_git_commit": "193e5389f04c8c3240227a138d80be4831e3fc77",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Preserve orientation and coordinate-frame operation order.",
+  "family_id": "inspection_rigid_transform",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "A17",
+  "test_count": 11,
+  "title": "Rotated inspection coordinates apply translation in the wrong frame",
+  "track": "data_analysis",
+  "version": "1.0"
+}

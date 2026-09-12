@@ -1,0 +1,62 @@
+{
+  "runs": [
+    {
+      "events": [
+        {
+          "sequence": 1,
+          "event_id": "event-1",
+          "payload": {
+            "machine_id": "M",
+            "value": 10
+          }
+        },
+        {
+          "sequence": 2,
+          "event_id": "event-2",
+          "payload": {
+            "machine_id": "M",
+            "value": 20
+          }
+        },
+        {
+          "sequence": 3,
+          "event_id": "event-3",
+          "payload": {
+            "machine_id": "M",
+            "value": 30
+          }
+        }
+      ],
+      "fail_at": 2,
+      "crash_point": "after_checkpoint"
+    },
+    {
+      "events": [
+        {
+          "sequence": 1,
+          "event_id": "event-1",
+          "payload": {
+            "machine_id": "M",
+            "value": 10
+          }
+        },
+        {
+          "sequence": 2,
+          "event_id": "event-2",
+          "payload": {
+            "machine_id": "M",
+            "value": 20
+          }
+        },
+        {
+          "sequence": 3,
+          "event_id": "event-3",
+          "payload": {
+            "machine_id": "M",
+            "value": 30
+          }
+        }
+      ]
+    }
+  ]
+}

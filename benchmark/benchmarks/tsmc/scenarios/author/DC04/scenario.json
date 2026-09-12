@@ -1,0 +1,197 @@
+{
+  "schema_version": "tsmc-incident/0.3",
+  "scenario_id": "DC04",
+  "title": "Datacenter reachable but data untrusted: verify before recovery",
+  "synthetic": true,
+  "affiliation": "none",
+  "split": "demo_dev",
+  "track": "patch-repair-with-recovery-gates",
+  "fault_domain": "synthetic factory services only; actual GCP/Modal inference stays up",
+  "story": "The DC-B standby is reachable but its source is incomplete; state, impacted lots and reports may disagree. Software repair may begin independently. An LLM cannot infer missing source data or declare recovery before completeness is established.",
+  "environment_facts": {
+    "standby_readable": true,
+    "source_complete": false,
+    "sensor_dictionary_verified": true,
+    "local_interlock_ok": true
+  },
+  "services": {
+    "journal": {
+      "task_id": "R03",
+      "node_id": "recovery-node",
+      "dc_dependency": "hard",
+      "initial_state": "unverified",
+      "impact": "Complete reconstruction cannot be claimed before the source manifest is verified",
+      "repair_requires": [],
+      "restore_requires": [],
+      "restore_facts": [
+        "standby_readable",
+        "source_complete"
+      ],
+      "acceptance_checks": [
+        "source completeness external",
+        "durable replay"
+      ],
+      "protected_business_service": false
+    },
+    "state": {
+      "task_id": "F03",
+      "node_id": "state-node",
+      "dc_dependency": "hard",
+      "initial_state": "unverified",
+      "impact": "Use the latest version from a verified source",
+      "repair_requires": [],
+      "restore_requires": [
+        "journal"
+      ],
+      "restore_facts": [],
+      "acceptance_checks": [
+        "latest state"
+      ],
+      "protected_business_service": false
+    },
+    "alarm": {
+      "task_id": "F04",
+      "node_id": "alarm-analysis-node",
+      "dc_dependency": "none",
+      "initial_state": "degraded",
+      "impact": "Offline analysis still runs, but unit conversion produces incorrect alarms",
+      "repair_requires": [],
+      "restore_requires": [],
+      "restore_facts": [
+        "sensor_dictionary_verified"
+      ],
+      "acceptance_checks": [
+        "equivalent units",
+        "INVALID distinct from OK"
+      ],
+      "protected_business_service": true
+    },
+    "lineage": {
+      "task_id": "A03",
+      "node_id": "lineage-node",
+      "dc_dependency": "hard",
+      "initial_state": "unverified",
+      "impact": "Identify impacted lots while preserving complete evidence",
+      "repair_requires": [],
+      "restore_requires": [
+        "journal",
+        "state"
+      ],
+      "restore_facts": [],
+      "acceptance_checks": [
+        "exact impacted set",
+        "no evidence loss"
+      ],
+      "protected_business_service": false
+    },
+    "wafer_report": {
+      "task_id": "A02",
+      "node_id": "wafer-analysis-node",
+      "dc_dependency": "hard",
+      "initial_state": "unverified",
+      "impact": "This synthetic issue uses the latest valid test result as an input to the public release check",
+      "repair_requires": [],
+      "restore_requires": [
+        "journal"
+      ],
+      "restore_facts": [],
+      "acceptance_checks": [
+        "correct grain",
+        "tie/null policy"
+      ],
+      "protected_business_service": false
+    },
+    "release": {
+      "task_id": "F01",
+      "node_id": "release-node",
+      "dc_dependency": "hard",
+      "initial_state": "blocked_safe",
+      "impact": "Remain fail-closed until sources, lot checks and state are trusted",
+      "repair_requires": [],
+      "restore_requires": [
+        "state",
+        "lineage",
+        "wafer_report"
+      ],
+      "restore_facts": [
+        "local_interlock_ok"
+      ],
+      "acceptance_checks": [
+        "hold preserved",
+        "missing prerequisite prevents release",
+        "eligible positive accepted"
+      ],
+      "protected_business_service": true
+    },
+    "maintenance": {
+      "task_id": "R01",
+      "node_id": "maintenance-node",
+      "dc_dependency": "async",
+      "initial_state": "backlog",
+      "impact": "Work-order software can be repaired first, but production replay requires a verified source",
+      "repair_requires": [],
+      "restore_requires": [
+        "journal"
+      ],
+      "restore_facts": [],
+      "acceptance_checks": [
+        "idempotent work orders"
+      ],
+      "protected_business_service": false
+    },
+    "downtime": {
+      "task_id": "A01",
+      "node_id": "report-node",
+      "dc_dependency": "async",
+      "initial_state": "stale",
+      "impact": "Secondary reporting must not relax correctness to produce attractive numbers",
+      "repair_requires": [],
+      "restore_requires": [
+        "journal"
+      ],
+      "restore_facts": [],
+      "acceptance_checks": [
+        "interval union"
+      ],
+      "protected_business_service": false
+    }
+  },
+  "importance": [
+    {
+      "higher": "release",
+      "lower": "maintenance",
+      "reason": "Correct release takes priority over background maintenance replay"
+    },
+    {
+      "higher": "alarm",
+      "lower": "downtime",
+      "reason": "Restore trusted alarm analysis before reporting"
+    },
+    {
+      "higher": "maintenance",
+      "lower": "downtime",
+      "reason": "Work-order tracking takes priority over reporting"
+    }
+  ],
+  "author_environment_events": [
+    {
+      "at_seconds": 60,
+      "event": "observed_fact",
+      "fact": "source_complete",
+      "value": true,
+      "note": "Example: an external system completes source-manifest verification; agent code repair does not restore a physical disk"
+    }
+  ],
+  "implementation_status": {
+    "manifest": "implemented",
+    "dependency_state_model": "implemented",
+    "live_cloud_or_agent_runner": "deferred",
+    "actual_service_deployment": "not_implemented",
+    "end_to_end_scenario_probes": "all mapped services implemented",
+    "docker_patch_replay": "implemented"
+  },
+  "timing_note": "All numeric times are synthetic examples, not factory deadlines or measured agent durations.",
+  "correctness_rule": "local task suite AND current integration evidence AND recovery prerequisites; importance is NOT a precedence constraint",
+  "expected_total_order": null,
+  "policies_observe": "current states, observed environment facts, public importance/graph; NOT gold, hidden answers, future events or remaining durations"
+}

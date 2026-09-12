@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_quantity_1000001_capacity_1000",
+    "assessment/tests/test_hidden.py::test_quantity_1_capacity_25",
+    "assessment/tests/test_hidden.py::test_quantity_49_capacity_25",
+    "assessment/tests/test_hidden.py::test_quantity_51_capacity_25",
+    "tests/test_public.py::test_quantity_26_capacity_25"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_quantity_0_capacity_1",
+    "assessment/tests/test_hidden.py::test_quantity_7_capacity_1",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_quantity_0_capacity_25",
+    "tests/test_public.py::test_quantity_25_capacity_25",
+    "tests/test_public.py::test_quantity_50_capacity_25"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_quantity_0_capacity_1",
+    "assessment/tests/test_hidden.py::test_quantity_1000001_capacity_1000",
+    "assessment/tests/test_hidden.py::test_quantity_1_capacity_25",
+    "assessment/tests/test_hidden.py::test_quantity_49_capacity_25",
+    "assessment/tests/test_hidden.py::test_quantity_51_capacity_25",
+    "assessment/tests/test_hidden.py::test_quantity_7_capacity_1",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_quantity_0_capacity_25",
+    "tests/test_public.py::test_quantity_25_capacity_25",
+    "tests/test_public.py::test_quantity_26_capacity_25",
+    "tests/test_public.py::test_quantity_50_capacity_25"
+  ],
+  "task_id": "F09",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_quantity_0_capacity_1": "hidden",
+    "assessment/tests/test_hidden.py::test_quantity_1000001_capacity_1000": "hidden",
+    "assessment/tests/test_hidden.py::test_quantity_1_capacity_25": "hidden",
+    "assessment/tests/test_hidden.py::test_quantity_49_capacity_25": "hidden",
+    "assessment/tests/test_hidden.py::test_quantity_51_capacity_25": "hidden",
+    "assessment/tests/test_hidden.py::test_quantity_7_capacity_1": "hidden",
+    "tests/test_public.py::test_public_cli_fixture": "public",
+    "tests/test_public.py::test_quantity_0_capacity_25": "public",
+    "tests/test_public.py::test_quantity_25_capacity_25": "public",
+    "tests/test_public.py::test_quantity_26_capacity_25": "public",
+    "tests/test_public.py::test_quantity_50_capacity_25": "public"
+  }
+}

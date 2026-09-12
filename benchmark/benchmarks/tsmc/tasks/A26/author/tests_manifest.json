@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_replay_after_delete",
+    "tests/test_public.py::test_delete"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_old_delete",
+    "assessment/tests/test_hidden.py::test_old_update",
+    "assessment/tests/test_hidden.py::test_other_key",
+    "assessment/tests/test_hidden.py::test_restore",
+    "assessment/tests/test_hidden.py::test_zero",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_one",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_update"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_old_delete",
+    "assessment/tests/test_hidden.py::test_old_update",
+    "assessment/tests/test_hidden.py::test_other_key",
+    "assessment/tests/test_hidden.py::test_replay_after_delete",
+    "assessment/tests/test_hidden.py::test_restore",
+    "assessment/tests/test_hidden.py::test_zero",
+    "tests/test_public.py::test_delete",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_one",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_update"
+  ],
+  "task_id": "A26",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_old_delete": "hidden",
+    "assessment/tests/test_hidden.py::test_old_update": "hidden",
+    "assessment/tests/test_hidden.py::test_other_key": "hidden",
+    "assessment/tests/test_hidden.py::test_replay_after_delete": "hidden",
+    "assessment/tests/test_hidden.py::test_restore": "hidden",
+    "assessment/tests/test_hidden.py::test_zero": "hidden",
+    "tests/test_public.py::test_delete": "public",
+    "tests/test_public.py::test_empty": "public",
+    "tests/test_public.py::test_one": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public",
+    "tests/test_public.py::test_update": "public"
+  }
+}

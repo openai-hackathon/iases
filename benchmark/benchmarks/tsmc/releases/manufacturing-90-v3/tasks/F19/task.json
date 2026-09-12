@@ -1,0 +1,39 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "d8d659cc25565973c570ba07ed82eb960710f2ccaeacb1c8b0957093975c93b3",
+    "data/expected.json": "1b21ba8ef1c1de1d8600a5fe443ddeb6c0dcc37ac1227e51b8029ee1fb274f9d",
+    "data/request.json": "7f3cb7eb1ee5c9a000f9483ee98668e9d88b3f418f45dba8d4616c69af64ee95",
+    "docs/contract.md": "922496e96d3e6b95c5ac992d93fbe242d70d7d5bb8b50b507437875eafdd368a",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "6c751a5c83c70486154e5ce7d9e679b87dd661d22c881d3e00851b0d16ce1c01",
+    "fabops/planner.py": "2d2dff11224bb2aad7f7fb0f58dd1a98475f3519860ab777d8e268e1f597bb13",
+    "fabops/store.py": "eaf0e741d729d83d5626d79567caa4f4a75a7f53940b8514fca647677b006af9",
+    "problem_statement.md": "38a17d4c7e5f5b0087dd2765e0cd9169d972fb263f7717296d5fd9ae7ce438e4",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "f038255d1b94a3442ef6da16271a3ba92658f1a35d5d0fd8e37833335c31c44f"
+  },
+  "baseline_git_commit": "ae60a91585de56d1f4402da13bb5844fe0ead824",
+  "design_difficulty": "hard",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Solve a non-greedy allocation problem across two shared resources, then enforce an independent complete-snapshot commit invariant in another module.",
+  "family_id": "constrained_dispatch_snapshot_commit",
+  "hidden_tests": 8,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "production-log",
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "F19",
+  "test_count": 13,
+  "title": "Dispatch optimization and commit disagree about shared resource state",
+  "track": "factory_logic",
+  "version": "1.0"
+}

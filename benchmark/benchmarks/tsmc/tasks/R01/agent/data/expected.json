@@ -1,0 +1,19 @@
+{
+  "responses": [
+    {
+      "ok": {
+        "work_order_id": 1,
+        "machine_id": "E-02",
+        "reason": "inspection"
+      }
+    },
+    {
+      "ok": {
+        "work_order_id": 1,
+        "machine_id": "E-02",
+        "reason": "inspection"
+      }
+    }
+  ],
+  "work_orders": 1
+}

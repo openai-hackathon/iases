@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_frozen_wall",
+    "assessment/tests/test_hidden.py::test_large_epoch",
+    "assessment/tests/test_hidden.py::test_negative_wall",
+    "assessment/tests/test_hidden.py::test_repeated_backward",
+    "tests/test_public.py::test_backward_jump",
+    "tests/test_public.py::test_forward_jump"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_fractional",
+    "assessment/tests/test_hidden.py::test_offset_independent",
+    "tests/test_public.py::test_normal",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_zero"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_fractional",
+    "assessment/tests/test_hidden.py::test_frozen_wall",
+    "assessment/tests/test_hidden.py::test_large_epoch",
+    "assessment/tests/test_hidden.py::test_negative_wall",
+    "assessment/tests/test_hidden.py::test_offset_independent",
+    "assessment/tests/test_hidden.py::test_repeated_backward",
+    "tests/test_public.py::test_backward_jump",
+    "tests/test_public.py::test_forward_jump",
+    "tests/test_public.py::test_normal",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_zero"
+  ],
+  "task_id": "R09",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_fractional": "hidden",
+    "assessment/tests/test_hidden.py::test_frozen_wall": "hidden",
+    "assessment/tests/test_hidden.py::test_large_epoch": "hidden",
+    "assessment/tests/test_hidden.py::test_negative_wall": "hidden",
+    "assessment/tests/test_hidden.py::test_offset_independent": "hidden",
+    "assessment/tests/test_hidden.py::test_repeated_backward": "hidden",
+    "tests/test_public.py::test_backward_jump": "public",
+    "tests/test_public.py::test_forward_jump": "public",
+    "tests/test_public.py::test_normal": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public",
+    "tests/test_public.py::test_zero": "public"
+  }
+}

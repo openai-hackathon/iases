@@ -1,0 +1,12 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 298afa9..fbcb609 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -3,7 +3,6 @@ def run(request):
+     graph = {}
+     for source, target, cost in request["edges"]:
+         graph.setdefault(source, []).append((target, cost))
+-        graph.setdefault(target, []).append((source, cost))
+     queue = [(0, request["start"])]
+     seen = set()
+     while queue:

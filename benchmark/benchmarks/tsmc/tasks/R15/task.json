@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "07d6441529a81305945a105dbfc29ccf1b54fc5f98fb851a72cc674885a27b49",
+    "data/expected.json": "caf4a51789fb4e59f4b809ae8d5cf70fedaef8ba47cd46aec6abb24f96f6e2ce",
+    "data/request.json": "045e0d929e2dfe4d947ac7923878e211df6f779a9b457554c9b69bdf7b311fbf",
+    "docs/contract.md": "f924ceef3d8f30bcdf4cc5a3b5d714a3d02eeb0ec9dcb419b8fd837bf19030f9",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "b5ed2234cf0659dc87ff9f06aef471d58be15a3a5ac4dc37ed47e28f2fdf661f",
+    "problem_statement.md": "f0dd8e92c9f80dc17eb09452aba861a8d20ca42743de651395884fc7a35baf37",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "5824c39533320e83c8ba4467f9379a5ad30202253d87e0a00d800dcf444accf1"
+  },
+  "baseline_git_commit": "9b3a84d386d753eadb02adbcae1c9d52943b7cbf",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Make admission and replacement decisions before weighted eviction and recency updates.",
+  "family_id": "weighted_lru_admission",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "R15",
+  "test_count": 11,
+  "title": "Oversized cache writes evict useful entries before rejection",
+  "track": "reliability",
+  "version": "1.0"
+}

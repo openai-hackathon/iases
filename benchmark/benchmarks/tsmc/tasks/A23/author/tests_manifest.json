@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_negative",
+    "assessment/tests/test_hidden.py::test_reverse_weighted",
+    "assessment/tests/test_hidden.py::test_weighted",
+    "assessment/tests/test_hidden.py::test_within_between",
+    "tests/test_public.py::test_different_means"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_all_empty",
+    "assessment/tests/test_hidden.py::test_zero_group",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_equal_means",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_single"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_all_empty",
+    "assessment/tests/test_hidden.py::test_negative",
+    "assessment/tests/test_hidden.py::test_reverse_weighted",
+    "assessment/tests/test_hidden.py::test_weighted",
+    "assessment/tests/test_hidden.py::test_within_between",
+    "assessment/tests/test_hidden.py::test_zero_group",
+    "tests/test_public.py::test_different_means",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_equal_means",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_single"
+  ],
+  "task_id": "A23",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_all_empty": "hidden",
+    "assessment/tests/test_hidden.py::test_negative": "hidden",
+    "assessment/tests/test_hidden.py::test_reverse_weighted": "hidden",
+    "assessment/tests/test_hidden.py::test_weighted": "hidden",
+    "assessment/tests/test_hidden.py::test_within_between": "hidden",
+    "assessment/tests/test_hidden.py::test_zero_group": "hidden",
+    "tests/test_public.py::test_different_means": "public",
+    "tests/test_public.py::test_empty": "public",
+    "tests/test_public.py::test_equal_means": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public",
+    "tests/test_public.py::test_single": "public"
+  }
+}

@@ -1,0 +1,58 @@
+diff --git a/fabops/fencing.py b/fabops/fencing.py
+index ffe2844..1de7edb 100644
+--- a/fabops/fencing.py
++++ b/fabops/fencing.py
+@@ -2,16 +2,16 @@
+ def owned(db, owner, tokens, now):
+     for resource, token in tokens.items():
+         row = db.execute("SELECT owner,token,expires FROM leases WHERE resource=?", (resource,)).fetchone()
+-        if row is None or row[0] != owner or now >= row[2]:
++        if row is None or row[0] != owner or row[1] != token or now >= row[2]:
+             return False
+     return True
+ 
+ def writable(db, command):
+-    if False:
++    if set(command["tokens"]) != set(command["updates"]) or set(command["expected"]) != set(command["updates"]):
+         return False
+     if not owned(db, command["owner"], command["tokens"], command["now"]):
+         return False
+     for resource, revision in command["expected"].items():
+-        if False:
++        if db.execute("SELECT revision FROM outputs WHERE resource=?", (resource,)).fetchone()[0] != revision:
+             return False
+     return True
+diff --git a/fabops/lease.py b/fabops/lease.py
+index 9c48a84..7ea9b20 100644
+--- a/fabops/lease.py
++++ b/fabops/lease.py
+@@ -9,7 +9,7 @@ def execute(db, command):
+         if op == "acquire":
+             resources = sorted(set(command["resources"]))
+             busy = [db.execute("SELECT expires FROM leases WHERE resource=?", (r,)).fetchone() for r in resources]
+-            if all(row and now < row[0] for row in busy):
++            if any(row and now < row[0] for row in busy):
+                 db.rollback()
+                 return None
+             result = {}
+@@ -35,7 +35,6 @@ def execute(db, command):
+             for resource,value in sorted(command["updates"].items()):
+                 db.execute("UPDATE outputs SET revision=revision+1,value=? WHERE resource=?",(value,resource))
+         if command.get("crash",False):
+-            db.commit()
+             raise RuntimeError("interrupted before transaction commit")
+         db.commit()
+         return result
+diff --git a/fabops/store.py b/fabops/store.py
+index 635f22e..82305a4 100644
+--- a/fabops/store.py
++++ b/fabops/store.py
+@@ -14,7 +14,7 @@ def connect(path, resources):
+     return db
+ 
+ def allocate(db, resource):
+-    epoch = (db.execute("SELECT COALESCE(MAX(token),0) FROM leases WHERE resource=?", (resource,)).fetchone()[0])+1
++    epoch = db.execute("SELECT value FROM epochs WHERE resource=?", (resource,)).fetchone()[0]+1
+     db.execute("UPDATE epochs SET value=? WHERE resource=?", (epoch,resource))
+     return epoch
+ 

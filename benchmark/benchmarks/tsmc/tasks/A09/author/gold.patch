@@ -1,0 +1,13 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 0a123b7..6aba34b 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -2,7 +2,7 @@ def run(request):
+     active = request["initial"]
+     states = []
+     for value in request["values"]:
+-        if not active and value > request["high"]:
++        if not active and value >= request["high"]:
+             active = True
+         elif active and value <= request["low"]:
+             active = False

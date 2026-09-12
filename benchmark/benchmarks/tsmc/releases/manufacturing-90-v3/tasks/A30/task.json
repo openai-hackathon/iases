@@ -1,0 +1,38 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "50334306673e8fc16dde5cf207ec9ee96acbb019fc6188e09886b2b0828a9f24",
+    "data/expected.json": "e6bf76864bb72135d89e031b6ed113568728d86b0112d713f968b8128f5bb53b",
+    "data/request.json": "73337caca2d71066a05527ed702931ca849dc2b7bfce455a3b4cddfcd54570a7",
+    "docs/contract.md": "fa4f555185a9b3eebd06beab529b8658c25faa65d2efa18198e5a514d5708412",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/cohort.py": "726534e5c5ee9cefdc56de665cf68ebaea21f97c4bfc077572889f77d6919cc4",
+    "fabops/domain.py": "048a1e1d44ac143cff7930ca7159ac731dcc451f1d62cc8d843bbb556ac6da4a",
+    "fabops/model.py": "a4b8ebfbcae49e99d61002158500a2f79e944ba79526cd5b035a5cda30264916",
+    "problem_statement.md": "491252354ce0e4a583f9ef7c78704f87f1551c47e8ce0837553a4d316bc5845d",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "5787de1965f7736ade928138bd69fe1df91690abc971e7bbddf903dc950999e7"
+  },
+  "baseline_git_commit": "68e692a3dff9533aa471a8dbec89b33f35d38539",
+  "design_difficulty": "hard",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Couples embargoed interval selection, campaign-level exclusion and five-field profile eligibility with training-only standardization and inversion of a shrunk correlation matrix across three modules. Unlike A16 scalar chart baselines or A23 pooled variance, correct cohort membership changes a multivariate geometry, and a marginal z-score or random split cannot reproduce the diagnostic.",
+  "family_id": "purged_group_training_correlated_cycle_diagnosis",
+  "hidden_tests": 20,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "zema-hydraulic"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "A30",
+  "test_count": 25,
+  "title": "Campaign leakage and covariance inversion corrupt cycle anomaly scores",
+  "track": "data_analysis",
+  "version": "1.0"
+}

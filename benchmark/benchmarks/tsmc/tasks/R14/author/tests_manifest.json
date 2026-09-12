@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_after_rejection",
+    "assessment/tests/test_hidden.py::test_two_owners",
+    "tests/test_public.py::test_other"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_boundary",
+    "assessment/tests/test_hidden.py::test_renew_again",
+    "assessment/tests/test_hidden.py::test_shorten",
+    "assessment/tests/test_hidden.py::test_wrong_expired",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_expired",
+    "tests/test_public.py::test_owner",
+    "tests/test_public.py::test_public_cli_fixture"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_after_rejection",
+    "assessment/tests/test_hidden.py::test_boundary",
+    "assessment/tests/test_hidden.py::test_renew_again",
+    "assessment/tests/test_hidden.py::test_shorten",
+    "assessment/tests/test_hidden.py::test_two_owners",
+    "assessment/tests/test_hidden.py::test_wrong_expired",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_expired",
+    "tests/test_public.py::test_other",
+    "tests/test_public.py::test_owner",
+    "tests/test_public.py::test_public_cli_fixture"
+  ],
+  "task_id": "R14",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_after_rejection": "hidden",
+    "assessment/tests/test_hidden.py::test_boundary": "hidden",
+    "assessment/tests/test_hidden.py::test_renew_again": "hidden",
+    "assessment/tests/test_hidden.py::test_shorten": "hidden",
+    "assessment/tests/test_hidden.py::test_two_owners": "hidden",
+    "assessment/tests/test_hidden.py::test_wrong_expired": "hidden",
+    "tests/test_public.py::test_empty": "public",
+    "tests/test_public.py::test_expired": "public",
+    "tests/test_public.py::test_other": "public",
+    "tests/test_public.py::test_owner": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public"
+  }
+}

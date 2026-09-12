@@ -1,0 +1,53 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 904532e..867f989 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -8,8 +8,8 @@ def run(request):
+                   total_energy=None, ratio=None, decision="insufficient_data")
+     if values is None or coverage < request["min_coverage"]:
+         return output
+-    windowed, normalizer = window(values)
+-    windowed, slope = detrend(windowed)
++    residual, slope = detrend(values)
++    windowed, normalizer = window(residual)
+     energy, total = energies(windowed, normalizer, request["sample_rate"], request["band"])
+     ratio = energy / total if total > 1e-12 else 0.0
+     decision = ("alarm" if energy >= request["energy_threshold"]
+diff --git a/fabops/preprocess.py b/fabops/preprocess.py
+index 1451484..bb8da3c 100644
+--- a/fabops/preprocess.py
++++ b/fabops/preprocess.py
+@@ -17,9 +17,9 @@ def fill(samples, max_gap):
+             return None, observed / len(samples)
+         first, last = values[start - 1], values[index]
+         for offset in range(width):
+-            fraction = offset / (width + 1)
++            fraction = (offset + 1) / (width + 1)
+             values[start + offset] = first + fraction * (last - first)
+-    return values, sum(value is not None for value in values) / len(values)
++    return values, observed / len(samples)
+ 
+ def detrend(values):
+     count = len(values)
+diff --git a/fabops/spectrum.py b/fabops/spectrum.py
+index b4dc289..2bf3917 100644
+--- a/fabops/spectrum.py
++++ b/fabops/spectrum.py
+@@ -3,7 +3,7 @@ from math import cos, sin, pi
+ 
+ def window(values):
+     count = len(values)
+-    weights = [0.5 - 0.5 * cos(2 * pi * index / (count - 1)) for index in range(count)]
++    weights = [0.5 - 0.5 * cos(2 * pi * index / count) for index in range(count)]
+     return [value * weight for value, weight in zip(values, weights)], sum(weight * weight for weight in weights)
+ 
+ def energies(values, normalizer, sample_rate, band):
+@@ -14,7 +14,7 @@ def energies(values, normalizer, sample_rate, band):
+                    for index, value in enumerate(values))
+         imag = -sum(value * sin(2 * pi * frequency * index / count)
+                     for index, value in enumerate(values))
+-        factor = 1 if frequency == 0 else 2
++        factor = 1 if frequency in (0, count // 2) else 2
+         energy = factor * (real * real + imag * imag) / (count * normalizer)
+         total += energy
+         if band[0] <= frequency * sample_rate / count < band[1]:

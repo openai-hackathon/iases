@@ -1,0 +1,38 @@
+diff --git a/fabops/manifest.py b/fabops/manifest.py
+index 5d40e5d..1ebcd71 100644
+--- a/fabops/manifest.py
++++ b/fabops/manifest.py
+@@ -9,11 +9,11 @@ def normalize(manifest):
+     ordered = sorted(manifest, key=lambda item: item["index"])
+     if [item["index"] for item in ordered] != list(range(len(ordered))):
+         raise ValueError("chunk indexes must be contiguous from zero")
+-    return canonical(manifest)
++    return canonical(ordered)
+ 
+ def verify(rows, expected):
+     body = canonical(rows)
+     digest = hashlib.sha256(body.encode("utf-8")).hexdigest()
+-    if len(rows) != expected["rows"] and digest != expected["sha256"]:
++    if len(rows) != expected["rows"] or digest != expected["sha256"]:
+         raise ValueError("chunk does not match manifest")
+     return body
+diff --git a/fabops/publish.py b/fabops/publish.py
+index cf9abb5..f624d52 100644
+--- a/fabops/publish.py
++++ b/fabops/publish.py
+@@ -19,7 +19,6 @@ def finish(db, batch, crash=False):
+             return "incomplete"
+         rows, seen = [], set()
+         for expected in manifest:
+-            seen = set()
+             chunk = json.loads(chunks[expected["index"]])
+             verify(chunk, expected)
+             for row in chunk:
+@@ -29,7 +28,6 @@ def finish(db, batch, crash=False):
+                 rows.append(row)
+         db.executemany("INSERT OR REPLACE INTO published VALUES (?,?,?)",
+                        [(batch, index, canonical(row)) for index, row in enumerate(rows)])
+-        db.commit()
+         if crash:
+             raise RuntimeError("interrupted batch publication")
+         db.execute("UPDATE uploads SET status='committed' WHERE id=?", (batch,))

@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "922838b42c9b2e53b269229bcc54605997901b555c79b8a3fddde1b3e67e713e",
+    "data/expected.json": "24a279376551117f31ed9d92797023d0f89b376a6392801c7d6626e4cb7877e5",
+    "data/request.json": "d2d1e5b2a7ecfeb2ff0a2ff82d0a0288f9581e85fbb06c5bd701bef1053a4306",
+    "docs/contract.md": "062aba5259378a0f1732bd8f34dd2e8dcdc7b2a4d784072838e26047318e583b",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "3dcd582b406e52653c270bff7482b943d1e852d87edb2adb32132e99f2954f70",
+    "problem_statement.md": "610c5dc9ca8cd039c36fb9216d666787e0ffe8b9e1a328aaf1b565b3055a7e2f",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "947b26a17b8b7cbaf56c959ba586f97f97d9b29dabd9851f84eab2d8d14ed9d0"
+  },
+  "baseline_git_commit": "aeb878620e576364ed97a87b32dce0e65ed582e2",
+  "design_difficulty": "easy",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "",
+  "family_id": "cache_ttl_boundary",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "R07",
+  "test_count": 11,
+  "title": "Cache entries remain readable at their TTL boundary",
+  "track": "reliability",
+  "version": "1.0"
+}

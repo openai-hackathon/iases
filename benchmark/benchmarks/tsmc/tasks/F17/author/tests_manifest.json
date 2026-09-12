@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_deplete",
+    "assessment/tests/test_hidden.py::test_insufficient",
+    "assessment/tests/test_hidden.py::test_retry_after_reject",
+    "assessment/tests/test_hidden.py::test_unknown",
+    "tests/test_public.py::test_reject"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_empty_order",
+    "assessment/tests/test_hidden.py::test_two_items",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_exact",
+    "tests/test_public.py::test_one",
+    "tests/test_public.py::test_public_cli_fixture"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_deplete",
+    "assessment/tests/test_hidden.py::test_empty_order",
+    "assessment/tests/test_hidden.py::test_insufficient",
+    "assessment/tests/test_hidden.py::test_retry_after_reject",
+    "assessment/tests/test_hidden.py::test_two_items",
+    "assessment/tests/test_hidden.py::test_unknown",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_exact",
+    "tests/test_public.py::test_one",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_reject"
+  ],
+  "task_id": "F17",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_deplete": "hidden",
+    "assessment/tests/test_hidden.py::test_empty_order": "hidden",
+    "assessment/tests/test_hidden.py::test_insufficient": "hidden",
+    "assessment/tests/test_hidden.py::test_retry_after_reject": "hidden",
+    "assessment/tests/test_hidden.py::test_two_items": "hidden",
+    "assessment/tests/test_hidden.py::test_unknown": "hidden",
+    "tests/test_public.py::test_empty": "public",
+    "tests/test_public.py::test_exact": "public",
+    "tests/test_public.py::test_one": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public",
+    "tests/test_public.py::test_reject": "public"
+  }
+}

@@ -1,0 +1,11 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index f1e7ebc..394dc41 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -6,5 +6,5 @@ def run(request):
+         for source, target in request["edges"]:
+             if source == parent and target not in seen:
+                 seen.add(target)
+-                pass
++                pending.append(target)
+     return sorted(seen - seeds)

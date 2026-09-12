@@ -1,0 +1,38 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "d4c25c6e6e2f939f142c81b234fd072a21377354b945d17635c35d08872b9056",
+    "data/expected.json": "38bfd831ba80efc736d6587f1d671d6233d1cfaa737d2a40bd98cd5988221d7b",
+    "data/request.json": "8189c77328cb3bd814c2ade11cef508afd3b829d5a780f80239a523bb36b488f",
+    "docs/contract.md": "1766582d5a493f39b8dde1c82fca96fbd08627d55d99bacce2f55e34e54b4160",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "3d1a1e2be3ed62cab40f053bc8ade1e05db7c9827aa4aea4598323fac2458c66",
+    "fabops/flight.py": "de82bb39676152b3ac0c1e38edafa91d9bb1df95e0f1649d43316500789af203",
+    "fabops/registry.py": "34da62353835de61007596412c096323d890d87b9425b96d6a6d8ae25c1205d8",
+    "problem_statement.md": "0804cac91dce3354778973f56b8cb63fc7716120f0b6c2d3754f76dde48e5747",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "01f6fa2eb3d5312fb9ffc9f3e4d6054d472e7dcdad16f1d2af8033b1f5b8022c"
+  },
+  "baseline_git_commit": "d1e27f4335e514c34f62ffd1f2e5e1d16d973488",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Coordinate scoped invalidation, shared caller cancellation, orphan producers and stale asynchronous cleanup through producer identity ownership across two modules; replacing shield alone cannot repair lifecycle semantics.",
+  "family_id": "scoped_generation_singleflight_lifecycle",
+  "hidden_tests": 18,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "R13",
+  "test_count": 23,
+  "title": "Scoped telemetry requests retain abandoned producers and retire newer work",
+  "track": "reliability",
+  "version": "2.0"
+}

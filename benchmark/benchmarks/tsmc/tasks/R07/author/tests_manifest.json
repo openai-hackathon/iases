@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_fractional_boundary",
+    "assessment/tests/test_hidden.py::test_negative_origin",
+    "assessment/tests/test_hidden.py::test_zero_ttl",
+    "tests/test_public.py::test_boundary"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_before_boundary",
+    "assessment/tests/test_hidden.py::test_late_origin",
+    "assessment/tests/test_hidden.py::test_object",
+    "tests/test_public.py::test_empty_value",
+    "tests/test_public.py::test_fresh",
+    "tests/test_public.py::test_old",
+    "tests/test_public.py::test_public_cli_fixture"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_before_boundary",
+    "assessment/tests/test_hidden.py::test_fractional_boundary",
+    "assessment/tests/test_hidden.py::test_late_origin",
+    "assessment/tests/test_hidden.py::test_negative_origin",
+    "assessment/tests/test_hidden.py::test_object",
+    "assessment/tests/test_hidden.py::test_zero_ttl",
+    "tests/test_public.py::test_boundary",
+    "tests/test_public.py::test_empty_value",
+    "tests/test_public.py::test_fresh",
+    "tests/test_public.py::test_old",
+    "tests/test_public.py::test_public_cli_fixture"
+  ],
+  "task_id": "R07",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_before_boundary": "hidden",
+    "assessment/tests/test_hidden.py::test_fractional_boundary": "hidden",
+    "assessment/tests/test_hidden.py::test_late_origin": "hidden",
+    "assessment/tests/test_hidden.py::test_negative_origin": "hidden",
+    "assessment/tests/test_hidden.py::test_object": "hidden",
+    "assessment/tests/test_hidden.py::test_zero_ttl": "hidden",
+    "tests/test_public.py::test_boundary": "public",
+    "tests/test_public.py::test_empty_value": "public",
+    "tests/test_public.py::test_fresh": "public",
+    "tests/test_public.py::test_old": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public"
+  }
+}

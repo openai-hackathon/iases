@@ -1,0 +1,79 @@
+{
+  "assistant_messages": 0,
+  "code_commit": "0aa6cabcf227e35a70c27af01e8816e0e10c0830",
+  "configured_agent_query_attempts": 2,
+  "interpretation": "The live workflow is blocked at the API response. Error recording, empty workspace collection, prediction serialization and cleanup completed. This run does not establish repair capability or complete successful submission.",
+  "manifest": {
+    "config_sha256": "60c395a1831e2ea11b03950356f58db5f074cf7f73b30d94c5a18ab49d43c4ae",
+    "dataset": ".generated/tsmc-d-single-01/public",
+    "endpoint": "https://s9930703--vllm-serve-d-serve.modal.run",
+    "hard_timeout_seconds": 600.0,
+    "instances": [
+      "tsmc__f01-v0.2"
+    ],
+    "rounds": 1,
+    "scope": "Per-instance subprocess startup, inference and owned-container cleanup; no image builds or grading",
+    "seed": 20260912,
+    "split": "demo_dev",
+    "step_limit": 50,
+    "workers": 1
+  },
+  "minimal_curl_probe": {
+    "curl_exit_code": 28,
+    "elapsed_seconds": 65.001644,
+    "http_code": 0,
+    "max_tokens": 64,
+    "message": "hi",
+    "response_bytes": 0,
+    "url": "https://s9930703--vllm-serve-d-serve.modal.run/v1/chat/completions"
+  },
+  "native_grade": {
+    "empty_patch_instances": 1,
+    "resolved_instances": 0,
+    "source": "logs/evaluation/tsmc-d-single-01-grade/results.json"
+  },
+  "outcome": {
+    "api_calls": 1,
+    "cleanup_errors": [],
+    "ended_at": "2026-09-12T06:33:48.736589+00:00",
+    "exit_status": "Timeout",
+    "hard_timeout": false,
+    "inference_seconds": 129.44063804112375,
+    "instance_id": "tsmc__f01-v0.2",
+    "nonempty_submission": false,
+    "patch_collection_error": null,
+    "started_at": "2026-09-12T06:31:39.277287+00:00",
+    "subprocess_return_code": 0,
+    "total_seconds": 129.45722508314066,
+    "trajectory_error": null
+  },
+  "query_count_note": "mini-SWE-agent reports one agent query; the console records one retry within that query. No assistant response was received.",
+  "request_format": {
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "model": "local",
+    "priority": 0
+  },
+  "run_id": "tsmc-d-single-01",
+  "selection": {
+    "base_commit": "94f46f00cd3d35877de957a58f27d392681a5b2a",
+    "endpoint_models_preflight": "GET /v1/models timed out after 30 seconds; no current model root confirmed.",
+    "image_id": "sha256:3356cc770e0e1cdc4816a6f3c26bc425ec67fc3de86c8159c59e56bd52455e0e",
+    "instance_id": "tsmc__f01-v0.2",
+    "selection": "Original development task F01 for workflow verification; no heldout task exposure."
+  },
+  "trajectory": "logs/inference/tsmc-d-single-01/round-1/tsmc__f01-v0.2/inference/tsmc__f01-v0.2/tsmc__f01-v0.2.traj.json",
+  "workflow": {
+    "baseline_verified": "passed",
+    "code_repair": "not_reached",
+    "complete_repair_and_submission_verified": false,
+    "model_response": "timeout",
+    "native_tests": "not_run_empty_patch",
+    "owned_containers_remaining": 0,
+    "prediction_file_written": true,
+    "prediction_read_by_native_evaluator": true,
+    "workspace_collection": "passed_empty_diff",
+    "workspace_startup": "passed"
+  }
+}

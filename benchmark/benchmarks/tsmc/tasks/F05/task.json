@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "11dceb77ae2be13968c40038f1a91fab30ef82b232d695a0e34aef008f467a4d",
+    "data/expected.json": "fb486e2313029b38bc2809501a4a5d04655dc9b0a73396b8d80dc69a7fcae2b4",
+    "data/request.json": "1ce37f0f37f6f0859e33d72bb8feb5beb9a84914048da2ce78554182d9e4f509",
+    "docs/contract.md": "13dba010da2ec329db3e5ddfeb0aeb05db3ca0aa521153d0ec4721b8ae4b0d89",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "011e586bfce0b297a3a5b3ff41635f2c2dc899988acf4aca83fbf938ecc345c6",
+    "problem_statement.md": "a3902aefc7912256729b1bc87968ff8d6cf2c5ae4e03fde0f08cf8aaa2befa4c",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "a84f4200d12f075650ec1ba89b65185ae6e5ef8cad9edf63016e761845838c8a"
+  },
+  "baseline_git_commit": "333511118981308f9fb9bf9ab15a9afe051c4891",
+  "design_difficulty": "easy",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "",
+  "family_id": "material_expiry",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "production-log"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "F05",
+  "test_count": 11,
+  "title": "Expired material remains available at its expiry boundary",
+  "track": "factory_logic",
+  "version": "1.0"
+}

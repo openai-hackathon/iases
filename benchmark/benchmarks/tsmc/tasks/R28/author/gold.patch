@@ -1,0 +1,13 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 6ab0584..775eb73 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -9,7 +9,7 @@ def run(request):
+             if not valid:
+                 raise ValueError("checksum mismatch")
+         except ValueError:
+-            if True:
++            if index == len(request["lines"]) - 1:
+                 break
+             raise
+         if number != len(output) + 1:

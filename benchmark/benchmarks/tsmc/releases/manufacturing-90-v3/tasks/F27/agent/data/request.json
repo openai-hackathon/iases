@@ -1,0 +1,46 @@
+{
+  "initial": {
+    "raw": 2
+  },
+  "recipes": {
+    "move": {
+      "consume": {
+        "raw": 1
+      },
+      "produce": {
+        "wip": 1
+      },
+      "scrap": 0
+    },
+    "finish": {
+      "consume": {
+        "wip": 1
+      },
+      "produce": {
+        "done": 1
+      },
+      "scrap": 0
+    }
+  },
+  "events": [
+    {
+      "id": "a_finish",
+      "revision": 1,
+      "order": 2,
+      "recipe": "finish",
+      "batches": 2
+    },
+    {
+      "id": "z_move",
+      "revision": 1,
+      "order": 1,
+      "recipe": "move",
+      "batches": 2
+    }
+  ],
+  "capacities": {
+    "done": 20,
+    "raw": 20,
+    "wip": 20
+  }
+}

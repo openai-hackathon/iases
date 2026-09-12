@@ -1,0 +1,39 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "722b4ed458d78a6375a574d932f9dda62a531b43a3dc7426bb016aa2c4955c09",
+    "data/expected.json": "b446367d23e2a117865d5bf6c1cdb1e3d11e963184a71f344da5f9ed27f18801",
+    "data/request.json": "447781f40b9433e0642e56c6bc30a5cbbf56cc9c73b73618a02db96307b69f71",
+    "docs/contract.md": "a278c414e877da4b97a9b01bbc8154ba4b3d8ed5fc731fdc7cb380f5b6d434b2",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "cd2d25f5de7627e791ddd55af70536ce56ac227a68c0b14507e3a4036373fc1e",
+    "fabops/graph.py": "a55256b542e490fb83c08aa669a77ecc1c185e71f8e0bd4725c528dc0d2f1c28",
+    "fabops/package.py": "13b4eaa83a259f2b3e8b6ad87e617c228d284c3003e9e3bb06799f60b6dcaa99",
+    "fabops/store.py": "3dcf4d19bdf9fc1d9572c57a85289fbb4b01f2cb15ec46d6fb7224e62878e71a",
+    "problem_statement.md": "f18cf36109b47569ade665f3bf9f9c6503edb64af1a418a6dbedf31e82bddf9b",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "069f74afa74f93954913843ce2c7c6447ed3ae5134de7d159a253f91f662c628"
+  },
+  "baseline_git_commit": "45f99263159cd377aa646cae8a7a5c5d86c2deff",
+  "design_difficulty": "hard",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Replace exact-pin traversal with global revision-range constraint search under integrity, cycle and durable rollback floors, then couple immutable prepared closures to generation-checked atomic publication and crash recovery.",
+  "family_id": "range_resolved_rollback_safe_package_cas",
+  "hidden_tests": 30,
+  "language": "en",
+  "public_tests": 8,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "R30",
+  "test_count": 38,
+  "title": "Technical packages greedily resolve ranges and commit stale prepared closures",
+  "track": "reliability",
+  "version": "2.0"
+}

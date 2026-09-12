@@ -1,0 +1,50 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_current_token",
+    "assessment/tests/test_hidden.py::test_restart_after_retire",
+    "assessment/tests/test_hidden.py::test_restart_value",
+    "assessment/tests/test_hidden.py::test_same_owner_stale",
+    "assessment/tests/test_hidden.py::test_three_epochs",
+    "assessment/tests/test_hidden.py::test_wrong_token",
+    "tests/test_public.py::test_retire_reacquire"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_expiry",
+    "assessment/tests/test_hidden.py::test_new_owner",
+    "tests/test_public.py::test_busy",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_first",
+    "tests/test_public.py::test_public_cli_fixture"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_current_token",
+    "assessment/tests/test_hidden.py::test_expiry",
+    "assessment/tests/test_hidden.py::test_new_owner",
+    "assessment/tests/test_hidden.py::test_restart_after_retire",
+    "assessment/tests/test_hidden.py::test_restart_value",
+    "assessment/tests/test_hidden.py::test_same_owner_stale",
+    "assessment/tests/test_hidden.py::test_three_epochs",
+    "assessment/tests/test_hidden.py::test_wrong_token",
+    "tests/test_public.py::test_busy",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_first",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_retire_reacquire"
+  ],
+  "task_id": "R22",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_current_token": "hidden",
+    "assessment/tests/test_hidden.py::test_expiry": "hidden",
+    "assessment/tests/test_hidden.py::test_new_owner": "hidden",
+    "assessment/tests/test_hidden.py::test_restart_after_retire": "hidden",
+    "assessment/tests/test_hidden.py::test_restart_value": "hidden",
+    "assessment/tests/test_hidden.py::test_same_owner_stale": "hidden",
+    "assessment/tests/test_hidden.py::test_three_epochs": "hidden",
+    "assessment/tests/test_hidden.py::test_wrong_token": "hidden",
+    "tests/test_public.py::test_busy": "public",
+    "tests/test_public.py::test_empty": "public",
+    "tests/test_public.py::test_first": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public",
+    "tests/test_public.py::test_retire_reacquire": "public"
+  }
+}

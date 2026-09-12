@@ -1,0 +1,38 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "86be583284cc5f999290015fcdf84f64d1bc0aae318f0e614d91fd37c0e46641",
+    "data/expected.json": "f0b96bdf5e7447db8a4ea97250678488b2ddd53dc596b490862388a8f4d2e885",
+    "data/request.json": "c1e480ab0162cb4171ad019f7310c41b14e743a861f6c08ba1eb9cf6b7a1a5c3",
+    "docs/contract.md": "95ee4ec523d8fff3175de0de5b2bc169ee2c4768aa2a78e4b9bb25209eba398b",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "580028e05ed2e5fbb575fd616fabb23f0928e6a4b878624774cd42c98654711e",
+    "fabops/history.py": "39e01ab324aa7b42ad13bd6dea00926787b9953a68b9900c84814ecb111d6853",
+    "fabops/metrology.py": "1da559431a3337a83d87bb0500552ecf44f04c5c35b54987939efdd6732856ff",
+    "problem_statement.md": "aa3cf338519e0d35d9e2012c35a3df81c516689660a60d3844f58431d4aab9e4",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "04fe06a2af9b4f60ac2e7d7591959f1d6b7931962fc3bbecd230d36e0119db50"
+  },
+  "baseline_git_commit": "b5d8423a41052856932e4e2cf9d3200ea059c0df",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Replace a two-line static join with revision visibility, tombstone and quality precedence, event-time selection and independent calibration-time semantics across three modules. Medium difficulty remains bounded to exact relational selection; unlike the revised hydraulic task it has no continuous interval reconstruction or publication retractions.",
+  "family_id": "revisioned_bitemporal_metrology_join",
+  "hidden_tests": 24,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "A12",
+  "test_count": 29,
+  "title": "Historical metrology joins mix future corrections with the wrong calibration interval",
+  "track": "data_analysis",
+  "version": "2.0"
+}

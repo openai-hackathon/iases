@@ -1,0 +1,25 @@
+[
+  {
+    "windows": [
+      {
+        "id": "w",
+        "coverage": "1",
+        "accepted": true,
+        "volume": "2",
+        "work": "120"
+      }
+    ],
+    "changes": [
+      {
+        "op": "upsert",
+        "value": {
+          "id": "w",
+          "coverage": "1",
+          "accepted": true,
+          "volume": "2",
+          "work": "120"
+        }
+      }
+    ]
+  }
+]

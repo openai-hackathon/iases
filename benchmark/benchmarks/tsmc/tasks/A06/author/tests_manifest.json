@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_duplicates",
+    "assessment/tests/test_hidden.py::test_negative",
+    "assessment/tests/test_hidden.py::test_upper_quartile",
+    "tests/test_public.py::test_even_median"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_maximum",
+    "assessment/tests/test_hidden.py::test_noninteger_rank",
+    "assessment/tests/test_hidden.py::test_odd_median",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_minimum",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_single"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_duplicates",
+    "assessment/tests/test_hidden.py::test_maximum",
+    "assessment/tests/test_hidden.py::test_negative",
+    "assessment/tests/test_hidden.py::test_noninteger_rank",
+    "assessment/tests/test_hidden.py::test_odd_median",
+    "assessment/tests/test_hidden.py::test_upper_quartile",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_even_median",
+    "tests/test_public.py::test_minimum",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_single"
+  ],
+  "task_id": "A06",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_duplicates": "hidden",
+    "assessment/tests/test_hidden.py::test_maximum": "hidden",
+    "assessment/tests/test_hidden.py::test_negative": "hidden",
+    "assessment/tests/test_hidden.py::test_noninteger_rank": "hidden",
+    "assessment/tests/test_hidden.py::test_odd_median": "hidden",
+    "assessment/tests/test_hidden.py::test_upper_quartile": "hidden",
+    "tests/test_public.py::test_empty": "public",
+    "tests/test_public.py::test_even_median": "public",
+    "tests/test_public.py::test_minimum": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public",
+    "tests/test_public.py::test_single": "public"
+  }
+}

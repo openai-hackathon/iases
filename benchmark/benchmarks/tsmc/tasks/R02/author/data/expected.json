@@ -1,0 +1,14 @@
+{
+  "accepted": [
+    true,
+    true,
+    false,
+    true,
+    true,
+    false
+  ],
+  "used": {
+    "X": 3,
+    "Y": 0
+  }
+}

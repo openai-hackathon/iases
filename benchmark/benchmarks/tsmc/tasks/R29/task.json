@@ -1,0 +1,41 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "6008a6e842451fd55d73bab5a44bf9f867c6313eb4c313c10c8ab2833c33b1ef",
+    "data/expected.json": "179e1ce46e1894181ed4edd303e05dd14668e7530ba34f7f9c1eb1ff1f15c6c4",
+    "data/request.json": "7660b8912c212365514b1f645c0b294845c147b4d610a3f2acfe460d4b3b8dc2",
+    "docs/contract.md": "0302a5c5a798db5484d8633f7c43c18b18b859e2872aa85d396992c5dd9af772",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/consumer.py": "9d52ed4953bb0304427647ea43dd64a134c36edf0407cf608d87a9407408ed7b",
+    "fabops/domain.py": "f494b4ef70b9b45dbb5a5b83883190e0e8a6c07a3fe9cdc4f3990ff74bee3d0a",
+    "fabops/lease.py": "dd1fea86a8a29a6db8692e09effb3f6a24cf6773db65c309aa1044add0fde9ae",
+    "fabops/relay.py": "c457d7eaef8aa585e82a77a53f49b1f35bc67261628755987bfd03d4197a4b88",
+    "fabops/retention.py": "1781965f070df8d2003b7f9f69efa318773e28c32ad7c31b8dab6a9418c7528b",
+    "fabops/store.py": "2591622e6c8569dd7a11f8004c5a77ddadf7bddeffb20880e360accc8e5c5657",
+    "problem_statement.md": "3d01ae800620eddd5829aecfc108584462369c513b6540581b34e308ea918cd4",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "cafe6acb3fc4a34fddad09f88e679da0fd148b7fb486200c5d38022b2467206a"
+  },
+  "baseline_git_commit": "b105048773db1b04f2f502f0e1d593930ca687db",
+  "design_difficulty": "hard",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Replace an eager out-of-order reducer and unsafe retention architecture while coordinating independently committed sink effects, local acknowledgements, durable producer identities, epoch fencing and crash-safe compaction across six modules.",
+  "family_id": "durable_ordered_outbox_fenced_consumer_compaction",
+  "hidden_tests": 29,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "R29",
+  "test_count": 34,
+  "title": "Outbox recovery crosses consumer gaps and reclaims unacknowledged fenced work",
+  "track": "reliability",
+  "version": "2.0"
+}

@@ -1,0 +1,10 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index de9c723..c4a80ad 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -1,4 +1,4 @@
+ def run(request):
+     route = request["route"]
+-    position = (route.index(route[request["completed"] - 1]) + 1) if request["completed"] else 0
++    position = request["completed"]
+     return route[position] if position < len(route) else None

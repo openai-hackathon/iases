@@ -1,0 +1,13 @@
+{
+  "inventory": {
+    "raw": 0,
+    "wip": 0,
+    "done": 2
+  },
+  "accepted": [
+    "z_move",
+    "a_finish"
+  ],
+  "rejected": [],
+  "scrap": 0
+}

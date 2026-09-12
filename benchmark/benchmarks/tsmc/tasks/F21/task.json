@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "c90e27953597206741da61dabb78b8a431edae435c6e59efd9a26ffa7dcc6ece",
+    "data/expected.json": "cdac1d4615feb5bbaf73d166d02aed020641a9cb436afd90caaed21573ae19ab",
+    "data/request.json": "3e5b529f5c6276dd5f4b8e4efd201b9b819652b684a56628a04173dd5b968b4f",
+    "docs/contract.md": "5750b4fd08fde26122baa0ac4ca905ad8429d6727d974be7ebae8625bfa04e7a",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "7492a7d67bc99b12600bbd7e168a42bcda431deaf3a33f0d92e4268477abb29e",
+    "problem_statement.md": "735eb6ce984f083d1ee665501aa0bf4bf172c10b6ccdfeba4bad4a15ac1a58d9",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "f0c8898882ffb3c6a2343f0f3a099385a0ef1fa9cceb43e83326f7246670914a"
+  },
+  "baseline_git_commit": "6c2ae422105c46f7b9721f74aba48285599176a8",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Reconcile three records at purchase-line granularity while accounting for partial invoices.",
+  "family_id": "purchase_line_three_way_match",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "bpi-2019"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "F21",
+  "test_count": 11,
+  "title": "Invoice matching pools receipts from different purchase-order lines",
+  "track": "factory_logic",
+  "version": "1.0"
+}

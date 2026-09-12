@@ -1,0 +1,11 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index d6c93aa..766deb7 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -1,5 +1,5 @@
+ from decimal import Decimal, ROUND_HALF_UP
+ def run(request):
+     values = [Decimal(value) for value in request["values"]]
+-    total = sum((v.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP) for v in values), Decimal(0))
++    total = sum(values, Decimal(0))
+     return format(total.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP), ".2f")

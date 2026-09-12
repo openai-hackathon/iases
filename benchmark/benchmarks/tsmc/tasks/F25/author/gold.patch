@@ -1,0 +1,99 @@
+diff --git a/fabops/alignment.py b/fabops/alignment.py
+index 1b9a890..9b37ba9 100644
+--- a/fabops/alignment.py
++++ b/fabops/alignment.py
+@@ -1,35 +1,44 @@
+ """Compute an auditable least-cost explanation of production observations."""
++import heapq
+ from .net import fire
+ from .observations import available, consume
+ 
+ def search(request):
+     places = sorted(request["capacities"])
+-    marking = tuple(request["initial"].get(p, 0) for p in places)
++    initial = tuple(request["initial"].get(p, 0) for p in places)
+     final = tuple(request["final"].get(p, 0) for p in places)
+-    group, mask, cost, path = 0, 0, 0, ()
+-    seen = set()
+-    while (group, mask, marking) not in seen:
+-        seen.add((group, mask, marking))
+-        if group == len(request["groups"]) and marking == final:
++    groups = request["groups"]
++    initial_state = (0, 0, initial)
++    best = {initial_state: (0, 0, ())}
++    queue = [(0, 0, (), initial_state)]
++    while queue:
++        cost, length, path, state = heapq.heappop(queue)
++        if best.get(state) != (cost, length, path):
++            continue
++        group, mask, marking = state
++        if group == len(groups) and marking == final:
+             return cost, path
+-        choices = []
+-        events = available(request["groups"], group, mask)
++        edges = []
++        events = available(groups, group, mask)
++        for index, event in events:
++            next_group, next_mask = consume(groups, group, mask, index)
++            edges.append(((next_group, next_mask, marking), event["skip_cost"],
++                          ("log", event["id"], "")))
+         for transition in request["transitions"]:
+             changed = fire(marking, transition, places, request["capacities"])
+             if changed is None:
+                 continue
+-            choices.append((transition["model_cost"], ("model", "", transition["id"]),
+-                            group, mask, changed))
+-            for index, event in events:
+-                if transition["label"] is not None and event["label"] == transition["label"]:
+-                    g, m = consume(request["groups"], group, mask, index)
+-                    choices.append((0, ("sync", event["id"], transition["id"]), g, m, changed))
+-        for index, event in events:
+-            g, m = consume(request["groups"], group, mask, index)
+-            choices.append((event["skip_cost"], ("log", event["id"], ""), g, m, marking))
+-        if not choices:
+-            break
+-        price, move, group, mask, marking = min(choices)
+-        cost += price
+-        path += (move,)
++            edges.append(((group, mask, changed), transition["model_cost"],
++                          ("model", "", transition["id"])))
++            if transition["label"] is not None:
++                for index, event in events:
++                    if event["label"] == transition["label"]:
++                        next_group, next_mask = consume(groups, group, mask, index)
++                        edges.append(((next_group, next_mask, changed), 0,
++                                      ("sync", event["id"], transition["id"])))
++        for target, price, move in edges:
++            score = (cost + price, length + 1, path + (move,))
++            if target not in best or score < best[target]:
++                best[target] = score
++                heapq.heappush(queue, (*score, target))
+     return None, ()
+diff --git a/fabops/net.py b/fabops/net.py
+index 59e05bc..d9905db 100644
+--- a/fabops/net.py
++++ b/fabops/net.py
+@@ -3,8 +3,8 @@ def fire(marking, transition, places, capacities):
+     current = dict(zip(places, marking))
+     if any(current[p] < n for p, n in transition["consume"].items()):
+         return None
+-    result = tuple(current[p] - int(p in transition["consume"])
+-                   + int(p in transition["produce"]) for p in places)
++    result = tuple(current[p] - transition["consume"].get(p, 0)
++                   + transition["produce"].get(p, 0) for p in places)
+     if any(n > capacities[p] for p, n in zip(places, result)):
+         return None
+     return result
+diff --git a/fabops/observations.py b/fabops/observations.py
+index 2a7414a..bc66fea 100644
+--- a/fabops/observations.py
++++ b/fabops/observations.py
+@@ -2,7 +2,7 @@
+ def available(groups, group, mask):
+     if group == len(groups):
+         return []
+-    return [(i, event) for i, event in enumerate(groups[group]) if not mask & (1 << i)][:1]
++    return [(i, event) for i, event in enumerate(groups[group]) if not mask & (1 << i)]
+ 
+ def consume(groups, group, mask, index):
+     updated = mask | (1 << index)

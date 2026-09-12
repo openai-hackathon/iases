@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "6371bdd6195547e74a547a8a02b1a9f74cf767f8900551d021bc8c464402996b",
+    "data/expected.json": "881b9e0169c614b99b14c4c40017a1e898246a35b27a2d8c2b46bfc3a060bacc",
+    "data/request.json": "c64dbcbd1f8264eb66e2d42cf3eea1ef5b42c8089bb9b4a81051c48a03ac9682",
+    "docs/contract.md": "2c98afcb860773707614ca1f9ba1c34ce492dc71197fd1b79b2f89e1f6cbea96",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "592ed438a4bd43608e1e1a46b4931dbb8f4c14fe3eb703464c35d7e0b44a29be",
+    "problem_statement.md": "03eb06c2977a60d8e085cfa29d03bfff2cd9345f04ec26ef30a91cfb3d5a13ab",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "737c45062e53c277fa05756fc8e658456b9aee5f2726b8083ff36607ab41a173"
+  },
+  "baseline_git_commit": "48318eba36bd345fc3f822bf121fe60235a5544e",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Combine ownership and expiration checks before state mutation.",
+  "family_id": "owner_checked_lease_renewal",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "R14",
+  "test_count": 11,
+  "title": "Former lease owners renew another worker's reservation",
+  "track": "reliability",
+  "version": "1.0"
+}

@@ -1,0 +1,42 @@
+{
+  "journal": {
+    "task_id": "R03",
+    "source_task_manifest_sha256": "071684c5f7ff49137b1f03b26d5846a2d8c36daeab9962779061b465f133fbfe",
+    "archive_task_manifest_sha256": "8ff08081b72aa615a863513e8d58a0418581307bdb7f5bc7ed30849f33c9a51c"
+  },
+  "telemetry": {
+    "task_id": "A04",
+    "source_task_manifest_sha256": "73d31bad368e470145b946f0956cae52d23b4fb4f1fa3113c090bc3337acf8f3",
+    "archive_task_manifest_sha256": "ef844905282da53d31d452497b918735b2af74515681eb116a5a936ed515ceb3"
+  },
+  "state": {
+    "task_id": "F03",
+    "source_task_manifest_sha256": "af07f7af2f347a506cd9424180d8b147f4406e97648ac3f315c51ce8b0bf4f8f",
+    "archive_task_manifest_sha256": "c349903e0a548fa4d5390a03f855852e4be055ee0ed05c8960a74cf2b2d4b177"
+  },
+  "qualification": {
+    "task_id": "F02",
+    "source_task_manifest_sha256": "3e61e774439c1c275cc8dd815a5db31041807d7b14e82a2554f2b23ceae800b4",
+    "archive_task_manifest_sha256": "8ee279b82e5294d3d185e0e9def9a4bf93aacf13abca37a57aeb575358e7c9a8"
+  },
+  "release": {
+    "task_id": "F01",
+    "source_task_manifest_sha256": "e845932b6e2ce04ca42f825051a5c3b2d16acc01ff551be4f5d8962960dc5b8d",
+    "archive_task_manifest_sha256": "7d9333d803e12166b8bf8c3d56143ad1fd9822026d66ae754f608b88e71bcc37"
+  },
+  "reservation": {
+    "task_id": "R02",
+    "source_task_manifest_sha256": "d978de209c0a75f58570480d05853eab380c35583700d8d4cab80af71477fa60",
+    "archive_task_manifest_sha256": "9fb94de709d9c66c1c205aa3b2ae8449a79cdcf3c1f716acd02c763d5aef07a6"
+  },
+  "maintenance": {
+    "task_id": "R01",
+    "source_task_manifest_sha256": "c89213c0a949881bae502a7fd6b692e6abfe24ebd30090589efef035f093e9e4",
+    "archive_task_manifest_sha256": "703853d99c7a41ddd8a7d0ed2fe371c0e7e66c2564b44d3c03b7c1a21d75de65"
+  },
+  "downtime": {
+    "task_id": "A01",
+    "source_task_manifest_sha256": "9987324e3a1bd0de7cbbb0f5165be26fc398a996542801a2de02d98fe02bd60a",
+    "archive_task_manifest_sha256": "8b9f7d38545bf6f90214f0c564fa63a25ac0647fd5c1251a4288f41d1b0ec319"
+  }
+}

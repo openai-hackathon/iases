@@ -1,0 +1,84 @@
+diff --git a/fabops/consumer.py b/fabops/consumer.py
+index 65e795d..3a6bc92 100644
+--- a/fabops/consumer.py
++++ b/fabops/consumer.py
+@@ -5,13 +5,16 @@ def drain(db, consumer):
+     next_sequence, total, trail = db.execute(
+         "SELECT next,total,trail FROM consumers WHERE id=?", (consumer,)).fetchone()
+     trail = json.loads(trail)
+-    buffered = db.execute("SELECT seq,event,delta FROM inbox WHERE consumer=? ORDER BY seq",
+-                          (consumer,)).fetchall()
+-    for sequence, event, delta in buffered:
++    while True:
++        item = db.execute("SELECT event,delta FROM inbox WHERE consumer=? AND seq=?",
++                          (consumer,next_sequence)).fetchone()
++        if item is None:
++            break
++        event, delta = item
+         total += delta
+         trail.append(event)
+-        next_sequence = sequence + 1
+-    db.execute("DELETE FROM inbox WHERE consumer=?", (consumer,))
++        db.execute("DELETE FROM inbox WHERE consumer=? AND seq=?", (consumer,next_sequence))
++        next_sequence += 1
+     db.execute("UPDATE consumers SET next=?,total=?,trail=? WHERE id=?",
+                (next_sequence,total,json.dumps(trail),consumer))
+ def accept(db, consumer, sequence, event, delta):
+diff --git a/fabops/lease.py b/fabops/lease.py
+index 276dbc9..b2ebf60 100644
+--- a/fabops/lease.py
++++ b/fabops/lease.py
+@@ -2,7 +2,7 @@
+ def valid(db, command):
+     lease = db.execute("SELECT owner,token,expires FROM lease WHERE id=1").fetchone()
+     return bool(lease and command["owner"] == lease[0]
+-                and command["now"] < lease[2])
++                and command["token"] == lease[1] and command["now"] < lease[2])
+ 
+ def acquire(db, command):
+     lease = db.execute("SELECT expires FROM lease WHERE id=1").fetchone()
+diff --git a/fabops/relay.py b/fabops/relay.py
+index 72671d8..4ed38ee 100644
+--- a/fabops/relay.py
++++ b/fabops/relay.py
+@@ -11,8 +11,6 @@ def deliver(db, command):
+         return "missing"
+     if db.execute("SELECT 1 FROM acks WHERE seq=? AND consumer=?", (sequence,consumer)).fetchone():
+         return "acked"
+-    with db:
+-        db.execute("INSERT OR IGNORE INTO acks VALUES(?,?)", (sequence,consumer))
+     if command.get("crash") == "before_sink":
+         return "crashed"
+     accept(db, consumer, sequence, *event)
+diff --git a/fabops/retention.py b/fabops/retention.py
+index f8c72fe..cbc2079 100644
+--- a/fabops/retention.py
++++ b/fabops/retention.py
+@@ -2,7 +2,14 @@
+ from .lease import valid
+ 
+ def safe_cut(db):
+-    return max(row[0] for row in db.execute("SELECT next FROM consumers")) - 1
++    cut, next_sequence = db.execute("SELECT compacted,next FROM source WHERE id=1").fetchone()
++    frontier = min(row[0] for row in db.execute("SELECT next FROM consumers"))
++    while cut + 1 < min(frontier, next_sequence):
++        acknowledged = db.execute("SELECT COUNT(*) FROM acks WHERE seq=?", (cut+1,)).fetchone()[0]
++        if acknowledged != 2:
++            break
++        cut += 1
++    return cut
+ def compact(db, command):
+     if not valid(db, command):
+         return "fenced"
+diff --git a/fabops/store.py b/fabops/store.py
+index 8fa5c43..df8df8e 100644
+--- a/fabops/store.py
++++ b/fabops/store.py
+@@ -26,7 +26,6 @@ def append(db, command):
+         sequence = db.execute("SELECT next FROM source WHERE id=1").fetchone()[0]
+         db.execute("UPDATE source SET next=next+1,total=total+? WHERE id=1", (command["delta"],))
+         db.execute("INSERT INTO commands VALUES(?,?,?)", (command["id"],command["delta"],sequence))
+-        db.commit()
+         if command.get("crash", False):
+             raise RuntimeError("interrupted append")
+         db.execute("INSERT INTO outbox VALUES(?,?,?)", (sequence,command["id"],command["delta"]))

@@ -1,0 +1,11 @@
+{
+  "planned": 8,
+  "runtime": 8,
+  "lots": [
+    {
+      "total": 4,
+      "good": 4,
+      "ideal_cycle": 2
+    }
+  ]
+}

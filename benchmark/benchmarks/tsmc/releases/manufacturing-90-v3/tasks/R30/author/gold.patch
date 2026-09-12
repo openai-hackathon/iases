@@ -1,0 +1,43 @@
+diff --git a/fabops/graph.py b/fabops/graph.py
+index eda2990..287f081 100644
+--- a/fabops/graph.py
++++ b/fabops/graph.py
+@@ -5,14 +5,14 @@ def closure(artifacts, roots):
+ 
+     def visit(key):
+         key = tuple(key)
+-        if key in active and key not in done:
++        if key in active:
+             raise ValueError("dependency cycle")
+-        if key[0] in selected and selected[key[0]] > key[1]:
++        if key[0] in selected and selected[key[0]] != key[1]:
+             raise ValueError("incompatible revision pins")
+         selected[key[0]] = key[1]
+         if key in done:
+             return
+-        row = max((row for (name, revision), row in catalog.items() if name == key[0]), key=lambda row: row["revision"], default=None)
++        row = catalog.get(key)
+         if row is None or row["revoked"]:
+             raise ValueError("missing or revoked artifact")
+         active.add(key)
+diff --git a/fabops/package.py b/fabops/package.py
+index 5ea2baf..0357bd0 100644
+--- a/fabops/package.py
++++ b/fabops/package.py
+@@ -13,8 +13,6 @@ def install(db, artifacts, roots, crash=False):
+     try:
+         ordered = closure(artifacts, roots)
+         for row in ordered:
+-            if [row["id"], row["revision"]] not in roots:
+-                continue
+             if hashlib.sha256(row["content"].encode("utf-8")).hexdigest() != row["sha256"]:
+                 raise ValueError("content digest mismatch")
+     except ValueError:
+@@ -22,7 +20,6 @@ def install(db, artifacts, roots, crash=False):
+     db.execute("BEGIN IMMEDIATE")
+     try:
+         db.execute("DELETE FROM installed")
+-        db.commit()
+         if crash:
+             raise RuntimeError("interrupted package replacement")
+         db.executemany("INSERT INTO installed VALUES (?,?,?,?)", [

@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "1492490bd466fa5c40edc79f0cfdef5f4436903afae091fb545dd0b4b65a8816",
+    "data/expected.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "data/request.json": "1a46c0402c164e450fc729a327a7f36d64cf4e4425fc9fd7063a788623706f19",
+    "docs/contract.md": "f848106acab9e2bb26d460da313d0ef8725776f17dde02362cc3a0f38eb083cd",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "a0b5424c8b73859e200b6ead0f65dd69fdb246bd8793d549aa8d0072ab1e5b47",
+    "problem_statement.md": "f9b7a849e2c3e0a5c07eec26c16dea38bab9d1f68d8c93fde13e080bb2467d7d",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "bfdfc76703d9be0d530610a7d1bfa4426dc2c60499f1f439de321aca4853c191"
+  },
+  "baseline_git_commit": "cdf6fa69c689b20f4e7ceb26d0d48ad4542f3e2a",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Track independent authority versions so one release cannot erase another hold.",
+  "family_id": "independent_hold_authorities",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "production-log"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "F22",
+  "test_count": 11,
+  "title": "One department's release clears another department's quality hold",
+  "track": "factory_logic",
+  "version": "1.0"
+}

@@ -1,0 +1,18 @@
+# Apply after agent.yaml. Select a model and explicit reasoning effort.
+agent:
+  system_template: |
+    You are a software engineer repairing the repository through the bash tool.
+    Inspect the implementation, make a general repair, and run the public tests.
+    Use a bash tool call for each action and wait for its result before continuing.
+    Follow the task instructions for permitted files and the submission command.
+model:
+  model_name: null
+  model_class: swebench.inference.openai_responses.OpenAIResponsesModel
+  model_kwargs:
+    api_base: https://api.openai.com/v1
+    parallel_tool_calls: false
+    tool_choice: required
+    timeout: 600
+    num_retries: 0
+    max_output_tokens: 32768
+    service_tier: default

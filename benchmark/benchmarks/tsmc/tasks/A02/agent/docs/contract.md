@@ -1,0 +1,3 @@
+# A02 Public API and data contract
+
+`summarize(rows,lot_ids)`: group by (lot_id,wafer_id), considering only valid=True rows for requested lots. Rank first by tested_at in UTC, then lexicographically by test_id to break equal-time ties; select the maximum. Valid rows require result PASS/FAIL and timezone-aware timestamps; violations raise ValueError. Ignore invalid rows. test_id is unique or replays an identical row, never a different payload at the same test_id. Each wafer contributes one denominator unit. Output requested lots in input order after deduplication, including empty lots; empty lots have count=0,passed=0,pass_ratio=null. Do not mutate inputs. This is not a universal industry yield definition.

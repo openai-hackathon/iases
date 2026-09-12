@@ -1,0 +1,13 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index ba77d70..934336c 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -2,7 +2,7 @@ def run(request):
+     lease = dict(request["lease"])
+     accepted = []
+     for renewal in request["renewals"]:
+-        valid = renewal["now"] < lease["expires"]
++        valid = renewal["owner"] == lease["owner"] and renewal["now"] < lease["expires"]
+         if valid:
+             lease["expires"] = renewal["now"] + renewal["ttl"]
+         accepted.append(valid)

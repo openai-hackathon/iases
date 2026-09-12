@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "87cc39a3e0d07b53d7392b1ddbb41bd8df0a734caf9cbc2451739d361c6b7ea9",
+    "data/expected.json": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+    "data/request.json": "0da86b80777156eb7a2788a369828537847c4159b9631494348e0262cc5ab5c8",
+    "docs/contract.md": "984708f1c5bc3d6591b0b8a98e2713eacbf435165944224dc48cb39c446fb8a0",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "99715b804ed593df0b59f9b225d9d9e381c97b6ca56f883172b1cf519abe8f63",
+    "problem_statement.md": "c0cd1c63a018bd5f79ad552ef893f96c399e06ef3c2878022e4d2edd1380a3d1",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "10b5f78c70b7023936d97f44db2ac90a0b1b6f8b56bcb2b90dae93dded5aabac"
+  },
+  "baseline_git_commit": "674f075b072e020a19aac271a7ce382e56fffe0f",
+  "design_difficulty": "easy",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "",
+  "family_id": "numeric_recipe_revision",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "F06",
+  "test_count": 11,
+  "title": "Recipe revisions sort lexically instead of numerically",
+  "track": "factory_logic",
+  "version": "1.0"
+}

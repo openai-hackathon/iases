@@ -1,0 +1,10 @@
+{
+  "X": {
+    "sequence": 2,
+    "state": "BUSY"
+  },
+  "Y": {
+    "sequence": 9,
+    "state": "MAINTENANCE"
+  }
+}

@@ -1,0 +1,12 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 9cb9159..01da7cf 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -3,7 +3,6 @@ def migrate(connection, fail):
+     connection.execute("BEGIN")
+     try:
+         connection.execute("ALTER TABLE measurements ADD COLUMN unit TEXT")
+-        connection.commit()
+         if fail:
+             raise RuntimeError("injected interruption")
+         connection.execute("UPDATE measurements SET unit = 'Pa'")

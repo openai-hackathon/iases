@@ -1,0 +1,25 @@
+diff --git a/fabops/planner.py b/fabops/planner.py
+index 2e6b668..82979df 100644
+--- a/fabops/planner.py
++++ b/fabops/planner.py
+@@ -5,7 +5,7 @@ def plan(lots, tools, stock):
+     def visit(index, pairs, used, remaining, priority, cost):
+         nonlocal best, best_score
+         if index == len(lots):
+-            score = (-priority, -len(pairs), cost, tuple(pairs))
++            score = (-len(pairs), -priority, cost, tuple(pairs))
+             if best_score is None or score < best_score:
+                 best, best_score = list(pairs), score
+             return
+diff --git a/fabops/store.py b/fabops/store.py
+index 1129320..5a22bd7 100644
+--- a/fabops/store.py
++++ b/fabops/store.py
+@@ -1,6 +1,6 @@
+ """Commit a plan only against the complete observed state revision."""
+ def commit_plan(pairs, lots, stock, observed, current):
+-    if observed.get("dispatch") != current.get("dispatch"):
++    if observed != current:
+         return False, dict(stock)
+     remaining = dict(stock)
+     by_id = {lot["id"]: lot for lot in lots}

@@ -1,0 +1,11 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 0a3789b..b8fa5e1 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -1,5 +1,5 @@
+ def run(request):
+-    current = {i: r for i, r in enumerate(request["rows"])}
++    current = {r["part"]: r for r in request["rows"]}
+     groups = {}
+     for row in current.values():
+         counts = groups.setdefault(row["group"], dict(good=0, total=0))

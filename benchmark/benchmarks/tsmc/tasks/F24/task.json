@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "c15facd78aece005c6fba491e646cd1e91ce8f7dea616df1ddde838afca4e94e",
+    "data/expected.json": "c335bfc41e8fc23cdf35498d750cceb0e27bda7dd04156d6fb413c624b97b550",
+    "data/request.json": "ac4508e83f1a3d09e38d5e4fc32c1099a9b6f4bd620b41dd9088fcf6b0ffa72a",
+    "docs/contract.md": "a99184705317e131fc91fd6b82751cc1bd90c9de66bb62e6bb291101a70b0246",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "3c8008bb3eb1084a5981aa8ccd6aa53e8ecbfacb69e7a95f3a0e5f828e10be8c",
+    "problem_statement.md": "bf9f7351dd01a4d3e52a98b5cb926fd692327e8b52c1bb6c1626810a7c02420f",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "73f10bb1e07768e4fa461d06fe133ddc9b81d5fea59e6286f17e66b036cbbdf0"
+  },
+  "baseline_git_commit": "58763abdd4260adce4b5faa0ae9096746ca47332",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Invalidate approvals on edits while retaining the last successfully activated revision.",
+  "family_id": "revision_bound_recipe_approval",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "F24",
+  "test_count": 11,
+  "title": "Revoked recipe approvals remain valid after revision replacement",
+  "track": "factory_logic",
+  "version": "1.0"
+}

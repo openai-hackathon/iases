@@ -1,0 +1,23 @@
+[
+  [
+    {
+      "part": "q",
+      "values": [
+        null,
+        null
+      ]
+    },
+    {
+      "part": "p",
+      "values": [
+        null,
+        {
+          "measurement": "m",
+          "revision": 1,
+          "calibration_revision": 1,
+          "value": "10"
+        }
+      ]
+    }
+  ]
+]

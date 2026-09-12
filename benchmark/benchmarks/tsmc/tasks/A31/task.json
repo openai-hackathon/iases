@@ -1,0 +1,40 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "39902fad70569e8334abf7ba541c554a57705035ddfa5c11e924e9b1d3108de6",
+    "data/expected.json": "1bdc97d0049f7d90b0b86428307c8a1574c1a0012752b8622980791c20cd8757",
+    "data/request.json": "5b908406fe4ac370e0a5cebebe2e98d9dafed2dfaf95e15e2374775229c9bd00",
+    "docs/contract.md": "36c89ff508eb85d9b4facf23e9adb958a3a561e44d65694735b505cbd4d499bd",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "a24ebe36b31ba6000671d5f47ce850549c7b80b8dc353ab4cd5ea5c93bc0a68c",
+    "fabops/preprocess.py": "a94ff2c95a3284c39d97dd07fbf513142e0ab4726a4c70c207a524c136f4faa1",
+    "fabops/segments.py": "b26dae92ea8644321f6fef6600644a375dc187e160b2f425fd6f4cc7a4868e77",
+    "fabops/spectrum.py": "506c07792e522525fb8ac71c6d045b792d71c06085c404f00632f5cd1377286b",
+    "fabops/welch.py": "39fefc4b25909b125ac8992ecfe2c6fb9613af81037d69d52a4a38b22a8de60e",
+    "problem_statement.md": "4fdfc1ddf5d348cb3705413024da31422087b03025c6790fbc5bceb410f4549b",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "82a7472a1218e640493b65f51643ff40c911cc54145a9c0a28cc36fea95518c3"
+  },
+  "baseline_git_commit": "d4ee9c0027f1b685f94039b3707f9072812f09de",
+  "design_difficulty": "hard",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Reconstruct paired gap-valid windows, per-window detrending, energy-normalized complex cross spectra and ensemble-before-ratio coherence/phase; independent channel filtering and averaging magnitudes destroy the joint diagnostic even when each scalar spectrum looks plausible.",
+  "family_id": "paired_welch_support_coherence_phase",
+  "hidden_tests": 32,
+  "language": "en",
+  "public_tests": 8,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "zema-hydraulic"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "A31",
+  "test_count": 40,
+  "title": "Paired vibration windows lose phase cancellation and share incompatible support",
+  "track": "data_analysis",
+  "version": "2.0"
+}

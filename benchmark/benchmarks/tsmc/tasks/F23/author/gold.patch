@@ -1,0 +1,13 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 732aa8a..f5a9220 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -7,7 +7,7 @@ def run(request):
+             raise ValueError("cyclic dependencies")
+         key = ready[0]
+         job = pending.pop(key)
+-        start = max([job["release"], available.get(job["resource"], 0)] + [schedule[d][0] for d in job["depends"]])
++        start = max([job["release"], available.get(job["resource"], 0)] + [schedule[d][1] for d in job["depends"]])
+         end = start + job["duration"]
+         schedule[key] = [start, end]
+         available[job["resource"]] = end

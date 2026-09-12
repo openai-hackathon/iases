@@ -1,0 +1,116 @@
+diff --git a/fabops/history.py b/fabops/history.py
+index 1d801b4..b902442 100644
+--- a/fabops/history.py
++++ b/fabops/history.py
+@@ -1,6 +1,9 @@
+ """Resolve full replacement records before interpreting deletion or quality."""
+ def visible(rows, asof):
+     selected = {}
+-    for row in sorted(rows, key=lambda row: row["revision"]):
+-        selected[row["id"]] = row
+-    return [row for row in selected.values() if row["recorded"] <= asof and not row["deleted"]]
++    for row in rows:
++        if row["recorded"] <= asof:
++            old = selected.get(row["id"])
++            if old is None or row["revision"] > old["revision"]:
++                selected[row["id"]] = row
++    return [row for row in selected.values() if not row["deleted"]]
+diff --git a/fabops/integrate.py b/fabops/integrate.py
+index 20c08ff..172e267 100644
+--- a/fabops/integrate.py
++++ b/fabops/integrate.py
+@@ -6,17 +6,17 @@ def value(segment, at):
+     return va + (vb - va) * (at - a) / (b - a)
+ 
+ def measure(pressure, flow, start, end):
+-    if not pressure or not flow:
+-        return F(0), F(0), F(0)
+-    left = max(start, pressure[0][0], flow[0][0])
+-    right = min(end, pressure[-1][1], flow[-1][1])
+-    if left >= right:
+-        return F(0), F(0), F(0)
+-    def sample_at(signal, at):
+-        earlier = [segment for segment in signal if segment[0] <= at]
+-        segment = max(earlier, key=lambda row: row[0]) if earlier else signal[0]
+-        return value(segment, min(segment[1], max(segment[0], at)))
+-    p0, p1 = sample_at(pressure, left), sample_at(pressure, right)
+-    q0, q1 = sample_at(flow, left), sample_at(flow, right)
+-    width = right - left
+-    return width, width * (q0 + q1) / 120, width * (p0 * q0 + p1 * q1) / 1200
++    covered = volume = work = F(0)
++    for p in pressure:
++        for q in flow:
++            left, right = max(start, p[0], q[0]), min(end, p[1], q[1])
++            if left >= right:
++                continue
++            width = right - left
++            p0, p1 = value(p, left), value(p, right)
++            q0, q1 = value(q, left), value(q, right)
++            dp, dq = p1 - p0, q1 - q0
++            covered += width
++            volume += width * (q0 + q1) / 120
++            work += width * (p0 * q0 + (p0 * dq + q0 * dp) / 2 + dp * dq / 3) / 600
++    return covered, volume, work
+diff --git a/fabops/support.py b/fabops/support.py
+index 4fa0b0a..693c2a3 100644
+--- a/fabops/support.py
++++ b/fabops/support.py
+@@ -12,13 +12,13 @@ def segments(samples, clocks, calibrations, channel, maximum_gap):
+     for epoch, rows in groups.items():
+         clock = clock_map[channel, epoch]
+         def factory_time(row):
+-            return (F(clock["global_origin"]) + F(row["t"]) - F(clock["local_origin"])) * F(clock["rate"])
+-        ordered = sorted((row for row in rows if row["valid"]), key=lambda row: F(row["t"]))
++            return F(clock["global_origin"]) + (F(row["t"]) - F(clock["local_origin"])) * F(clock["rate"])
++        ordered = sorted(rows, key=lambda row: F(row["t"]))
+         for first, second in zip(ordered, ordered[1:]):
+             a, b = factory_time(first), factory_time(second)
+             if not first["valid"] or not second["valid"]:
+                 continue
+-            if F(second["t"]) - F(first["t"]) > F(maximum_gap):
++            if b - a > F(maximum_gap):
+                 continue
+             segment = (a, b, F(first["raw"]), F(second["raw"]))
+             result.extend(calibrate(segment, active))
+@@ -26,8 +26,14 @@ def segments(samples, clocks, calibrations, channel, maximum_gap):
+ 
+ def calibrate(segment, calibrations):
+     a, b, va, vb = segment
++    result = []
+     for calibration in calibrations:
+-        if F(calibration["start"]) <= a < F(calibration["end"]):
+-            gain, offset = F(calibration["gain"]), F(calibration["offset"])
+-            return [(a, b, va * gain + offset, vb * gain + offset)]
+-    return []
++        left = max(a, F(calibration["start"]))
++        right = min(b, F(calibration["end"]))
++        if left >= right:
++            continue
++        gain, offset = F(calibration["gain"]), F(calibration["offset"])
++        raw_left = va + (vb - va) * (left - a) / (b - a)
++        raw_right = va + (vb - va) * (right - a) / (b - a)
++        result.append((left, right, raw_left * gain + offset, raw_right * gain + offset))
++    return result
+diff --git a/fabops/windows.py b/fabops/windows.py
+index fc84195..412ea30 100644
+--- a/fabops/windows.py
++++ b/fabops/windows.py
+@@ -5,8 +5,7 @@ from .integrate import measure
+ def summarize(window, pressure, flow, minimum):
+     start, end = F(window["start"]), F(window["end"])
+     covered, volume, work = measure(pressure, flow, start, end)
+-    coverage = min(sum(max(F(0), min(end, row[1]) - max(start, row[0])) for row in pressure),
+-                   sum(max(F(0), min(end, row[1]) - max(start, row[0])) for row in flow)) / (end - start)
++    coverage = covered / (end - start)
+     accepted = covered > 0 and coverage >= F(minimum)
+     return dict(id=window["id"], coverage=str(coverage), accepted=accepted,
+                 volume=str(volume) if accepted else None,
+@@ -18,7 +17,7 @@ def changes(previous, current):
+         old, new = previous.get(key), current[key]
+         if old == new:
+             continue
+-        if old is not None and old["accepted"] is False:
++        if old is not None:
+             events.append(dict(op="retract", value=old))
+         events.append(dict(op="upsert", value=new))
+     return events

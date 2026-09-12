@@ -1,0 +1,43 @@
+# Applied after mini-SWE-agent's bundled config by `swebench infer`.
+agent:
+  instance_template: |
+    Repair the synthetic factory-software repository in /testbed.
+
+    {{task}}
+
+    Read docs/contract.md and the public tests. Implement a general repair and
+    test it using the installed Python environment. You may modify Python files
+    under fabops/ and add tests/test_agent_*.py. Do not change existing tests,
+    contracts, data, configuration, or add pytest/sitecustomize hooks or symlinks.
+    The public tests intentionally contain failures in the baseline.
+
+    Inspect the existing implementation before editing. Use non-interactive shell
+    commands or Python scripts to edit files, then run the public tests.
+    The harness automatically collects workspace changes against the original
+    commit, including new fabops modules and tests/test_agent_*.py files.
+    Empty submissions are rejected so you can continue within the same budget.
+    You do not need to stage changes or print a patch. After implementing and
+    testing the repair, finish with:
+      echo COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT
+  step_limit: 100
+  cost_limit: 3.0
+run:
+  collect_workspace: true
+environment:
+  cwd: /testbed
+  timeout: 60
+  forward_env: []
+  run_args:
+    - --rm
+    - --init
+    - --platform=linux/amd64
+    - --network=none
+    - --cpus=1
+    - --memory=1g
+    - --pids-limit=128
+    - --cap-drop=ALL
+    - --security-opt=no-new-privileges:true
+  env:
+    BASH_ENV: /dev/null
+    PYTHONDONTWRITEBYTECODE: "1"
+    PYTEST_DISABLE_PLUGIN_AUTOLOAD: "1"

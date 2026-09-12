@@ -1,0 +1,11 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 94defaf..e703b89 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -2,5 +2,5 @@ def run(request):
+     matches = [r for r in request["rules"] if all(r[k] in ("*", request[k]) for k in ("product", "machine"))]
+     def rank(rule):
+         specificity = sum(rule[k] != "*" for k in ("product", "machine"))
+-        return (-rule["revision"], -specificity, rule["id"])
++        return (-specificity, -rule["revision"], rule["id"])
+     return min(matches, key=rank)["id"] if matches else None

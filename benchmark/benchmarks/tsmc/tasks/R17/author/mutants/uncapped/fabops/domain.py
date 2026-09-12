@@ -1,0 +1,10 @@
+def run(request):
+    tokens, last, accepted = request["capacity"] * 1000, 0, []
+    for now in request["times"]:
+        tokens = tokens + (now - last) * request["rate"]
+        last = now
+        valid = tokens >= 1000
+        if valid:
+            tokens -= 1000
+        accepted.append(valid)
+    return dict(accepted=accepted, milli_tokens=tokens)

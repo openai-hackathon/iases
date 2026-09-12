@@ -1,0 +1,20 @@
+{
+  "events": [
+    {
+      "id": "s",
+      "kind": "start",
+      "time": 1,
+      "case": "lot",
+      "activity": "etch",
+      "resource": "tool"
+    },
+    {
+      "id": "c",
+      "kind": "complete",
+      "time": 4,
+      "case": "lot",
+      "activity": "etch",
+      "resource": "tool"
+    }
+  ]
+}

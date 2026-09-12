@@ -1,0 +1,12 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index dffd525..3d514d2 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -1,6 +1,6 @@
+ def run(request):
+     sessions = []
+-    for time in list(dict.fromkeys(request["times"])):
++    for time in sorted(set(request["times"])):
+         if sessions and time - sessions[-1][1] <= request["gap"]:
+             sessions[-1][1] = time
+             sessions[-1][2] += 1

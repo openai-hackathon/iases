@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "b96cbe11766a9ae376fa61099e9e73c72acac56ce4e69db8e8a4e4ac2d4bbce2",
+    "data/expected.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "data/request.json": "d2f001d926ea96072a56ec56f6cf828bdad8a655896e150ad31e16b3314c4a73",
+    "docs/contract.md": "39ac5ac662fa797cb6dc0d8c94d87e711c4e765282e8543c5dc1abb5790e64b9",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "d4fc8ce33da1425491eea5c3511d781622ea3a67e40f95fe2373346dbd6202b5",
+    "problem_statement.md": "148c787d0a93efdc1afe36f15d954b547b7fb7eeb4fbe0ec699742d330abeb42",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "c757f27a1a92393ff09bd984a7ce0f578f15e67c16179e1545ec5abaa17203d5"
+  },
+  "baseline_git_commit": "b585da1d38a7fe8b5de6114171054561cf19fbfc",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Keep calibration and evaluation populations separate and choose the correct variance estimator.",
+  "family_id": "frozen_control_chart_baseline",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "zema-hydraulic"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "A16",
+  "test_count": 11,
+  "title": "Control limits include the measurements being evaluated",
+  "track": "data_analysis",
+  "version": "1.0"
+}

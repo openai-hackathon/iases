@@ -1,0 +1,11 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 9e7e371..cfc5882 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -4,5 +4,5 @@ def run(request):
+     def valid(row):
+         start = datetime.fromisoformat(row["start"])
+         end = datetime.fromisoformat(row["end"])
+-        return start.replace(tzinfo=None) <= instant.replace(tzinfo=None) < end.replace(tzinfo=None)
++        return start <= instant < end
+     return sorted(row["id"] for row in request["qualifications"] if valid(row))

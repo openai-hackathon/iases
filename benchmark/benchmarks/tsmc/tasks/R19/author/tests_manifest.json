@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_partial",
+    "assessment/tests/test_hidden.py::test_repeat",
+    "assessment/tests/test_hidden.py::test_reverse_finish",
+    "tests/test_public.py::test_drain"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_closed_start",
+    "assessment/tests/test_hidden.py::test_reject_new",
+    "assessment/tests/test_hidden.py::test_unknown",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_idle_shutdown",
+    "tests/test_public.py::test_normal",
+    "tests/test_public.py::test_public_cli_fixture"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_closed_start",
+    "assessment/tests/test_hidden.py::test_partial",
+    "assessment/tests/test_hidden.py::test_reject_new",
+    "assessment/tests/test_hidden.py::test_repeat",
+    "assessment/tests/test_hidden.py::test_reverse_finish",
+    "assessment/tests/test_hidden.py::test_unknown",
+    "tests/test_public.py::test_drain",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_idle_shutdown",
+    "tests/test_public.py::test_normal",
+    "tests/test_public.py::test_public_cli_fixture"
+  ],
+  "task_id": "R19",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_closed_start": "hidden",
+    "assessment/tests/test_hidden.py::test_partial": "hidden",
+    "assessment/tests/test_hidden.py::test_reject_new": "hidden",
+    "assessment/tests/test_hidden.py::test_repeat": "hidden",
+    "assessment/tests/test_hidden.py::test_reverse_finish": "hidden",
+    "assessment/tests/test_hidden.py::test_unknown": "hidden",
+    "tests/test_public.py::test_drain": "public",
+    "tests/test_public.py::test_empty": "public",
+    "tests/test_public.py::test_idle_shutdown": "public",
+    "tests/test_public.py::test_normal": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public"
+  }
+}

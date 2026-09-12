@@ -1,0 +1,21 @@
+diff --git a/fabops/intervals.py b/fabops/intervals.py
+index c1b6f1f..ce7b959 100644
+--- a/fabops/intervals.py
++++ b/fabops/intervals.py
+@@ -4,4 +4,15 @@ from collections.abc import Iterable
+ 
+ def covered_seconds(intervals: Iterable[tuple[datetime, datetime]]) -> float:
+     """Return the time covered by already-clipped, positive intervals."""
+-    return sum((end - start).total_seconds() for start, end in intervals)
++    ordered = sorted(intervals)
++    if not ordered:
++        return 0.0
++    left, right = ordered[0]
++    total = 0.0
++    for start, end in ordered[1:]:
++        if start <= right:
++            right = max(right, end)
++        else:
++            total += (right - left).total_seconds()
++            left, right = start, end
++    return total + (right - left).total_seconds()

@@ -1,0 +1,38 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "56a9667062c28a001e9e153a98433178c7d60ff5a6e06ef905e8c221af2e67c2",
+    "data/expected.json": "9bfd8c1d89f277d20574b3ea91ace34b3fb2d9e9dba0cafeee2259c74e4014f4",
+    "data/request.json": "5b908406fe4ac370e0a5cebebe2e98d9dafed2dfaf95e15e2374775229c9bd00",
+    "docs/contract.md": "32bd77b095e10cac24ea8003e31e25675f50ab79292b413f59296c1d9021d08a",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "b358b4ae493d1caf3ef3726275eb58f68dc0977ef07cf0a80617285a3376d641",
+    "fabops/preprocess.py": "a94ff2c95a3284c39d97dd07fbf513142e0ab4726a4c70c207a524c136f4faa1",
+    "fabops/spectrum.py": "5bbea7a0ed461e87aca7a07b5fc9ebe72ec74351cd8be2f4f6620e5b6744b9d0",
+    "problem_statement.md": "5a03260c07833e4c791c1d4a242c5737e35c5fe0dd7b22ecb81ebe0c92f23637",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "0d8f41c576ae43b8fc37d86f1100ecbd97f096e7d7a98a6fbb98fada1c798bf3"
+  },
+  "baseline_git_commit": "58bf744cbf11d728e7cd30423b70b497c73240e7",
+  "design_difficulty": "hard",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Requires preserving original observation quality through interpolation, enforcing the noncommuting detrend/window order, and reconstructing an energy-normalized one-sided spectrum with distinct DC/Nyquist weights across three modules. Unlike A09 hysteresis, A22 unit conversion or A23 scalar variance, the defect changes frequency-domain geometry and invalid data can pass a downstream diagnosis unless stages agree.",
+  "family_id": "quality_gated_detrended_one_sided_spectrum",
+  "hidden_tests": 18,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "zema-hydraulic"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "A31",
+  "test_count": 23,
+  "title": "Window order and Nyquist weighting hide vibration-band faults after gap repair",
+  "track": "data_analysis",
+  "version": "1.0"
+}

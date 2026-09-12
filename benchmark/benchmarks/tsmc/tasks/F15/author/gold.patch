@@ -1,0 +1,13 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index b6854f3..3d9f599 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -6,7 +6,7 @@ def run(request):
+             break
+         if passed:
+             position += 1
+-            retries = retries
++            retries = 0
+         else:
+             retries += 1
+             if retries > request["max_retries"]:

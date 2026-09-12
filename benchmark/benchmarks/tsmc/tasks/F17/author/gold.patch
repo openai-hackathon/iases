@@ -1,0 +1,13 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 36c75d9..3914c2a 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -3,7 +3,7 @@ def run(request):
+     accepted = []
+     for order in request["orders"]:
+         valid = all(stock.get(k, 0) >= n for k, n in order.items())
+-        if True:
++        if valid:
+             for key, amount in order.items():
+                 stock[key] -= amount
+         accepted.append(valid)

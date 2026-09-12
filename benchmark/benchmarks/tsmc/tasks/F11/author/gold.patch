@@ -1,0 +1,68 @@
+diff --git a/fabops/booking.py b/fabops/booking.py
+index c4017ed..0f440b7 100644
+--- a/fabops/booking.py
++++ b/fabops/booking.py
+@@ -1,15 +1,17 @@
+ """Find a continuous booking inside a capacity profile."""
+ def earliest(profile, ready, duration, units):
+-    remaining = duration
+-    started = None
++    run_start = None
++    run_end = None
+     for left, right, free in profile:
+         left = max(left, ready)
+-        if free < units or right <= left:
++        if left >= right:
+             continue
+-        if started is None:
+-            started = left
+-        take = min(remaining, right - left)
+-        remaining -= take
+-        if remaining == 0:
+-            return [started, left + take]
++        if free < units:
++            run_start = run_end = None
++            continue
++        if run_end != left:
++            run_start = left
++        run_end = right
++        if run_end - run_start >= duration:
++            return [run_start, run_start + duration]
+     return None
+diff --git a/fabops/calendar.py b/fabops/calendar.py
+index a46995b..c8fa2c9 100644
+--- a/fabops/calendar.py
++++ b/fabops/calendar.py
+@@ -1,15 +1,23 @@
+ """Translate operating windows and reservations to available capacity."""
+ def capacity_profile(request):
+     start, end = request["horizon"]
++    intervals = request["open"] + request["maintenance"]
++    boundaries = {start, end}
++    for left, right in intervals:
++        boundaries.update((max(start, min(end, left)), max(start, min(end, right))))
++    for job in request["jobs"]:
++        boundaries.update((max(start, min(end, job["start"])),
++                           max(start, min(end, job["end"]))))
++    ordered = sorted(boundaries)
+     result = []
+-    for a, b in sorted(request["open"]):
+-        left, right = max(start, a), min(end, b)
+-        if left >= right:
+-            continue
+-        unavailable = sum(max(0, min(right, y) - max(left, x))
+-                          for x, y in request["maintenance"])
++    for left, right in zip(ordered, ordered[1:]):
++        opened = any(a <= left < b for a, b in request["open"])
++        closed = any(a <= left < b for a, b in request["maintenance"])
+         used = sum(job["units"] for job in request["jobs"]
+-                   if job["start"] < right and job["end"] > left)
+-        effective_end = max(left, right - unavailable)
+-        result.append([left, effective_end, max(0, request["capacity"] - used)])
++                   if job["start"] <= left < job["end"])
++        free = max(0, request["capacity"] - used) if opened and not closed else 0
++        if result and result[-1][2] == free:
++            result[-1][1] = right
++        else:
++            result.append([left, right, free])
+     return result

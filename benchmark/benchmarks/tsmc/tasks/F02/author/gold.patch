@@ -1,0 +1,19 @@
+diff --git a/fabops/qualifications.py b/fabops/qualifications.py
+index 8275ea1..59c5b6b 100644
+--- a/fabops/qualifications.py
++++ b/fabops/qualifications.py
+@@ -28,9 +28,11 @@ class Registry:
+ 
+     def allowed(self, machine_id, product_id, step_id):
+         key = (machine_id, product_id, step_id)
+-        if key not in self.cache:
+-            self.cache[key] = bool(self.records.get(key, {}).get("valid", False))
+-        return self.cache[key]
++        record = self.records.get(key)
++        version = None if record is None else record["version"]
++        if key not in self.cache or self.cache[key][0] != version:
++            self.cache[key] = (version, bool(record and record["valid"]))
++        return self.cache[key][1]
+ 
+ def run(data):
+     registry=Registry(data["qualifications"])

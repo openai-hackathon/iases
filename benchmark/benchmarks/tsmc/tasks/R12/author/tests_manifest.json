@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_alternating",
+    "assessment/tests/test_hidden.py::test_middle",
+    "assessment/tests/test_hidden.py::test_one_attempt",
+    "assessment/tests/test_hidden.py::test_two_poison",
+    "tests/test_public.py::test_poison_first"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_all_good",
+    "assessment/tests/test_hidden.py::test_last",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_poison_only",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_valid"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_all_good",
+    "assessment/tests/test_hidden.py::test_alternating",
+    "assessment/tests/test_hidden.py::test_last",
+    "assessment/tests/test_hidden.py::test_middle",
+    "assessment/tests/test_hidden.py::test_one_attempt",
+    "assessment/tests/test_hidden.py::test_two_poison",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_poison_first",
+    "tests/test_public.py::test_poison_only",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_valid"
+  ],
+  "task_id": "R12",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_all_good": "hidden",
+    "assessment/tests/test_hidden.py::test_alternating": "hidden",
+    "assessment/tests/test_hidden.py::test_last": "hidden",
+    "assessment/tests/test_hidden.py::test_middle": "hidden",
+    "assessment/tests/test_hidden.py::test_one_attempt": "hidden",
+    "assessment/tests/test_hidden.py::test_two_poison": "hidden",
+    "tests/test_public.py::test_empty": "public",
+    "tests/test_public.py::test_poison_first": "public",
+    "tests/test_public.py::test_poison_only": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public",
+    "tests/test_public.py::test_valid": "public"
+  }
+}

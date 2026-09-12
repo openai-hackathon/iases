@@ -1,0 +1,8 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 39df757..4007567 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -1,2 +1,2 @@
+ def run(request):
+-    return [(max(response["observations"]) + 1 if response["observations"] else 1) for response in request["responses"]]
++    return [response["nextSequence"] for response in request["responses"]]

@@ -1,0 +1,40 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "2ec825452aea8e0c5249c9c1e92992c609d5cf0651015528393cb4d16d3be6f4",
+    "data/expected.json": "7c66ff9c99d4a7bdc36d873e2298191614a2e23e0c5f0386a4a94b7a96167635",
+    "data/request.json": "d1933215812bb0a62c50ba518f5a0fd2a2ceee6c0da4a4dea8ee51640a6b38a4",
+    "docs/contract.md": "48398fe2358366290be79778921ccf8e02944dae75f5b912ba7e4901dabc8ffe",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "4417414e144a647ec1d5c28a8a5c80a6419fde9c0a11ca1cd4edffe927cb83c4",
+    "fabops/manifest.py": "e13c5b66a9174d7ba50974971c3bb90be14a661ee8ff252e8bfb82392072d656",
+    "fabops/publish.py": "b6ca477301797fd22c18b882e430fd19287e4df3275ce0d30081bb0b2d1617b0",
+    "fabops/revisions.py": "ca6ecda99a8069ad9ab48df50d892fcae3e03f7b94d8c45614c33e9153690b44",
+    "fabops/upload.py": "a91bb8e0c42ff75c43560364410f9dbecc3f78de95a04793fd849276ca95f5cd",
+    "problem_statement.md": "bc5227cdd81d4647421f0873501a30b58cea1412075b2f70edbee233046711ae",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "5f933faa85fe0827dd4e09eef2ee0d8ff4443eef2d6c65b28a1a97f606a2c198"
+  },
+  "baseline_git_commit": "7127a31f0a81e2b63b17ce5ce8fd5d552c8c8012",
+  "design_difficulty": "hard",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Bind immutable resumable manifests to shared dataset scopes and read sets, validate all chunks and cross-upload identities against one pre-state, preserve tombstone versions, and publish records, audits and group receipts atomically across restart.",
+  "family_id": "versioned_multi_upload_atomic_publication",
+  "hidden_tests": 30,
+  "language": "en",
+  "public_tests": 8,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "R32",
+  "test_count": 38,
+  "title": "Resumed import groups bypass revision read sets and resurrect tombstoned records",
+  "track": "reliability",
+  "version": "2.0"
+}

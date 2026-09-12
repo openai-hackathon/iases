@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "9886366ca3f972b51110cdf6f82fbe11dadc1aca082a25f431918364e5032e66",
+    "data/expected.json": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3",
+    "data/request.json": "e7df17c5fe661d71982f3492e24539e9333f4230650a9f602f832b33c988169c",
+    "docs/contract.md": "3c4f2e8fb060081d2855eef75c99383d5dbf0b94232b2b7e1a5ab4fdd2ed550c",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "9ff3e32f7f5cb9dfb7055b3c3dd529bfddd526b1815ee8263593a064551af487",
+    "problem_statement.md": "55f0079fcbe4ef18122b60a40442a5be8dbe1cfb5b77ede8269c8293911cb24b",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "767902078dd98b39583b71d840a5409dabec1994815a4b7c106518e793c1e407"
+  },
+  "baseline_git_commit": "c2551f61385cc24793425cf621f0821b5b95c70b",
+  "design_difficulty": "easy",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "",
+  "family_id": "monotonic_duration_source",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "R09",
+  "test_count": 11,
+  "title": "Wall-clock adjustments corrupt request duration measurements",
+  "track": "reliability",
+  "version": "1.0"
+}

@@ -1,0 +1,146 @@
+{
+  "schema_version": "tsmc-incident/0.3",
+  "scenario_id": "DC02",
+  "title": "Temporarily available edge services: caches and buffers expire",
+  "synthetic": true,
+  "affiliation": "none",
+  "split": "demo_dev",
+  "track": "patch-repair-with-recovery-gates",
+  "fault_domain": "synthetic factory services only; actual GCP/Modal inference stays up",
+  "story": "The central WAN is disconnected. Edge services retain limited valid caches and finite buffers. Current availability does not permit indefinite delay; services degrade at different times.",
+  "environment_facts": {
+    "edge_store_writable": true,
+    "alternate_snapshot_readable": true,
+    "local_interlock_ok": true,
+    "dc_a_primary_up": false
+  },
+  "services": {
+    "workers": {
+      "task_id": "R04",
+      "node_id": "edge-analysis-pool",
+      "dc_dependency": "none",
+      "initial_state": "degraded",
+      "impact": "Cancelled analysis jobs leak slots and reduce available processing capacity",
+      "repair_requires": [],
+      "restore_requires": [],
+      "restore_facts": [],
+      "acceptance_checks": [
+        "cancelled owner releases",
+        "cancelled waiter does not release"
+      ],
+      "protected_business_service": false
+    },
+    "telemetry": {
+      "task_id": "A04",
+      "node_id": "edge-telemetry-node",
+      "dc_dependency": "buffered",
+      "initial_state": "buffered",
+      "impact": "Buffering is temporarily possible, but sustainable ingestion is lost when the buffer expires",
+      "repair_requires": [],
+      "restore_requires": [
+        "workers"
+      ],
+      "restore_facts": [
+        "edge_store_writable"
+      ],
+      "acceptance_checks": [
+        "batch/incremental equivalence",
+        "no late-event loss"
+      ],
+      "protected_business_service": true,
+      "synthetic_grace_seconds": 120
+    },
+    "qualification": {
+      "task_id": "F02",
+      "node_id": "edge-cache-node",
+      "dc_dependency": "cache_grace",
+      "initial_state": "limited",
+      "impact": "Only cache-covered operations are currently allowed; fail closed after expiry",
+      "repair_requires": [],
+      "restore_requires": [],
+      "restore_facts": [
+        "alternate_snapshot_readable"
+      ],
+      "acceptance_checks": [
+        "cache version current",
+        "revocation invalidates"
+      ],
+      "protected_business_service": false,
+      "synthetic_grace_seconds": 180
+    },
+    "release": {
+      "task_id": "F01",
+      "node_id": "release-node",
+      "dc_dependency": "cache_grace",
+      "initial_state": "limited",
+      "impact": "Only lots with still-valid cached qualifications may be released",
+      "repair_requires": [],
+      "restore_requires": [
+        "qualification"
+      ],
+      "restore_facts": [
+        "local_interlock_ok"
+      ],
+      "acceptance_checks": [
+        "no expired authorization",
+        "held lot refused",
+        "eligible positive accepted"
+      ],
+      "protected_business_service": true,
+      "synthetic_grace_seconds": 180
+    },
+    "maintenance": {
+      "task_id": "R01",
+      "node_id": "work-order-node",
+      "dc_dependency": "async",
+      "initial_state": "backlog",
+      "impact": "Requests can be buffered for later replay",
+      "repair_requires": [],
+      "restore_requires": [],
+      "restore_facts": [
+        "edge_store_writable"
+      ],
+      "acceptance_checks": [
+        "idempotent retries"
+      ],
+      "protected_business_service": false
+    },
+    "downtime": {
+      "task_id": "A01",
+      "node_id": "report-node",
+      "dc_dependency": "async",
+      "initial_state": "stale",
+      "impact": "Reports are delayed without blocking valid local operations",
+      "repair_requires": [],
+      "restore_requires": [
+        "telemetry"
+      ],
+      "restore_facts": [],
+      "acceptance_checks": [
+        "union downtime"
+      ],
+      "protected_business_service": false
+    }
+  },
+  "importance": [
+    {
+      "higher": "release",
+      "lower": "downtime",
+      "reason": "Valid release capability matters more than background reporting"
+    },
+    {
+      "higher": "telemetry",
+      "lower": "downtime",
+      "reason": "Prevent buffer pressure before refreshing reports"
+    },
+    {
+      "higher": "maintenance",
+      "lower": "downtime",
+      "reason": "Work-order traceability matters more than report refresh"
+    }
+  ],
+  "timing_note": "All numeric times are synthetic examples, not factory deadlines or measured agent durations.",
+  "correctness_rule": "local task suite AND current integration evidence AND recovery prerequisites; importance is NOT a precedence constraint",
+  "expected_total_order": null,
+  "policies_observe": "current states, observed environment facts, public importance/graph; NOT gold, hidden answers, future events or remaining durations"
+}

@@ -1,0 +1,7 @@
+{
+  "lease": {
+    "owner": "a",
+    "expires": 10
+  },
+  "renewals": []
+}

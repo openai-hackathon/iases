@@ -1,0 +1,18 @@
+diff --git a/fabops/wafer_tests.py b/fabops/wafer_tests.py
+index bdb1e18..04d5a62 100644
+--- a/fabops/wafer_tests.py
++++ b/fabops/wafer_tests.py
+@@ -9,7 +9,12 @@ def summarize(rows, lot_ids):
+         if r['result'] not in {'PASS','FAIL'}: raise ValueError('invalid test result')
+         timestamp(r['tested_at'])
+         valid.append(r)
+-    selected=valid
++    latest={}
++    for r in valid:
++        key=(r['lot_id'],r['wafer_id'])
++        rank=(timestamp(r['tested_at']),r['test_id'])
++        if key not in latest or rank>latest[key][0]: latest[key]=(rank,r)
++    selected=[record for _,record in latest.values()]
+     result=[]
+     for lot in requested:
+         items=[r for r in selected if r['lot_id']==lot]

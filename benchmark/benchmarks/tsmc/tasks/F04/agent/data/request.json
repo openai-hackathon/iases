@@ -1,0 +1,29 @@
+{
+  "sensors": {
+    "P1": {
+      "kind": "pressure",
+      "high": 2000.0
+    },
+    "T1": {
+      "kind": "temperature",
+      "high": 25.0
+    }
+  },
+  "readings": [
+    {
+      "sensor_id": "P1",
+      "value": 3,
+      "unit": "kPa"
+    },
+    {
+      "sensor_id": "P1",
+      "value": 1500,
+      "unit": "Pa"
+    },
+    {
+      "sensor_id": "T1",
+      "value": 77,
+      "unit": "F"
+    }
+  ]
+}

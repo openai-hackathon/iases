@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_jitter_crosses_cap",
+    "assessment/tests/test_hidden.py::test_large_attempt",
+    "assessment/tests/test_hidden.py::test_minimum_cap",
+    "tests/test_public.py::test_capped"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_exponential",
+    "assessment/tests/test_hidden.py::test_fractional",
+    "assessment/tests/test_hidden.py::test_within_cap",
+    "tests/test_public.py::test_exact_cap",
+    "tests/test_public.py::test_initial",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_second"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_exponential",
+    "assessment/tests/test_hidden.py::test_fractional",
+    "assessment/tests/test_hidden.py::test_jitter_crosses_cap",
+    "assessment/tests/test_hidden.py::test_large_attempt",
+    "assessment/tests/test_hidden.py::test_minimum_cap",
+    "assessment/tests/test_hidden.py::test_within_cap",
+    "tests/test_public.py::test_capped",
+    "tests/test_public.py::test_exact_cap",
+    "tests/test_public.py::test_initial",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_second"
+  ],
+  "task_id": "R06",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_exponential": "hidden",
+    "assessment/tests/test_hidden.py::test_fractional": "hidden",
+    "assessment/tests/test_hidden.py::test_jitter_crosses_cap": "hidden",
+    "assessment/tests/test_hidden.py::test_large_attempt": "hidden",
+    "assessment/tests/test_hidden.py::test_minimum_cap": "hidden",
+    "assessment/tests/test_hidden.py::test_within_cap": "hidden",
+    "tests/test_public.py::test_capped": "public",
+    "tests/test_public.py::test_exact_cap": "public",
+    "tests/test_public.py::test_initial": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public",
+    "tests/test_public.py::test_second": "public"
+  }
+}

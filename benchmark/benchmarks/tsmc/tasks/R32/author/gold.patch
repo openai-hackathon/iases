@@ -1,0 +1,73 @@
+diff --git a/fabops/manifest.py b/fabops/manifest.py
+index 68e1091..1ebcd71 100644
+--- a/fabops/manifest.py
++++ b/fabops/manifest.py
+@@ -14,6 +14,6 @@ def normalize(manifest):
+ def verify(rows, expected):
+     body = canonical(rows)
+     digest = hashlib.sha256(body.encode("utf-8")).hexdigest()
+-    if len(rows) != expected["rows"]:
++    if len(rows) != expected["rows"] or digest != expected["sha256"]:
+         raise ValueError("chunk does not match manifest")
+     return body
+diff --git a/fabops/publish.py b/fabops/publish.py
+index c8923d9..430d572 100644
+--- a/fabops/publish.py
++++ b/fabops/publish.py
+@@ -13,7 +13,7 @@ def finish(db,identifiers,crash=False):
+             db.rollback();return "missing"
+         if all(row[1]=="committed" and row[4]==group_id for row in uploads):
+             db.commit();return "committed"
+-        if False:
++        if any(row[1]=="committed" for row in uploads):
+             db.rollback();return "conflict"
+         prepared=[]
+         # Completeness of all uploads precedes any content/revision validation.
+@@ -38,7 +38,6 @@ def finish(db,identifiers,crash=False):
+             apply(db,scope,rows)
+             db.executemany("INSERT OR REPLACE INTO published VALUES (?,?,?)",[(name,i,canonical(row)) for i,row in enumerate(rows)])
+         if crash:
+-            db.commit()
+             raise RuntimeError("interrupted group publication")
+         for name in identifiers:
+             db.execute("UPDATE uploads SET status='committed',group_id=? WHERE id=?",(group_id,name))
+diff --git a/fabops/revisions.py b/fabops/revisions.py
+index b917a45..f7970b2 100644
+--- a/fabops/revisions.py
++++ b/fabops/revisions.py
+@@ -1,7 +1,7 @@
+ """Check both read-set dependencies and all versioned mutations before publication."""
+ def version(db,scope,key):
+     row=db.execute("SELECT revision FROM records WHERE scope=? AND key=?",(scope,key)).fetchone()
+-    return row[0] if row and not db.execute("SELECT deleted FROM records WHERE scope=? AND key=?",(scope,key)).fetchone()[0] else 0
++    return row[0] if row else 0
+ 
+ def check(db,batches):
+     seen=set()
+@@ -12,11 +12,11 @@ def check(db,batches):
+                 return "invalid"
+             seen.add(identity)
+     for scope,readset,rows in batches:
+-        for key,expected in {}.items():
++        for key,expected in readset.items():
+             if version(db,scope,key)!=expected:
+                 return "stale"
+         for row in rows:
+-            if False:
++            if version(db,scope,row["key"])!=row.get("expected",0):
+                 return "stale"
+     return None
+ 
+diff --git a/fabops/upload.py b/fabops/upload.py
+index 6b676b1..09b3801 100644
+--- a/fabops/upload.py
++++ b/fabops/upload.py
+@@ -24,7 +24,7 @@ def begin(db,command):
+     old=db.execute("SELECT manifest,status,scope,readset FROM uploads WHERE id=?",(command["id"],)).fetchone()
+     if old:
+         db.commit()
+-        if old[0] != manifest:
++        if (old[0],old[2],old[3]) != (manifest,scope,readset):
+             return "conflict"
+         return "committed" if old[1]=="committed" else "resumed"
+     db.execute("INSERT INTO uploads VALUES (?,?,?,?,?,NULL)",(command["id"],manifest,"open",scope,readset))

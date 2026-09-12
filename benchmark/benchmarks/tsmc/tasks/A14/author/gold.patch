@@ -1,0 +1,13 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 978604d..d146f1b 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -2,7 +2,7 @@ def run(request):
+     rows = sorted(request["calibrations"], key=lambda r: r["effective"])
+     output = []
+     for time, value in request["samples"]:
+-        eligible = [r for r in rows if r["effective"] >= time]
++        eligible = [r for r in rows if r["effective"] <= time]
+         rule = eligible[-1] if eligible else None
+         output.append(value * rule["gain"] + rule["offset"] if rule else None)
+     return output

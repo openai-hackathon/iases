@@ -1,0 +1,38 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "7231256d0f9697d3b7c4ed6bcd5075288c5ce96e35ee5ece483f007b7b4098e6",
+    "data/expected.json": "d16243740629e0e6ea57f7a8df46633cf5576357a0392fad3f30154a04db99f1",
+    "data/request.json": "b10c6811b1953ab9ff91962f3372acb9b9fdcfa607732da51aca19b53e8d1990",
+    "docs/contract.md": "4ca01fb2bb0533f7dd27a874da3f9496659cb185af07828b590dbcee96ec9117",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "c28328dbde070024d4d1bd10295823f9495eada7f026768846fa67ca1e5d264c",
+    "fabops/integrate.py": "338641fd427b54c2a62b661e3b1d16ff7752cf355ecd2c883779d98c9dc081a2",
+    "fabops/segments.py": "958049c216c42b1416b60616ead38712e8ffc85d31a151616577f212d98534c3",
+    "problem_statement.md": "e96a01817f3c735ef89b309ff70194b808f286ed63a5f34f09badceec5c3f870",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "c29c6ec3f4c50f72c766e8e6a6b79d7bab3bf5d9a23df5dd29b984a4497ba782"
+  },
+  "baseline_git_commit": "a04f84a19e245ecee1537d114e5a9b59b866e270",
+  "design_difficulty": "hard",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Requires reconstructing two piecewise-linear supports, intersecting them across independent knots, exactly integrating a quadratic product, and coupling the result to a cycle-duration quality gate across three modules. Unlike A11 scalar integration, A14 as-of calibration, and A18 nearest alignment, neither per-channel integration nor nearest-sample pairing can satisfy the joint-support energy contract.",
+  "family_id": "multirate_joint_support_cycle_energy",
+  "hidden_tests": 14,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "zema-hydraulic"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "A29",
+  "test_count": 19,
+  "title": "Multirate cycle work integrates unsupported phases and couples the wrong coverage",
+  "track": "data_analysis",
+  "version": "1.0"
+}

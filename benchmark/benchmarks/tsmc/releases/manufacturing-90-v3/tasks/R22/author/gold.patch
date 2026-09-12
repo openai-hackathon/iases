@@ -1,0 +1,25 @@
+diff --git a/fabops/lease.py b/fabops/lease.py
+index b4ff861..7ca39eb 100644
+--- a/fabops/lease.py
++++ b/fabops/lease.py
+@@ -16,7 +16,7 @@ def execute(connection, command):
+             result = None
+         else:
+             result = bool(lease and command["owner"] == lease[0]
+-                          and command["now"] < lease[2])
++                          and command["token"] == lease[1] and command["now"] < lease[2])
+             if result:
+                 connection.execute("UPDATE output SET value=? WHERE id=1", (command["value"],))
+         connection.commit()
+diff --git a/fabops/store.py b/fabops/store.py
+index d65084d..80f639e 100644
+--- a/fabops/store.py
++++ b/fabops/store.py
+@@ -11,6 +11,6 @@ def connect(path):
+     """)
+     return connection
+ def allocate(connection):
+-    token = (connection.execute("SELECT COALESCE(MAX(token),0) FROM lease").fetchone()[0]) + 1
++    token = connection.execute("SELECT value FROM epoch WHERE id=1").fetchone()[0] + 1
+     connection.execute("UPDATE epoch SET value=? WHERE id=1", (token,))
+     return token

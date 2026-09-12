@@ -1,0 +1,47 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_fan_in",
+    "assessment/tests/test_hidden.py::test_reverse",
+    "tests/test_public.py::test_dependency"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_cyclic_graph",
+    "assessment/tests/test_hidden.py::test_later_release",
+    "assessment/tests/test_hidden.py::test_release",
+    "assessment/tests/test_hidden.py::test_shared_resource",
+    "assessment/tests/test_hidden.py::test_zero_duration",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_parallel",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_single"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_cyclic_graph",
+    "assessment/tests/test_hidden.py::test_fan_in",
+    "assessment/tests/test_hidden.py::test_later_release",
+    "assessment/tests/test_hidden.py::test_release",
+    "assessment/tests/test_hidden.py::test_reverse",
+    "assessment/tests/test_hidden.py::test_shared_resource",
+    "assessment/tests/test_hidden.py::test_zero_duration",
+    "tests/test_public.py::test_dependency",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_parallel",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_single"
+  ],
+  "task_id": "F23",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_cyclic_graph": "hidden",
+    "assessment/tests/test_hidden.py::test_fan_in": "hidden",
+    "assessment/tests/test_hidden.py::test_later_release": "hidden",
+    "assessment/tests/test_hidden.py::test_release": "hidden",
+    "assessment/tests/test_hidden.py::test_reverse": "hidden",
+    "assessment/tests/test_hidden.py::test_shared_resource": "hidden",
+    "assessment/tests/test_hidden.py::test_zero_duration": "hidden",
+    "tests/test_public.py::test_dependency": "public",
+    "tests/test_public.py::test_empty": "public",
+    "tests/test_public.py::test_parallel": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public",
+    "tests/test_public.py::test_single": "public"
+  }
+}

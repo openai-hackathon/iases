@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "2429d9a5cb9f470e3e763d70af7f2078f4c9a8b6325a51a833389c5572abf635",
+    "data/expected.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "data/request.json": "8b83bc7d8f03f10a00e6eff5efb6e783e423fcd3e4a98ac203c9870683fa9bc5",
+    "docs/contract.md": "4cc7fb64f4ee57a424f68d7f99690cbf56b7e9159bb13f9d71c03de0ebc3d577",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "7f94ecc13a61c711a3d23f48d13139992f87912a90be5a8363c801a20eb3ec2c",
+    "problem_statement.md": "27ce8ad86beb8c26141069a21e3f4e0541b81bdf7736225b317ae5aef98c7824",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "969ac0e2e69e59d4837efec28ce51eca0566da14eac7ec6b0e3a625ffa4f17f4"
+  },
+  "baseline_git_commit": "21e500d27704ebdec350c10d00832fd2c32d67ce",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Reconstruct sessions after late arrivals and duplicate suppression.",
+  "family_id": "late_event_session_merge",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "production-log"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "A15",
+  "test_count": 11,
+  "title": "Late production events fail to bridge adjacent activity sessions",
+  "track": "data_analysis",
+  "version": "1.0"
+}

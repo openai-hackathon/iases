@@ -1,0 +1,18 @@
+diff --git a/fabops/checkpoint.py b/fabops/checkpoint.py
+index ce67e5f..982a058 100644
+--- a/fabops/checkpoint.py
++++ b/fabops/checkpoint.py
+@@ -25,11 +25,10 @@ def process(path,events,fail_at=None,crash_point=None):
+                 c.execute('BEGIN IMMEDIATE')
+                 checkpoint=c.execute('SELECT last_seq FROM checkpoint WHERE id=1').fetchone()[0]
+                 if row['sequence']<=checkpoint:c.rollback();continue
+-                c.execute('UPDATE checkpoint SET last_seq=? WHERE id=1',(row['sequence'],))
+-                c.commit()
+-                if row['sequence']==fail_at and crash_point=='after_checkpoint':raise InjectedCrash(crash_point)
+                 c.execute('INSERT INTO outputs VALUES (?,?)',(row['sequence'],json.dumps(row,sort_keys=True)))
+                 if row['sequence']==fail_at and crash_point=='after_output':raise InjectedCrash(crash_point)
++                c.execute('UPDATE checkpoint SET last_seq=? WHERE id=1',(row['sequence'],))
++                if row['sequence']==fail_at and crash_point=='after_checkpoint':raise InjectedCrash(crash_point)
+                 c.commit()
+             except BaseException:c.rollback();raise
+     return inspect(path)

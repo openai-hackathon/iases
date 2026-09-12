@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_retain_active",
+    "tests/test_public.py::test_edit_clears"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_foreign_role",
+    "assessment/tests/test_hidden.py::test_revision_zero",
+    "assessment/tests/test_hidden.py::test_revoke",
+    "assessment/tests/test_hidden.py::test_stale_approval",
+    "assessment/tests/test_hidden.py::test_valid",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_no_revision",
+    "tests/test_public.py::test_partial",
+    "tests/test_public.py::test_public_cli_fixture"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_foreign_role",
+    "assessment/tests/test_hidden.py::test_retain_active",
+    "assessment/tests/test_hidden.py::test_revision_zero",
+    "assessment/tests/test_hidden.py::test_revoke",
+    "assessment/tests/test_hidden.py::test_stale_approval",
+    "assessment/tests/test_hidden.py::test_valid",
+    "tests/test_public.py::test_edit_clears",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_no_revision",
+    "tests/test_public.py::test_partial",
+    "tests/test_public.py::test_public_cli_fixture"
+  ],
+  "task_id": "F24",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_foreign_role": "hidden",
+    "assessment/tests/test_hidden.py::test_retain_active": "hidden",
+    "assessment/tests/test_hidden.py::test_revision_zero": "hidden",
+    "assessment/tests/test_hidden.py::test_revoke": "hidden",
+    "assessment/tests/test_hidden.py::test_stale_approval": "hidden",
+    "assessment/tests/test_hidden.py::test_valid": "hidden",
+    "tests/test_public.py::test_edit_clears": "public",
+    "tests/test_public.py::test_empty": "public",
+    "tests/test_public.py::test_no_revision": "public",
+    "tests/test_public.py::test_partial": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public"
+  }
+}

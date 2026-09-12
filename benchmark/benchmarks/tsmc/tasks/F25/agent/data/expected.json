@@ -1,0 +1,14 @@
+{
+  "accepted": true,
+  "cost": 0,
+  "alignment": [
+    {
+      "kind": "sync",
+      "event": "w",
+      "transition": "work"
+    }
+  ],
+  "log_moves": 0,
+  "model_moves": 0,
+  "synchronous_moves": 1
+}

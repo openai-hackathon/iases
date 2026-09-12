@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "39454726e929e9b7a0141a51e948996f31f196570d71cc4889086556bc098a22",
+    "data/expected.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "data/request.json": "8e27dba332dd25170b16632b4cf2349554dd4173446a67ea261c75c6a076fad1",
+    "docs/contract.md": "fdb220915641131aa017b3f999251efa249da1c8988bae4888c3acdcf44298e3",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "c9b74e52a2b7dab1dcbad99b6cfa330023354fa4a8c4dbd8b376ea09194eba84",
+    "problem_statement.md": "0e4df3758a5a05cddf95d130d53dc189a77520ac7d0dabf60d20419a44601c64",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "248462d77fb2356035d080646935a9715183f143c86ddc24e786e9f2848fd49b"
+  },
+  "baseline_git_commit": "a8d9d54d352b8fc4a52776d0f325cb5faa44d58c",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Distinguish incomplete final append from interior corruption and sequence discontinuity.",
+  "family_id": "journal_corruption_boundary",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "R28",
+  "test_count": 11,
+  "title": "Journal recovery treats corruption in committed records as a torn tail",
+  "track": "reliability",
+  "version": "1.0"
+}

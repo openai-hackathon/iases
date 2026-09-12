@@ -1,0 +1,50 @@
+{
+  "secom-inspection": {
+    "url": "https://archive.ics.uci.edu/static/public/179/secom.zip",
+    "sha256": "eea568baf3c2229096d7d294cf0b096b5502bd96d92c0b80a65b84714059be8e",
+    "files": [
+      "secom.data",
+      "secom.names",
+      "secom_labels.data"
+    ],
+    "rows": 1567,
+    "feature_counts": [
+      590
+    ],
+    "label_counts": {
+      "-1": 1463,
+      "1": 104
+    }
+  },
+  "production-inspection": {
+    "url": "https://ndownloader.figshare.com/files/24045434",
+    "sha256": "b3a43f457393bc9dd0c616db189d01aa55e823f202cc8ce0cd537572840644cf",
+    "files": [
+      "MI_-Eng.pdf",
+      "Production_Data.csv"
+    ],
+    "csv_files": {
+      "Production_Data.csv": {
+        "rows": 4543,
+        "columns": [
+          "Case ID",
+          "Activity",
+          "Resource",
+          "Start Timestamp",
+          "Complete Timestamp",
+          "Span",
+          "Work Order  Qty",
+          "Part Desc.",
+          "Worker ID",
+          "Report Type",
+          "Qty Completed",
+          "Qty Rejected",
+          "Qty for MRB",
+          "Rework"
+        ],
+        "cases": 225,
+        "activities": 55
+      }
+    }
+  }
+}

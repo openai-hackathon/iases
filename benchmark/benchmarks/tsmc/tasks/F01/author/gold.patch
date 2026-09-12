@@ -1,0 +1,14 @@
+diff --git a/fabops/eligibility.py b/fabops/eligibility.py
+index a764f35..e895d0b 100644
+--- a/fabops/eligibility.py
++++ b/fabops/eligibility.py
+@@ -6,7 +6,8 @@ def eligible(lot_id: str, machine_id: str, lots: Mapping, machines: Mapping,
+     lot, machine = lots.get(lot_id), machines.get(machine_id)
+     if lot is None or machine is None:
+         return False
+-    return (lot["status"] == "WAITING"
++    return (not lot["quality_hold"]
++            and lot["status"] == "WAITING"
+             and machine["state"] == "AVAILABLE"
+             and any(q["machine_id"] == machine_id
+                     and q["product_id"] == lot["product_id"]

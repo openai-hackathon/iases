@@ -1,0 +1,28 @@
+{
+  "agent_steps": 5,
+  "baseline_public_test_exit": 1,
+  "collected_patch_bytes": 646,
+  "image_id": "sha256:b3f326ffeb6a5164293cbbb517da1ba80d81b56da7a0223b5e4ab7dec0af7e06",
+  "instance_id": "tsmc__f01-v0.2",
+  "model_submission_empty": true,
+  "native_evaluation": {
+    "resolved": true,
+    "source": "logs/evaluation/solver-submission-qa-01/results.json"
+  },
+  "patch_baseline": "94f46f00cd3d35877de957a58f27d392681a5b2a",
+  "patch_sha256": "52ec7267917baea564c24249b3f634c853e22e6e446f6a4ae5c85aef07d58722",
+  "real_index_remained_empty": true,
+  "rejected_empty_submissions": 1,
+  "repaired_public_test_exit": 0,
+  "repository_verification": {
+    "deselected": 2,
+    "deselected_tests": [
+      "tests/test_cli.py::test_one_instance",
+      "tests/test_evaluation.py::test_make_run_report"
+    ],
+    "passed": 396,
+    "source": ".generated/solver-full-verification.log",
+    "warnings": 9
+  },
+  "scope": "Scripted harness regression using a trusted TSMC reference; no model API requests or accuracy measurement."
+}

@@ -1,0 +1,39 @@
+diff --git a/fabops/canonical.py b/fabops/canonical.py
+index 8a7355b..05295ac 100644
+--- a/fabops/canonical.py
++++ b/fabops/canonical.py
+@@ -24,7 +24,7 @@ def normalize(value):
+     return ["object", [[key, normalize(value[key])] for key in sorted(value)]]
+ 
+ def fingerprint(command):
+-    return json.dumps(command["value"], separators=(",", ":"))
++    return json.dumps(normalize([command["expected"], command["value"]]), separators=(",", ":"))
+ 
+ def scope_key(scope):
+     return json.dumps(scope, separators=(",", ":"))
+diff --git a/fabops/commands.py b/fabops/commands.py
+index bbbda85..035100b 100644
+--- a/fabops/commands.py
++++ b/fabops/commands.py
+@@ -15,7 +15,7 @@ def connect(path):
+ def execute(db, command):
+     scope, key = scope_key(command["scope"]), command["key"]
+     identity = fingerprint(command)
+-    previous = db.execute("SELECT fingerprint,reply FROM receipts WHERE key=?", (key,)).fetchone()
++    previous = db.execute("SELECT fingerprint,reply FROM receipts WHERE scope=? AND key=?", (scope,key)).fetchone()
+     if previous:
+         return json.loads(previous[1]) if previous[0] == identity else {"status": "conflict"}
+     db.execute("BEGIN IMMEDIATE")
+@@ -29,11 +29,9 @@ def execute(db, command):
+             value = command["value"]
+             db.execute("INSERT OR REPLACE INTO states VALUES (?,?,?)", (scope,revision,json.dumps(value)))
+             reply = dict(status="applied", revision=revision, value=value)
+-        db.commit()
+         if command.get("crash", False):
+             raise RuntimeError("interrupted command")
+-        if reply["status"] == "applied":
+-            db.execute("INSERT INTO receipts VALUES (?,?,?,?)", (scope,key,identity,json.dumps(reply)))
++        db.execute("INSERT INTO receipts VALUES (?,?,?,?)", (scope,key,identity,json.dumps(reply)))
+         db.commit()
+         return reply
+     except RuntimeError:

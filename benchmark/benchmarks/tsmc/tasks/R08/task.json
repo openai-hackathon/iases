@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "89422893d1e9c0fb38adc75cce60c6fc4788be24656431bbdd407446d920e71b",
+    "data/expected.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "data/request.json": "374e01bdee5ca72c9fc4546740f0611b3e422b1fea67aa6345a39721bbdc1a79",
+    "docs/contract.md": "557f61d53adb1b764436392e2a588ccd3568511a057299215200bbba6e6dff5c",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "765be48c0f172de774c34f6a3a1ef7a3b1a02ee1c0864f64bc047c50c618787a",
+    "problem_statement.md": "292958ed6870350a6f772235bb4d7659cb793598f39fd072bbe7592d6bae5214",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "17c0d64776ffd3e82ee63edb948d41c58d6488e00f9f9ea6b6ac0526af62e307"
+  },
+  "baseline_git_commit": "fa644b3be11d37ffcca966e286422143990366f0",
+  "design_difficulty": "easy",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "",
+  "family_id": "compound_cache_identity",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "R08",
+  "test_count": 11,
+  "title": "Delimiter collisions mix cache records from different tenants",
+  "track": "reliability",
+  "version": "1.0"
+}

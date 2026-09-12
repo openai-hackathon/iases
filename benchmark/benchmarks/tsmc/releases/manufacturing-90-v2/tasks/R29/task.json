@@ -1,0 +1,39 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "6c93330992397c60c2cd984ecc3c9c3a4857dd6b7aae675ac0407f7adb98306f",
+    "data/expected.json": "585899fc73d8721525fc5eb2ef333645414a37a23bce8c2d8523c0c25ac2f744",
+    "data/request.json": "d1933215812bb0a62c50ba518f5a0fd2a2ceee6c0da4a4dea8ee51640a6b38a4",
+    "docs/contract.md": "dd179e89183b82d24a66ce2e8e8e4a2cf57fd9dea69b6a98c992baf496e74134",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/delivery.py": "0a6beb663e44e83ba23450f936c23db9bf3a10091376b457d5a8b63f73a6fdc9",
+    "fabops/domain.py": "003c40b6c9bc4b58e157753f306ad3061ee5fb934ee468cd3488a57453ab3d93",
+    "fabops/sink.py": "bd1bab899540c25937fd377c7e5fdef37eca1d5abdf0a79a6dfa00079334c143",
+    "fabops/store.py": "eb98fe2a1c8692a91c38396e47d8c1c8443a3d66e702bf6f3748b63f9fdbac19",
+    "problem_statement.md": "b7362a91bc7e5aeee7c5f1ea6f62ed6fd04e6f750b4e31a40ac3ed40924fdc7e",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "ebda8abb28bf486c657462a82a5ddd11f3b171dd25c9728f69afadd9fb34f4c4"
+  },
+  "baseline_git_commit": "0fd81f942f21bc8906550218ce8f173ce4da6836",
+  "design_difficulty": "hard",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Coordinate four coupled invariants across SQLite intent atomicity, an independently committed sink, lost acknowledgements, per-channel idempotence and monotonic projections. Unlike a single outbox or lease check, a successful retry must repair channel divergence without duplicating a remote effect or rolling back a newer revision.",
+  "family_id": "durable_multichannel_outbox_reconciliation",
+  "hidden_tests": 13,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "R29",
+  "test_count": 18,
+  "title": "Publication recovery loses a channel or replays obsolete artifact revisions",
+  "track": "reliability",
+  "version": "1.0"
+}

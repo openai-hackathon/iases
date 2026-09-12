@@ -1,0 +1,47 @@
+diff --git a/fabops/history.py b/fabops/history.py
+index 37743f3..e8c2437 100644
+--- a/fabops/history.py
++++ b/fabops/history.py
+@@ -1,6 +1,10 @@
+ """Resolve identity revisions at the recorded-time visibility frontier."""
+ def visible(rows, asof):
+     current = {}
+-    for row in sorted(rows, key=lambda row: row["revision"]):
+-        current[row["id"]] = row
+-    return {key: row for key, row in current.items() if row["recorded"] <= asof}
++    for row in rows:
++        if row["recorded"] > asof:
++            continue
++        old = current.get(row["id"])
++        if old is None or row["revision"] > old["revision"]:
++            current[row["id"]] = row
++    return current
+diff --git a/fabops/metrology.py b/fabops/metrology.py
+index 0e46feb..07cafee 100644
+--- a/fabops/metrology.py
++++ b/fabops/metrology.py
+@@ -4,11 +4,11 @@ from fractions import Fraction
+ def choose(measurements, quality, at):
+     selected = {}
+     for row in measurements.values():
+-        if row["deleted"] or row["event"] > at or not quality.get(row["id"], row)["valid"]:
++        if row["deleted"] or row["event"] > at:
+             continue
+         key = (row["part"], row["station"])
+         old = selected.get(key)
+-        if old is None or (row["recorded"], row["id"]) > (old["recorded"], old["id"]):
++        if old is None or (row["event"], row["id"]) > (old["event"], old["id"]):
+             selected[key] = row
+     return selected
+ 
+@@ -22,8 +22,8 @@ def cell(row, quality, calibrations, at):
+     calibration = calibrations.get(row["calibration"])
+     if calibration is None or calibration["deleted"]:
+         return None
+-    if not calibration["start"] <= at < calibration["end"]:
++    if not calibration["start"] <= row["event"] < calibration["end"]:
+         return None
+-    value = (Fraction(row["raw"]) + Fraction(calibration["offset"])) * Fraction(calibration["gain"])
++    value = Fraction(row["raw"]) * Fraction(calibration["gain"]) + Fraction(calibration["offset"])
+     return dict(measurement=row["id"], revision=row["revision"],
+                 calibration_revision=calibration["revision"], value=str(value))

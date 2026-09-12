@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "ef6fb5f9ea15dbdb145fafda8fab41abb9cdfdb3bfce5a5f6cae0c1b8b1445b6",
+    "data/expected.json": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "data/request.json": "fc7eb59acb5a98d510da26c4408a8f4e8bca8a9f5c1ba37783b874d901beb741",
+    "docs/contract.md": "9e102ef2f7cfa992f2a2b9a2d53a600c0ae06412b2dface401ac470c56a38d70",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "347d76b4deed880d67db8c97a82b9ed5c91d76ed78d3921c28a4b1f0a5d80929",
+    "problem_statement.md": "4647387c38b74a6b6dbc2d2bd466753ab6e94257fc9573cbb526dbcdaba880bc",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "46ff4a28edee7432e85891b5233c56f688f37f88fe12409acef60de9d878ebf0"
+  },
+  "baseline_git_commit": "9e9a952ed55957d570be9f2c506a3ed0df149369",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Account for elapsed time, interpolation and sample ordering together.",
+  "family_id": "trapezoid_energy_integration",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "zema-hydraulic"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "A11",
+  "test_count": 11,
+  "title": "Irregular power sampling distorts integrated energy",
+  "track": "data_analysis",
+  "version": "1.0"
+}

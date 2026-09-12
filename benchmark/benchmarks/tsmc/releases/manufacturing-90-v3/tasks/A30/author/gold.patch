@@ -1,0 +1,42 @@
+diff --git a/fabops/cohort.py b/fabops/cohort.py
+index 4e37e43..84a251b 100644
+--- a/fabops/cohort.py
++++ b/fabops/cohort.py
+@@ -2,13 +2,13 @@
+ def training_rows(rows, target, embargo):
+     selected = []
+     for row in rows:
+-        if row["id"] == target["id"]:
++        if row["run"] == target["run"]:
+             continue
+-        if row["start"] > target["start"] - embargo:
++        if row["end"] > target["start"] - embargo:
+             continue
+-        if row["profile"][4] and row["profile"][:4] != [100, 100, 0, 130]:
++        if row["profile"][4] != 0:
+             continue
+-        if row["profile"][0] != 100:
++        if row["profile"][:4] != [100, 100, 0, 130]:
+             continue
+         if any(value is None for value in row["features"]):
+             continue
+diff --git a/fabops/model.py b/fabops/model.py
+index 7e4e8a0..4b67e14 100644
+--- a/fabops/model.py
++++ b/fabops/model.py
+@@ -2,7 +2,7 @@
+ from math import sqrt
+ 
+ def fit(rows, target, shrinkage):
+-    values = [row["features"] for row in rows] + ([target["features"]] if all(value is not None for value in target["features"]) else [])
++    values = [row["features"] for row in rows]
+     center = [sum(row[j] for row in values) / len(values) for j in range(2)]
+     variance = [sum((row[j] - center[j]) ** 2 for row in values) / len(values)
+                 for j in range(2)]
+@@ -13,5 +13,5 @@ def fit(rows, target, shrinkage):
+ 
+ def score(features, center, scale, correlation):
+     first, second = [(features[j] - center[j]) / scale[j] for j in range(2)]
+-    return ((first * first + 2 * correlation * first * second + second * second)
++    return ((first * first - 2 * correlation * first * second + second * second)
+             / (1 - correlation * correlation))

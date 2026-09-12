@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "d2e743a7d416b8959116671d4230860f951cc924490c1a55ca39131b076d5902",
+    "data/expected.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "data/request.json": "d1933215812bb0a62c50ba518f5a0fd2a2ceee6c0da4a4dea8ee51640a6b38a4",
+    "docs/contract.md": "60abddc1429a86c4b12131dcd52ed37b71334a1557efc3fe07bbfad129d13c29",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "b88b71fbea40b02626ac10cdc4e6721cacc7dd323308713c0718755ce8d60c7c",
+    "problem_statement.md": "466ba2a02529cf3a9a3db1ddf80676688a718a5071a53405b754fe0815354092",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "e764357041f2a4290c8f17ca05e2c2ab76bec9adb4d0edf6afecb01979763a9a"
+  },
+  "baseline_git_commit": "4c6c1247ef1b740e9bcda4c6bb41e7f54de8b9c3",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Canonicalize nested payloads while binding retries to the complete command identity.",
+  "family_id": "canonical_idempotency_fingerprint",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "production-log"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "R21",
+  "test_count": 11,
+  "title": "Idempotent commands conflict when JSON object keys are reordered",
+  "track": "reliability",
+  "version": "1.0"
+}

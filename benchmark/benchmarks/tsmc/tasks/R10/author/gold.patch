@@ -1,0 +1,12 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index ab0d45b..1348330 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -1,5 +1,6 @@
+ def run(request):
+     cursor = request["cursor"]
+     acknowledgements = set(request["acks"])
+-    cursor = max(acknowledgements | {cursor})
++    while cursor + 1 in acknowledgements:
++        cursor += 1
+     return cursor

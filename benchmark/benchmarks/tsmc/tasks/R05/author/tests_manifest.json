@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_over_attempts",
+    "assessment/tests/test_hidden.py::test_over_time",
+    "assessment/tests/test_hidden.py::test_zero_calls",
+    "assessment/tests/test_hidden.py::test_zero_time",
+    "tests/test_public.py::test_attempts_exhausted",
+    "tests/test_public.py::test_time_exhausted"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_fractional_time",
+    "assessment/tests/test_hidden.py::test_last_attempt",
+    "tests/test_public.py::test_all_exhausted",
+    "tests/test_public.py::test_available",
+    "tests/test_public.py::test_public_cli_fixture"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_fractional_time",
+    "assessment/tests/test_hidden.py::test_last_attempt",
+    "assessment/tests/test_hidden.py::test_over_attempts",
+    "assessment/tests/test_hidden.py::test_over_time",
+    "assessment/tests/test_hidden.py::test_zero_calls",
+    "assessment/tests/test_hidden.py::test_zero_time",
+    "tests/test_public.py::test_all_exhausted",
+    "tests/test_public.py::test_attempts_exhausted",
+    "tests/test_public.py::test_available",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_time_exhausted"
+  ],
+  "task_id": "R05",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_fractional_time": "hidden",
+    "assessment/tests/test_hidden.py::test_last_attempt": "hidden",
+    "assessment/tests/test_hidden.py::test_over_attempts": "hidden",
+    "assessment/tests/test_hidden.py::test_over_time": "hidden",
+    "assessment/tests/test_hidden.py::test_zero_calls": "hidden",
+    "assessment/tests/test_hidden.py::test_zero_time": "hidden",
+    "tests/test_public.py::test_all_exhausted": "public",
+    "tests/test_public.py::test_attempts_exhausted": "public",
+    "tests/test_public.py::test_available": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public",
+    "tests/test_public.py::test_time_exhausted": "public"
+  }
+}

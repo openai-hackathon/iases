@@ -1,0 +1,39 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "72d21ceba3a838daefc3dc5269fe951cc9b7d2f0cccc75af99e48e9f02e94196",
+    "data/expected.json": "ca810cfe7ab883a7fe092d8e8c5785bf88ef706ed9f302a01ab4c50ce831522b",
+    "data/request.json": "d64f10bb73ece7e0d0f51bf8616c472d090b2644b4bb4735231f4a01c18b5846",
+    "docs/contract.md": "f87b47278f410ada2dbb58ce33ee62d0a93b062696601d79a9ddadf2843be2dd",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/constraints.py": "700947c591938bae9c358b6fbb7792194d2c63c6977962ef0f5a82138f26409a",
+    "fabops/correlation.py": "10182dfa2bd37d2683ba688222c250b3955cbf9e5ec2b1d61a93921d0a80f5c1",
+    "fabops/domain.py": "bca1959122295ead98034d00f94782ff2e23f320eb05b3f4364fdea05971378a",
+    "fabops/events.py": "1cbb16a4aff412a993246b63938a2bef50753962cbd00da9e6fc2d69592e3a37",
+    "problem_statement.md": "84664c48c72c328f97ecf1b6d5b8e2de4093c32c69bdd2fd67d25eea02873d79",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "d4d4a55e814afb7b40fb037f77d6320e291e18a02b3431f3954e3d663d28e834"
+  },
+  "baseline_git_commit": "b26c6ceb238fb56d313aecf2b4e2f8385fdf952d",
+  "design_difficulty": "hard",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Reconstruct all maximum interpretations under nonlocal weighted interval capacity, cross-resource route order, duration limits and coupled event evidence; local matching or filtering only unconstrained maxima loses valid lower-cardinality solutions and certainty bounds.",
+  "family_id": "capacity_route_constrained_lifecycle_interpretations",
+  "hidden_tests": 26,
+  "language": "en",
+  "public_tests": 8,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "production-log"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "F26",
+  "test_count": 34,
+  "title": "Lifecycle certainty ignores globally competing resources and coupled evidence",
+  "track": "factory_logic",
+  "version": "2.0"
+}

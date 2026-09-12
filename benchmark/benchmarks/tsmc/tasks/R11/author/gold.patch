@@ -1,0 +1,12 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index fb0b8a6..3aeed6b 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -6,6 +6,6 @@ def run(request):
+     try:
+         retry = parsedate_to_datetime(header)
+         now = parsedate_to_datetime(request["now"])
+-        return max(0, retry.timestamp())
++        return max(0, (retry - now).total_seconds())
+     except (TypeError, ValueError, OverflowError):
+         return None

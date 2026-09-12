@@ -1,0 +1,8 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 0fa7081..5e5c586 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -1,2 +1,2 @@
+ def run(request):
+-    return request["attempts"] < request["max_attempts"] or request["elapsed"] < request["deadline"]
++    return request["attempts"] < request["max_attempts"] and request["elapsed"] < request["deadline"]

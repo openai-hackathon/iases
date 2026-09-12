@@ -1,0 +1,56 @@
+{
+  "task_id": "R04",
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_callback_type_error_cleanup",
+    "assessment/tests/test_hidden.py::test_exception_then_next_job",
+    "assessment/tests/test_hidden.py::test_hidden_cli_fixture",
+    "assessment/tests/test_hidden.py::test_internal_cancelled_error",
+    "assessment/tests/test_hidden.py::test_running_task_cancellation_cleanup",
+    "tests/test_public.py::test_error_releases_slot",
+    "tests/test_public.py::test_public_cli_fixture"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_cancel_before_start",
+    "assessment/tests/test_hidden.py::test_concurrency_ceiling",
+    "assessment/tests/test_hidden.py::test_limits_reject_bool_negative_float",
+    "assessment/tests/test_hidden.py::test_many_successes_no_double_release",
+    "assessment/tests/test_hidden.py::test_success_result_preserved",
+    "assessment/tests/test_hidden.py::test_waiter_cancellation_does_not_release_owner_slot",
+    "tests/test_public.py::test_invalid_limit",
+    "tests/test_public.py::test_normal_result"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_callback_type_error_cleanup",
+    "assessment/tests/test_hidden.py::test_cancel_before_start",
+    "assessment/tests/test_hidden.py::test_concurrency_ceiling",
+    "assessment/tests/test_hidden.py::test_exception_then_next_job",
+    "assessment/tests/test_hidden.py::test_hidden_cli_fixture",
+    "assessment/tests/test_hidden.py::test_internal_cancelled_error",
+    "assessment/tests/test_hidden.py::test_limits_reject_bool_negative_float",
+    "assessment/tests/test_hidden.py::test_many_successes_no_double_release",
+    "assessment/tests/test_hidden.py::test_running_task_cancellation_cleanup",
+    "assessment/tests/test_hidden.py::test_success_result_preserved",
+    "assessment/tests/test_hidden.py::test_waiter_cancellation_does_not_release_owner_slot",
+    "tests/test_public.py::test_error_releases_slot",
+    "tests/test_public.py::test_invalid_limit",
+    "tests/test_public.py::test_normal_result",
+    "tests/test_public.py::test_public_cli_fixture"
+  ],
+  "visibility": {
+    "tests/test_public.py::test_normal_result": "public",
+    "assessment/tests/test_hidden.py::test_callback_type_error_cleanup": "hidden",
+    "assessment/tests/test_hidden.py::test_cancel_before_start": "hidden",
+    "assessment/tests/test_hidden.py::test_exception_then_next_job": "hidden",
+    "assessment/tests/test_hidden.py::test_success_result_preserved": "hidden",
+    "assessment/tests/test_hidden.py::test_many_successes_no_double_release": "hidden",
+    "tests/test_public.py::test_invalid_limit": "public",
+    "assessment/tests/test_hidden.py::test_waiter_cancellation_does_not_release_owner_slot": "hidden",
+    "assessment/tests/test_hidden.py::test_running_task_cancellation_cleanup": "hidden",
+    "assessment/tests/test_hidden.py::test_internal_cancelled_error": "hidden",
+    "tests/test_public.py::test_error_releases_slot": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public",
+    "assessment/tests/test_hidden.py::test_limits_reject_bool_negative_float": "hidden",
+    "assessment/tests/test_hidden.py::test_hidden_cli_fixture": "hidden",
+    "assessment/tests/test_hidden.py::test_concurrency_ceiling": "hidden"
+  }
+}

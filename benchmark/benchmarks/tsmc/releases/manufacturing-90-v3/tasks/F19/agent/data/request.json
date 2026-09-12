@@ -1,0 +1,19 @@
+{
+  "lots": [],
+  "tools": [
+    "x",
+    "y"
+  ],
+  "stock": {
+    "r": 1,
+    "s": 1
+  },
+  "observed": {
+    "dispatch": 1,
+    "inventory": 1
+  },
+  "current": {
+    "dispatch": 1,
+    "inventory": 1
+  }
+}

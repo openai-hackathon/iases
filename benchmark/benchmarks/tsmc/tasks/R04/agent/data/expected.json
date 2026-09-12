@@ -1,0 +1,13 @@
+{
+  "results": [
+    {
+      "ok": 6
+    },
+    {
+      "status": "error"
+    }
+  ],
+  "active": 0,
+  "free_slots": 2,
+  "peak": 1
+}

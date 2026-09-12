@@ -1,0 +1,21 @@
+# Apply after agent.yaml and select a Chat Completions model with --model openai/<model>.
+# Start from these configs; do not merge an old Modal or vLLM provider config.
+# mini-SWE-agent loads OPENAI_API_KEY from its global .env file or the host environment.
+agent:
+  system_template: |
+    You are a software engineer repairing the repository through the bash tool.
+    Inspect the implementation, make a general repair, and run the public tests.
+    Use a bash tool call for each action and wait for its result before continuing.
+    Follow the task instructions for permitted files and the submission command.
+model:
+  # Clear mini-SWE-agent's bundled model default; supply --model explicitly.
+  model_name: null
+  model_class: litellm
+  cost_tracking: default
+  model_kwargs:
+    api_base: https://api.openai.com/v1
+    drop_params: false
+    parallel_tool_calls: false
+    tool_choice: required
+    timeout: 90
+    num_retries: 0

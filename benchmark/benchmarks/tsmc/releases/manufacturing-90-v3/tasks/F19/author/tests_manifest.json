@@ -1,0 +1,50 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_cardinality_reverse",
+    "assessment/tests/test_hidden.py::test_stale_empty",
+    "assessment/tests/test_hidden.py::test_stale_inventory",
+    "tests/test_public.py::test_cardinality"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_assignment_alternative",
+    "assessment/tests/test_hidden.py::test_cost",
+    "assessment/tests/test_hidden.py::test_missing_stock",
+    "assessment/tests/test_hidden.py::test_priority",
+    "assessment/tests/test_hidden.py::test_tie",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_no_eligible_tool",
+    "tests/test_public.py::test_one",
+    "tests/test_public.py::test_public_cli_fixture"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_assignment_alternative",
+    "assessment/tests/test_hidden.py::test_cardinality_reverse",
+    "assessment/tests/test_hidden.py::test_cost",
+    "assessment/tests/test_hidden.py::test_missing_stock",
+    "assessment/tests/test_hidden.py::test_priority",
+    "assessment/tests/test_hidden.py::test_stale_empty",
+    "assessment/tests/test_hidden.py::test_stale_inventory",
+    "assessment/tests/test_hidden.py::test_tie",
+    "tests/test_public.py::test_cardinality",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_no_eligible_tool",
+    "tests/test_public.py::test_one",
+    "tests/test_public.py::test_public_cli_fixture"
+  ],
+  "task_id": "F19",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_assignment_alternative": "hidden",
+    "assessment/tests/test_hidden.py::test_cardinality_reverse": "hidden",
+    "assessment/tests/test_hidden.py::test_cost": "hidden",
+    "assessment/tests/test_hidden.py::test_missing_stock": "hidden",
+    "assessment/tests/test_hidden.py::test_priority": "hidden",
+    "assessment/tests/test_hidden.py::test_stale_empty": "hidden",
+    "assessment/tests/test_hidden.py::test_stale_inventory": "hidden",
+    "assessment/tests/test_hidden.py::test_tie": "hidden",
+    "tests/test_public.py::test_cardinality": "public",
+    "tests/test_public.py::test_empty": "public",
+    "tests/test_public.py::test_no_eligible_tool": "public",
+    "tests/test_public.py::test_one": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public"
+  }
+}

@@ -1,0 +1,718 @@
+{
+  "all_qualified": true,
+  "gate_test_count": 7,
+  "incorrect_variants": 58,
+  "interpretation": "Native validation of seven selected v2.0 development repairs; this is oracle verification, not a model difficulty score.",
+  "native_executions": 79,
+  "original_test_count": 203,
+  "release_sha256": "dddc29ff09641cd6871d90fcc70c2d4fbd0b8a5c836ddd08313b1155360a7e31",
+  "run_id": "tsmc-development-revision-7",
+  "scope": "docker-bundled-fixture-validation",
+  "source_log": "logs/evaluation/tsmc-development-revision-7/validation.json",
+  "tasks": [
+    {
+      "base_commit": "b5d8423a41052856932e4e2cf9d3200ea059c0df",
+      "gate_test_count": 1,
+      "image_id": "sha256:a6ba1be2e5197867a67baad111adf9dfaf1e358a58ab38a6ecc1ab93840549a2",
+      "instance_id": "tsmc__a12-v2.0",
+      "issues": [],
+      "mutant_hidden_failures": {
+        "mutant_arrival_order_wins": 5,
+        "mutant_calibration_at_query_time": 1,
+        "mutant_future_revision_hides_history": 5,
+        "mutant_offset_scaled_twice": 2,
+        "mutant_quality_filtered_before_join": 2,
+        "mutant_tombstone_resurrection": 2
+      },
+      "original_test_count": 29,
+      "task_id": "A12",
+      "variants": {
+        "baseline": {
+          "counts": {
+            "failed": 15,
+            "passed": 14
+          },
+          "resolved": false
+        },
+        "gold": {
+          "counts": {
+            "failed": 0,
+            "passed": 29
+          },
+          "resolved": true
+        },
+        "gold_repeat": {
+          "counts": {
+            "failed": 0,
+            "passed": 29
+          },
+          "resolved": true
+        },
+        "mutant_arrival_order_wins": {
+          "counts": {
+            "failed": 6,
+            "passed": 23
+          },
+          "resolved": false
+        },
+        "mutant_calibration_at_query_time": {
+          "counts": {
+            "failed": 2,
+            "passed": 27
+          },
+          "resolved": false
+        },
+        "mutant_future_revision_hides_history": {
+          "counts": {
+            "failed": 6,
+            "passed": 23
+          },
+          "resolved": false
+        },
+        "mutant_offset_scaled_twice": {
+          "counts": {
+            "failed": 2,
+            "passed": 27
+          },
+          "resolved": false
+        },
+        "mutant_quality_filtered_before_join": {
+          "counts": {
+            "failed": 3,
+            "passed": 26
+          },
+          "resolved": false
+        },
+        "mutant_tombstone_resurrection": {
+          "counts": {
+            "failed": 2,
+            "passed": 27
+          },
+          "resolved": false
+        }
+      }
+    },
+    {
+      "base_commit": "dbb47e09ac042eb8eaf87707f50a440885333a45",
+      "gate_test_count": 1,
+      "image_id": "sha256:180d4c4febb25ee5704d09b734c232ac7f519172e14112a7595109eddf86385b",
+      "instance_id": "tsmc__a29-v2.0",
+      "issues": [],
+      "mutant_hidden_failures": {
+        "mutant_clock_offset_scaled": 2,
+        "mutant_coarse_window_resampling": 4,
+        "mutant_future_revision_erases_known_knots": 11,
+        "mutant_invalid_knots_removed": 2,
+        "mutant_local_time_gap_check": 1,
+        "mutant_marginal_coverage": 2,
+        "mutant_missing_accepted_retractions": 7,
+        "mutant_product_endpoint_trapezoid": 2,
+        "mutant_single_calibration_per_segment": 3
+      },
+      "original_test_count": 35,
+      "task_id": "A29",
+      "variants": {
+        "baseline": {
+          "counts": {
+            "failed": 22,
+            "passed": 13
+          },
+          "resolved": false
+        },
+        "gold": {
+          "counts": {
+            "failed": 0,
+            "passed": 35
+          },
+          "resolved": true
+        },
+        "gold_repeat": {
+          "counts": {
+            "failed": 0,
+            "passed": 35
+          },
+          "resolved": true
+        },
+        "mutant_clock_offset_scaled": {
+          "counts": {
+            "failed": 2,
+            "passed": 33
+          },
+          "resolved": false
+        },
+        "mutant_coarse_window_resampling": {
+          "counts": {
+            "failed": 5,
+            "passed": 30
+          },
+          "resolved": false
+        },
+        "mutant_future_revision_erases_known_knots": {
+          "counts": {
+            "failed": 12,
+            "passed": 23
+          },
+          "resolved": false
+        },
+        "mutant_invalid_knots_removed": {
+          "counts": {
+            "failed": 2,
+            "passed": 33
+          },
+          "resolved": false
+        },
+        "mutant_local_time_gap_check": {
+          "counts": {
+            "failed": 1,
+            "passed": 34
+          },
+          "resolved": false
+        },
+        "mutant_marginal_coverage": {
+          "counts": {
+            "failed": 2,
+            "passed": 33
+          },
+          "resolved": false
+        },
+        "mutant_missing_accepted_retractions": {
+          "counts": {
+            "failed": 8,
+            "passed": 27
+          },
+          "resolved": false
+        },
+        "mutant_product_endpoint_trapezoid": {
+          "counts": {
+            "failed": 3,
+            "passed": 32
+          },
+          "resolved": false
+        },
+        "mutant_single_calibration_per_segment": {
+          "counts": {
+            "failed": 4,
+            "passed": 31
+          },
+          "resolved": false
+        }
+      }
+    },
+    {
+      "base_commit": "236bb3283d3e475fa57a73e23e6b57c86948837d",
+      "gate_test_count": 1,
+      "image_id": "sha256:9f1cdd6e6a7f78580c5ff64e3b00bba69bdf03ec5dc921f17fa3bae4c6c562fc",
+      "instance_id": "tsmc__f11-v2.0",
+      "issues": [],
+      "mutant_hidden_failures": {
+        "mutant_closed_right_endpoint": 5,
+        "mutant_count_jobs_instead_of_units": 2,
+        "mutant_ignore_ready": 7,
+        "mutant_one_maintenance_window": 3,
+        "mutant_one_open_window": 4,
+        "mutant_preemptive_booking": 5,
+        "mutant_reset_at_capacity_change": 1,
+        "mutant_window_level_capacity": 16
+      },
+      "original_test_count": 25,
+      "task_id": "F11",
+      "variants": {
+        "baseline": {
+          "counts": {
+            "failed": 19,
+            "passed": 6
+          },
+          "resolved": false
+        },
+        "gold": {
+          "counts": {
+            "failed": 0,
+            "passed": 25
+          },
+          "resolved": true
+        },
+        "gold_repeat": {
+          "counts": {
+            "failed": 0,
+            "passed": 25
+          },
+          "resolved": true
+        },
+        "mutant_closed_right_endpoint": {
+          "counts": {
+            "failed": 7,
+            "passed": 18
+          },
+          "resolved": false
+        },
+        "mutant_count_jobs_instead_of_units": {
+          "counts": {
+            "failed": 3,
+            "passed": 22
+          },
+          "resolved": false
+        },
+        "mutant_ignore_ready": {
+          "counts": {
+            "failed": 7,
+            "passed": 18
+          },
+          "resolved": false
+        },
+        "mutant_one_maintenance_window": {
+          "counts": {
+            "failed": 3,
+            "passed": 22
+          },
+          "resolved": false
+        },
+        "mutant_one_open_window": {
+          "counts": {
+            "failed": 4,
+            "passed": 21
+          },
+          "resolved": false
+        },
+        "mutant_preemptive_booking": {
+          "counts": {
+            "failed": 6,
+            "passed": 19
+          },
+          "resolved": false
+        },
+        "mutant_reset_at_capacity_change": {
+          "counts": {
+            "failed": 2,
+            "passed": 23
+          },
+          "resolved": false
+        },
+        "mutant_window_level_capacity": {
+          "counts": {
+            "failed": 19,
+            "passed": 6
+          },
+          "resolved": false
+        }
+      }
+    },
+    {
+      "base_commit": "a683439d24b5ebc63d58a939824abf795590518c",
+      "gate_test_count": 1,
+      "image_id": "sha256:4ae738f797ff2a9d28f1c62f596f8affb637003b54fdbd88bb6ef9b9d05b8fea",
+      "instance_id": "tsmc__f25-v2.0",
+      "issues": [],
+      "mutant_hidden_failures": {
+        "mutant_accept_incomplete_marking": 14,
+        "mutant_cache_ignores_event_mask": 6,
+        "mutant_cache_ignores_marking": 13,
+        "mutant_discard_log_moves": 8,
+        "mutant_discard_model_moves": 12,
+        "mutant_first_discovered_state": 10,
+        "mutant_greedy_local_alignment": 9,
+        "mutant_ignore_tie_improvement": 6,
+        "mutant_preconsumption_capacity": 2,
+        "mutant_premature_group_advance": 8,
+        "mutant_serialized_observation_group": 7,
+        "mutant_unit_deviation_costs": 15,
+        "mutant_unweighted_token_firing": 3
+      },
+      "original_test_count": 34,
+      "task_id": "F25",
+      "variants": {
+        "baseline": {
+          "counts": {
+            "failed": 18,
+            "passed": 16
+          },
+          "resolved": false
+        },
+        "gold": {
+          "counts": {
+            "failed": 0,
+            "passed": 34
+          },
+          "resolved": true
+        },
+        "gold_repeat": {
+          "counts": {
+            "failed": 0,
+            "passed": 34
+          },
+          "resolved": true
+        },
+        "mutant_accept_incomplete_marking": {
+          "counts": {
+            "failed": 15,
+            "passed": 19
+          },
+          "resolved": false
+        },
+        "mutant_cache_ignores_event_mask": {
+          "counts": {
+            "failed": 6,
+            "passed": 28
+          },
+          "resolved": false
+        },
+        "mutant_cache_ignores_marking": {
+          "counts": {
+            "failed": 15,
+            "passed": 19
+          },
+          "resolved": false
+        },
+        "mutant_discard_log_moves": {
+          "counts": {
+            "failed": 9,
+            "passed": 25
+          },
+          "resolved": false
+        },
+        "mutant_discard_model_moves": {
+          "counts": {
+            "failed": 13,
+            "passed": 21
+          },
+          "resolved": false
+        },
+        "mutant_first_discovered_state": {
+          "counts": {
+            "failed": 10,
+            "passed": 24
+          },
+          "resolved": false
+        },
+        "mutant_greedy_local_alignment": {
+          "counts": {
+            "failed": 11,
+            "passed": 23
+          },
+          "resolved": false
+        },
+        "mutant_ignore_tie_improvement": {
+          "counts": {
+            "failed": 6,
+            "passed": 28
+          },
+          "resolved": false
+        },
+        "mutant_preconsumption_capacity": {
+          "counts": {
+            "failed": 2,
+            "passed": 32
+          },
+          "resolved": false
+        },
+        "mutant_premature_group_advance": {
+          "counts": {
+            "failed": 9,
+            "passed": 25
+          },
+          "resolved": false
+        },
+        "mutant_serialized_observation_group": {
+          "counts": {
+            "failed": 8,
+            "passed": 26
+          },
+          "resolved": false
+        },
+        "mutant_unit_deviation_costs": {
+          "counts": {
+            "failed": 17,
+            "passed": 17
+          },
+          "resolved": false
+        },
+        "mutant_unweighted_token_firing": {
+          "counts": {
+            "failed": 3,
+            "passed": 31
+          },
+          "resolved": false
+        }
+      }
+    },
+    {
+      "base_commit": "d1e27f4335e514c34f62ffd1f2e5e1d16d973488",
+      "gate_test_count": 1,
+      "image_id": "sha256:33c51e7dd9dc4deedd4621a5949605d14ea83c8404abe753682ced7530cc711e",
+      "instance_id": "tsmc__r13-v2.0",
+      "issues": [],
+      "mutant_hidden_failures": {
+        "mutant_generation_ignored": 4,
+        "mutant_orphan_producer": 7,
+        "mutant_scope_ignored": 1,
+        "mutant_stale_retirement": 3,
+        "mutant_unscoped_generations": 5,
+        "mutant_unshielded_waiter": 4
+      },
+      "original_test_count": 23,
+      "task_id": "R13",
+      "variants": {
+        "baseline": {
+          "counts": {
+            "failed": 11,
+            "passed": 12
+          },
+          "resolved": false
+        },
+        "gold": {
+          "counts": {
+            "failed": 0,
+            "passed": 23
+          },
+          "resolved": true
+        },
+        "gold_repeat": {
+          "counts": {
+            "failed": 0,
+            "passed": 23
+          },
+          "resolved": true
+        },
+        "mutant_generation_ignored": {
+          "counts": {
+            "failed": 5,
+            "passed": 18
+          },
+          "resolved": false
+        },
+        "mutant_orphan_producer": {
+          "counts": {
+            "failed": 7,
+            "passed": 16
+          },
+          "resolved": false
+        },
+        "mutant_scope_ignored": {
+          "counts": {
+            "failed": 2,
+            "passed": 21
+          },
+          "resolved": false
+        },
+        "mutant_stale_retirement": {
+          "counts": {
+            "failed": 3,
+            "passed": 20
+          },
+          "resolved": false
+        },
+        "mutant_unscoped_generations": {
+          "counts": {
+            "failed": 7,
+            "passed": 16
+          },
+          "resolved": false
+        },
+        "mutant_unshielded_waiter": {
+          "counts": {
+            "failed": 5,
+            "passed": 18
+          },
+          "resolved": false
+        }
+      }
+    },
+    {
+      "base_commit": "ee4309d3c3d8ad5b8ec1403449bb8258af11004a",
+      "gate_test_count": 1,
+      "image_id": "sha256:d673adb21de2e9c20031b2c5e8fa6ad32e532f079eb3934a034ff1dd18b4e641",
+      "instance_id": "tsmc__r21-v2.0",
+      "issues": [],
+      "mutant_hidden_failures": {
+        "mutant_bool_is_number": 2,
+        "mutant_cell_without_plant": 1,
+        "mutant_drops_rejected_receipt": 2,
+        "mutant_payload_only_identity": 4,
+        "mutant_sorts_arrays": 2,
+        "mutant_state_before_receipt": 1
+      },
+      "original_test_count": 23,
+      "task_id": "R21",
+      "variants": {
+        "baseline": {
+          "counts": {
+            "failed": 11,
+            "passed": 12
+          },
+          "resolved": false
+        },
+        "gold": {
+          "counts": {
+            "failed": 0,
+            "passed": 23
+          },
+          "resolved": true
+        },
+        "gold_repeat": {
+          "counts": {
+            "failed": 0,
+            "passed": 23
+          },
+          "resolved": true
+        },
+        "mutant_bool_is_number": {
+          "counts": {
+            "failed": 2,
+            "passed": 21
+          },
+          "resolved": false
+        },
+        "mutant_cell_without_plant": {
+          "counts": {
+            "failed": 2,
+            "passed": 21
+          },
+          "resolved": false
+        },
+        "mutant_drops_rejected_receipt": {
+          "counts": {
+            "failed": 2,
+            "passed": 21
+          },
+          "resolved": false
+        },
+        "mutant_payload_only_identity": {
+          "counts": {
+            "failed": 5,
+            "passed": 18
+          },
+          "resolved": false
+        },
+        "mutant_sorts_arrays": {
+          "counts": {
+            "failed": 2,
+            "passed": 21
+          },
+          "resolved": false
+        },
+        "mutant_state_before_receipt": {
+          "counts": {
+            "failed": 2,
+            "passed": 21
+          },
+          "resolved": false
+        }
+      }
+    },
+    {
+      "base_commit": "b105048773db1b04f2f502f0e1d593930ca687db",
+      "gate_test_count": 1,
+      "image_id": "sha256:807e2d7d29c1fc0dd2b1ef98716ff51339566e3ab26a49e634513c550a6cca28",
+      "instance_id": "tsmc__r29-v2.0",
+      "issues": [],
+      "mutant_hidden_failures": {
+        "mutant_ack_before_sink": 5,
+        "mutant_ackless_compaction": 2,
+        "mutant_aggressive_compaction": 3,
+        "mutant_compaction_commits_before_crash": 1,
+        "mutant_compaction_erases_idempotency": 7,
+        "mutant_eager_gap_reducer": 4,
+        "mutant_epoch_from_active_lease": 2,
+        "mutant_expiry_is_inclusive": 1,
+        "mutant_owner_without_fencing": 4,
+        "mutant_split_source_commit": 2
+      },
+      "original_test_count": 34,
+      "task_id": "R29",
+      "variants": {
+        "baseline": {
+          "counts": {
+            "failed": 18,
+            "passed": 16
+          },
+          "resolved": false
+        },
+        "gold": {
+          "counts": {
+            "failed": 0,
+            "passed": 34
+          },
+          "resolved": true
+        },
+        "gold_repeat": {
+          "counts": {
+            "failed": 0,
+            "passed": 34
+          },
+          "resolved": true
+        },
+        "mutant_ack_before_sink": {
+          "counts": {
+            "failed": 5,
+            "passed": 29
+          },
+          "resolved": false
+        },
+        "mutant_ackless_compaction": {
+          "counts": {
+            "failed": 2,
+            "passed": 32
+          },
+          "resolved": false
+        },
+        "mutant_aggressive_compaction": {
+          "counts": {
+            "failed": 4,
+            "passed": 30
+          },
+          "resolved": false
+        },
+        "mutant_compaction_commits_before_crash": {
+          "counts": {
+            "failed": 1,
+            "passed": 33
+          },
+          "resolved": false
+        },
+        "mutant_compaction_erases_idempotency": {
+          "counts": {
+            "failed": 7,
+            "passed": 27
+          },
+          "resolved": false
+        },
+        "mutant_eager_gap_reducer": {
+          "counts": {
+            "failed": 5,
+            "passed": 29
+          },
+          "resolved": false
+        },
+        "mutant_epoch_from_active_lease": {
+          "counts": {
+            "failed": 2,
+            "passed": 32
+          },
+          "resolved": false
+        },
+        "mutant_expiry_is_inclusive": {
+          "counts": {
+            "failed": 1,
+            "passed": 33
+          },
+          "resolved": false
+        },
+        "mutant_owner_without_fencing": {
+          "counts": {
+            "failed": 4,
+            "passed": 30
+          },
+          "resolved": false
+        },
+        "mutant_split_source_commit": {
+          "counts": {
+            "failed": 2,
+            "passed": 32
+          },
+          "resolved": false
+        }
+      }
+    }
+  ],
+  "unchanged_heldout_tasks": 55,
+  "unchanged_tasks": 83
+}

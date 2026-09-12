@@ -1,0 +1,1299 @@
+{
+  "lots": {
+    "L0": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L1": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L2": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L3": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L4": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L5": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L6": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L7": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L8": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L9": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L10": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L11": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L12": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L13": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L14": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L15": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L16": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L17": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L18": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L19": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L20": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L21": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L22": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L23": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L24": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L25": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L26": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L27": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L28": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L29": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L30": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L31": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L32": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L33": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L34": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L35": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L36": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L37": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L38": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L39": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L40": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L41": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L42": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L43": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L44": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L45": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L46": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L47": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L48": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L49": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L50": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L51": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L52": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L53": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L54": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L55": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L56": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L57": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L58": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L59": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L60": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L61": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L62": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L63": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L64": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L65": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L66": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L67": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L68": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L69": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L70": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L71": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L72": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L73": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L74": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L75": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L76": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L77": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L78": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L79": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L80": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L81": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L82": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L83": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L84": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L85": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L86": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L87": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L88": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L89": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L90": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L91": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L92": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L93": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L94": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L95": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L96": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L97": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L98": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L99": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L100": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L101": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L102": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L103": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L104": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L105": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L106": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L107": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L108": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L109": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L110": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L111": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L112": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L113": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L114": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L115": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L116": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L117": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L118": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L119": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L120": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L121": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L122": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L123": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L124": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L125": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L126": {
+      "status": "WAITING",
+      "quality_hold": true,
+      "product_id": "P",
+      "step_id": "S"
+    },
+    "L127": {
+      "status": "WAITING",
+      "quality_hold": false,
+      "product_id": "P",
+      "step_id": "S"
+    }
+  },
+  "machines": {
+    "M": {
+      "state": "AVAILABLE"
+    }
+  },
+  "qualifications": [
+    {
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S",
+      "valid": true
+    }
+  ],
+  "assignments": [
+    {
+      "lot_id": "L0",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L1",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L2",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L3",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L4",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L5",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L6",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L7",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L8",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L9",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L10",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L11",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L12",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L13",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L14",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L15",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L16",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L17",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L18",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L19",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L20",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L21",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L22",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L23",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L24",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L25",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L26",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L27",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L28",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L29",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L30",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L31",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L32",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L33",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L34",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L35",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L36",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L37",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L38",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L39",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L40",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L41",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L42",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L43",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L44",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L45",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L46",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L47",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L48",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L49",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L50",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L51",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L52",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L53",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L54",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L55",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L56",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L57",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L58",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L59",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L60",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L61",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L62",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L63",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L64",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L65",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L66",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L67",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L68",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L69",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L70",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L71",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L72",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L73",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L74",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L75",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L76",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L77",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L78",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L79",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L80",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L81",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L82",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L83",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L84",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L85",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L86",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L87",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L88",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L89",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L90",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L91",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L92",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L93",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L94",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L95",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L96",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L97",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L98",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L99",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L100",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L101",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L102",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L103",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L104",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L105",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L106",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L107",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L108",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L109",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L110",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L111",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L112",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L113",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L114",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L115",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L116",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L117",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L118",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L119",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L120",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L121",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L122",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L123",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L124",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L125",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L126",
+      "machine_id": "M"
+    },
+    {
+      "lot_id": "L127",
+      "machine_id": "M"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "commands": [
+    {
+      "op": "join",
+      "waiter": "a",
+      "job": "p",
+      "scope": "cell",
+      "key": "sensor",
+      "resistant": false
+    },
+    {
+      "op": "finish",
+      "job": "p",
+      "value": 3
+    }
+  ]
+}

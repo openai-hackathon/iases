@@ -1,0 +1,43 @@
+{
+  "parts": [
+    "q",
+    "p"
+  ],
+  "stations": [
+    "other",
+    "s"
+  ],
+  "measurements": [
+    {
+      "id": "m",
+      "revision": 1,
+      "recorded": 1,
+      "event": 4,
+      "raw": "10",
+      "part": "p",
+      "station": "s",
+      "valid": true,
+      "deleted": false,
+      "calibration": "c"
+    }
+  ],
+  "calibrations": [
+    {
+      "id": "c",
+      "revision": 1,
+      "recorded": 0,
+      "start": 0,
+      "end": 20,
+      "gain": "1",
+      "offset": "0",
+      "deleted": false
+    }
+  ],
+  "quality": [],
+  "queries": [
+    {
+      "asof": 10,
+      "at": 10
+    }
+  ]
+}

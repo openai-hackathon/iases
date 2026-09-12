@@ -1,0 +1,17 @@
+[
+  {
+    "sensor_id": "P1",
+    "value_base": 3000.0,
+    "status": "ALARM"
+  },
+  {
+    "sensor_id": "T1",
+    "value_base": 27.0,
+    "status": "ALARM"
+  },
+  {
+    "sensor_id": "P1",
+    "value_base": null,
+    "status": "MISSING"
+  }
+]

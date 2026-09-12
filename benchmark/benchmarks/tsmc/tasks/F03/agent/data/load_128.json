@@ -1,0 +1,772 @@
+{
+  "events": [
+    {
+      "machine_id": "M0",
+      "sequence": 24,
+      "new_state": "AVAILABLE",
+      "event_id": "e24"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 38,
+      "new_state": "AVAILABLE",
+      "event_id": "e38"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 74,
+      "new_state": "AVAILABLE",
+      "event_id": "e74"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 96,
+      "new_state": "AVAILABLE",
+      "event_id": "e96"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 82,
+      "new_state": "AVAILABLE",
+      "event_id": "e82"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 78,
+      "new_state": "AVAILABLE",
+      "event_id": "e78"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 53,
+      "new_state": "BUSY",
+      "event_id": "e53"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 39,
+      "new_state": "BUSY",
+      "event_id": "e39"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 18,
+      "new_state": "AVAILABLE",
+      "event_id": "e18"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 98,
+      "new_state": "AVAILABLE",
+      "event_id": "e98"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 81,
+      "new_state": "BUSY",
+      "event_id": "e81"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 0,
+      "new_state": "AVAILABLE",
+      "event_id": "e0"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 122,
+      "new_state": "AVAILABLE",
+      "event_id": "e122"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 111,
+      "new_state": "BUSY",
+      "event_id": "e111"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 22,
+      "new_state": "AVAILABLE",
+      "event_id": "e22"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 46,
+      "new_state": "AVAILABLE",
+      "event_id": "e46"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 70,
+      "new_state": "AVAILABLE",
+      "event_id": "e70"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 48,
+      "new_state": "AVAILABLE",
+      "event_id": "e48"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 123,
+      "new_state": "BUSY",
+      "event_id": "e123"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 61,
+      "new_state": "BUSY",
+      "event_id": "e61"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 1,
+      "new_state": "BUSY",
+      "event_id": "e1"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 14,
+      "new_state": "AVAILABLE",
+      "event_id": "e14"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 66,
+      "new_state": "AVAILABLE",
+      "event_id": "e66"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 30,
+      "new_state": "AVAILABLE",
+      "event_id": "e30"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 11,
+      "new_state": "BUSY",
+      "event_id": "e11"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 34,
+      "new_state": "AVAILABLE",
+      "event_id": "e34"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 93,
+      "new_state": "BUSY",
+      "event_id": "e93"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 101,
+      "new_state": "BUSY",
+      "event_id": "e101"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 116,
+      "new_state": "AVAILABLE",
+      "event_id": "e116"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 80,
+      "new_state": "AVAILABLE",
+      "event_id": "e80"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 45,
+      "new_state": "BUSY",
+      "event_id": "e45"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 47,
+      "new_state": "BUSY",
+      "event_id": "e47"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 117,
+      "new_state": "BUSY",
+      "event_id": "e117"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 103,
+      "new_state": "BUSY",
+      "event_id": "e103"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 69,
+      "new_state": "BUSY",
+      "event_id": "e69"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 118,
+      "new_state": "AVAILABLE",
+      "event_id": "e118"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 32,
+      "new_state": "AVAILABLE",
+      "event_id": "e32"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 37,
+      "new_state": "BUSY",
+      "event_id": "e37"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 44,
+      "new_state": "AVAILABLE",
+      "event_id": "e44"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 119,
+      "new_state": "BUSY",
+      "event_id": "e119"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 51,
+      "new_state": "BUSY",
+      "event_id": "e51"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 2,
+      "new_state": "AVAILABLE",
+      "event_id": "e2"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 33,
+      "new_state": "BUSY",
+      "event_id": "e33"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 52,
+      "new_state": "AVAILABLE",
+      "event_id": "e52"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 125,
+      "new_state": "BUSY",
+      "event_id": "e125"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 50,
+      "new_state": "AVAILABLE",
+      "event_id": "e50"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 91,
+      "new_state": "BUSY",
+      "event_id": "e91"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 23,
+      "new_state": "BUSY",
+      "event_id": "e23"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 58,
+      "new_state": "AVAILABLE",
+      "event_id": "e58"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 12,
+      "new_state": "AVAILABLE",
+      "event_id": "e12"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 95,
+      "new_state": "BUSY",
+      "event_id": "e95"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 90,
+      "new_state": "AVAILABLE",
+      "event_id": "e90"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 26,
+      "new_state": "AVAILABLE",
+      "event_id": "e26"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 124,
+      "new_state": "AVAILABLE",
+      "event_id": "e124"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 43,
+      "new_state": "BUSY",
+      "event_id": "e43"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 85,
+      "new_state": "BUSY",
+      "event_id": "e85"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 97,
+      "new_state": "BUSY",
+      "event_id": "e97"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 36,
+      "new_state": "AVAILABLE",
+      "event_id": "e36"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 49,
+      "new_state": "BUSY",
+      "event_id": "e49"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 109,
+      "new_state": "BUSY",
+      "event_id": "e109"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 64,
+      "new_state": "AVAILABLE",
+      "event_id": "e64"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 108,
+      "new_state": "AVAILABLE",
+      "event_id": "e108"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 9,
+      "new_state": "BUSY",
+      "event_id": "e9"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 120,
+      "new_state": "AVAILABLE",
+      "event_id": "e120"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 59,
+      "new_state": "BUSY",
+      "event_id": "e59"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 54,
+      "new_state": "AVAILABLE",
+      "event_id": "e54"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 83,
+      "new_state": "BUSY",
+      "event_id": "e83"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 41,
+      "new_state": "BUSY",
+      "event_id": "e41"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 4,
+      "new_state": "AVAILABLE",
+      "event_id": "e4"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 6,
+      "new_state": "AVAILABLE",
+      "event_id": "e6"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 121,
+      "new_state": "BUSY",
+      "event_id": "e121"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 35,
+      "new_state": "BUSY",
+      "event_id": "e35"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 77,
+      "new_state": "BUSY",
+      "event_id": "e77"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 94,
+      "new_state": "AVAILABLE",
+      "event_id": "e94"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 67,
+      "new_state": "BUSY",
+      "event_id": "e67"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 28,
+      "new_state": "AVAILABLE",
+      "event_id": "e28"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 21,
+      "new_state": "BUSY",
+      "event_id": "e21"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 102,
+      "new_state": "AVAILABLE",
+      "event_id": "e102"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 17,
+      "new_state": "BUSY",
+      "event_id": "e17"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 40,
+      "new_state": "AVAILABLE",
+      "event_id": "e40"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 20,
+      "new_state": "AVAILABLE",
+      "event_id": "e20"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 99,
+      "new_state": "BUSY",
+      "event_id": "e99"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 31,
+      "new_state": "BUSY",
+      "event_id": "e31"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 126,
+      "new_state": "AVAILABLE",
+      "event_id": "e126"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 92,
+      "new_state": "AVAILABLE",
+      "event_id": "e92"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 104,
+      "new_state": "AVAILABLE",
+      "event_id": "e104"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 16,
+      "new_state": "AVAILABLE",
+      "event_id": "e16"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 29,
+      "new_state": "BUSY",
+      "event_id": "e29"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 19,
+      "new_state": "BUSY",
+      "event_id": "e19"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 100,
+      "new_state": "AVAILABLE",
+      "event_id": "e100"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 56,
+      "new_state": "AVAILABLE",
+      "event_id": "e56"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 113,
+      "new_state": "BUSY",
+      "event_id": "e113"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 13,
+      "new_state": "BUSY",
+      "event_id": "e13"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 65,
+      "new_state": "BUSY",
+      "event_id": "e65"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 107,
+      "new_state": "BUSY",
+      "event_id": "e107"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 5,
+      "new_state": "BUSY",
+      "event_id": "e5"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 63,
+      "new_state": "BUSY",
+      "event_id": "e63"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 68,
+      "new_state": "AVAILABLE",
+      "event_id": "e68"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 105,
+      "new_state": "BUSY",
+      "event_id": "e105"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 42,
+      "new_state": "AVAILABLE",
+      "event_id": "e42"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 8,
+      "new_state": "AVAILABLE",
+      "event_id": "e8"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 75,
+      "new_state": "BUSY",
+      "event_id": "e75"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 84,
+      "new_state": "AVAILABLE",
+      "event_id": "e84"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 7,
+      "new_state": "BUSY",
+      "event_id": "e7"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 72,
+      "new_state": "AVAILABLE",
+      "event_id": "e72"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 110,
+      "new_state": "AVAILABLE",
+      "event_id": "e110"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 71,
+      "new_state": "BUSY",
+      "event_id": "e71"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 57,
+      "new_state": "BUSY",
+      "event_id": "e57"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 62,
+      "new_state": "AVAILABLE",
+      "event_id": "e62"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 115,
+      "new_state": "BUSY",
+      "event_id": "e115"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 88,
+      "new_state": "AVAILABLE",
+      "event_id": "e88"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 25,
+      "new_state": "BUSY",
+      "event_id": "e25"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 10,
+      "new_state": "AVAILABLE",
+      "event_id": "e10"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 60,
+      "new_state": "AVAILABLE",
+      "event_id": "e60"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 112,
+      "new_state": "AVAILABLE",
+      "event_id": "e112"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 114,
+      "new_state": "AVAILABLE",
+      "event_id": "e114"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 106,
+      "new_state": "AVAILABLE",
+      "event_id": "e106"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 76,
+      "new_state": "AVAILABLE",
+      "event_id": "e76"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 86,
+      "new_state": "AVAILABLE",
+      "event_id": "e86"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 73,
+      "new_state": "BUSY",
+      "event_id": "e73"
+    },
+    {
+      "machine_id": "M2",
+      "sequence": 89,
+      "new_state": "BUSY",
+      "event_id": "e89"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 79,
+      "new_state": "BUSY",
+      "event_id": "e79"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 3,
+      "new_state": "BUSY",
+      "event_id": "e3"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 127,
+      "new_state": "BUSY",
+      "event_id": "e127"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 27,
+      "new_state": "BUSY",
+      "event_id": "e27"
+    },
+    {
+      "machine_id": "M1",
+      "sequence": 55,
+      "new_state": "BUSY",
+      "event_id": "e55"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 87,
+      "new_state": "BUSY",
+      "event_id": "e87"
+    },
+    {
+      "machine_id": "M0",
+      "sequence": 15,
+      "new_state": "BUSY",
+      "event_id": "e15"
+    }
+  ]
+}

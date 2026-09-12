@@ -1,0 +1,27 @@
+{
+  "capacities": {
+    "done": 3,
+    "raw": 3
+  },
+  "initial": {
+    "raw": 1
+  },
+  "final": {
+    "done": 1
+  },
+  "transitions": [
+    {
+      "id": "etch",
+      "label": "etch",
+      "consume": {
+        "raw": 1
+      },
+      "produce": {
+        "done": 1
+      }
+    }
+  ],
+  "trace": [
+    "etch"
+  ]
+}

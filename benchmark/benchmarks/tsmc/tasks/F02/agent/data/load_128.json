@@ -1,0 +1,2053 @@
+{
+  "qualifications": [],
+  "actions": [
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 0,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 1,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 2,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 3,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 4,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 5,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 6,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 7,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 8,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 9,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 10,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 11,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 12,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 13,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 14,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 15,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 16,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 17,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 18,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 19,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 20,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 21,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 22,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 23,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 24,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 25,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 26,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 27,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 28,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 29,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 30,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 31,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 32,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 33,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 34,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 35,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 36,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 37,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 38,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 39,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 40,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 41,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 42,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 43,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 44,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 45,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 46,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 47,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 48,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 49,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 50,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 51,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 52,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 53,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 54,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 55,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 56,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 57,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 58,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 59,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 60,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 61,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 62,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 63,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 64,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 65,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 66,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 67,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 68,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 69,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 70,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 71,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 72,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 73,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 74,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 75,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 76,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 77,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 78,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 79,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 80,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 81,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 82,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 83,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 84,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 85,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 86,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 87,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 88,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 89,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 90,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 91,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 92,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 93,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 94,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 95,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 96,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 97,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 98,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 99,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 100,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 101,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 102,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 103,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 104,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 105,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 106,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 107,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 108,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 109,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 110,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 111,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 112,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 113,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 114,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 115,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 116,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 117,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 118,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 119,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 120,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 121,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 122,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 123,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 124,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 125,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 126,
+        "valid": true
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    },
+    {
+      "op": "update",
+      "record": {
+        "machine_id": "M",
+        "product_id": "P",
+        "step_id": "S",
+        "version": 127,
+        "valid": false
+      }
+    },
+    {
+      "op": "query",
+      "machine_id": "M",
+      "product_id": "P",
+      "step_id": "S"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "d9575c0baa598e293f06ddda3f34d88658672de132970cf1218653f99f95f839",
+    "data/expected.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "data/request.json": "fb2989323b717f2e869a06272d8ee4b35b4e516d6a555f4ce3d19f9ee3606ff0",
+    "docs/contract.md": "98da71a84e843d87666ada56bda7b48d1ca25629cd45a58fef9c4ed86a40ce58",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "9380669c0465dc71368cc97e6edd8a45194aa281e60f7830e31a4017d99a310b",
+    "problem_statement.md": "baba3a46a0a06352b593e047e4a507ce30ca24c9cbd776a4f5df1aa9fc826061",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "04f95cf04775858d1764f91d71bb74d8906a94259202435b9c65c3aa9cd9929c"
+  },
+  "baseline_git_commit": "883394d79ac7c809cd0774e4ac94e3cdc1059df4",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Resolve record identity and corrections before aggregation across changing groups.",
+  "family_id": "leaf_identity_yield_rollup",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "production-log",
+    "secom"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "A19",
+  "test_count": 11,
+  "title": "Repeated leaf records inflate hierarchical yield reports",
+  "track": "data_analysis",
+  "version": "1.0"
+}

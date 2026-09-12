@@ -1,0 +1,28 @@
+{
+  "training": [
+    "a",
+    "b"
+  ],
+  "center": [
+    1.0,
+    1.0
+  ],
+  "scale": [
+    1.0,
+    1.0
+  ],
+  "correlation": [
+    [
+      1.0,
+      0.5
+    ],
+    [
+      0.5,
+      1.0
+    ]
+  ],
+  "score": 5.333333,
+  "decision": "alarm",
+  "calibration": [],
+  "threshold": 5
+}

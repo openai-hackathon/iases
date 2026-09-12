@@ -1,0 +1,12 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index a43eec4..44d254c 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -1,6 +1,6 @@
+ import statistics
+ def run(request):
+-    baseline = request["baseline"] + request["measurements"]
++    baseline = request["baseline"]
+     center = statistics.mean(baseline)
+     width = request["k"] * statistics.stdev(baseline)
+     return [abs(value - center) > width for value in request["measurements"]]

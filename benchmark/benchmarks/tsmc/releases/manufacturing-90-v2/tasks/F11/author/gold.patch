@@ -1,0 +1,13 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 619bf43..5d3f854 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -2,7 +2,7 @@ def run(request):
+     start, end = request["start"], request["end"]
+     cursor, blocked = start, 0
+     for left, right in sorted(request["maintenance"]):
+-        left, right = max(start, left), min(end, right)
++        left, right = max(start, left, cursor), min(end, right)
+         blocked += max(0, right - left)
+         cursor = max(cursor, right)
+     return end - start - blocked

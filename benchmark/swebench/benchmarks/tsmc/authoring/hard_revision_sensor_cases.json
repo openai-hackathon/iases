@@ -1,0 +1,3692 @@
+{
+  "A30": [
+    {
+      "expected": {
+        "calibration": [],
+        "center": [
+          2.5,
+          0.5
+        ],
+        "correlation": [
+          [
+            1.0,
+            -0.087039
+          ],
+          [
+            -0.087039,
+            1.0
+          ]
+        ],
+        "decision": "normal",
+        "scale": [
+          1.658312,
+          0.866025
+        ],
+        "score": 0.458015,
+        "threshold": 3,
+        "training": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "name": "unequal_campaign_mass",
+      "public": true,
+      "request": {
+        "cycles": [
+          {
+            "end": 1,
+            "features": [
+              0,
+              0
+            ],
+            "id": "a",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "old",
+            "start": 0
+          },
+          {
+            "end": 3,
+            "features": [
+              2,
+              2
+            ],
+            "id": "b",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "old",
+            "start": 2
+          },
+          {
+            "end": 5,
+            "features": [
+              4,
+              0
+            ],
+            "id": "c",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "new",
+            "start": 4
+          },
+          {
+            "end": 21,
+            "features": [
+              3,
+              1
+            ],
+            "id": "t",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "target",
+            "start": 20
+          }
+        ],
+        "embargo": 0,
+        "min_train": 2,
+        "shrinkage": 0.5,
+        "target": "t",
+        "threshold": 3
+      }
+    },
+    {
+      "expected": {
+        "calibration": [],
+        "center": [
+          2.5,
+          0.5
+        ],
+        "correlation": [
+          [
+            1.0,
+            -0.087039
+          ],
+          [
+            -0.087039,
+            1.0
+          ]
+        ],
+        "decision": "normal",
+        "scale": [
+          1.658312,
+          0.866025
+        ],
+        "score": 0.181818,
+        "threshold": 3,
+        "training": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "name": "observed_principal_subspace",
+      "public": true,
+      "request": {
+        "cycles": [
+          {
+            "end": 1,
+            "features": [
+              0,
+              0
+            ],
+            "id": "a",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "old",
+            "start": 0
+          },
+          {
+            "end": 3,
+            "features": [
+              2,
+              2
+            ],
+            "id": "b",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "old",
+            "start": 2
+          },
+          {
+            "end": 5,
+            "features": [
+              4,
+              0
+            ],
+            "id": "c",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "new",
+            "start": 4
+          },
+          {
+            "end": 21,
+            "features": [
+              3,
+              null
+            ],
+            "id": "t",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "target",
+            "start": 20
+          }
+        ],
+        "embargo": 0,
+        "min_observed": 1,
+        "min_train": 2,
+        "shrinkage": 0.5,
+        "target": "t",
+        "threshold": 3
+      }
+    },
+    {
+      "expected": {
+        "calibration": [
+          [
+            "new",
+            17.333333
+          ]
+        ],
+        "center": [
+          2.5,
+          0.5
+        ],
+        "correlation": [
+          [
+            1.0,
+            -0.087039
+          ],
+          [
+            -0.087039,
+            1.0
+          ]
+        ],
+        "decision": "normal",
+        "scale": [
+          1.658312,
+          0.866025
+        ],
+        "score": 0.458015,
+        "threshold": 17.333333,
+        "training": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "name": "purged_run_calibration",
+      "public": true,
+      "request": {
+        "alpha": 0.5,
+        "calibrate": true,
+        "cycles": [
+          {
+            "end": 1,
+            "features": [
+              0,
+              0
+            ],
+            "id": "a",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "old",
+            "start": 0
+          },
+          {
+            "end": 3,
+            "features": [
+              2,
+              2
+            ],
+            "id": "b",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "old",
+            "start": 2
+          },
+          {
+            "end": 5,
+            "features": [
+              4,
+              0
+            ],
+            "id": "c",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "new",
+            "start": 4
+          },
+          {
+            "end": 21,
+            "features": [
+              3,
+              1
+            ],
+            "id": "t",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "target",
+            "start": 20
+          }
+        ],
+        "embargo": 0,
+        "min_train": 2,
+        "shrinkage": 0.5,
+        "target": "t",
+        "threshold": 3
+      }
+    },
+    {
+      "expected": {
+        "calibration": [
+          [
+            "new",
+            17.333333
+          ]
+        ],
+        "center": [
+          2.5,
+          0.5
+        ],
+        "correlation": [
+          [
+            1.0,
+            -0.087039
+          ],
+          [
+            -0.087039,
+            1.0
+          ]
+        ],
+        "decision": "insufficient_calibration",
+        "scale": [
+          1.658312,
+          0.866025
+        ],
+        "score": 0.458015,
+        "threshold": null,
+        "training": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "name": "finite_sample_rank_0_1",
+      "public": false,
+      "request": {
+        "alpha": 0.1,
+        "calibrate": true,
+        "cycles": [
+          {
+            "end": 1,
+            "features": [
+              0,
+              0
+            ],
+            "id": "a",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "old",
+            "start": 0
+          },
+          {
+            "end": 3,
+            "features": [
+              2,
+              2
+            ],
+            "id": "b",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "old",
+            "start": 2
+          },
+          {
+            "end": 5,
+            "features": [
+              4,
+              0
+            ],
+            "id": "c",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "new",
+            "start": 4
+          },
+          {
+            "end": 21,
+            "features": [
+              3,
+              1
+            ],
+            "id": "t",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "target",
+            "start": 20
+          }
+        ],
+        "embargo": 0,
+        "min_train": 2,
+        "shrinkage": 0.5,
+        "target": "t",
+        "threshold": 3
+      }
+    },
+    {
+      "expected": {
+        "calibration": [
+          [
+            "new",
+            17.333333
+          ]
+        ],
+        "center": [
+          2.5,
+          0.5
+        ],
+        "correlation": [
+          [
+            1.0,
+            -0.087039
+          ],
+          [
+            -0.087039,
+            1.0
+          ]
+        ],
+        "decision": "normal",
+        "scale": [
+          1.658312,
+          0.866025
+        ],
+        "score": 0.458015,
+        "threshold": 17.333333,
+        "training": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "name": "finite_sample_rank_0_75",
+      "public": false,
+      "request": {
+        "alpha": 0.75,
+        "calibrate": true,
+        "cycles": [
+          {
+            "end": 1,
+            "features": [
+              0,
+              0
+            ],
+            "id": "a",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "old",
+            "start": 0
+          },
+          {
+            "end": 3,
+            "features": [
+              2,
+              2
+            ],
+            "id": "b",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "old",
+            "start": 2
+          },
+          {
+            "end": 5,
+            "features": [
+              4,
+              0
+            ],
+            "id": "c",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "new",
+            "start": 4
+          },
+          {
+            "end": 21,
+            "features": [
+              3,
+              1
+            ],
+            "id": "t",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "target",
+            "start": 20
+          }
+        ],
+        "embargo": 0,
+        "min_train": 2,
+        "shrinkage": 0.5,
+        "target": "t",
+        "threshold": 3
+      }
+    },
+    {
+      "expected": {
+        "calibration": [
+          [
+            "new",
+            76.0
+          ]
+        ],
+        "center": [
+          3.75,
+          1.0
+        ],
+        "correlation": [
+          [
+            1.0,
+            0.261602
+          ],
+          [
+            0.261602,
+            1.0
+          ]
+        ],
+        "decision": "normal",
+        "scale": [
+          3.344772,
+          1.0
+        ],
+        "score": 0.053973,
+        "threshold": 76.0,
+        "training": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "name": "worst_member_per_run",
+      "public": false,
+      "request": {
+        "alpha": 0.5,
+        "calibrate": true,
+        "cycles": [
+          {
+            "end": 1,
+            "features": [
+              0,
+              0
+            ],
+            "id": "a",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "old",
+            "start": 0
+          },
+          {
+            "end": 3,
+            "features": [
+              2,
+              2
+            ],
+            "id": "b",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "old",
+            "start": 2
+          },
+          {
+            "end": 5,
+            "features": [
+              4,
+              0
+            ],
+            "id": "c",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "new",
+            "start": 4
+          },
+          {
+            "end": 7,
+            "features": [
+              9,
+              2
+            ],
+            "id": "d",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "new",
+            "start": 6
+          },
+          {
+            "end": 21,
+            "features": [
+              3,
+              1
+            ],
+            "id": "t",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "target",
+            "start": 20
+          }
+        ],
+        "embargo": 0,
+        "min_train": 2,
+        "shrinkage": 0.5,
+        "target": "t",
+        "threshold": 3
+      }
+    },
+    {
+      "expected": {
+        "calibration": [],
+        "center": [
+          2.5,
+          0.5
+        ],
+        "correlation": [
+          [
+            1.0,
+            -0.087039
+          ],
+          [
+            -0.087039,
+            1.0
+          ]
+        ],
+        "decision": "normal",
+        "scale": [
+          1.658312,
+          0.866025
+        ],
+        "score": 0.666667,
+        "threshold": 3,
+        "training": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "name": "second_coordinate_only",
+      "public": false,
+      "request": {
+        "cycles": [
+          {
+            "end": 1,
+            "features": [
+              0,
+              0
+            ],
+            "id": "a",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "old",
+            "start": 0
+          },
+          {
+            "end": 3,
+            "features": [
+              2,
+              2
+            ],
+            "id": "b",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "old",
+            "start": 2
+          },
+          {
+            "end": 5,
+            "features": [
+              4,
+              0
+            ],
+            "id": "c",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "new",
+            "start": 4
+          },
+          {
+            "end": 21,
+            "features": [
+              null,
+              1
+            ],
+            "id": "t",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "target",
+            "start": 20
+          }
+        ],
+        "embargo": 0,
+        "min_observed": 1,
+        "min_train": 2,
+        "shrinkage": 0.5,
+        "target": "t",
+        "threshold": 3
+      }
+    },
+    {
+      "expected": {
+        "calibration": [],
+        "center": [
+          2.5,
+          0.5
+        ],
+        "correlation": [
+          [
+            1.0,
+            -0.087039
+          ],
+          [
+            -0.087039,
+            1.0
+          ]
+        ],
+        "decision": "deferred",
+        "scale": [
+          1.658312,
+          0.866025
+        ],
+        "score": null,
+        "threshold": 3,
+        "training": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "name": "no_observed_coordinate",
+      "public": false,
+      "request": {
+        "cycles": [
+          {
+            "end": 1,
+            "features": [
+              0,
+              0
+            ],
+            "id": "a",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "old",
+            "start": 0
+          },
+          {
+            "end": 3,
+            "features": [
+              2,
+              2
+            ],
+            "id": "b",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "old",
+            "start": 2
+          },
+          {
+            "end": 5,
+            "features": [
+              4,
+              0
+            ],
+            "id": "c",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "new",
+            "start": 4
+          },
+          {
+            "end": 21,
+            "features": [
+              null,
+              null
+            ],
+            "id": "t",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "target",
+            "start": 20
+          }
+        ],
+        "embargo": 0,
+        "min_observed": 1,
+        "min_train": 2,
+        "shrinkage": 0.5,
+        "target": "t",
+        "threshold": 3
+      }
+    },
+    {
+      "expected": {
+        "calibration": [],
+        "center": [
+          2.5,
+          0.5
+        ],
+        "correlation": [
+          [
+            1.0,
+            -0.087039
+          ],
+          [
+            -0.087039,
+            1.0
+          ]
+        ],
+        "decision": "insufficient_calibration",
+        "scale": [
+          1.658312,
+          0.866025
+        ],
+        "score": 0.458015,
+        "threshold": null,
+        "training": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "name": "calibration_embargo_removes_history",
+      "public": false,
+      "request": {
+        "alpha": 0.5,
+        "calibrate": true,
+        "cycles": [
+          {
+            "end": 1,
+            "features": [
+              0,
+              0
+            ],
+            "id": "a",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "old",
+            "start": 0
+          },
+          {
+            "end": 3,
+            "features": [
+              2,
+              2
+            ],
+            "id": "b",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "old",
+            "start": 2
+          },
+          {
+            "end": 5,
+            "features": [
+              4,
+              0
+            ],
+            "id": "c",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "new",
+            "start": 4
+          },
+          {
+            "end": 21,
+            "features": [
+              3,
+              1
+            ],
+            "id": "t",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "target",
+            "start": 20
+          }
+        ],
+        "embargo": 2,
+        "min_train": 2,
+        "shrinkage": 0.5,
+        "target": "t",
+        "threshold": 3
+      }
+    },
+    {
+      "expected": {
+        "calibration": [
+          [
+            "g1",
+            9.0
+          ],
+          [
+            "g2",
+            0.830508
+          ],
+          [
+            "g3",
+            4.2
+          ]
+        ],
+        "center": [
+          -0.125
+        ],
+        "correlation": [
+          [
+            1.0
+          ]
+        ],
+        "decision": "normal",
+        "scale": [
+          1.899836
+        ],
+        "score": 1.251082,
+        "threshold": 4.2,
+        "training": [
+          "p0",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7"
+        ]
+      },
+      "name": "dimension_1_calibration",
+      "public": false,
+      "request": {
+        "alpha": 0.6,
+        "calibrate": true,
+        "cycles": [
+          {
+            "end": 1,
+            "features": [
+              -1
+            ],
+            "id": "p0",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g0",
+            "start": 0
+          },
+          {
+            "end": 3,
+            "features": [
+              1
+            ],
+            "id": "p1",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g0",
+            "start": 2
+          },
+          {
+            "end": 5,
+            "features": [
+              3
+            ],
+            "id": "p2",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g1",
+            "start": 4
+          },
+          {
+            "end": 7,
+            "features": [
+              -2
+            ],
+            "id": "p3",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g1",
+            "start": 6
+          },
+          {
+            "end": 9,
+            "features": [
+              0
+            ],
+            "id": "p4",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g2",
+            "start": 8
+          },
+          {
+            "end": 11,
+            "features": [
+              2
+            ],
+            "id": "p5",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g2",
+            "start": 10
+          },
+          {
+            "end": 13,
+            "features": [
+              -3
+            ],
+            "id": "p6",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g3",
+            "start": 12
+          },
+          {
+            "end": 15,
+            "features": [
+              -1
+            ],
+            "id": "p7",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g3",
+            "start": 14
+          },
+          {
+            "end": 31,
+            "features": [
+              2
+            ],
+            "id": "t",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "target",
+            "start": 30
+          }
+        ],
+        "embargo": 0,
+        "min_train": 2,
+        "shrinkage": 0.2,
+        "target": "t",
+        "threshold": 3
+      }
+    },
+    {
+      "expected": {
+        "calibration": [
+          [
+            "g1",
+            72.606838
+          ],
+          [
+            "g2",
+            4.773019
+          ],
+          [
+            "g3",
+            46.322964
+          ]
+        ],
+        "center": [
+          -0.125,
+          0.0,
+          0.125
+        ],
+        "correlation": [
+          [
+            1.0,
+            0.196946,
+            0.363636
+          ],
+          [
+            0.196946,
+            1.0,
+            -0.196946
+          ],
+          [
+            0.363636,
+            -0.196946,
+            1.0
+          ]
+        ],
+        "decision": "normal",
+        "scale": [
+          1.899836,
+          1.870829,
+          1.899836
+        ],
+        "score": 2.843246,
+        "threshold": 46.322964,
+        "training": [
+          "p0",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7"
+        ]
+      },
+      "name": "dimension_3_calibration",
+      "public": false,
+      "request": {
+        "alpha": 0.6,
+        "calibrate": true,
+        "cycles": [
+          {
+            "end": 1,
+            "features": [
+              -1,
+              0,
+              1
+            ],
+            "id": "p0",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g0",
+            "start": 0
+          },
+          {
+            "end": 3,
+            "features": [
+              1,
+              3,
+              -2
+            ],
+            "id": "p1",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g0",
+            "start": 2
+          },
+          {
+            "end": 5,
+            "features": [
+              3,
+              -1,
+              2
+            ],
+            "id": "p2",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g1",
+            "start": 4
+          },
+          {
+            "end": 7,
+            "features": [
+              -2,
+              2,
+              -1
+            ],
+            "id": "p3",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g1",
+            "start": 6
+          },
+          {
+            "end": 9,
+            "features": [
+              0,
+              -2,
+              3
+            ],
+            "id": "p4",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g2",
+            "start": 8
+          },
+          {
+            "end": 11,
+            "features": [
+              2,
+              1,
+              0
+            ],
+            "id": "p5",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g2",
+            "start": 10
+          },
+          {
+            "end": 13,
+            "features": [
+              -3,
+              -3,
+              -3
+            ],
+            "id": "p6",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g3",
+            "start": 12
+          },
+          {
+            "end": 15,
+            "features": [
+              -1,
+              0,
+              1
+            ],
+            "id": "p7",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g3",
+            "start": 14
+          },
+          {
+            "end": 31,
+            "features": [
+              2,
+              2,
+              2
+            ],
+            "id": "t",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "target",
+            "start": 30
+          }
+        ],
+        "embargo": 0,
+        "min_train": 2,
+        "shrinkage": 0.2,
+        "target": "t",
+        "threshold": 3
+      }
+    },
+    {
+      "expected": {
+        "calibration": [
+          [
+            "g1",
+            72.606838
+          ],
+          [
+            "g2",
+            4.773019
+          ],
+          [
+            "g3",
+            46.322964
+          ]
+        ],
+        "center": [
+          -0.125,
+          0.0,
+          0.125
+        ],
+        "correlation": [
+          [
+            1.0,
+            0.196946,
+            0.363636
+          ],
+          [
+            0.196946,
+            1.0,
+            -0.196946
+          ],
+          [
+            0.363636,
+            -0.196946,
+            1.0
+          ]
+        ],
+        "decision": "normal",
+        "scale": [
+          1.899836,
+          1.870829,
+          1.899836
+        ],
+        "score": 2.458503,
+        "threshold": 46.322964,
+        "training": [
+          "p0",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7"
+        ]
+      },
+      "name": "dimension_3_missing",
+      "public": false,
+      "request": {
+        "alpha": 0.6,
+        "calibrate": true,
+        "cycles": [
+          {
+            "end": 1,
+            "features": [
+              -1,
+              0,
+              1
+            ],
+            "id": "p0",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g0",
+            "start": 0
+          },
+          {
+            "end": 3,
+            "features": [
+              1,
+              3,
+              -2
+            ],
+            "id": "p1",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g0",
+            "start": 2
+          },
+          {
+            "end": 5,
+            "features": [
+              3,
+              -1,
+              2
+            ],
+            "id": "p2",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g1",
+            "start": 4
+          },
+          {
+            "end": 7,
+            "features": [
+              -2,
+              2,
+              -1
+            ],
+            "id": "p3",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g1",
+            "start": 6
+          },
+          {
+            "end": 9,
+            "features": [
+              0,
+              -2,
+              3
+            ],
+            "id": "p4",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g2",
+            "start": 8
+          },
+          {
+            "end": 11,
+            "features": [
+              2,
+              1,
+              0
+            ],
+            "id": "p5",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g2",
+            "start": 10
+          },
+          {
+            "end": 13,
+            "features": [
+              -3,
+              -3,
+              -3
+            ],
+            "id": "p6",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g3",
+            "start": 12
+          },
+          {
+            "end": 15,
+            "features": [
+              -1,
+              0,
+              1
+            ],
+            "id": "p7",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g3",
+            "start": 14
+          },
+          {
+            "end": 31,
+            "features": [
+              2,
+              null,
+              2
+            ],
+            "id": "t",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "target",
+            "start": 30
+          }
+        ],
+        "embargo": 0,
+        "min_observed": 1,
+        "min_train": 2,
+        "shrinkage": 0.2,
+        "target": "t",
+        "threshold": 3
+      }
+    },
+    {
+      "expected": {
+        "calibration": [
+          [
+            "g1",
+            109.411765
+          ],
+          [
+            "g2",
+            4.872191
+          ],
+          [
+            "g3",
+            84.0
+          ]
+        ],
+        "center": [
+          -0.125,
+          0.0,
+          0.125,
+          0.25
+        ],
+        "correlation": [
+          [
+            1.0,
+            0.196946,
+            0.363636,
+            -0.232104
+          ],
+          [
+            0.196946,
+            1.0,
+            -0.196946,
+            0.377124
+          ],
+          [
+            0.363636,
+            -0.196946,
+            1.0,
+            0.232104
+          ],
+          [
+            -0.232104,
+            0.377124,
+            0.232104,
+            1.0
+          ]
+        ],
+        "decision": "normal",
+        "scale": [
+          1.899836,
+          1.870829,
+          1.899836,
+          1.984313
+        ],
+        "score": 3.039518,
+        "threshold": 84.0,
+        "training": [
+          "p0",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7"
+        ]
+      },
+      "name": "dimension_4_calibration",
+      "public": false,
+      "request": {
+        "alpha": 0.6,
+        "calibrate": true,
+        "cycles": [
+          {
+            "end": 1,
+            "features": [
+              -1,
+              0,
+              1,
+              2
+            ],
+            "id": "p0",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g0",
+            "start": 0
+          },
+          {
+            "end": 3,
+            "features": [
+              1,
+              3,
+              -2,
+              0
+            ],
+            "id": "p1",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g0",
+            "start": 2
+          },
+          {
+            "end": 5,
+            "features": [
+              3,
+              -1,
+              2,
+              -2
+            ],
+            "id": "p2",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g1",
+            "start": 4
+          },
+          {
+            "end": 7,
+            "features": [
+              -2,
+              2,
+              -1,
+              3
+            ],
+            "id": "p3",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g1",
+            "start": 6
+          },
+          {
+            "end": 9,
+            "features": [
+              0,
+              -2,
+              3,
+              1
+            ],
+            "id": "p4",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g2",
+            "start": 8
+          },
+          {
+            "end": 11,
+            "features": [
+              2,
+              1,
+              0,
+              -1
+            ],
+            "id": "p5",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g2",
+            "start": 10
+          },
+          {
+            "end": 13,
+            "features": [
+              -3,
+              -3,
+              -3,
+              -3
+            ],
+            "id": "p6",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g3",
+            "start": 12
+          },
+          {
+            "end": 15,
+            "features": [
+              -1,
+              0,
+              1,
+              2
+            ],
+            "id": "p7",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g3",
+            "start": 14
+          },
+          {
+            "end": 31,
+            "features": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "id": "t",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "target",
+            "start": 30
+          }
+        ],
+        "embargo": 0,
+        "min_train": 2,
+        "shrinkage": 0.2,
+        "target": "t",
+        "threshold": 3
+      }
+    },
+    {
+      "expected": {
+        "calibration": [
+          [
+            "g1",
+            109.411765
+          ],
+          [
+            "g2",
+            4.872191
+          ],
+          [
+            "g3",
+            84.0
+          ]
+        ],
+        "center": [
+          -0.125,
+          0.0,
+          0.125,
+          0.25
+        ],
+        "correlation": [
+          [
+            1.0,
+            0.196946,
+            0.363636,
+            -0.232104
+          ],
+          [
+            0.196946,
+            1.0,
+            -0.196946,
+            0.377124
+          ],
+          [
+            0.363636,
+            -0.196946,
+            1.0,
+            0.232104
+          ],
+          [
+            -0.232104,
+            0.377124,
+            0.232104,
+            1.0
+          ]
+        ],
+        "decision": "normal",
+        "scale": [
+          1.899836,
+          1.870829,
+          1.899836,
+          1.984313
+        ],
+        "score": 3.573323,
+        "threshold": 84.0,
+        "training": [
+          "p0",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7"
+        ]
+      },
+      "name": "dimension_4_missing",
+      "public": false,
+      "request": {
+        "alpha": 0.6,
+        "calibrate": true,
+        "cycles": [
+          {
+            "end": 1,
+            "features": [
+              -1,
+              0,
+              1,
+              2
+            ],
+            "id": "p0",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g0",
+            "start": 0
+          },
+          {
+            "end": 3,
+            "features": [
+              1,
+              3,
+              -2,
+              0
+            ],
+            "id": "p1",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g0",
+            "start": 2
+          },
+          {
+            "end": 5,
+            "features": [
+              3,
+              -1,
+              2,
+              -2
+            ],
+            "id": "p2",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g1",
+            "start": 4
+          },
+          {
+            "end": 7,
+            "features": [
+              -2,
+              2,
+              -1,
+              3
+            ],
+            "id": "p3",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g1",
+            "start": 6
+          },
+          {
+            "end": 9,
+            "features": [
+              0,
+              -2,
+              3,
+              1
+            ],
+            "id": "p4",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g2",
+            "start": 8
+          },
+          {
+            "end": 11,
+            "features": [
+              2,
+              1,
+              0,
+              -1
+            ],
+            "id": "p5",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g2",
+            "start": 10
+          },
+          {
+            "end": 13,
+            "features": [
+              -3,
+              -3,
+              -3,
+              -3
+            ],
+            "id": "p6",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g3",
+            "start": 12
+          },
+          {
+            "end": 15,
+            "features": [
+              -1,
+              0,
+              1,
+              2
+            ],
+            "id": "p7",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g3",
+            "start": 14
+          },
+          {
+            "end": 31,
+            "features": [
+              2,
+              null,
+              2,
+              2
+            ],
+            "id": "t",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "target",
+            "start": 30
+          }
+        ],
+        "embargo": 0,
+        "min_observed": 1,
+        "min_train": 2,
+        "shrinkage": 0.2,
+        "target": "t",
+        "threshold": 3
+      }
+    },
+    {
+      "expected": {
+        "calibration": [
+          [
+            "g1",
+            163.465608
+          ],
+          [
+            "g2",
+            11.056855
+          ],
+          [
+            "g3",
+            88.413164
+          ]
+        ],
+        "center": [
+          -0.125,
+          0.0,
+          0.125,
+          0.25,
+          0.375
+        ],
+        "correlation": [
+          [
+            1.0,
+            0.196946,
+            0.363636,
+            -0.232104,
+            0.108745
+          ],
+          [
+            0.196946,
+            1.0,
+            -0.196946,
+            0.377124,
+            0.353381
+          ],
+          [
+            0.363636,
+            -0.196946,
+            1.0,
+            0.232104,
+            0.23924
+          ],
+          [
+            -0.232104,
+            0.377124,
+            0.232104,
+            1.0,
+            0.45811
+          ],
+          [
+            0.108745,
+            0.353381,
+            0.23924,
+            0.45811,
+            1.0
+          ]
+        ],
+        "decision": "normal",
+        "scale": [
+          1.899836,
+          1.870829,
+          1.899836,
+          1.984313,
+          2.117634
+        ],
+        "score": 3.044196,
+        "threshold": 88.413164,
+        "training": [
+          "p0",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7"
+        ]
+      },
+      "name": "dimension_5_calibration",
+      "public": false,
+      "request": {
+        "alpha": 0.6,
+        "calibrate": true,
+        "cycles": [
+          {
+            "end": 1,
+            "features": [
+              -1,
+              0,
+              1,
+              2,
+              3
+            ],
+            "id": "p0",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g0",
+            "start": 0
+          },
+          {
+            "end": 3,
+            "features": [
+              1,
+              3,
+              -2,
+              0,
+              2
+            ],
+            "id": "p1",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g0",
+            "start": 2
+          },
+          {
+            "end": 5,
+            "features": [
+              3,
+              -1,
+              2,
+              -2,
+              1
+            ],
+            "id": "p2",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g1",
+            "start": 4
+          },
+          {
+            "end": 7,
+            "features": [
+              -2,
+              2,
+              -1,
+              3,
+              0
+            ],
+            "id": "p3",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g1",
+            "start": 6
+          },
+          {
+            "end": 9,
+            "features": [
+              0,
+              -2,
+              3,
+              1,
+              -1
+            ],
+            "id": "p4",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g2",
+            "start": 8
+          },
+          {
+            "end": 11,
+            "features": [
+              2,
+              1,
+              0,
+              -1,
+              -2
+            ],
+            "id": "p5",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g2",
+            "start": 10
+          },
+          {
+            "end": 13,
+            "features": [
+              -3,
+              -3,
+              -3,
+              -3,
+              -3
+            ],
+            "id": "p6",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g3",
+            "start": 12
+          },
+          {
+            "end": 15,
+            "features": [
+              -1,
+              0,
+              1,
+              2,
+              3
+            ],
+            "id": "p7",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g3",
+            "start": 14
+          },
+          {
+            "end": 31,
+            "features": [
+              2,
+              2,
+              2,
+              2,
+              2
+            ],
+            "id": "t",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "target",
+            "start": 30
+          }
+        ],
+        "embargo": 0,
+        "min_train": 2,
+        "shrinkage": 0.2,
+        "target": "t",
+        "threshold": 3
+      }
+    },
+    {
+      "expected": {
+        "calibration": [
+          [
+            "g1",
+            163.465608
+          ],
+          [
+            "g2",
+            11.056855
+          ],
+          [
+            "g3",
+            88.413164
+          ]
+        ],
+        "center": [
+          -0.125,
+          0.0,
+          0.125,
+          0.25,
+          0.375
+        ],
+        "correlation": [
+          [
+            1.0,
+            0.196946,
+            0.363636,
+            -0.232104,
+            0.108745
+          ],
+          [
+            0.196946,
+            1.0,
+            -0.196946,
+            0.377124,
+            0.353381
+          ],
+          [
+            0.363636,
+            -0.196946,
+            1.0,
+            0.232104,
+            0.23924
+          ],
+          [
+            -0.232104,
+            0.377124,
+            0.232104,
+            1.0,
+            0.45811
+          ],
+          [
+            0.108745,
+            0.353381,
+            0.23924,
+            0.45811,
+            1.0
+          ]
+        ],
+        "decision": "normal",
+        "scale": [
+          1.899836,
+          1.870829,
+          1.899836,
+          1.984313,
+          2.117634
+        ],
+        "score": 3.354679,
+        "threshold": 88.413164,
+        "training": [
+          "p0",
+          "p1",
+          "p2",
+          "p3",
+          "p4",
+          "p5",
+          "p6",
+          "p7"
+        ]
+      },
+      "name": "dimension_5_missing",
+      "public": false,
+      "request": {
+        "alpha": 0.6,
+        "calibrate": true,
+        "cycles": [
+          {
+            "end": 1,
+            "features": [
+              -1,
+              0,
+              1,
+              2,
+              3
+            ],
+            "id": "p0",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g0",
+            "start": 0
+          },
+          {
+            "end": 3,
+            "features": [
+              1,
+              3,
+              -2,
+              0,
+              2
+            ],
+            "id": "p1",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g0",
+            "start": 2
+          },
+          {
+            "end": 5,
+            "features": [
+              3,
+              -1,
+              2,
+              -2,
+              1
+            ],
+            "id": "p2",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g1",
+            "start": 4
+          },
+          {
+            "end": 7,
+            "features": [
+              -2,
+              2,
+              -1,
+              3,
+              0
+            ],
+            "id": "p3",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g1",
+            "start": 6
+          },
+          {
+            "end": 9,
+            "features": [
+              0,
+              -2,
+              3,
+              1,
+              -1
+            ],
+            "id": "p4",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g2",
+            "start": 8
+          },
+          {
+            "end": 11,
+            "features": [
+              2,
+              1,
+              0,
+              -1,
+              -2
+            ],
+            "id": "p5",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g2",
+            "start": 10
+          },
+          {
+            "end": 13,
+            "features": [
+              -3,
+              -3,
+              -3,
+              -3,
+              -3
+            ],
+            "id": "p6",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g3",
+            "start": 12
+          },
+          {
+            "end": 15,
+            "features": [
+              -1,
+              0,
+              1,
+              2,
+              3
+            ],
+            "id": "p7",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "g3",
+            "start": 14
+          },
+          {
+            "end": 31,
+            "features": [
+              2,
+              null,
+              2,
+              2,
+              2
+            ],
+            "id": "t",
+            "profile": [
+              100,
+              100,
+              0,
+              130,
+              0
+            ],
+            "run": "target",
+            "start": 30
+          }
+        ],
+        "embargo": 0,
+        "min_observed": 1,
+        "min_train": 2,
+        "shrinkage": 0.2,
+        "target": "t",
+        "threshold": 3
+      }
+    }
+  ],
+  "A31": [
+    {
+      "expected": {
+        "band_energy": 0.16,
+        "coherence": 0.0,
+        "coverage": 1.0,
+        "decision": "normal",
+        "phase": 0.0,
+        "ratio": 1.0,
+        "reference_energy": 0.16,
+        "segments": [
+          0,
+          4
+        ],
+        "slope": -0.4,
+        "total_energy": 0.16
+      },
+      "name": "opposite_windows_cancel_cross_spectrum",
+      "public": true,
+      "request": {
+        "band": [
+          0,
+          3
+        ],
+        "coherence_threshold": 0.5,
+        "energy_threshold": 0.01,
+        "max_gap": 1,
+        "min_coverage": 0.5,
+        "phase_limit": 3.141592653589793,
+        "ratio_threshold": 0,
+        "reference": [
+          0,
+          1,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          1
+        ],
+        "sample_rate": 4,
+        "samples": [
+          0,
+          1,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          -1
+        ],
+        "segment_length": 4,
+        "step": 4
+      }
+    },
+    {
+      "expected": {
+        "band_energy": 0.16,
+        "coherence": 0.605856,
+        "coverage": 1.0,
+        "decision": "alarm",
+        "phase": 2.485897,
+        "ratio": 1.0,
+        "reference_energy": 0.493333,
+        "segments": [
+          0,
+          4
+        ],
+        "slope": -0.4,
+        "total_energy": 0.16
+      },
+      "name": "signed_phase_0",
+      "public": true,
+      "request": {
+        "band": [
+          0,
+          3
+        ],
+        "coherence_threshold": 0.5,
+        "energy_threshold": 0.01,
+        "max_gap": 1,
+        "min_coverage": 0.5,
+        "phase_limit": 3.141592653589793,
+        "ratio_threshold": 0,
+        "reference": [
+          1,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          -1,
+          0
+        ],
+        "sample_rate": 4,
+        "samples": [
+          0,
+          1,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          -1
+        ],
+        "segment_length": 4,
+        "step": 4
+      }
+    },
+    {
+      "expected": {
+        "band_energy": 0.16,
+        "coherence": 1,
+        "coverage": 1.0,
+        "decision": "alarm",
+        "phase": 3.141593,
+        "ratio": 1.0,
+        "reference_energy": 0.16,
+        "segments": [
+          0,
+          4
+        ],
+        "slope": -0.4,
+        "total_energy": 0.16
+      },
+      "name": "signed_phase_1",
+      "public": false,
+      "request": {
+        "band": [
+          0,
+          3
+        ],
+        "coherence_threshold": 0.5,
+        "energy_threshold": 0.01,
+        "max_gap": 1,
+        "min_coverage": 0.5,
+        "phase_limit": 3.141592653589793,
+        "ratio_threshold": 0,
+        "reference": [
+          0,
+          -1,
+          0,
+          1,
+          0,
+          -1,
+          0,
+          1
+        ],
+        "sample_rate": 4,
+        "samples": [
+          0,
+          1,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          -1
+        ],
+        "segment_length": 4,
+        "step": 4
+      }
+    },
+    {
+      "expected": {
+        "band_energy": 0.16,
+        "coherence": 0.605856,
+        "coverage": 1.0,
+        "decision": "alarm",
+        "phase": -0.655696,
+        "ratio": 1.0,
+        "reference_energy": 0.493333,
+        "segments": [
+          0,
+          4
+        ],
+        "slope": -0.4,
+        "total_energy": 0.16
+      },
+      "name": "signed_phase_2",
+      "public": false,
+      "request": {
+        "band": [
+          0,
+          3
+        ],
+        "coherence_threshold": 0.5,
+        "energy_threshold": 0.01,
+        "max_gap": 1,
+        "min_coverage": 0.5,
+        "phase_limit": 3.141592653589793,
+        "ratio_threshold": 0,
+        "reference": [
+          -1,
+          0,
+          1,
+          0,
+          -1,
+          0,
+          1,
+          0
+        ],
+        "sample_rate": 4,
+        "samples": [
+          0,
+          1,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          -1
+        ],
+        "segment_length": 4,
+        "step": 4
+      }
+    },
+    {
+      "expected": {
+        "band_energy": 0.16,
+        "coherence": 0.059693,
+        "coverage": 1.0,
+        "decision": "normal",
+        "phase": 1.670465,
+        "ratio": 1.0,
+        "reference_energy": 0.208889,
+        "segments": [
+          0,
+          2,
+          4
+        ],
+        "slope": -0.133333,
+        "total_energy": 0.16
+      },
+      "name": "overlap_changes_ensemble",
+      "public": true,
+      "request": {
+        "band": [
+          0,
+          3
+        ],
+        "coherence_threshold": 0.5,
+        "energy_threshold": 0.01,
+        "max_gap": 1,
+        "min_coverage": 0.5,
+        "phase_limit": 3.141592653589793,
+        "ratio_threshold": 0,
+        "reference": [
+          0,
+          1,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          1
+        ],
+        "sample_rate": 4,
+        "samples": [
+          0,
+          1,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          -1
+        ],
+        "segment_length": 4,
+        "step": 2
+      }
+    },
+    {
+      "expected": {
+        "band_energy": 0.16,
+        "coherence": 0.042216,
+        "coverage": 0.875,
+        "decision": "normal",
+        "phase": 2.485897,
+        "ratio": 1.0,
+        "reference_energy": 0.196667,
+        "segments": [
+          0,
+          2,
+          4
+        ],
+        "slope": -0.133333,
+        "total_energy": 0.16
+      },
+      "name": "overlap_with_local_reference_gap",
+      "public": false,
+      "request": {
+        "band": [
+          0,
+          3
+        ],
+        "coherence_threshold": 0.5,
+        "energy_threshold": 0.01,
+        "max_gap": 1,
+        "min_coverage": 0.5,
+        "phase_limit": 3.141592653589793,
+        "ratio_threshold": 0,
+        "reference": [
+          0,
+          null,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          1
+        ],
+        "sample_rate": 4,
+        "samples": [
+          0,
+          1,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          -1
+        ],
+        "segment_length": 4,
+        "step": 2
+      }
+    },
+    {
+      "expected": {
+        "band_energy": 0.16,
+        "coherence": 1,
+        "coverage": 0.875,
+        "decision": "alarm",
+        "phase": -0.0,
+        "ratio": 1.0,
+        "reference_energy": 0.16,
+        "segments": [
+          0
+        ],
+        "slope": -0.4,
+        "total_energy": 0.16
+      },
+      "name": "reference_endpoint_rejects_pair",
+      "public": false,
+      "request": {
+        "band": [
+          0,
+          3
+        ],
+        "coherence_threshold": 0.5,
+        "energy_threshold": 0.01,
+        "max_gap": 1,
+        "min_coverage": 0.5,
+        "phase_limit": 3.141592653589793,
+        "ratio_threshold": 0,
+        "reference": [
+          0,
+          1,
+          0,
+          -1,
+          null,
+          -1,
+          0,
+          1
+        ],
+        "sample_rate": 4,
+        "samples": [
+          0,
+          1,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          -1
+        ],
+        "segment_length": 4,
+        "step": 4
+      }
+    },
+    {
+      "expected": {
+        "band_energy": 0.141667,
+        "coherence": 0.108333,
+        "coverage": 0.75,
+        "decision": "normal",
+        "phase": 2.403778,
+        "ratio": 1.0,
+        "reference_energy": 0.16,
+        "segments": [
+          0,
+          4
+        ],
+        "slope": -0.35,
+        "total_energy": 0.141667
+      },
+      "name": "independent_interior_gap_repair",
+      "public": false,
+      "request": {
+        "band": [
+          0,
+          3
+        ],
+        "coherence_threshold": 0.5,
+        "energy_threshold": 0.01,
+        "max_gap": 1,
+        "min_coverage": 0.5,
+        "phase_limit": 3.141592653589793,
+        "ratio_threshold": 0,
+        "reference": [
+          0,
+          1,
+          0,
+          -1,
+          0,
+          -1,
+          null,
+          1
+        ],
+        "sample_rate": 4,
+        "samples": [
+          0,
+          null,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          -1
+        ],
+        "segment_length": 4,
+        "step": 4
+      }
+    },
+    {
+      "expected": {
+        "band_energy": 0.16,
+        "coherence": 1,
+        "coverage": 0.75,
+        "decision": "alarm",
+        "phase": 3.141593,
+        "ratio": 1.0,
+        "reference_energy": 0.16,
+        "segments": [
+          4
+        ],
+        "slope": -0.4,
+        "total_energy": 0.16
+      },
+      "name": "long_reference_gap",
+      "public": false,
+      "request": {
+        "band": [
+          0,
+          3
+        ],
+        "coherence_threshold": 0.5,
+        "energy_threshold": 0.01,
+        "max_gap": 1,
+        "min_coverage": 0.5,
+        "phase_limit": 3.141592653589793,
+        "ratio_threshold": 0,
+        "reference": [
+          0,
+          null,
+          null,
+          -1,
+          0,
+          -1,
+          0,
+          1
+        ],
+        "sample_rate": 4,
+        "samples": [
+          0,
+          1,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          -1
+        ],
+        "segment_length": 4,
+        "step": 4
+      }
+    },
+    {
+      "expected": {
+        "band_energy": null,
+        "coherence": null,
+        "coverage": 0.875,
+        "decision": "insufficient_data",
+        "phase": null,
+        "ratio": null,
+        "reference_energy": null,
+        "segments": [
+          0
+        ],
+        "slope": null,
+        "total_energy": null
+      },
+      "name": "paired_count_gate",
+      "public": false,
+      "request": {
+        "band": [
+          0,
+          3
+        ],
+        "coherence_threshold": 0.5,
+        "energy_threshold": 0.01,
+        "max_gap": 1,
+        "min_coverage": 0.5,
+        "min_segments": 2,
+        "phase_limit": 3.141592653589793,
+        "ratio_threshold": 0,
+        "reference": [
+          0,
+          1,
+          0,
+          -1,
+          null,
+          -1,
+          0,
+          1
+        ],
+        "sample_rate": 4,
+        "samples": [
+          0,
+          1,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          -1
+        ],
+        "segment_length": 4,
+        "step": 4
+      }
+    },
+    {
+      "expected": {
+        "band_energy": 0.16,
+        "coherence": 1,
+        "coverage": 0.875,
+        "decision": "alarm",
+        "phase": 3.141593,
+        "ratio": 1.0,
+        "reference_energy": 0.16,
+        "segments": [
+          4
+        ],
+        "slope": -0.4,
+        "total_energy": 0.16
+      },
+      "name": "original_reference_coverage",
+      "public": false,
+      "request": {
+        "band": [
+          0,
+          3
+        ],
+        "coherence_threshold": 0.5,
+        "energy_threshold": 0.01,
+        "max_gap": 1,
+        "min_coverage": 0.8,
+        "phase_limit": 3.141592653589793,
+        "ratio_threshold": 0,
+        "reference": [
+          0,
+          null,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          1
+        ],
+        "sample_rate": 4,
+        "samples": [
+          0,
+          1,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          -1
+        ],
+        "segment_length": 4,
+        "step": 4
+      }
+    },
+    {
+      "expected": {
+        "band_energy": 0.666667,
+        "coherence": 1,
+        "coverage": 1.0,
+        "decision": "alarm",
+        "phase": 0.0,
+        "ratio": 0.543478,
+        "reference_energy": 2.666667,
+        "segments": [
+          0,
+          4
+        ],
+        "slope": -0.4,
+        "total_energy": 1.226667
+      },
+      "name": "nyquist_cross_energy",
+      "public": false,
+      "request": {
+        "band": [
+          2,
+          3
+        ],
+        "coherence_threshold": 0.5,
+        "energy_threshold": 0.01,
+        "max_gap": 1,
+        "min_coverage": 0.5,
+        "phase_limit": 3.141592653589793,
+        "ratio_threshold": 0,
+        "reference": [
+          2,
+          -2,
+          2,
+          -2,
+          2,
+          -2,
+          2,
+          -2
+        ],
+        "sample_rate": 4,
+        "samples": [
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1
+        ],
+        "segment_length": 4,
+        "step": 4
+      }
+    },
+    {
+      "expected": {
+        "band_energy": 0.16,
+        "coherence": 0.0,
+        "coverage": 1.0,
+        "decision": "normal",
+        "phase": 0.0,
+        "ratio": 1.0,
+        "reference_energy": 0.0,
+        "segments": [
+          0,
+          4
+        ],
+        "slope": -0.4,
+        "total_energy": 0.16
+      },
+      "name": "zero_reference_power",
+      "public": false,
+      "request": {
+        "band": [
+          0,
+          3
+        ],
+        "coherence_threshold": 0.5,
+        "energy_threshold": 0.01,
+        "max_gap": 1,
+        "min_coverage": 0.5,
+        "phase_limit": 3.141592653589793,
+        "ratio_threshold": 0,
+        "reference": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sample_rate": 4,
+        "samples": [
+          0,
+          1,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          -1
+        ],
+        "segment_length": 4,
+        "step": 4
+      }
+    },
+    {
+      "expected": {
+        "band_energy": 0.0,
+        "coherence": 0.0,
+        "coverage": 1.0,
+        "decision": "normal",
+        "phase": 0.0,
+        "ratio": 0.0,
+        "reference_energy": 0.0,
+        "segments": [
+          0,
+          4
+        ],
+        "slope": 0.0,
+        "total_energy": 0.0
+      },
+      "name": "both_zero_power",
+      "public": false,
+      "request": {
+        "band": [
+          0,
+          3
+        ],
+        "coherence_threshold": 0.5,
+        "energy_threshold": 0.01,
+        "max_gap": 1,
+        "min_coverage": 0.5,
+        "phase_limit": 3.141592653589793,
+        "ratio_threshold": 0,
+        "reference": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "sample_rate": 4,
+        "samples": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "segment_length": 4,
+        "step": 4
+      }
+    },
+    {
+      "expected": {
+        "band_energy": 0.0,
+        "coherence": 0.0,
+        "coverage": 1.0,
+        "decision": "normal",
+        "phase": 0.0,
+        "ratio": 0.0,
+        "reference_energy": 0.0,
+        "segments": [
+          0,
+          4
+        ],
+        "slope": -0.4,
+        "total_energy": 0.16
+      },
+      "name": "empty_bin_band",
+      "public": false,
+      "request": {
+        "band": [
+          0.1,
+          0.9
+        ],
+        "coherence_threshold": 0.5,
+        "energy_threshold": 0.01,
+        "max_gap": 1,
+        "min_coverage": 0.5,
+        "phase_limit": 3.141592653589793,
+        "ratio_threshold": 0,
+        "reference": [
+          0,
+          1,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          1
+        ],
+        "sample_rate": 4,
+        "samples": [
+          0,
+          1,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          -1
+        ],
+        "segment_length": 4,
+        "step": 4
+      }
+    },
+    {
+      "expected": {
+        "band_energy": 0.16,
+        "coherence": 0.0,
+        "coverage": 1.0,
+        "decision": "normal",
+        "phase": 0.0,
+        "ratio": 1.0,
+        "reference_energy": 0.16,
+        "segments": [
+          0,
+          4
+        ],
+        "slope": -0.4,
+        "total_energy": 0.16
+      },
+      "name": "discard_partial_tail",
+      "public": false,
+      "request": {
+        "band": [
+          0,
+          3
+        ],
+        "coherence_threshold": 0.5,
+        "energy_threshold": 0.01,
+        "max_gap": 1,
+        "min_coverage": 0.5,
+        "phase_limit": 3.141592653589793,
+        "ratio_threshold": 0,
+        "reference": [
+          0,
+          1,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          1,
+          5,
+          6
+        ],
+        "sample_rate": 4,
+        "samples": [
+          0,
+          1,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          -1,
+          3,
+          4
+        ],
+        "segment_length": 4,
+        "step": 4
+      }
+    },
+    {
+      "expected": {
+        "band_energy": 0.16,
+        "coherence": 0.605856,
+        "coverage": 1.0,
+        "decision": "normal",
+        "phase": 2.485897,
+        "ratio": 1.0,
+        "reference_energy": 0.493333,
+        "segments": [
+          0,
+          4
+        ],
+        "slope": -0.4,
+        "total_energy": 0.16
+      },
+      "name": "phase_gate_uses_signed_cross",
+      "public": false,
+      "request": {
+        "band": [
+          0,
+          3
+        ],
+        "coherence_threshold": 0.5,
+        "energy_threshold": 0.01,
+        "max_gap": 1,
+        "min_coverage": 0.5,
+        "phase_limit": 0.1,
+        "ratio_threshold": 0,
+        "reference": [
+          1,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          -1,
+          0
+        ],
+        "sample_rate": 4,
+        "samples": [
+          0,
+          1,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          -1
+        ],
+        "segment_length": 4,
+        "step": 4
+      }
+    }
+  ]
+}

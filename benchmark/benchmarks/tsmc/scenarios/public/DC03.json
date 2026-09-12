@@ -1,0 +1,172 @@
+{
+  "schema_version": "tsmc-incident/0.3",
+  "scenario_id": "DC03",
+  "title": "Datacenter connectivity restored: replay, duplicate operations and backlog",
+  "synthetic": true,
+  "affiliation": "none",
+  "split": "demo_dev",
+  "track": "patch-repair-with-recovery-gates",
+  "fault_domain": "synthetic factory services only; actual GCP/Modal inference stays up",
+  "story": "Network and storage are reachable again, but a large backlog replays after the outage. An HTTP 200 does not establish recovery of state, data or operations. This version does not simulate packet-level retry storms.",
+  "environment_facts": {
+    "dc_a_primary_up": true,
+    "source_complete": true,
+    "qualification_snapshot_current": true
+  },
+  "services": {
+    "journal": {
+      "task_id": "R03",
+      "node_id": "journal-node",
+      "dc_dependency": "hard",
+      "initial_state": "unverified",
+      "impact": "Align output and checkpoint first; never skip events whose output is missing",
+      "repair_requires": [],
+      "restore_requires": [],
+      "restore_facts": [
+        "source_complete"
+      ],
+      "acceptance_checks": [
+        "atomic recovery"
+      ],
+      "protected_business_service": false
+    },
+    "workers": {
+      "task_id": "R04",
+      "node_id": "replay-worker-node",
+      "dc_dependency": "none",
+      "initial_state": "degraded",
+      "impact": "Cancellation leaks slots and reduces backlog-draining capacity",
+      "repair_requires": [],
+      "restore_requires": [],
+      "restore_facts": [],
+      "acceptance_checks": [
+        "all exits reclaim once"
+      ],
+      "protected_business_service": false
+    },
+    "telemetry": {
+      "task_id": "A04",
+      "node_id": "ingest-node",
+      "dc_dependency": "hard",
+      "initial_state": "backlog",
+      "impact": "Old and new records interleave and may be replayed",
+      "repair_requires": [],
+      "restore_requires": [
+        "journal",
+        "workers"
+      ],
+      "restore_facts": [],
+      "acceptance_checks": [
+        "offset/event-id distinctions",
+        "incremental batch equivalence"
+      ],
+      "protected_business_service": false
+    },
+    "state": {
+      "task_id": "F03",
+      "node_id": "state-node",
+      "dc_dependency": "hard",
+      "initial_state": "stale",
+      "impact": "Unordered replay may regress the latest state",
+      "repair_requires": [],
+      "restore_requires": [
+        "telemetry"
+      ],
+      "restore_facts": [],
+      "acceptance_checks": [
+        "per-machine max sequence"
+      ],
+      "protected_business_service": false
+    },
+    "maintenance": {
+      "task_id": "R01",
+      "node_id": "work-order-node",
+      "dc_dependency": "async",
+      "initial_state": "backlog",
+      "impact": "Timeout retries may duplicate work orders",
+      "repair_requires": [],
+      "restore_requires": [
+        "journal"
+      ],
+      "restore_facts": [],
+      "acceptance_checks": [
+        "same-key same result",
+        "commit-then-response-loss"
+      ],
+      "protected_business_service": false
+    },
+    "reservation": {
+      "task_id": "R02",
+      "node_id": "dispatch-node",
+      "dc_dependency": "hard",
+      "initial_state": "blocked_safe",
+      "impact": "Concurrent returning dispatch requests must not exceed capacity",
+      "repair_requires": [],
+      "restore_requires": [
+        "state"
+      ],
+      "restore_facts": [
+        "qualification_snapshot_current"
+      ],
+      "acceptance_checks": [
+        "atomic capacity",
+        "current state used"
+      ],
+      "protected_business_service": true
+    },
+    "lineage": {
+      "task_id": "A03",
+      "node_id": "impact-analysis-node",
+      "dc_dependency": "async",
+      "initial_state": "stale",
+      "impact": "Reconcile impacted lots and their evidence for the incident interval",
+      "repair_requires": [],
+      "restore_requires": [
+        "telemetry"
+      ],
+      "restore_facts": [],
+      "acceptance_checks": [
+        "complete evidence set",
+        "no fanout overcount"
+      ],
+      "protected_business_service": true
+    },
+    "wafer_report": {
+      "task_id": "A02",
+      "node_id": "wafer-report-node",
+      "dc_dependency": "async",
+      "initial_state": "stale",
+      "impact": "Background statistics have not yet eliminated retest records",
+      "repair_requires": [],
+      "restore_requires": [
+        "telemetry"
+      ],
+      "restore_facts": [],
+      "acceptance_checks": [
+        "latest valid per wafer"
+      ],
+      "protected_business_service": false
+    }
+  },
+  "importance": [
+    {
+      "higher": "reservation",
+      "lower": "wafer_report",
+      "reason": "Restore legal reservations first"
+    },
+    {
+      "higher": "lineage",
+      "lower": "wafer_report",
+      "reason": "Establish evidence for impacted lots first"
+    },
+    {
+      "higher": "maintenance",
+      "lower": "wafer_report",
+      "reason": "Prevent duplicate work orders first"
+    }
+  ],
+  "timing_note": "All numeric times are synthetic examples, not factory deadlines or measured agent durations.",
+  "correctness_rule": "local task suite AND current integration evidence AND recovery prerequisites; importance is NOT a precedence constraint",
+  "expected_total_order": null,
+  "policies_observe": "current states, observed environment facts, public importance/graph; NOT gold, hidden answers, future events or remaining durations"
+}

@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "22fccd8c2536672e1276d6aa1a3d4a8f833bf1d0463278ef3c528d146b82dc5f",
+    "data/expected.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "data/request.json": "101f5a74238a91140b075b3895e4fbf5058f14f218b9398aefaef1d7e8b0175c",
+    "docs/contract.md": "02ea02b0928ec4b68c3e56768c3d603d06cd8ec87775e12ce3af7bf49cb9d551",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "3873a94c2b29307adf8ad3b5170c04daf66c53707208869965447fb92ec23a5a",
+    "problem_statement.md": "f039de6c9d5b1449ece7bf8790ceadce8885232020902fd00ca2fe8f1d920e1b",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "cfbbf33de9fea6e1eebf3eeb8a96c58bb3b334bcb972b4e4dc331ea209e35826"
+  },
+  "baseline_git_commit": "cb2f361e3a669dded8ecf3c612bc9f1b49485e19",
+  "design_difficulty": "easy",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "",
+  "family_id": "pressure_unit_normalization",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "zema-hydraulic"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "A22",
+  "test_count": 11,
+  "title": "Pressure units are converted in the wrong direction",
+  "track": "data_analysis",
+  "version": "1.0"
+}

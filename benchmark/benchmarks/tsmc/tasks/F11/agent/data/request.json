@@ -1,0 +1,20 @@
+{
+  "horizon": [
+    0,
+    20
+  ],
+  "open": [
+    [
+      0,
+      20
+    ]
+  ],
+  "maintenance": [],
+  "jobs": [],
+  "capacity": 2,
+  "query": {
+    "ready": 0,
+    "duration": 4,
+    "units": 1
+  }
+}

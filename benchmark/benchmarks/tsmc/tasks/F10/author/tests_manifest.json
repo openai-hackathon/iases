@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_partial",
+    "assessment/tests/test_hidden.py::test_unrelated",
+    "tests/test_public.py::test_missing"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_all_safe",
+    "assessment/tests/test_hidden.py::test_numeric_true",
+    "assessment/tests/test_hidden.py::test_one_unsafe",
+    "assessment/tests/test_hidden.py::test_text_true",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_safe",
+    "tests/test_public.py::test_unsafe"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_all_safe",
+    "assessment/tests/test_hidden.py::test_numeric_true",
+    "assessment/tests/test_hidden.py::test_one_unsafe",
+    "assessment/tests/test_hidden.py::test_partial",
+    "assessment/tests/test_hidden.py::test_text_true",
+    "assessment/tests/test_hidden.py::test_unrelated",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_missing",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_safe",
+    "tests/test_public.py::test_unsafe"
+  ],
+  "task_id": "F10",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_all_safe": "hidden",
+    "assessment/tests/test_hidden.py::test_numeric_true": "hidden",
+    "assessment/tests/test_hidden.py::test_one_unsafe": "hidden",
+    "assessment/tests/test_hidden.py::test_partial": "hidden",
+    "assessment/tests/test_hidden.py::test_text_true": "hidden",
+    "assessment/tests/test_hidden.py::test_unrelated": "hidden",
+    "tests/test_public.py::test_empty": "public",
+    "tests/test_public.py::test_missing": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public",
+    "tests/test_public.py::test_safe": "public",
+    "tests/test_public.py::test_unsafe": "public"
+  }
+}

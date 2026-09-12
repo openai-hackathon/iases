@@ -1,0 +1,15 @@
+{
+  "matched": 1,
+  "alternatives": 1,
+  "certain_pairs": [
+    [
+      "s",
+      "c"
+    ]
+  ],
+  "certain_unmatched": [],
+  "duration_bounds": [
+    3,
+    3
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "P1": {
+    "kind": "pressure",
+    "high": 2000.0
+  },
+  "T1": {
+    "kind": "temperature",
+    "high": 25.0
+  }
+}

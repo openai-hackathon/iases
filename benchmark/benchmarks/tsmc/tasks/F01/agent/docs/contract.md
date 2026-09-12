@@ -1,0 +1,3 @@
+# F01 Public API and data contract
+
+`eligible(lot_id, machine_id, lots, machines, qualifications) -> bool`. Return True only when all conditions hold: the lot exists, the machine exists, quality_hold=False, lot status is WAITING, machine state is AVAILABLE, and at least one valid=True qualification matches machine/product/step. Unknown IDs return False. Upstream validates the input schema; boolean fields are JSON booleans. Duplicate identical qualification rows do not change the result; differing rows use "at least one valid match" semantics. This task does not manage qualification versions. Do not mutate inputs. `run` returns booleans in assignments input order.

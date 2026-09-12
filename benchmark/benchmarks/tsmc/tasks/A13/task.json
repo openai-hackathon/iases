@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "f319c1312925c380b5d7fa7d3fd6dcb7ab299e7775ea59d2d3a5442eb74b4791",
+    "data/expected.json": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "data/request.json": "fc7eb59acb5a98d510da26c4408a8f4e8bca8a9f5c1ba37783b874d901beb741",
+    "docs/contract.md": "7c2b14745ae66be7c9ad63faf847b258c64ba98fe01aed3729c9276116dba00b",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "5a21c192e356e19c9f69069ebb2c3b19e23bf05561140615b4220f66bfe82ccb",
+    "problem_statement.md": "b8f37f48defc48a2904ed2c2ff25109d602760892535e96e4f9f720ba31be2fe",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "a28747b0b2e4a0e501260f4ab0817ec56546b2986a0df2088eba64ce402ca814"
+  },
+  "baseline_git_commit": "05d6f8116f6d9c0447b3dbd6d95259c39cbc3cbc",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Distinguish counter reset from negative production using ordered observations.",
+  "family_id": "reset_aware_counter_delta",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "A13",
+  "test_count": 11,
+  "title": "Machine counter resets subtract completed production",
+  "track": "data_analysis",
+  "version": "1.0"
+}

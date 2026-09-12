@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_duplicate_lots",
+    "assessment/tests/test_hidden.py::test_large_bad_lot",
+    "assessment/tests/test_hidden.py::test_reversed",
+    "assessment/tests/test_hidden.py::test_three_lots",
+    "tests/test_public.py::test_unequal"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_all_bad",
+    "assessment/tests/test_hidden.py::test_all_good",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_equal_sizes",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_single"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_all_bad",
+    "assessment/tests/test_hidden.py::test_all_good",
+    "assessment/tests/test_hidden.py::test_duplicate_lots",
+    "assessment/tests/test_hidden.py::test_large_bad_lot",
+    "assessment/tests/test_hidden.py::test_reversed",
+    "assessment/tests/test_hidden.py::test_three_lots",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_equal_sizes",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_single",
+    "tests/test_public.py::test_unequal"
+  ],
+  "task_id": "A05",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_all_bad": "hidden",
+    "assessment/tests/test_hidden.py::test_all_good": "hidden",
+    "assessment/tests/test_hidden.py::test_duplicate_lots": "hidden",
+    "assessment/tests/test_hidden.py::test_large_bad_lot": "hidden",
+    "assessment/tests/test_hidden.py::test_reversed": "hidden",
+    "assessment/tests/test_hidden.py::test_three_lots": "hidden",
+    "tests/test_public.py::test_empty": "public",
+    "tests/test_public.py::test_equal_sizes": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public",
+    "tests/test_public.py::test_single": "public",
+    "tests/test_public.py::test_unequal": "public"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_lower_spike",
+    "assessment/tests/test_hidden.py::test_opposite_outliers",
+    "assessment/tests/test_hidden.py::test_zero_multiplier",
+    "tests/test_public.py::test_spike"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_constant_baseline",
+    "assessment/tests/test_hidden.py::test_sample_denominator",
+    "assessment/tests/test_hidden.py::test_zero_width",
+    "tests/test_public.py::test_center",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_flat",
+    "tests/test_public.py::test_public_cli_fixture"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_constant_baseline",
+    "assessment/tests/test_hidden.py::test_lower_spike",
+    "assessment/tests/test_hidden.py::test_opposite_outliers",
+    "assessment/tests/test_hidden.py::test_sample_denominator",
+    "assessment/tests/test_hidden.py::test_zero_multiplier",
+    "assessment/tests/test_hidden.py::test_zero_width",
+    "tests/test_public.py::test_center",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_flat",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_spike"
+  ],
+  "task_id": "A16",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_constant_baseline": "hidden",
+    "assessment/tests/test_hidden.py::test_lower_spike": "hidden",
+    "assessment/tests/test_hidden.py::test_opposite_outliers": "hidden",
+    "assessment/tests/test_hidden.py::test_sample_denominator": "hidden",
+    "assessment/tests/test_hidden.py::test_zero_multiplier": "hidden",
+    "assessment/tests/test_hidden.py::test_zero_width": "hidden",
+    "tests/test_public.py::test_center": "public",
+    "tests/test_public.py::test_empty": "public",
+    "tests/test_public.py::test_flat": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public",
+    "tests/test_public.py::test_spike": "public"
+  }
+}

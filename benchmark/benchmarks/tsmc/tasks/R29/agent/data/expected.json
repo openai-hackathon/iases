@@ -1,0 +1,49 @@
+{
+  "results": [
+    1,
+    1,
+    "acked",
+    "acked"
+  ],
+  "next_sequence": 2,
+  "total": 5,
+  "epoch": 1,
+  "compacted": 0,
+  "lease": [
+    "w",
+    1,
+    100
+  ],
+  "consumers": {
+    "mes": {
+      "next": 2,
+      "total": 5,
+      "trail": [
+        "e1"
+      ],
+      "buffered": []
+    },
+    "quality": {
+      "next": 2,
+      "total": 5,
+      "trail": [
+        "e1"
+      ],
+      "buffered": []
+    }
+  },
+  "retained": [
+    1
+  ],
+  "acks": [
+    [
+      1,
+      "mes"
+    ],
+    [
+      1,
+      "quality"
+    ]
+  ],
+  "commands": 1
+}

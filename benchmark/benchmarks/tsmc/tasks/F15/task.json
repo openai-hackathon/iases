@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "89f5c370e2d592b77db9bbb6ace9da28a6b514d6c4b7d3daf57d977debeb760d",
+    "data/expected.json": "3f2b56630195478f240c8f37acdd3505477c13c487bfdd28bf8342605e58849e",
+    "data/request.json": "182f5d22aca4a27e52a8c98f9443b293eebac902d5f39ddeab7e55191040fd66",
+    "docs/contract.md": "b37c02484bb7e821e08fec3db97efb7780d1ff98c2f748ba7e0eafc969657f74",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "b4e2ca09fd8f23c7ec2b19eb2e5509ff7b8e5127d92286e05b26499dbe76878c",
+    "problem_statement.md": "38f19578765a147dded206e86304a03e034fff4f993d72dc696b2fa68d380802",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "953af131a9366dd624284044798a46cc67ee08e3393fa6e939b0d7a1bdc8efda"
+  },
+  "baseline_git_commit": "25c1c6fef826707ec4072c48b4434119750f14b5",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Track retry lifetime separately from route progress and terminal states.",
+  "family_id": "rework_visit_state_machine",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "production-log"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "F15",
+  "test_count": 11,
+  "title": "Rework visits consume the next route occurrence",
+  "track": "factory_logic",
+  "version": "1.0"
+}

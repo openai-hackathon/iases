@@ -1,0 +1,13 @@
+diff --git a/fabops/domain.py b/fabops/domain.py
+index 430e7b5..d1d199d 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -5,7 +5,7 @@ def run(request):
+         if kind == "start" and state == "open":
+             active.add(event["id"])
+             accepted.append(event["id"])
+-        elif kind == "finish" and state == "open" and event["id"] in active:
++        elif kind == "finish" and event["id"] in active:
+             active.remove(event["id"])
+             completed.append(event["id"])
+             if state == "draining" and not active:

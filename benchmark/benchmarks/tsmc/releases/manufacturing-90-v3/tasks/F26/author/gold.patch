@@ -1,0 +1,43 @@
+diff --git a/fabops/correlation.py b/fabops/correlation.py
+index 56acb18..50cc8aa 100644
+--- a/fabops/correlation.py
++++ b/fabops/correlation.py
+@@ -3,7 +3,7 @@ def compatible(start, end):
+     return (all(start[key] == end[key] for key in ("case", "activity", "resource"))
+             and start["time"] <= end["time"]
+             and (start.get("run") is None or end.get("run") is None
+-                 or start["case"] == end["case"]))
++                 or start["run"] == end["run"]))
+ 
+ def matchings(events):
+     starts = [event for event in events if event["kind"] == "start"]
+@@ -23,6 +23,5 @@ def matchings(events):
+             if end["id"] in used or not compatible(start, end):
+                 continue
+             visit(index + 1, used | {end["id"]}, pairs + [(start["id"], end["id"])])
+-            break
+     visit(0, set(), [])
+     return results
+diff --git a/fabops/domain.py b/fabops/domain.py
+index b19822d..56417e5 100644
+--- a/fabops/domain.py
++++ b/fabops/domain.py
+@@ -6,7 +6,7 @@ def run(request):
+     interpretations = matchings(events)
+     certain = set(interpretations[0])
+     for pairs in interpretations[1:]:
+-        certain.update(pairs)
++        certain.intersection_update(pairs)
+     ever_used = {identifier for pairs in interpretations for pair in pairs for identifier in pair}
+     by_id = {event["id"]: event for event in events}
+     durations = [sum(by_id[end]["time"] - by_id[start]["time"]
+diff --git a/fabops/events.py b/fabops/events.py
+index cc44c2b..04021ab 100644
+--- a/fabops/events.py
++++ b/fabops/events.py
+@@ -6,4 +6,4 @@ def normalize(events):
+         if identifier in seen and seen[identifier] != event:
+             raise ValueError("Conflicting event id")
+         seen[identifier] = dict(event)
+-    return sorted(events, key=lambda event: event["id"])
++    return [seen[key] for key in sorted(seen)]

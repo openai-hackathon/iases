@@ -1,0 +1,19 @@
+diff --git a/fabops/lineage.py b/fabops/lineage.py
+index c3b057f..9ac5227 100644
+--- a/fabops/lineage.py
++++ b/fabops/lineage.py
+@@ -9,11 +9,11 @@ def interval(row,start,end):
+ def impacted_lots(steps,events):
+     parsed_steps=[(s,*interval(s,'enter','exit')) for s in steps]
+     parsed_events=[(e,*interval(e,'start','end')) for e in events]
+-    matches=[]
++    matches={}
+     for s,a,b in parsed_steps:
+         for e,c,d in parsed_events:
+             if s['machine_id']==e['machine_id'] and max(a,c)<min(b,d):
+-                matches.append({'lot_id':s['lot_id'],'event_ids':[e['event_id']]})
+-    return sorted(matches,key=lambda r:r['lot_id'])
++                matches.setdefault(s['lot_id'],set()).add(e['event_id'])
++    return [{'lot_id':lot,'event_ids':sorted(matches[lot])} for lot in sorted(matches)]
+ 
+ def run(data): return impacted_lots(data['steps'],data['events'])

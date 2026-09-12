@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "b22a3ef29b8136d58f5c4e60fbb0784d674bcb7fe828ab99dbc2a1572c4d11c9",
+    "data/expected.json": "d6bae034ea45eb924e535c99f408e8462fdf7ff4d562ec8218d789df89d775f3",
+    "data/request.json": "a03113d8e49fe1fdb4b0fcaae91b7dab44ee78e591d111071c487cf8abc11e8e",
+    "docs/contract.md": "4540d3116a50477ce5d9fe02b862de2a64eca1f8602668e9cbc065cd68d60947",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "c2c57ad82c6380754004e9742e93deb16e1948db0a71030b79a5768665ae475d",
+    "problem_statement.md": "8dd388b9ea4573412017905a4f37c2bcab8219032452172279e37f09c3c9e46e",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "c216293215e820ccd345479ee0af16e94d97ea5ef8ad3096a224b9b89ae3f54d"
+  },
+  "baseline_git_commit": "4bee36a53b94228f9705de2276e78209928afab9",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Compensate only steps that completed and preserve state for later orders.",
+  "family_id": "order_saga_compensation",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "bpi-2019"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "test",
+  "status": "author_fixture_validated",
+  "task_id": "R24",
+  "test_count": 11,
+  "title": "Failed order payment leaves material reservations consumed",
+  "track": "reliability",
+  "version": "1.0"
+}

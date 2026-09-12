@@ -1,0 +1,32 @@
+diff --git a/fabops/ledger.py b/fabops/ledger.py
+index 1622b83..acba0e2 100644
+--- a/fabops/ledger.py
++++ b/fabops/ledger.py
+@@ -4,11 +4,11 @@ def apply(inventory, capacities, recipe, batches):
+     produced = {place: count * batches for place, count in recipe["produce"].items()}
+     if any(inventory[place] < count for place, count in consumed.items()):
+         return False, inventory, 0
+-    candidate = inventory
++    candidate = dict(inventory)
+     for place, count in consumed.items():
+         candidate[place] -= count
+     for place, count in produced.items():
+         candidate[place] += count
+     if any(candidate[place] > capacities[place] for place in candidate):
+         return False, inventory, 0
+-    return True, candidate, recipe["scrap"]
++    return True, candidate, recipe["scrap"] * batches
+diff --git a/fabops/revisions.py b/fabops/revisions.py
+index cd9039a..2cd1ac1 100644
+--- a/fabops/revisions.py
++++ b/fabops/revisions.py
+@@ -7,7 +7,7 @@ def active_events(records):
+             raise ValueError("Conflicting event revision")
+         seen[key] = dict(record)
+         current = latest.get(record["id"])
+-        if current is None or record["revision"] != current["revision"]:
++        if current is None or record["revision"] > current["revision"]:
+             latest[record["id"]] = dict(record)
+     active = [event for event in latest.values() if not event.get("deleted", False)]
+-    return sorted(active, key=lambda event: (event["id"], event["order"]))
++    return sorted(active, key=lambda event: (event["order"], event["id"]))

@@ -1,0 +1,44 @@
+{
+  "FAIL_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_later_repeat",
+    "assessment/tests/test_hidden.py::test_repeat_at_end",
+    "assessment/tests/test_hidden.py::test_same_names",
+    "assessment/tests/test_hidden.py::test_triple_repeat",
+    "tests/test_public.py::test_rework_occurrence"
+  ],
+  "PASS_TO_PASS": [
+    "assessment/tests/test_hidden.py::test_done",
+    "assessment/tests/test_hidden.py::test_middle",
+    "tests/test_public.py::test_advance",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_start"
+  ],
+  "required": [
+    "assessment/tests/test_hidden.py::test_done",
+    "assessment/tests/test_hidden.py::test_later_repeat",
+    "assessment/tests/test_hidden.py::test_middle",
+    "assessment/tests/test_hidden.py::test_repeat_at_end",
+    "assessment/tests/test_hidden.py::test_same_names",
+    "assessment/tests/test_hidden.py::test_triple_repeat",
+    "tests/test_public.py::test_advance",
+    "tests/test_public.py::test_empty",
+    "tests/test_public.py::test_public_cli_fixture",
+    "tests/test_public.py::test_rework_occurrence",
+    "tests/test_public.py::test_start"
+  ],
+  "task_id": "F07",
+  "visibility": {
+    "assessment/tests/test_hidden.py::test_done": "hidden",
+    "assessment/tests/test_hidden.py::test_later_repeat": "hidden",
+    "assessment/tests/test_hidden.py::test_middle": "hidden",
+    "assessment/tests/test_hidden.py::test_repeat_at_end": "hidden",
+    "assessment/tests/test_hidden.py::test_same_names": "hidden",
+    "assessment/tests/test_hidden.py::test_triple_repeat": "hidden",
+    "tests/test_public.py::test_advance": "public",
+    "tests/test_public.py::test_empty": "public",
+    "tests/test_public.py::test_public_cli_fixture": "public",
+    "tests/test_public.py::test_rework_occurrence": "public",
+    "tests/test_public.py::test_start": "public"
+  }
+}

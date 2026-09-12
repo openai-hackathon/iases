@@ -1,0 +1,13 @@
+diff --git a/fabops/incremental.py b/fabops/incremental.py
+index 391acdd..e91ff7b 100644
+--- a/fabops/incremental.py
++++ b/fabops/incremental.py
+@@ -14,7 +14,7 @@ def update(state,batch):
+         t=timestamp(row['event_time'])
+         value=float(row['value'])
+         if not math.isfinite(value):raise ValueError('non-finite value')
+-        if row['event_id'] not in seen and (out['watermark'] is None or t>timestamp(out['watermark'])):
++        if row['event_id'] not in seen:
+             target=out['totals'].setdefault(row['machine_id'],{'count':0,'sum':0.0})
+             target['count']+=1;target['sum']+=value;seen.add(row['event_id'])
+         if out['watermark'] is None or t>timestamp(out['watermark']):out['watermark']=t.isoformat()

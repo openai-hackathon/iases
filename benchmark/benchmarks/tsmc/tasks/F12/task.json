@@ -1,0 +1,36 @@
+{
+  "agent_file_sha256": {
+    ".gitignore": "c30f9bc45238a2e6624722bb4ef666e23f8823fcc9f3bc4fc5277723185fa701",
+    "README.md": "18c069a4d463a9b13bbda98cd13ad12849d4f654f2e86f7ab0ddad13f503c123",
+    "data/expected.json": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+    "data/request.json": "667726fcb2985d3e2de81dcd182c944608ac0075d3c2b228f80f873a7ed0dae1",
+    "docs/contract.md": "e4c2b80e6877bab7d3c654d079de5095e5990d5380e3a76c435b012069183e2d",
+    "fabops/__init__.py": "e8ea4474077e065758fbd474047a8d8300f2467401c8c83c8b7cefec809479af",
+    "fabops/__main__.py": "4ca6f02b97b42b662555c13a56d0eaf67d6957c8f1ab917aae19eae48e046488",
+    "fabops/domain.py": "7a22619a68bb1b6f90152f6d12ef120603d7666684ee390bb205f36232498399",
+    "problem_statement.md": "c550bd8226736b9bceb52e0de98b8ed83e3107d2b747de721b8ab7fe25cc95ff",
+    "requirements-dev.txt": "3afbb65b6b5ed9b0a016d38afed29a1764d0c1bab44f2977a90fb3b297c6fd72",
+    "tests/test_public.py": "46e6dab4b0ac984fddafd04d4b5746fb0690ae8082269da3c986952eb8a32ae7"
+  },
+  "baseline_git_commit": "fd50c7b2ee1859d9c1b5c16306adcca20b2c2bdc",
+  "design_difficulty": "medium",
+  "difficulty": "unmeasured",
+  "difficulty_evidence": "author_review",
+  "difficulty_reason": "Resolve a documented precedence order across three independent keys.",
+  "family_id": "recipe_rule_specificity",
+  "hidden_tests": 6,
+  "language": "en",
+  "public_tests": 5,
+  "reference_is_not_unique": true,
+  "reference_sources": [
+    "nist-sms"
+  ],
+  "source_kind": "authored_synthetic",
+  "split": "dev",
+  "status": "author_fixture_validated",
+  "task_id": "F12",
+  "test_count": 11,
+  "title": "Wildcard recipes override more specific equipment settings",
+  "track": "factory_logic",
+  "version": "1.0"
+}

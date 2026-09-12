@@ -1,0 +1,19 @@
+diff --git a/fabops/machine_events.py b/fabops/machine_events.py
+index d420664..05a23ad 100644
+--- a/fabops/machine_events.py
++++ b/fabops/machine_events.py
+@@ -9,6 +9,14 @@ def reduce_events(events, initial=None):
+         if type(e["sequence"]) is not int or e["sequence"]<0 or e["new_state"] not in ALLOWED:
+             raise ValueError("invalid machine event")
+         current={"sequence":e["sequence"], "state":e["new_state"]}
++        previous=state.get(e["machine_id"])
++        if previous is not None:
++            if e["sequence"] < previous["sequence"]:
++                continue
++            if e["sequence"] == previous["sequence"]:
++                if e["new_state"] != previous["state"]:
++                    raise ConflictError("conflicting event at current sequence")
++                continue
+         state[e["machine_id"]]=current
+     return state
+ 

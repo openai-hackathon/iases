@@ -1,0 +1,63 @@
+diff --git a/fabops/preprocess.py b/fabops/preprocess.py
+index 1451484..bb8da3c 100644
+--- a/fabops/preprocess.py
++++ b/fabops/preprocess.py
+@@ -17,9 +17,9 @@ def fill(samples, max_gap):
+             return None, observed / len(samples)
+         first, last = values[start - 1], values[index]
+         for offset in range(width):
+-            fraction = offset / (width + 1)
++            fraction = (offset + 1) / (width + 1)
+             values[start + offset] = first + fraction * (last - first)
+-    return values, sum(value is not None for value in values) / len(values)
++    return values, observed / len(samples)
+ 
+ def detrend(values):
+     count = len(values)
+diff --git a/fabops/segments.py b/fabops/segments.py
+index fedfe77..f5ce48e 100644
+--- a/fabops/segments.py
++++ b/fabops/segments.py
+@@ -13,9 +13,9 @@ def segments(request):
+         second, cy = fill(y[start:start+length], request["max_gap"])
+         if first is None or second is None or min(cx, cy) < request["min_coverage"]:
+             continue
+-        first, normalizer = window(first)
+-        second, _ = window(second)
+         first, slope = detrend(first)
+         second, _ = detrend(second)
++        first, normalizer = window(first)
++        second, _ = window(second)
+         accepted.append((start, first, second, slope, normalizer))
+     return accepted
+diff --git a/fabops/spectrum.py b/fabops/spectrum.py
+index 4bfd6a8..2bf3917 100644
+--- a/fabops/spectrum.py
++++ b/fabops/spectrum.py
+@@ -3,7 +3,7 @@ from math import cos, sin, pi
+ 
+ def window(values):
+     count = len(values)
+-    weights = [0.5 - 0.5 * cos(2 * pi * index / (count - 1)) for index in range(count)]
++    weights = [0.5 - 0.5 * cos(2 * pi * index / count) for index in range(count)]
+     return [value * weight for value, weight in zip(values, weights)], sum(weight * weight for weight in weights)
+ 
+ def energies(values, normalizer, sample_rate, band):
+diff --git a/fabops/welch.py b/fabops/welch.py
+index 1279474..bfdb78e 100644
+--- a/fabops/welch.py
++++ b/fabops/welch.py
+@@ -12,11 +12,11 @@ def summarize(segments, request):
+     for _, first, second, _, normalizer in segments:
+         fx, fy = transform(first), transform(second)
+         for k in range(n//2+1):
+-            factor = 1 if k == 0 else 2
++            factor = 1 if k in (0, n//2) else 2
+             weight = factor / (n*normalizer*len(segments))
+             xx[k] += weight*abs(fx[k])**2
+             yy[k] += weight*abs(fy[k])**2
+-            xy[k] += weight*abs(fx[k].conjugate()*fy[k])
++            xy[k] += weight*fx[k].conjugate()*fy[k]
+     chosen = [k for k in range(n//2+1) if request["band"][0] <= k*request["sample_rate"]/n < request["band"][1]]
+     first, second, cross = sum(xx[k] for k in chosen), sum(yy[k] for k in chosen), sum(xy[k] for k in chosen)
+     coherence = min(1.0, abs(cross)**2/(first*second)) if first*second > 1e-12 else 0.0

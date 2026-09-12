@@ -1,0 +1,14 @@
+{
+  "commands": [
+    {
+      "op": "execute",
+      "key": "k",
+      "expected": 0,
+      "value": 1,
+      "scope": [
+        "fab",
+        "cell"
+      ]
+    }
+  ]
+}

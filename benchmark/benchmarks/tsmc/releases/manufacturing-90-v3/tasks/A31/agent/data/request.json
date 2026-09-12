@@ -1,0 +1,17 @@
+{
+  "samples": [
+    2,
+    2,
+    2,
+    2
+  ],
+  "sample_rate": 4,
+  "band": [
+    1,
+    2
+  ],
+  "max_gap": 1,
+  "min_coverage": 0.75,
+  "energy_threshold": 0.5,
+  "ratio_threshold": 0.6
+}
